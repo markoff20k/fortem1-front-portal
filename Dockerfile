@@ -1,4 +1,4 @@
-FROM node:16.13.0 AS builder
+FROM node:16.15.1 AS builder
 
 WORKDIR /home/node
 COPY --chown=node:node . .
@@ -9,19 +9,19 @@ ARG REACT_APP_SENTRY_KEY=${REACT_APP_SENTRY_KEY:-""}
 ARG REACT_APP_SENTRY_ORGANIZATION=${REACT_APP_SENTRY_ORGANIZATION:-""}
 ARG REACT_APP_SENTRY_PROJECT=${REACT_APP_SENTRY_PROJECT:-""}
 
-RUN npm i -g yarn
-
 USER node
 
 ENV REACT_APP_SENTRY_KEY=${REACT_APP_SENTRY_KEY}
 ENV REACT_APP_SENTRY_ORGANIZATION=${REACT_APP_SENTRY_ORGANIZATION}
 ENV REACT_APP_SENTRY_PROJECT=${REACT_APP_SENTRY_PROJECT}
 
-RUN yarn install
-RUN ./scripts/build.sh
+RUN npm install --legacy-peer-deps
+RUN chmod -R 777 ./scripts/build.sh
+RUN npm run build
 
 FROM nginx:mainline-alpine
 
 COPY --from=builder /home/node/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 3000
+
