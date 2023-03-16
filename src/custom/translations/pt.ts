@@ -340,21 +340,21 @@ export const pt: LangType = {
     'page.body.wallets.beneficiaries.failAddModal.content': 'You need to confirm your account to add a beneficiary',
     'page.body.wallets.beneficiaries.failAddModal.button': 'Confirm phone',
 
-    'page.body.openOrders.tab.all': 'Все',
-    'page.body.openOrders.tab.open': 'Открытые',
-    'page.body.openOrders.header.date': 'Дата',
-    'page.body.openOrders.header.market': 'Маркет',
-    'page.body.openOrders.header.side': 'Сторона',
+    'page.body.openOrders.tab.all': 'Todas',
+    'page.body.openOrders.tab.open': 'Abertas',
+    'page.body.openOrders.header.date': 'Data',
+    'page.body.openOrders.header.market': 'Mercado',
+    'page.body.openOrders.header.side': 'Lado',
     'page.body.openOrders.header.side.buy': 'Покупка',
     'page.body.openOrders.header.side.sell': 'Продажа',
-    'page.body.openOrders.header.orderType': 'Тип',
-    'page.body.openOrders.header.avgPrice': 'Ср. цена',
-    'page.body.openOrders.header.price': 'Цена',
-    'page.body.openOrders.header.amount': 'Кол-во',
-    'page.body.openOrders.header.value': 'Стоимость',
-    'page.body.openOrders.header.trigger': 'Триггер',
+    'page.body.openOrders.header.orderType': 'Tipo',
+    'page.body.openOrders.header.avgPrice': 'Preço médio',
+    'page.body.openOrders.header.price': 'Preço',
+    'page.body.openOrders.header.amount': 'Quantidade',
+    'page.body.openOrders.header.value': 'Valor',
+    'page.body.openOrders.header.trigger': 'Gatilho',
     'page.body.openOrders.header.filled': 'Заполненный',
-    'page.body.openOrders.header.status': 'Статус',
+    'page.body.openOrders.header.status': 'Status',
     'page.body.openOrders.content.status.done': 'Выполнен',
     'page.body.openOrders.content.status.wait': 'Открыт',
     'page.body.openOrders.content.status.cancel': 'Отменен',
@@ -443,8 +443,8 @@ export const pt: LangType = {
     'page.body.profile.tabs.referral': 'Referral',
 
     'page.body.profile.header.account.username': 'Никнейм',
-    'page.body.profile.header.account.content.password': 'Пароль',
-    'page.body.profile.header.account.content.password.button.change': 'Изменить',
+    'page.body.profile.header.account.content.password': 'Senha',
+    'page.body.profile.header.account.content.password.button.change': 'Alterar',
     'page.body.profile.header.account.content.password.old': 'Старый пароль',
     'page.body.profile.header.account.content.password.new': 'Новый пароль',
     'page.body.profile.header.account.content.password.button.save': 'Сохранить',
@@ -470,7 +470,7 @@ export const pt: LangType = {
     'page.body.profile.header.account.content.twoFactorAuthentication.modalBody': 'Пожалуйста, обратитесь с администратором, чтобы отключить 2FA',
     'page.body.profile.header.account.content.twoFactorAuthentication.modalHeader': 'Двухфакторная аутентификация включена',
 
-    'page.body.profile.header.account.profile': 'Верификация Вашего профиля',
+    'page.body.profile.header.account.profile': 'Status do seu cadastro',
     'page.body.profile.header.account.profile.email.title': 'Почта - подтверждено',
     'page.body.profile.header.account.profile.email.message': 'Депозиты и вывод средств не разрешены',
     'page.body.profile.header.account.profile.phone.unverified.title': 'Телефон - подтвердить',
@@ -710,7 +710,8 @@ export const pt: LangType = {
     'page.header.signUp.confirmPassword.message.error': 'As senhas não são iguais',
     'page.header.signUp.referalCode': 'Código de indicação (caso tenha sido convidado)',
     'page.header.signUp.terms': 'Li e aceito os Termos de Uso e a Política de Privacidade',
-    'page.header.signUp.modal.header': 'ПРОВЕРЬТЕ СВОЙ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ',
+    'page.header.signUp.modal.header': 'ÓTIMO. SEU CADASTRO FOI INICIADO.',
+    
     'page.header.signUp.modal.body': 'Чтобы завершить регистрацию, найдите в своем' +
                                      ' почтовом ящике электронное письмо с дальнейшими инструкциями. ' +
                                      'Если вы не можете найти адрес электронной почты, проверьте свою' +
@@ -729,7 +730,7 @@ export const pt: LangType = {
     'page.password2fa.message': 'Введите 2FA код с приложения',
     'page.forgotPassword.email': 'Email',
     'page.forgotPassword.send': 'Redefinir senha',
-    'page.noDataToShow': 'Нет данных для отображения',
+    'page.noDataToShow': 'Sem dados a exibir',
 
     'page.modal.withdraw.success': 'Успешно!',
     'page.modal.withdraw.success.message.content': 'Ваш вывод был успешно подтвержден. Пожалуйста, подождите, чтобы получить ' +
@@ -880,7 +881,7 @@ export const pt: LangType = {
     'success.offer.created': 'Offer was created',
     'success.offer.cancelling': 'Offer is being cancelling',
 
-    'sentry.report_feedback': 'Отправить отчет',
+    'sentry.report_feedback': 'Informar erro',
 
     // error messages
     'error.order.rejected': 'Запрос отвергнут',
@@ -1353,22 +1354,22 @@ export const pt: LangType = {
 
     // Wallets screen
 
-    'page.body.wallets.tab.overview': 'Overview',
-    'page.body.wallets.tab.spot': 'Spot',
+    'page.body.wallets.tab.overview': 'Visão geral',
+    'page.body.wallets.tab.spot': 'Conta principal',
     'page.body.wallets.tab.p2p': 'P2P',
     'page.body.wallets.tab.transfer': 'Transfer',
-    'page.body.wallets.overview.header.wallet': 'Wallet',
+    'page.body.wallets.overview.header.wallet': 'Carteira',
     'page.body.wallets.overview.header.total': 'Total balance',
-    'page.body.wallets.overview.header.estimated': 'Estimated value',
+    'page.body.wallets.overview.header.estimated': 'Valor estimado',
     'page.body.wallets.overview.header.spot': 'Spot balance',
     'page.body.wallets.overview.header.p2p': 'P2P balance',
-    'page.body.wallets.p2p.header.wallet': 'Wallet',
+    'page.body.wallets.p2p.header.wallet': 'Carteira',
     'page.body.wallets.p2p.header.p2p': 'P2P balance',
     'page.body.wallets.p2p.header.available': 'Available balance',
     'page.body.wallets.p2p.header.locked': 'Locked balance',
-    'page.body.wallets.overview.action.deposit': 'Deposit',
-    'page.body.wallets.overview.action.withdraw': 'Withdraw',
-    'page.body.wallets.overview.action.transfer': 'Transfer',
+    'page.body.wallets.overview.action.deposit': 'Depositar',
+    'page.body.wallets.overview.action.withdraw': 'Sacar',
+    'page.body.wallets.overview.action.transfer': 'Transferir',
     'page.body.wallets.overview.action.p2p': 'P2P',
     'page.body.wallets.overview.seach': 'Procurar',
     'page.body.wallets.overview.nonZero': 'Ocultar saldos pequenos',
@@ -1406,6 +1407,17 @@ export const pt: LangType = {
     'page.header.signUp.title': 'Inicie sua jornada de investimentos',
 
     'page.header.signUp.username': 'Como prefere ser chamado ?',
+
+    'page.marketsLists.table.body.trade': 'Negociar',
+    'page.body.marketsTable.header.trade': 'Negociar',
+
+    'page.marketsLists.tab.favorites': 'Favoritos',
+	'page.marketsLists.tab.spotMarkets': 'Mercados Spot',
+	'FIAT': 'Fiat',
+	'USD': 'USD',
+	'BTC': 'BTC',
+	'page.marketsLists.markets.all': 'Todos',
+	'page.marketsLists.input.search.placeholder': 'Procurar',
 
     
 

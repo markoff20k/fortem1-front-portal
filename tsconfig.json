@@ -31,6 +31,7 @@
         "jest.config.js",
         "webpack",
         "./src/*.test.*",
-        "./src/charting_library"
+        "./src/charting_library",
+        "./src/templates"
     ]
 }

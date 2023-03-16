@@ -429,7 +429,7 @@ export const en = {
     'page.body.profile.tabs.payment': 'Payment',
     'page.body.profile.tabs.referral': 'Referral',
 
-    'page.body.profile.header.account.username': 'Nickname',
+    'page.body.profile.header.account.username': 'Enter your name',
     'page.body.profile.header.account.content.password': 'Password',
     'page.body.profile.header.account.content.password.button.change': 'Change',
     'page.body.profile.header.account.content.password.old': 'Old password',
@@ -1346,7 +1346,7 @@ export const en = {
     // Wallets screen
 
     'page.body.wallets.tab.overview': 'Overview',
-    'page.body.wallets.tab.spot': 'Spot',
+    'page.body.wallets.tab.spot': 'Main account',
     'page.body.wallets.tab.p2p': 'P2P',
     'page.body.wallets.tab.transfer': 'Transfer',
     'page.body.wallets.overview.header.wallet': 'Wallet',

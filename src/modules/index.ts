@@ -51,6 +51,8 @@ import { P2PDisputeState, rootP2PDisputeSaga } from './user/p2pDispute';
 import { rootFeeGroupSaga, FeeGroupState } from './user/feeGroup';
 import { rootWithdrawLimitsSaga, WithdrawLimitsState } from './public/withdrawLimits';
 
+import { RangerState } from './public/ranger/reducer';
+
 export * from './admin/config';
 export * from './admin/markets';
 export * from './admin/platform';
@@ -115,6 +117,8 @@ export interface RootState {
         rgl: GridLayoutState;
         p2p: P2PState;
         withdrawLimits: WithdrawLimitsState,
+
+        ranger: RangerState;
     };
     user: {
         abilities: AbilitiesState;

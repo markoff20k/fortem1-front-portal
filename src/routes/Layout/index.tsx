@@ -87,6 +87,10 @@ import {
     P2POrderScreen,
 } from '../../screens';
 
+import { MarketsList } from '../../containers/MarketsList';
+import ScaleLoader from 'react-spinners/ScaleLoader';
+// import App from "../../templates/template_react_ft_axies/src/App";
+
 interface ReduxProps {
     colorTheme: string;
     currentMarket?: Market;
@@ -121,11 +125,12 @@ interface OwnProps {
 export type LayoutProps = ReduxProps & DispatchProps & LocationProps & IntlProps & OwnProps;
 
 const renderLoader = () => (
-    <div className="pg-loader-container">
-        <Spinner animation="border" variant="primary" />
-    </div>
+	<div className="pg-loader-container">
+		{/* <Spinner animation="border" variant="primary" /> */}
+		{/*<img src={spinerLoading} style={{width: '38px', margin: '0 auto'}}></img>*/}
+		<ScaleLoader color="#009991" />
+	</div>
 );
-
 const STORE_KEY = 'lastAction';
 
 //tslint:disable-next-line no-any
@@ -363,7 +368,14 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p/order/:id" component={P2POrderScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p/:currency" component={P2POffersScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p" component={P2POffersScreen} />
+
+                    <PublicRoute path="/markets" component={MarketsList} />
+
                     <Route path="**"><Redirect to="/trading/" /></Route>
+
+                    
+                    {/* <Route path="/ui" component={App} /> */}
+
                 </Switch>
                 {isLoggedIn && <WalletsFetch/>}
                 {isShownExpSessionModal && this.handleRenderExpiredSessionModal()}

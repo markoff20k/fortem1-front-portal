@@ -14,6 +14,7 @@ import { marketsReducer } from './public/markets';
 import { memberLevelsReducer } from './public/memberLevels';
 import { depthReducer, incrementDepthReducer, orderBookReducer } from './public/orderBook';
 import { recentTradesReducer  } from './public/recentTrades';
+import { rangerReducer } from './public/ranger/reducer';
 import { withdrawLimitsReducer  } from './public/withdrawLimits';
 import { apiKeysReducer } from './user/apiKeys';
 import { abilitiesReducer } from './user/abilities';
@@ -69,6 +70,7 @@ export const publicReducer = combineReducers({
     recentTrades: recentTradesReducer,
     p2p: p2pReducer,
     withdrawLimits: withdrawLimitsReducer,
+    ranger: rangerReducer,
 });
 
 export const userReducer = combineReducers({

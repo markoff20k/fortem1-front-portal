@@ -26,3 +26,5 @@ export * from './useP2PHighestPriceFetch';
 export * from './useWithdrawalLimits';
 export * from './useFeeGroup';
 export * from './useUserWithdrawalLimits';
+
+export * from './useRangerConnectFetch';

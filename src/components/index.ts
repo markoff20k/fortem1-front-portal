@@ -57,3 +57,7 @@ export * from './Info';
 export * from './LockedComponent';
 export * from './WarningMessage';
 export * from './SharedLayout';
+
+export * from './FortemMarketTable';
+export * from './ButtonFIAT';
+export * from './FiatMarketFill';

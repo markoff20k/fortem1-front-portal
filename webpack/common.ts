@@ -29,36 +29,15 @@ const config: webpack.Configuration = {
             hash: true,
             chunks: ['common', 'bundle', 'styles'],
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        
+        
         new LodashModuleReplacementPlugin({ shorthands: true, flattening: true }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
             chunkFilename: '[id].[contenthash].css',
         }),
     ],
-    optimization: {
-        usedExports: false,
-        moduleIds: 'hashed',
-        namedModules: true,
-        namedChunks: true,
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'style',
-                    test: /\.(css|sass|scss|pcss)$/,
-                    chunks: 'all',
-                    enforce: true,
-                },
-                common: {
-                    name: 'common',
-                    chunks: 'initial',
-                    minChunks: 2,
-                    maxInitialRequests: 5,
-                    minSize: 0,
-                },
-            },
-        },
-    },
+
     module: {
         rules: [
             {

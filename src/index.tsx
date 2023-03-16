@@ -19,12 +19,14 @@ if (!Intl.PluralRules) {
     require('@formatjs/intl-pluralrules/polyfill');
     require('@formatjs/intl-pluralrules/locale-data/en');
     require('@formatjs/intl-pluralrules/locale-data/ru');
+    require('@formatjs/intl-pluralrules/locale-data/pt');
 }
 // @ts-ignore
 if (!Intl.RelativeTimeFormat) {
     require('@formatjs/intl-relativetimeformat/polyfill');
     require('@formatjs/intl-relativetimeformat/locale-data/en');
     require('@formatjs/intl-relativetimeformat/locale-data/ru');
+    require('@formatjs/intl-relativetimeformat/locale-data/pt');
 }
 
 sagaMiddleware.run(rootSaga);

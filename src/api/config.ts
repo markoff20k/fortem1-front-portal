@@ -13,7 +13,7 @@ export const defaultConfig: Config = {
     },
     finex: false,
     withCredentials: true,
-    incrementalOrderBook: false,
+    incrementalOrderBook: true,
     isResizable: true,
     isDraggable: false,
     showLanding: true,
