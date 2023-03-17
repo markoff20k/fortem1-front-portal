@@ -3,6 +3,9 @@ import { Button } from 'react-bootstrap';
 import { CodeVerification } from '../';
 import { CloseIcon } from '../../assets/images/CloseIcon';
 
+import logo from '../../assets/images/logo-icon-dark.svg';
+
+
 export interface TwoFactorAuthProps {
     isMobile?: boolean;
     isLoading?: boolean;
@@ -43,7 +46,8 @@ export const TwoFactorAuthComponent: React.FC<TwoFactorAuthProps> = ({
                     <div className="cr-email-form__options-group">
                         <div className="cr-email-form__option">
                             <div className="cr-email-form__option-inner">
-                                {title || '2FA verification'}
+                                <img className="cr-sign-in-form__image" src={logo} alt="logo" />
+
                                 <div className="cr-email-form__cros-icon" onClick={handleClose2fa}>
                                     <CloseIcon className="close-icon" />
                                 </div>

@@ -130,7 +130,7 @@ export const pt: LangType = {
     'page.body.landing.platformInfo.item.second.value': '$30M+',
     'page.body.landing.platformInfo.item.second.title': 'volume de negócios',
     'page.body.landing.platformInfo.item.third.value': '101',
-    'page.body.landing.platformInfo.item.third.title': 'Países atentidos',
+    'page.body.landing.platformInfo.item.third.title': 'Países atendidos',
 
     'page.body.landing.register.item.title': 'Não importa o seu nível de experiência',
     'page.body.landing.register.item.text': 'Fortem One offers an intuitive interface with real time orderbooks, charting tools, trade history, and a simple order process so you can trade from day one.',
@@ -709,6 +709,7 @@ export const pt: LangType = {
     'page.header.signUp.confirmPassword': 'Confirme sua senha',
     'page.header.signUp.confirmPassword.message.error': 'As senhas não são iguais',
     'page.header.signUp.referalCode': 'Código de indicação (caso tenha sido convidado)',
+    'page.header.signUp.referalCode.insert': 'Insira seu código de indicação (opcional)',
     'page.header.signUp.terms': 'Li e aceito os Termos de Uso e a Política de Privacidade',
     'page.header.signUp.modal.header': 'ÓTIMO. SEU CADASTRO FOI INICIADO.',
     
@@ -726,8 +727,8 @@ export const pt: LangType = {
     'page.resendConfirmation': 'Отправить подтверждение снова',
     'page.forgotPassword': 'Redefinir senha',
     'page.forgotPassword.message': 'Insira o email utilizado no cadastro para receber o link de redefinição de senha',
-    'page.password2fa': '2FA подтверждение',
-    'page.password2fa.message': 'Введите 2FA код с приложения',
+    'page.password2fa': '',
+    'page.password2fa.message': 'Digite os números gerados para ativar a autenticação',
     'page.forgotPassword.email': 'Email',
     'page.forgotPassword.send': 'Redefinir senha',
     'page.noDataToShow': 'Sem dados a exibir',
@@ -1116,7 +1117,7 @@ export const pt: LangType = {
 
     'server.internal_error': 'Внутренняя ошибка сервера',
 
-    'password.strength.tip.influence': 'Fatores quem influenciam na força da senha:',
+    'password.strength.tip.influence': 'Considere utilizar:',
     'password.strength.tip.number.characters': 'No mínimo 8 caracteres',
     'password.strength.tip.letter': 'No mínimo 1 letra Maiúscula e 1 minúscula',
     'password.strength.tip.digit': 'No mínimo 1 dígito',
@@ -1372,8 +1373,8 @@ export const pt: LangType = {
     'page.body.wallets.overview.action.transfer': 'Transferir',
     'page.body.wallets.overview.action.p2p': 'P2P',
     'page.body.wallets.overview.seach': 'Procurar',
-    'page.body.wallets.overview.nonZero': 'Ocultar saldos pequenos',
-    'page.body.wallets.transfers.transferType': 'Transfer Type',
+    'page.body.wallets.overview.nonZero': 'Ocultar pequenos saldos',
+    'page.body.wallets.transfers.transferType': 'Tipo de transferência',
     'page.body.wallets.transfers.from': 'De',
     'page.body.wallets.transfers.to': 'Para',
     'page.body.wallets.transfers.transferDetails': 'Detalhes da transferência',

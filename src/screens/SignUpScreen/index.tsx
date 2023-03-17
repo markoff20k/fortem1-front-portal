@@ -179,7 +179,7 @@ class SignUp extends React.Component<Props> {
                         emailLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.email'})}
                         passwordLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.password'})}
                         confirmPasswordLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.confirmPassword'})}
-                        referalCodeLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.referalCode'})}
+                        referalCodeLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.referalCode.insert'})}
                         usernameLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.username'})}
                         termsMessage={this.props.intl.formatMessage({ id: 'page.header.signUp.terms'})}
                         refId={refId}

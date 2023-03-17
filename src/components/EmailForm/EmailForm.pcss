@@ -37,6 +37,15 @@
   &__form-content {
     box-sizing: border-box;
     padding: var(--email-form-padding);
+
+    .passwordRecovery-icon {
+      display: flex;
+      justify: center;
+  
+    }
+
+
+
   }
 
   & > * {
@@ -73,7 +82,7 @@
   &__label {
     background: var(--input-background-color);
     border-radius: 2px;
-    color: var(--input-legend-color);
+    font-size: 12px;
     left: 10px;
     padding: 2px 6px;
     position: relative;
@@ -81,12 +90,20 @@
   }
 
   &__group--focused {
+
     .cr-email-form__label {
+      
       color: var(--input-legend-color-active);
+      background: var(--main-background-color);
+      font-size: 12px;
     }
 
     input {
-      border: 1px solid var(--input-border-color-active) !important;
+      border: 1px solid var(--input-border-color-active);
+      background: var(--input-background-color);
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--input-text-color);
     }
   }
 
@@ -95,7 +112,10 @@
     height: 100px;
     margin: 0 auto 20px auto;
     width: 50%;
+    
   }
+
+
 
   &__title {
     font-size: 18px;
@@ -124,10 +144,10 @@
 
     input {
       border: 1px solid var(--input-border-color);
-      border-radius: 4px;
+      border-radius: 12px;
       box-sizing: border-box;
       color: var(--input-text-color);
-      font-size: 12px;
+      font-size: 14px;
       height: 50px;
       padding: 0 10px;
       width: 100%;

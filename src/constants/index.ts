@@ -7,28 +7,20 @@ export const PG_TITLE_PREFIX = "Fortem One";
 export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isLight?: boolean): string[][] => {
     const routes = [
         ["page.header.navbar.trade", "/trading/", `trade${isLight ? "Light" : ""}`],
-        CanCan.checkAbilityByAction("read", "QuickExchange", abilities) && [
-            "page.header.navbar.quick.exchange",
-            "/quick-exchange",
-            `quick_exchange${isLight ? "Light" : ""}`,
-        ],
+        ["page.header.navbar.quick.exchange", "/quick-exchange", `quick_exchange${isLight ? "Light" : ""}`],
         ["page.header.navbar.wallets", "/wallets", `wallets${isLight ? "Light" : ""}`],
         ["page.header.navbar.openOrders", "/orders", `orders${isLight ? "Light" : ""}`],
         ["page.header.navbar.history", "/history", `history${isLight ? "Light" : ""}`],
-        CanCan.checkAbilityByAction("read", "P2P", abilities) && [
-            "page.header.navbar.p2p",
-            "/p2p",
-            `p2p${isLight ? "Light" : ""}`,
-        ],
+        ["page.header.navbar.p2p", "/p2p",`p2p${isLight ? "Light" : ""}`],
         ["page.header.navbar.internal.transfer", "/internal-transfer", `internal_transfer${isLight ? "Light" : ""}`],
-        ["page.header.navbar.api", "/docs", `api${isLight ? "Light" : ""}`],
+        // ["page.header.navbar.api", "/docs", `api${isLight ? "Light" : ""}`],
     ];
 
     const routesUnloggedIn = [
         ["page.header.navbar.signIn", "/signin", `signin${isLight ? "Light" : ""}`],
         ["page.header.signUp", "/signup", `signup${isLight ? "Light" : ""}`],
         ["page.header.navbar.trade", "/trading/", `trade${isLight ? "Light" : ""}`],
-        ["page.header.navbar.api", "/docs", `api${isLight ? "Light" : ""}`],
+        // ["page.header.navbar.api", "/docs", `api${isLight ? "Light" : ""}`],
     ];
 
     return isLoggedIn ? routes.filter((i) => Boolean(i)) : routesUnloggedIn;
@@ -56,7 +48,8 @@ export const DEFAULT_KYC_STEPS = ["email", "phone", "profile", "document", "addr
 
 export const DEFAULT_MARKET_HEADERS = ["Pair", "Price", "24h Change"];
 
-export const TRANSFER_TYPES_LIST = ["Spot", "P2P"];
+// export const TRANSFER_TYPES_LIST = ["Spot", "P2P"];
+export const TRANSFER_TYPES_LIST = ["Spot"];
 
 export const DEFAULT_ORDER_TYPES: DropdownElem[] = ["Limit", "Market"];
 export const AMOUNT_PERCENTAGE_ARRAY = [0.25, 0.5, 0.75, 1];

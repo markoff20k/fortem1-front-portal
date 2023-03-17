@@ -3,7 +3,8 @@ import React, { FormEvent } from 'react';
 import { Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { CustomInput } from '../CustomInput';
-import { CloseIcon } from '../../assets/images/CloseIcon';
+import { CloseIcon} from '../../assets/images/CloseIcon';
+import { PasswordRecovery } from '../../assets/images/PasswordRecovery';
 import { EMAIL_REGEX } from '../../helpers';
 import { GeetestCaptchaResponse } from '../../modules';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
@@ -114,6 +115,9 @@ export const EmailForm: React.FC<EmailFormProps> = (props) => {
                     </div>
                 )}
                 <div className="cr-email-form__form-content">
+                    <div className="cr-email-form__passwordRecovery-icon">
+                        <PasswordRecovery />
+                    </div>
                     <div className="cr-email-form__header">{message}</div>
                     <div className={emailGroupClass}>
                         <CustomInput

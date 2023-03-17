@@ -695,6 +695,7 @@ export const en = {
     'page.header.signUp.confirmPassword': 'Confirm Password',
     'page.header.signUp.confirmPassword.message.error': 'Passwords don\'t match',
     'page.header.signUp.referalCode': 'Referral Code',
+    'page.header.signUp.referalCode.insert': 'Insert your Referral Code (optional)',
     'page.header.signUp.terms': 'I have read and agree to the Terms of Service',
     'page.header.signUp.modal.header': 'VERIFY YOUR EMAIL ADDRESS',
     'page.header.signUp.modal.body': 'To complete registration, check for an ' +
@@ -711,7 +712,7 @@ export const en = {
     'page.resendConfirmation': 'Resend Confirmation',
     'page.forgotPassword': 'Forgot Password',
     'page.forgotPassword.message': 'Enter email to reset password',
-    'page.password2fa': '2FA verification',
+    'page.password2fa': '',
     'page.password2fa.message': 'Enter 2fa code from the app',
     'page.forgotPassword.email': 'Email',
     'page.forgotPassword.send': 'Send',
