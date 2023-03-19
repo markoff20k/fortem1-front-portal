@@ -61,3 +61,6 @@ export * from './SharedLayout';
 export * from './FortemMarketTable';
 export * from './ButtonFIAT';
 export * from './FiatMarketFill';
+export * from './NewHomeMarketTable';
+export * from './ConvertUsd';
+

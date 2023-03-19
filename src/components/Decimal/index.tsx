@@ -115,6 +115,27 @@ class Decimal extends React.Component<DecimalProps> {
         return isPositive ? result : `-${result}`;
     }
 
+    public static formatRemoveZero(value: DecimalProps['children'], precision: number, thousSep?: string, floatSep?: string) {
+		const strArr = this.format(value, precision > 19 ? 19 : precision, thousSep, floatSep).split('');
+
+		if (Number(value) !== 0) {
+			for (let i = strArr.length - 1; i >= 0; i--) {
+				if (strArr[i] === thousSep || strArr[i] === floatSep || strArr[i] === '.') {
+					strArr.pop();
+					if (!strArr.includes(thousSep || '.') && !strArr.includes(floatSep || '.')) {
+						break;
+					}
+				} else if (strArr[i] === '0') {
+					strArr.pop();
+				} else {
+					break;
+				}
+			}
+		}
+
+		return strArr.join('');
+	}
+
     public static getNumberBeforeDot(value: DecimalProps['children'], fixed: number, thousSep?: string, floatSep?: string) {
         return Decimal.format(value, 0, thousSep, floatSep);
     }

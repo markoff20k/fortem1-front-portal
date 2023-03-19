@@ -107,13 +107,13 @@ export const pt: LangType = {
     'page.body.charts.tabs.depth': 'Profundidade do Livro',
 
     /* Markets Table */
-	'page.body.marketsTable.filter.all': 'Todos os mercados',
+	'page.body.marketsTable.filter.all': 'Todos',
 	'page.body.marketsTable.header.pair': 'Mercado',
 	'page.body.marketsTable.header.lastPrice': 'Último preço',
-	'page.body.marketsTable.header.change': 'Variação % (24h)',
-	'page.body.marketsTable.header.high': 'Valor máximo (24h)',
-	'page.body.marketsTable.header.low': 'Valor mínimo (24h)',
-	'page.body.marketsTable.header.volume': 'Volume (24h)',
+	'page.body.marketsTable.header.change': 'Variação (24H)',
+	'page.body.marketsTable.header.high': 'Maior valor (24H)',
+	'page.body.marketsTable.header.low': 'Menor valor (24H)',
+	'page.body.marketsTable.header.volume': 'Volume financeiro (24H)',
 
 
     /* Landing */
@@ -169,7 +169,7 @@ export const pt: LangType = {
     'page.body.landing.footer.about': 'About us',
     'page.body.landing.footer.community': 'Community',
     'page.body.landing.footer.info': 'Info',
-    'page.body.landing.footer.rights': 'Baseapp © All rights reserved.',
+    'page.body.landing.footer.rights': 'Fortem Tech Inc © Todos os direitos reservados.',
 
     'pagy.body.footer.powered_by': 'Сделано',
 

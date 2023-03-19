@@ -66,6 +66,7 @@ const config = merge(commonConfig, {
                 exclude: /node_modules/,
             },
 
+            
 
                 //   {
                 //     // Match js, jsx, ts & tsx files

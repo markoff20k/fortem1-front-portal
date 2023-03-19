@@ -167,7 +167,7 @@ export const en = {
     'page.body.landing.footer.about': 'About us',
     'page.body.landing.footer.community': 'Community',
     'page.body.landing.footer.info': 'Info',
-    'page.body.landing.footer.rights': 'Baseapp © All rights reserved.',
+    'page.body.landing.footer.rights': 'Fortem Tech Inc © All rights reserved.',
 
     'pagy.body.footer.powered_by': 'Powered by',
 

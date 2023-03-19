@@ -13,6 +13,8 @@ import { rootSaga } from './modules';
 import { sagaMiddleware, store } from './store';
 
 import '@openware/react-components/build/index.css';
+// import 'cryptocoins-icons/webfont/cryptocoins.css';
+// import 'cryptocoins-icons/webfont/cryptocoins-colors.css';
 
 
 if (!Intl.PluralRules) {

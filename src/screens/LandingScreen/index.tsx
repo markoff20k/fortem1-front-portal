@@ -32,6 +32,9 @@ import FacebookIcon from 'src/assets/images/landing/social/Facebook.svg';
 import MediumIcon from 'src/assets/images/landing/social/Medium.svg';
 import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
+import { HomepageMarket } from '../../containers';
+
+
 interface ReduxProps {
     isLoggedIn: boolean;
     colorTheme: string;
@@ -256,6 +259,7 @@ class Landing extends React.Component<Props> {
                         {this.translate('page.body.landing.footer.rights')}
                     </span>
                 </div>
+                <HomepageMarket />
             </div>
         );
     }
