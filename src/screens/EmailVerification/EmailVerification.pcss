@@ -1,26 +1,44 @@
 .pg-emailverification-container {
   align-items: center;
-  background: url(assets/images/background.svg);
-  background-size: cover;
-  display: flex;
-  height: calc(100vh - calc(var(--gap) * 9.84));
-  justify-content: center;
+ 
+  
+  
+  /* height: calc(100vh - calc(var(--gap) * 9.84)); */
+  
   width: 100%;
+
+  font-family: 'Inter';
+  
+  background: url(assets/images/background-signin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom left;
+
+  display: flex;
+  height: calc(100vh - 120px);
+  
+  
+  overflow: hidden;
+    
+  justify-content: center;
+  
+  backdrop-filter: blur(16px) opacity(0.1);
 
   .pg-emailverification {
     align-items: center;
     background: var(--body-background-color);
-    border-radius: calc(var(--big-gap) * 0.05);
+    border-radius: 12px;
     box-shadow: 0 10px 15px var(--shadow-color-level-2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(var(--big-gap) * 7.07);
+    width: calc(var(--big-gap) * 8);
 
     &-title {
       align-items: center;
-      background: var(--subheader-background-color);
-      border-bottom: 2px solid var(--divider-color-level-2);
+      background: transparent;
+      border-bottom: none;
       color: var(--primary-text-color);
       display: flex;
       font-size: calc(var(--big-gap) * 0.23);
@@ -31,7 +49,7 @@
     }
 
     &-body {
-      background: var(--body-background-color);
+      background: transparent;
       display: flex;
       flex-direction: column;
       height: max-content;
@@ -40,12 +58,13 @@
 
       &-text {
         align-items: center;
-        color: var(--secondary-contrast-cta-color);
+        color: var(--primary-text-color);
         display: flex;
-        font-size: calc(var(--big-gap) * 0.27);
+        font-size: calc(var(--big-gap) * 0.23;
         justify-content: center;
         padding: 0 calc(var(--big-gap) * 0.9);
         text-align: center;
+        margin-bottom: 15px;
       }
 
       &-container {
@@ -61,11 +80,12 @@
           font-size: calc(var(--big-gap) * 0.23);
           outline: none;
           text-decoration: underline;
-          transition: 0.2s;
+          transition: 0.3s;
+          margin-top: 15px;
 
           &:hover {
             color: var(--primary-text-color);
-            transition: 0.2s;
+            transition: 0.3s;
           }
         }
       }

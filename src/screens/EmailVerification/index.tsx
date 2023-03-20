@@ -29,6 +29,9 @@ import {
 } from '../../modules';
 import { CommonError } from '../../modules/types';
 
+import logo from '../../assets/images/logo-icon-dark.svg';
+
+
 interface OwnProps {
     history: History;
     location: {
@@ -85,10 +88,12 @@ class EmailVerificationComponent extends React.Component<Props> {
         const text = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body' });
         const button = this.props.intl.formatMessage({ id: 'page.resendConfirmation' });
 
+
         return (
             <div className="pg-emailverification-container">
                 <div className="pg-emailverification">
-                    {!isMobileDevice && <div className="pg-emailverification-title">{title}</div>}
+                    {!isMobileDevice && <div className="pg-emailverification-title"> <img className="cr-sign-in-form__image" src={logo} alt="logo" /> </div>}
+                    
                     <div className="pg-emailverification-body">
                         <div className="pg-emailverification-body-text">{text}</div>
                         {this.renderCaptcha()}

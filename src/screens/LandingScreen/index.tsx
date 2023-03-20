@@ -33,6 +33,12 @@ import MediumIcon from 'src/assets/images/landing/social/Medium.svg';
 import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
 import { HomepageMarket } from '../../containers';
+// import { MarketOverviewList } from '../MarketOverviewList';
+
+
+import { Parallax } from 'react-scroll-parallax';
+import mobile from './fortem-mobile.png';
+
 
 
 interface ReduxProps {
@@ -260,6 +266,21 @@ class Landing extends React.Component<Props> {
                     </span>
                 </div>
                 <HomepageMarket />
+                {/* <h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
+										Tenha tudo 
+										<span className="color-accent">.<br /></span>
+										<span>Em uma única Plataforma</span>
+										<span className="color-accent">.<br /></span>
+										<span>Em um único App</span>
+										<span className="color-accent">.</span>
+										<span> Na palma da sua mão</span>
+										<span className="color-accent">...</span>
+
+				</h2> */}
+			
+			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+			</Parallax>
             </div>
         );
     }

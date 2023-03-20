@@ -13,6 +13,8 @@ import { languageMap } from './translations';
 import { SharedLayout } from './components';
 import WebSocketProvider from './websocket/WebSocket';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
 
@@ -121,6 +123,7 @@ export const App = () => {
     const isMobileDevice = useSelector(selectMobileDeviceState);
 
     return (
+        <ParallaxProvider>
         <IntlProvider locale={lang} messages={getTranslations(lang, isMobileDevice)} key={lang}>
             <Router history={browserHistory}>
                 <ErrorWrapper>
@@ -132,5 +135,6 @@ export const App = () => {
                 </ErrorWrapper>
             </Router>
         </IntlProvider>
+        </ParallaxProvider>
     );
 };
