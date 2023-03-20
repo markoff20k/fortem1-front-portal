@@ -77,9 +77,9 @@ export const DEFAULT_MARKET = {
 export const colors = {
     light: {
         chart: {
-            primary: "#fff",
+            primary: "#F5F5F5",
             up: "#54B489",
-            down: "#E85E59",
+            down: "#F15B5B",
         },
         navbar: {
             sun: "var(--icons)",
