@@ -12,6 +12,14 @@ import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 
 import logo from '../../assets/images/logo-icon-dark.svg';
 
+// import { FaBeer } from 'react-icons/fa';
+// import { BsPerson } from "react-icons/bs"; 
+// import { FaLock } from "react-icons/fa"; 
+import { MdLockOutline, MdMailOutline } from "react-icons/md";
+
+
+
+
 export interface SignInProps {
     labelSignIn?: string;
     labelSignUp?: string;
@@ -222,6 +230,7 @@ const SignIn: React.FC<SignInProps> = ({
                             handleFocusInput={() => handleFieldFocus('email')}
                             classNameLabel="cr-sign-in-form__label"
                             autoFocus={!isMobileDevice}
+                            pre={<MdMailOutline />}
                         />
                         {emailError && <div className={'cr-sign-in-form__error'}>{emailError}</div>}
                     </div>
@@ -239,6 +248,7 @@ const SignIn: React.FC<SignInProps> = ({
                             handleFocusInput={() => handleFieldFocus('password')}
                             classNameLabel="cr-sign-in-form__label"
                             autoFocus={false}
+                            pre={<MdLockOutline />}
                         />
                         {passwordError && <div className={'cr-sign-in-form__error'}>{passwordError}</div>}
                     </div>

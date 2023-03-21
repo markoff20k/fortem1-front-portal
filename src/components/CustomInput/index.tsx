@@ -20,6 +20,7 @@ export interface CustomInputProps {
     labelVisible?: boolean;
     autoComplete?: string;
     name?: string;
+    pre?: JSX.Element | null;
 }
 
 interface OnChangeEvent {
@@ -47,6 +48,7 @@ class CustomInput extends React.Component<Props> {
             onKeyPress,
             autoComplete,
             name,
+            pre,
         } = this.props;
 
         return (
@@ -56,6 +58,7 @@ class CustomInput extends React.Component<Props> {
                         {(labelVisible || inputValue) && (label || defaultLabel)}
                     </label>
                     <InputGroup size="lg">
+                        <InputGroup.Text id="basic-addon1">{pre}</InputGroup.Text>
                         <FormControl
                             size="lg"
                             type={type}

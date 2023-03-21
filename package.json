@@ -53,6 +53,7 @@
         "react-ga": "^2.6.0",
         "react-google-recaptcha": "^1.0.4",
         "react-grid-layout": "^0.18.3",
+        "react-icons": "^4.8.0",
         "react-intl": "^5.8.8",
         "react-maskinput": "^1.0.1",
         "react-paginate": "^8.1.4",

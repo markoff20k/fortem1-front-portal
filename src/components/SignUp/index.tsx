@@ -21,6 +21,7 @@ import { LegalDocuments } from '../../containers';
 
 import logo from '../../assets/images/logo-icon-dark.svg';
 
+import { MdOutlinePersonOutline, MdLockOutline, MdMailOutline } from "react-icons/md";
 
 export interface SignUpFormProps {
     isLoading?: boolean;
@@ -177,6 +178,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                     classNameLabel="cr-sign-up-form__label"
                     classNameInput="cr-sign-up-form__input"
                     autoFocus={false}
+                    pre={<MdLockOutline />}
                 />
                 {password ? (
                     <PasswordStrengthMeter
@@ -315,6 +317,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 classNameLabel="cr-sign-up-form__label"
                                 classNameInput="cr-sign-up-form__input"
                                 autoFocus={!isMobileDevice}
+                                pre={<MdOutlinePersonOutline />}
                             />
                             {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
                                 <div className="cr-sign-up-form__error">
@@ -338,6 +341,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={!isUsernameEnabled() && !isMobileDevice}
+                            pre={<MdMailOutline />}
                         />
                         {emailError && <div className="cr-sign-up-form__error">{emailError}</div>}
                     </div>
@@ -357,6 +361,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={false}
+                            pre={<MdLockOutline />}
                         />
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
                     </div>
