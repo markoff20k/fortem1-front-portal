@@ -1,16 +1,19 @@
 /* stylelint-disable */
 .pg-mobile-app {
   .cr-mobile-email-verification {
+    font-family: 'Inter';
     .cr-mobile-modal__block--open {
       height: 50%;
       top: 50vh;
     }
     .cr-mobile-modal__header {
+      border-bottom: none;
       &-title {
         font-size: 12px;
         flex: 2;
         color: var(--primary-text-color);
         text-align: center;
+        border-bottom: none;
       }
       &-close {
         flex: 0;
@@ -30,7 +33,8 @@
         &-body {
           &-text {
             padding: 0 12px;
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: 200;
             color: var(--primary-text-color);
             text-align: center;
           }
@@ -38,6 +42,7 @@
           &-container {
             &-button {
               background: var(--button-primary-cta-background-color);
+              margin-top: 20px;
             }
           }
         }
@@ -47,8 +52,10 @@
       button {
         margin: 0 13px;
         font-size: 14px;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         color: var(--primary-text-color);
+        border-radius: 12px;
+        margin-top: 10px;
       }
     }
   }
