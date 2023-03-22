@@ -6,7 +6,7 @@ interface PasswordRecoveryIconProps {
 
 export const PasswordRecovery: React.FC<PasswordRecoveryIconProps> = (props: PasswordRecoveryIconProps) => {
     return (
-<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_352_8893)">
 <rect width="140" height="140" rx="70" fill="#F2F5F8"/>
 <circle cx="24" cy="30" r="40" fill="#F2F5F8"/>

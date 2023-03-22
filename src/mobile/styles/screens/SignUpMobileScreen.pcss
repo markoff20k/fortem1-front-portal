@@ -6,9 +6,14 @@
     min-height: auto;
     padding-bottom: 50px;
 
+    .pg-sign-up-screen__container {
+      background: transparent;
+      margin-top: 0px;
+    }
+
     .pg-sign-up-screen__login {
       text-align: center;
-      margin-top: 12px;
+      /* margin-top: 12px; */
       font-size: 12px;
 
       &-button {
@@ -52,17 +57,39 @@
         font-size: 12px;
 
         input {
-          font-size: 16px;
+          font-size: 12px;
           &::placeholder {
             font-size: 14px;
           }
+        }
+
+        label {
+          font-size: 12px;
+          margin-left: 2%;  
         }
       }
     }
   }
 
   .cr-sign-up-form input:focus {
-    border-width: 2px;
-    border-color: var(--button-primary-cta-background-color);
+    /* border-width: 2px;
+    border-color: var(--button-primary-cta-background-color); */
+    .custom-input {
+
+      input {
+
+        font-size: 12px;
+      }
+
+      .input-group {
+        input {
+
+          font-size: 12px;
+        }
+      }
+
+
+    }
+
   }
 }

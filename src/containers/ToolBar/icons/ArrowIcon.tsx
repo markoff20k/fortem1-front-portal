@@ -7,7 +7,7 @@ interface Props {
 export class ArrowIcon extends React.Component<Props> {
     public render() {
         const {
-            color = '#737F92',
+            color = '#494949',
         } = this.props;
 
         return (

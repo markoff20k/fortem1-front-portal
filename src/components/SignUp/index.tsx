@@ -366,7 +366,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
                     </div>
                     
-                    <details>
+                    {/* <details>
                         <summary>{formatMessage({ id: 'page.header.signUp.referalCode' })}</summary>
                       <div
                         className={cr('cr-sign-up-form__group', {
@@ -386,7 +386,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         />
                     </div>
 
-            </details>
+            </details> */}
                     <Form className="cr-sign-up-form__group" onClick={clickCheckBox}>
                         <Form.Check
                             type="checkbox"
@@ -409,7 +409,8 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             {isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Sign up'}
                         </Button>
                     </div>
-                    {isMobileDevice && renderLogIn()}
+                    {/* {isMobileDevice && renderLogIn()} */}
+                    {renderLogIn()}
                 </div>
             </div>
         </form>

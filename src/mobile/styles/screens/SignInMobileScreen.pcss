@@ -9,9 +9,21 @@
       color: var(--primary-text-color);
     }
   }
+
   .pg-sign-in-screen {
     background: none;
     height: unset;
+
+    .pg-sign-in-screen__container {
+      background: transparent;
+      margin-top: 0px;
+    }
+
+
+    .pg-sign-up-screen__login {
+      font-size: 12px;
+    }
+
 
     .cr-email-form__options-group {
       display: none;
@@ -47,8 +59,8 @@
       position: static;
     }
     .cr-sign-in-form__group--focused input {
-      border-width: 2px;
-      border-color: var(--button-primary-cta-background-color);
+      /* border-width: 2px;
+      border-color: var(--button-primary-cta-background-color); */
     }
 
     .cr-sign-in-form__button-wrapper {
@@ -76,10 +88,16 @@
       font-size: 12px;
 
       input {
-        font-size: 16px;
+        font-size: 12px;
         &::placeholder {
           font-size: 14px;
         }
+      }
+
+      label {
+        font-size: 12px;
+        margin-left: 2%;
+
       }
     }
   }

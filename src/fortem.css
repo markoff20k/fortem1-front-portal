@@ -5,6 +5,15 @@
     background-color: var(--input-background-color) !important;
     white-space: nowrap;
     font-size: 1.5rem ;
+    font-weight: 200;
     color: var(--input-text-color) !important;
 }
 
+.pg-captcha--geetest {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    align-items: center !important;
+
+
+}

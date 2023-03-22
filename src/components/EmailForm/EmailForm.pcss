@@ -80,31 +80,12 @@
   }
 
   &__label {
-    background: var(--input-background-color);
-    border-radius: 2px;
-    font-size: 12px;
-    left: 10px;
-    padding: 2px 6px;
-    position: relative;
-    top: 16px;
+
   }
 
   &__group--focused {
 
-    .cr-email-form__label {
-      
-      color: var(--input-legend-color-active);
-      background: var(--main-background-color);
-      font-size: 12px;
-    }
 
-    input {
-      border: 1px solid var(--input-border-color-active);
-      background: var(--input-background-color);
-      border-radius: 12px;
-      font-size: 14px;
-      color: var(--input-text-color);
-    }
   }
 
   &__image {
@@ -138,7 +119,7 @@
     justify-content: flex-end;
   }
 
-  &__input {
+  /* &__input {
     margin-top: 8px;
     width: 100%;
 
@@ -152,7 +133,7 @@
       padding: 0 10px;
       width: 100%;
     }
-  }
+  } */
 
   &__recaptcha {
     display: flex;
@@ -193,8 +174,4 @@
     }
   }
 
-  .cr-email-form__group--focused input:focus {
-    border-color: var(--button-primary-cta-background-color);
-    border-width: 2px;
-  }
 }

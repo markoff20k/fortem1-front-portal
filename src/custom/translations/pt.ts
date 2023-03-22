@@ -118,7 +118,7 @@ export const pt: LangType = {
 
     /* Landing */
     'page.body.landing.header.button1': 'Perfil',
-    'page.body.landing.header.button2': 'Acessar plataforma',
+    'page.body.landing.header.button2': 'Entrar',
     'page.body.landing.header.button3': 'Criar conta',
 
     'page.body.landing.marketInfo.title.text1': 'Bem-vindo à Fortem One.',
@@ -922,7 +922,7 @@ export const pt: LangType = {
     'identity.password.user_doesnt_exist': 'Пользователь не существует',
     'identity.user.passwords_doesnt_match': 'Пароли не совпадают',
     'identity.user.utilized_token': 'JWT уже был использован',
-    'identity.session.invalid_login_params': 'Неправильный адрес электронной почты или пароль',
+    'identity.session.invalid_login_params': 'Email ou senha inválidos',
     'identity.session.invalid': 'Неверный сеанс',
     'identity.captcha.required': 'требуется captcha_response',
     'identity.captcha.mandatory_fields': 'Обязательные поля должны быть заполнены',

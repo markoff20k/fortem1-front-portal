@@ -9,6 +9,9 @@ import { EMAIL_REGEX } from '../../helpers';
 import { GeetestCaptchaResponse } from '../../modules';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 
+
+import { MdMailOutline } from "react-icons/md";
+
 export interface EmailFormProps {
     title?: string;
     buttonLabel?: string;
@@ -131,6 +134,7 @@ export const EmailForm: React.FC<EmailFormProps> = (props) => {
                             classNameLabel="cr-email-form__label"
                             classNameInput="cr-email-form__input"
                             autoFocus={!isMobileDevice}
+                            pre={<MdMailOutline  />}
                         />
                         {emailError && <div className="cr-email-form__error">{emailError}</div>}
                     </div>

@@ -2,24 +2,32 @@
   font-family: 'Inter';
   
   background: url(assets/images/background-signin.png);
-  background-size: cover;
+  background-size: 220%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom left;
 
   display: flex;
-  /* height: calc(100vh - 101px); */
 
-  height: 100vh;
+  height: calc(100vh - 102px);
+
   max-width: 100vw;
-  overflow: hidden;
-
+  /* overflow: hidden; */
    
   justify-content: center;
+  
+  @media screen and (max-width: 480px) {
+
+    padding: 0;
+
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    background-size: cover;
 
 
-  -webkit-backdrop-filter: blur(60px) opacity(.81);
-  backdrop-filter: blur(60px) opacity(.81);
+  }
 
   .pg-sign-up-screen__container {
     background: transparent;
@@ -28,16 +36,28 @@
     width: 480px;
 
     height: 90%;
-    /* max-height: calc(100vh - 200px); */
+    
     
     @media screen and (max-width: 480px) {
       margin-top: 0;
       margin-bottom: 0;
       max-width: 100vw;
+      padding: 0;
 
     }
     
 
+  }
+
+  .pg-sign-up-screen__login {
+    text-align: center;
+    /* margin-top: 12px; */
+    font-size: 12px;
+
+    &-button {
+      padding-left: 2px;
+      color: var(--button-primary-cta-background-color);
+    }
   }
 
   .cr-sign-up-form {
@@ -75,10 +95,10 @@
 
       &--errored {
         .cr-sign-up-form__label {
-          color: var(--input-border-color-error);
+          color: var(--system-red);
         }
 
-        input {
+        .input-group {
           border-color: var(--input-border-color-error) !important;
         }
       }
@@ -96,6 +116,7 @@
     }
 
     &__title {
+
       background: transparent;
       width: 100%;
       max-height: 120px;
@@ -115,13 +136,13 @@
         margin-top: 0;
         margin-bottom: 0;
       }
-    
+
       img {
         width: 60px;
         margin-bottom: 20px;
     
-        @media screen and (max-width: 1440px) {
-          width: 30px;
+        @media screen and (max-width: 768px) {
+          width: 40px;
           margin-bottom: 15px;
         }
       }
@@ -134,10 +155,10 @@
         width: 80%;
 
     
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 480px) {
           font-size: 14px;
-          font-weight: 500;
-          line-height: 20px;
+          font-weight: 400;
+          line-height: 18px;
         }
       }
 
@@ -213,74 +234,3 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .pg-sign-up-screen {
-    .pg-sign-up-screen__container {
-      margin: calc(var(--gap) * 3.33) calc(var(--gap) * 1.66) 0;
-      width: 100%;
-    }
-
-    .cr-sign-up-form {
-      margin: 0 auto;
-      min-height: calc(var(--big-gap) * 10.8);
-
-      &__button {
-        font-size: calc(var(--gap) * 2);
-        margin-top: calc(var(--gap) * 4);
-      }
-
-      &__title {
-        background: transparent;
-        margin-top: calc(var(--gap) * 2);
-      }
-
-      &__form-content {
-        top: calc(var(--gap) * 10.8);
-      }
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .pg-sign-up-screen {
-      .pg-sign-up-screen__container {
-        margin: 0;
-        width: 100%;
-      }
-  
-      .cr-sign-up-form {
-        margin: 0 auto;
-        min-height: calc(var(--big-gap) * 10.8);
-  
-        &__button {
-          font-size: calc(var(--gap) * 2);
-          margin-top: calc(var(--gap) * 4);
-        }
-  
-        &__title {
-          background: transparent;
-          margin-top: calc(var(--gap) * 0.5);
-        }
-  
-        &__form-content {
-          /* top: calc(var(--gap) * 10.8); */
-        }
-      }
-    }
-  }
-
-
-  .cr-modal {
-    .cr-modal__container {
-      font-size: calc(var(--gap) * 1.5);
-      width: 100%;
-
-      .cr-modal__container-header {
-        font-size: calc(var(--gap) * 1.5);
-      }
-
-      .cr-modal__container-content {
-        padding: 0 calc(var(--gap) * 3.33);
-      }
-    }
-  }
-}

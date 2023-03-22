@@ -139,8 +139,8 @@ export const MarketsList = props => {
 								</svg>
 
 								<span style={{ color: '#fff', marginLeft: 8 }}>{marketName[0]}</span>
-								<span style={{ color: '#737f92' }}>/</span>
-								<span style={{ color: '#737f92' }}>{marketName[1]}</span>
+								<span style={{ color: '#494949' }}>/</span>
+								<span style={{ color: '#494949' }}>{marketName[1]}</span>
 							</div>
 						),
 						last: (
