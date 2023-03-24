@@ -89,7 +89,7 @@ import {
 
 import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
-// import App from "../../templates/template_react_ft_axies/src/App";
+
 
 interface ReduxProps {
     colorTheme: string;

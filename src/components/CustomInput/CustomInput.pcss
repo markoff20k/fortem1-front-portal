@@ -1,16 +1,18 @@
 .custom-input {
   input {
     border-color: var(--input-border-color);
+    
   }
 
   label {
     font-size: calc(var(--gap) * 2);
-    left: 11.5%;
-    margin-top: -12px;
+    left: 12%;
+    argin-top: 2px;
     padding: 0 calc(var(--gap) * 0.7);
     position: absolute;
     /* top: 0; */
     z-index: 5;
+    background: inherit;
   }
 
   input,
@@ -21,6 +23,12 @@
 
     &::placeholder {
       color: #c0c0c0;
+    }
+
+    label {
+
+      background: var(--input-background-color) !important;
+
     }
   }
 
@@ -50,7 +58,7 @@
   font-size: 12px;
 
   input {
-    font-size: 16px;
+    font-size: 14px;
 
     &::placeholder {
       font-size: 14px;

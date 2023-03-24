@@ -538,11 +538,11 @@ export const pt: LangType = {
     'success.api_keys.updated': 'API ключ успешно обновлен',
     'success.api_keys.deleted': 'API ключ успешно удален',
 
-    'page.body.profile.header.accountActivity': 'Активность аккаунта',
+    'page.body.profile.header.accountActivity': 'Atividades da conta',
     'page.body.profile.header.accountActivity.content.date': 'Data',
     'page.body.profile.header.accountActivity.content.addressip': 'Endereço IP',
     'page.body.profile.header.accountActivity.content.action': 'Atividade',
-    'page.body.profile.header.accountActivity.content.result': 'Результат',
+    'page.body.profile.header.accountActivity.content.result': 'Resultado',
     'page.body.profile.header.accountActivity.content.userAgent': 'Dispositivo',
 
     'page.body.profile.content.action.login': 'Acessar plataforma',
@@ -560,13 +560,13 @@ export const pt: LangType = {
 
     /* Profile - verification */
     'page.body.profile.verification.email.title': 'Endereço de email válido',
-    'page.body.profile.verification.email.subtitle': 'Saques permitidos',
+    'page.body.profile.verification.email.subtitle': 'Acesso à plataforma liberado',
     'page.body.profile.verification.email.rejected.tooltip': 'Seu endereço de email foi recusado',
     'page.body.profile.verification.phone.title': 'Verify Phone number',
     'page.body.profile.verification.phone.subtitle': 'Para habilitar depósitos e transações financeiras',
     'page.body.profile.verification.phone.rejected.tooltip': 'Your phone was rejected',
-    'page.body.profile.verification.profile.title': 'Conclua seu cadastro',
-    'page.body.profile.verification.profile.subtitle': ' ',
+    'page.body.profile.verification.profile.title': 'Informações pessoais',
+    'page.body.profile.verification.profile.subtitle': 'Depósitos, saques e transações liberados',
     'page.body.profile.verification.profile.rejected.tooltip': 'Your profile was rejected',
     'page.body.profile.verification.document.title': 'Validar sua identificação',
     'page.body.profile.verification.document.subtitle': 'Increase Withdrawal limit to 10 BTC',
@@ -574,11 +574,11 @@ export const pt: LangType = {
     'page.body.profile.verification.address.title': 'Verify Proof of residence',
     'page.body.profile.verification.address.subtitle': 'Increase Withdrawal limit to 100 BTC',
     'page.body.profile.verification.address.rejected.tooltip': 'Seu comprovante de residência foi recusado',
-    'page.body.profile.verification.pending': 'Pending',
+    'page.body.profile.verification.pending': 'gEm análise',
     'page.body.profile.verification.reverify': 'Reverify',
-    'page.body.profile.verification.verify': 'Verify',
-    'page.body.profile.verification.verified': 'Verified',
-    'page.body.profile.verification.progress.level': 'Level',
+    'page.body.profile.verification.verify': 'Verificar',
+    'page.body.profile.verification.verified': 'Verificado',
+    'page.body.profile.verification.progress.level': 'Nível',
     'page.body.profile.verification.progress.tooltip.email.default': 'Email address to to get level 1 and allow Withdrawal',
     'page.body.profile.verification.progress.tooltip.email.rejected': 'Your email was rejected',
     'page.body.profile.verification.progress.tooltip.email.pending': 'Email address verification may take 1-3 business days.',
@@ -599,7 +599,7 @@ export const pt: LangType = {
     /* KYC */
     'page.confirm.title.email': 'Valide seu email',
     'page.confirm.title.phone': 'valide seu número de telefone',
-    'page.confirm.title.profile': 'Valide seu perfil',
+    'page.confirm.title.profile': 'Valide sua identificação',
     'page.confirm.title.document': 'Get Verified your Government Issued ID ',
     'page.confirm.title.address': 'Residence verification',
     'page.confirm.title.warning': 'Por favor, insira as informações exatamente como constam em seu documento de identificação',
@@ -1419,6 +1419,6 @@ export const pt: LangType = {
 	'page.marketsLists.markets.all': 'Todos',
 	'page.marketsLists.input.search.placeholder': 'Procurar',
 
-    
+    'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 
 };

@@ -546,15 +546,15 @@ export const en = {
 
 
     /* Profile - verification */
-    'page.body.profile.verification.email.title': 'Email address',
-    'page.body.profile.verification.email.subtitle': 'Withdrawal allowed',
+    'page.body.profile.verification.email.title': 'Valid email address',
+    'page.body.profile.verification.email.subtitle': 'Sign In allowed',
     'page.body.profile.verification.email.rejected.tooltip': 'Your email was rejected',
     'page.body.profile.verification.phone.title': 'Verify Phone number',
     'page.body.profile.verification.phone.subtitle': 'To allow Deposits and Trades',
     'page.body.profile.verification.phone.rejected.tooltip': 'Your phone was rejected',
-    'page.body.profile.verification.profile.title': 'Complete your profile',
-    'page.body.profile.verification.profile.subtitle': ' ',
-    'page.body.profile.verification.profile.rejected.tooltip': 'Your profile was rejected',
+    'page.body.profile.verification.profile.title': 'Personal information',
+    'page.body.profile.verification.profile.subtitle': 'Deposits, withdrawals and transactions allowed',
+    'page.body.profile.verification.profile.rejected.tooltip': 'Your personal information was rejected',
     'page.body.profile.verification.document.title': 'Verify your Identity',
     'page.body.profile.verification.document.subtitle': 'Increase Withdrawal limit to 10 BTC',
     'page.body.profile.verification.document.rejected.tooltip': 'Your identity was rejected',
@@ -1393,5 +1393,7 @@ export const en = {
     'order.action_level.not_permitted': 'Action is not permitted for your user verification level',
 
     'page.body.profile.whitelisted.add.beneficiary.2fa': 'Enter 2fa code from the Google Authenticator app',
-    'page.body.profile.whitelisted.paste': 'Paste'
+    'page.body.profile.whitelisted.paste': 'Paste',
+
+    'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 };

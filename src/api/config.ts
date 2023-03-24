@@ -4,10 +4,10 @@ const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'wss:
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `https://www.fortem1.com.br/api/v2/barong`,
-        tradeUrl: `https://www.fortem1.com.br/api/v2/peatio`,
-        applogicUrl: `https://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `wss://www.fortem1.com.br/api/v2/ranger`,
+        authUrl: `http://www.fortem1.com.br/api/v2/barong`,
+        tradeUrl: `http://www.fortem1.com.br/api/v2/peatio`,
+        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `ws://www.fortem1.com.br/api/v2/ranger`,
         finexUrl: `${hostUrl}/api/v2/finex`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
@@ -21,7 +21,7 @@ export const defaultConfig: Config = {
     captchaLogin: false,
     usernameEnabled: true,
     gaTrackerKey: '',
-    minutesUntilAutoLogout: '60',
+    minutesUntilAutoLogout: '5',
     msAlertDisplayTime: '5000',
     msPricesUpdates: '500',
     sessionCheckInterval: '5000',
@@ -38,9 +38,9 @@ export const defaultConfig: Config = {
         'document'
     ],
     captcha_type: 'geetest',
-    password_min_entropy: 0,
+    password_min_entropy: 8,
     wizard_step: 'false',
-    barong_upload_size_min_range: '1',
+    barong_upload_size_min_range: '0.1',
     barong_upload_size_max_range: '20',
     themeSwitcher: 'visible',
     peatio_platform_currency: 'brl',
