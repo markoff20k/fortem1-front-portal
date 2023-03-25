@@ -138,11 +138,11 @@ export const pt: LangType = {
 
     'page.body.landing.features.title': 'Fortem One platform features',
     'page.body.landing.features.features.item1.title': 'Exchange',
-    'page.body.landing.features.features.item2.title': 'Order Types',
-    'page.body.landing.features.features.item3.title': 'Customizable Interface',
-    'page.body.landing.features.features.item4.title': 'Security',
-    'page.body.landing.features.features.item5.title': 'Community',
-    'page.body.landing.features.features.item6.title': 'Industry leading API',
+    'page.body.landing.features.features.item2.title': 'Tipos de Ordens',
+    'page.body.landing.features.features.item3.title': 'Interface amigável e customizável',
+    'page.body.landing.features.features.item4.title': 'Segurança',
+    'page.body.landing.features.features.item5.title': 'Cuminidade',
+    'page.body.landing.features.features.item6.title': 'API para todas as necessidades',
     'page.body.landing.features.features.item1.text': 'Baseapp offers the most liquid order book in the world, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.',
     'page.body.landing.features.features.item2.text': 'Baseapp offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.',
     'page.body.landing.features.features.item3.text': 'Organize your workspace according to your needs: compose your layout, choose between themes, set up notifications and data preferences.',
@@ -175,9 +175,9 @@ export const pt: LangType = {
 
     /* Error pages */
 
-    'page.body.restricted': 'Страница не найдена',
-    'page.body.500.maintenance': 'Платформа находится на обслуживании',
-    'page.body.500.availableSoon': 'Платформа будет доступна как можно скорее',
+    'page.body.restricted': 'Acesso restrito',
+    'page.body.500.maintenance': 'Em manutenção. Acesse após alguns instantes',
+    'page.body.500.availableSoon': 'Em desenvolvimento',
 
 
     /* Wallets */
@@ -215,19 +215,19 @@ export const pt: LangType = {
     'page.body.wallets.tabs.deposit.min.deposit': 'Min. deposit:',
     'page.body.wallets.tabs.deposit.min.amount.tip': 'To create a deposit request the amount should be ≥ the minimum deposit amount',
 
-    'page.body.wallets.tabs.deposit.fiat.message1': 'Вы можете внести депозит в банке, используя следующие реквизиты',
-    'page.body.wallets.tabs.deposit.fiat.message2': 'Пожалуйста, используйте предоставленную информацию для завершения банковского платежа. Ваш депозит станет доступным на протяжении 2-х рабочих дней.',
-    'page.body.wallets.tabs.deposit.fiat.bankName': 'Название банка',
-    'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Номер счета',
-    'page.body.wallets.tabs.deposit.fiat.accountName': 'Имя счета',
+    'page.body.wallets.tabs.deposit.fiat.message1': 'Depósito via PIX',
+    'page.body.wallets.tabs.deposit.fiat.message2': 'Deposite o valor na mesma hora, em qualqer horário ou dia da semana. Seu depósito será creditado na sua conta digital em até 1 hora.',
+    'page.body.wallets.tabs.deposit.fiat.bankName': 'Nome do Banco',
+    'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Número da conta',
+    'page.body.wallets.tabs.deposit.fiat.accountName': 'Nome',
     'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Номер телефона',
     'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Ваш уникальный код',
-    'page.body.wallets.table.pending': 'Обрабатывается',
-    'page.body.wallets.table.confirming': 'Подтверждается',
-    'page.body.wallets.table.rejected': 'Отклонен',
-    'page.body.wallets.table.accepted': 'Accepted',
-    'page.body.wallets.table.skipped': 'Skipped',
-    'page.body.wallets.table.under_review': 'Under Review',
+    'page.body.wallets.table.pending': 'Aguardando',
+    'page.body.wallets.table.confirming': 'Em confirmação',
+    'page.body.wallets.table.rejected': 'Recusado',
+    'page.body.wallets.table.accepted': 'Processado',
+    'page.body.wallets.table.skipped': 'Em confirmação',
+    'page.body.wallets.table.under_review': 'Em análise',
     'page.body.wallets.tabs.deposit.fiat.admin': 'Для того, чтобы вывести эту валюту, обратитесь к администратору!',
 
 	'page.body.wallets.tabs.withdraw': 'Sacar',
@@ -501,7 +501,7 @@ export const pt: LangType = {
     'page.body.profile.payment.modal.body.popular': 'POPULAR',
     'page.body.profile.payment.modal.error.empty': 'Please enter {name}',
 
-    'page.body.profile.apiKeys.header': 'Мои API ключи',
+    'page.body.profile.apiKeys.header': 'Minhas chaves de API',
     'page.body.profile.apiKeys.header.create': 'Создать',
 
     'page.body.profile.apiKeys.noOtp': 'Пожалуйста, включите двухфакторную аутентификацию',
@@ -928,7 +928,7 @@ export const pt: LangType = {
     'identity.captcha.mandatory_fields': 'Обязательные поля должны быть заполнены',
     'identity.session.not_active': 'Ваш аккаунт не активен',
     'identity.session.banned': 'Ваш аккаунт заблокирован',
-    'identity.session.invalid_params': 'Неправильный адрес электронной почты или пароль',
+    'identity.session.invalid_params': 'Email e/ou senha inválidos',
     'identity.session.missing_otp': 'Отсутствует код 2FA',
     'identity.session.invalid_otp': 'Код 2FA недействителен',
     'username.taken': 'Este username já está sendo utilizado',

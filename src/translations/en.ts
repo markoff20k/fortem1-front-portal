@@ -203,8 +203,8 @@ export const en = {
     'page.body.wallets.warning.deposit.kyc.hint': `Your current verification level doesn't allow you to make a deposit. Please, submit the required KYC information to get deposit permission.`,
     'page.body.wallets.warning.deposit.verification.button': 'Verify Your Account',
 
-    'page.body.wallets.tabs.deposit.fiat.message1': 'Deposit using bank transfer',
-    'page.body.wallets.tabs.deposit.fiat.message2': 'Please use the following credentials to initiate your bank transfer. Your deposit will be reflected in your account within 2 business days.',
+    'page.body.wallets.tabs.deposit.fiat.message1': 'Deposit using PIX',
+    'page.body.wallets.tabs.deposit.fiat.message2': 'Your deposit will be reflected in your digital account within 1 hour.',
     'page.body.wallets.tabs.deposit.fiat.bankName': 'Bank Name',
     'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Account number',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Account name',
