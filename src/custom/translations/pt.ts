@@ -440,7 +440,7 @@ export const pt: LangType = {
     'page.body.profile.tabs.security': 'Segurança',
     'page.body.profile.tabs.api_keys': 'Chaves de API',
     'page.body.profile.tabs.payment': 'Payment',
-    'page.body.profile.tabs.referral': 'Indicação',
+    'page.body.profile.tabs.referral': 'Indicações',
 
     'page.body.profile.header.account.username': 'Nome',
     'page.body.profile.header.account.content.password': 'Senha',
@@ -480,11 +480,11 @@ export const pt: LangType = {
     'page.body.profile.header.account.profile.identity.title': 'Личность - подтверждено',
     'page.body.profile.header.account.profile.identity.message': 'Вывод средств разрешен',
 
-    'page.body.profile.referral.invite': 'Invite Friends.',
-    'page.body.profile.referral.earn': 'Earn Crypto Together',
-    'page.body.profile.referral.commission': 'Earn up to 40% commission every time your friends make a trade',
-    'page.body.profile.header.referralProgram': 'Реферальная программа',
-    'page.body.profile.content.copyLink': 'Скопировать',
+    'page.body.profile.referral.invite': 'Convide seus amigos.',
+    'page.body.profile.referral.earn': 'ganhe tokens juntos',
+    'page.body.profile.referral.commission': 'Receba até 30% em comissão quando seus amigos negociarem transações',
+    'page.body.profile.header.referralProgram': 'Link de indicação',
+    'page.body.profile.content.copyLink': 'Copiar',
 
     'page.body.profile.payment.title': 'P2P payment methods',
     'page.body.profile.payment.desc': 'When you sell cryptocurrencies, the payment method added will be displayed to buyer as options to accept payment, please ensure that the account owner’s name is consistent with your verified name. You can add up to 20 payment methods.',
@@ -504,9 +504,9 @@ export const pt: LangType = {
     'page.body.profile.apiKeys.header': 'Minhas chaves de API',
     'page.body.profile.apiKeys.header.create': 'Создать',
 
-    'page.body.profile.apiKeys.noOtp': 'Пожалуйста, включите двухфакторную аутентификацию',
+    'page.body.profile.apiKeys.noOtp': 'Por favor, habilite seu 2FA',
     'page.body.profile.apiKeys.show': 'Показать',
-    'page.body.profile.apiKeys.noKeys': 'У Вас нет API ключей',
+    'page.body.profile.apiKeys.noKeys': 'Nenhuma chave habilitada',
 
     'page.body.profile.apiKeys.modal.btn.show': 'Показать',
     'page.body.profile.apiKeys.modal.btn.create': 'Создать',
@@ -737,7 +737,7 @@ export const pt: LangType = {
                                                    'несколько обязательных подтверждений для завершения этой транзакции.',
     'page.modal.withdraw.success.button': 'OK',
 
-    'page.modal.expired.title': 'Para sua segurança, sua sessão foi encerrada',
+    'page.modal.expired.title': 'Sua sessão foi encerrada',
     'page.modal.expired.submit': 'Acessar novamente',
 
 
@@ -1049,7 +1049,7 @@ export const pt: LangType = {
     'account.withdraw.empty_rid': 'Rid отсутствует, rid пуст',
     'account.withdraw.non_decimal_amount': 'Значение суммы, которую вы отправили, не может быть проанализировано в десятичном виде',
     'account.withdraw.non_positive_amount': 'Значение суммы должно быть положительным',
-    'account.deposit.not_permitted': 'Депозиты разрешены после подтверждения телефона',
+    'account.deposit.not_permitted': 'Conclua seu cadastro para habilitar saques de fundos',
     'account.withdraw.not_permitted': 'Пожалуйста, пройдите соответствующие шаги проверки для вывода средств',
     'account.withdraw.insufficient_balance': 'Недостаточно средств на счете',
     'account.withdraw.invalid_amount': 'Неверная сумма снятия',
@@ -1088,11 +1088,11 @@ export const pt: LangType = {
     'market.order.create_error': 'Не удалось создать запрос',
     'market.order.cancel_error': 'Не удалось отменить запрос',
     'market.order.market_order_price': 'Рыночный ордер не имеет цены',
-    'market.trade.not_permitted': 'Пожалуйста, пройдите соответствующие шаги проверки, чтобы включить торговлю',
+    'market.trade.not_permitted': 'Conclua seu cadastro para habilitar negociações',
     'market.account.insufficient_balance': 'Недостаточно средств на счете',
 
-    'public.currency.doesnt_exist': 'Валюта не существует',
-    'public.currency.invalid_type': 'Неверный тип валюты',
+    'public.currency.doesnt_exist': 'Aitvo não habilitado',
+    'public.currency.invalid_type': 'Ativo inválido',
     'public.market.doesnt_exist': 'Рынок не существует',
     'public.order_book.non_integer_ask_limit': 'Не удалось проанализировать отправляемое вами предельное значение в тип Integer',
     'public.order_book.invalid_ask_limit': 'Неверный лимит спроса',

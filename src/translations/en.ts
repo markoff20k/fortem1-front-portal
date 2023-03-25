@@ -469,7 +469,7 @@ export const en = {
 
     'page.body.profile.referral.invite': 'Invite Friends.',
     'page.body.profile.referral.earn': 'Earn Crypto Together',
-    'page.body.profile.referral.commission': 'Earn up to 40% commission every time your friends make a trade',
+    'page.body.profile.referral.commission': 'Earn up to 30% commission every time your friends make a trade',
     'page.body.profile.header.referralProgram': 'Referral Link',
     'page.body.profile.content.copyLink': 'Copy',
 

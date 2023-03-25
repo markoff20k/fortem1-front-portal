@@ -69,7 +69,7 @@ export const ru = {
     'page.mobile.wallet.withdraw.modal.confirmation.message1': 'You\'ve requested to withdraw',
     'page.mobile.wallet.withdraw.modal.confirmation.message2': 'To this address',
 
-    'page.mobile.userInfo.details.uid': 'UID: {uid}',
+    'page.mobile.userInfo.details.uid': 'Fortem ID: {uid}',
     'page.mobile.userInfo.logout.button': 'Logout',
     'page.mobile.profileLinks.main.verification': 'Profile verification',
     'page.mobile.profileLinks.main.2fa': 'Two-factor authentication',
