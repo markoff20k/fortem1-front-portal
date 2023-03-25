@@ -192,7 +192,7 @@ const SignIn: React.FC<SignInProps> = ({
     return (
         <form>
             <div className="cr-sign-in-form" onKeyPress={handleEnterPress}>
-                {!isMobileDevice && (
+                {isMobileDevice && (
                     <div className="cr-sign-in-form__options-group">
                         <div className="cr-sign-in-form__option">
                             <div className="cr-sign-in-form__option-inner __selected">

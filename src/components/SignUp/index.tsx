@@ -277,7 +277,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     return (
         <form>
             <div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
-                {!isMobileDevice && (
+                {isMobileDevice && (
                     <div className="cr-sign-up-form__options-group">
                         <div className="cr-sign-up-form__option">
                             <div
