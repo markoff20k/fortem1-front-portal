@@ -4,10 +4,10 @@ const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'wss:
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `http://www.fortem1.com.br/api/v2/barong`,
-        tradeUrl: `http://www.fortem1.com.br/api/v2/peatio`,
-        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://www.fortem1.com.br/api/v2/ranger`,
+        authUrl: `https://www.fortem1.com.br/api/v2/barong`,
+        tradeUrl: `https://www.fortem1.com.br/api/v2/peatio`,
+        applogicUrl: `https://www.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `wss://www.fortem1.com.br/api/v2/ranger`,
         finexUrl: `${hostUrl}/api/v2/finex`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
