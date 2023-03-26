@@ -65,7 +65,7 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
         let updateList = list;
 
         if (type === 'open') {
-            updateList = list.filter(o => o.state === 'wait' || o.state === 'trigger_wait');
+            // updateList = list.filter(o => o.state === 'wait' || o.state === 'trigger_wait');
         }
 
         const emptyMsg = this.props.intl.formatMessage({id: 'page.noDataToShow'});

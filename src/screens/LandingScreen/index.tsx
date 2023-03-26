@@ -32,13 +32,21 @@ import FacebookIcon from 'src/assets/images/landing/social/Facebook.svg';
 import MediumIcon from 'src/assets/images/landing/social/Medium.svg';
 import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
+
 import { HomepageMarket } from '../../containers';
 // import { MarketOverviewList } from '../MarketOverviewList';
 
 
 import { Parallax } from 'react-scroll-parallax';
 import mobile from './fortem-mobile.png';
+import DownloadAPP from './Home/Screen1.png';
+import DownloadGG from './Home/Screen2.png';
+import Download1 from './Home/Screen4.png';
+import Download2 from './Home/Screen3.png';
+import devicePhone from './Home/fortemDevices-iPhone.png';
+import deviceLaptop from './Home/fortemDevices-Laptop.png';
 
+import Flip from 'react-reveal/Flip';
 
 
 interface ReduxProps {
@@ -66,6 +74,93 @@ class Landing extends React.Component<Props> {
             toggleColorTheme(this.props.colorTheme);
         }
     }
+
+	public renderDownloadDevices = () => {
+		return (
+			<div className="homepage-download rn-section-gap">
+				<div className="container">
+					<div className="main-homepage-download">
+						<div className="row dowdload-box">
+							<div className="col-5 dowdload-box__box-1" style={{ paddingTop: 100 }}>
+								<div className="row ">
+									<div className="col-12">
+										<div className="d-flex justify-content-start">
+										<h3 className="trading-title">Agora não há mais motivos para você ficar de fora. </h3>
+									</div>
+									<div>
+									<p className="trading-description">
+							Download Fortem APP, you will be able to easily at any time, anywhere trading global mainstream,
+							popular digital assets.
+						</p>
+										</div>
+					
+									</div>
+								</div>
+								<div className="row pt-5">
+									<div className="col-12">
+										<div
+											className="grid-container"
+											style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
+										>
+											<div>
+												<img
+													className="img-fluid"
+													src={DownloadAPP}
+													style={{ borderRadius: 10 }}
+													alt="google+play"
+												/>
+											</div>
+											<div style={{ marginLeft: -100 }}>
+												<img
+													className="img-fluid"
+													src={DownloadGG}
+													style={{ borderRadius: 10 }}
+													alt="android+store"
+												/>
+											</div>
+											<div className="mt-3">
+												<img
+													className="img-fluid"
+													src={Download2}
+													style={{ borderRadius: 10 }}
+													alt="app+store"
+												/>
+											</div>
+											<div className="mt-3" style={{ marginLeft: -100 }}>
+												<img
+													className="img-fluid"
+													src={Download1}
+													style={{ borderRadius: 10 }}
+													alt="scan+qrcode"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div className="col-7 dowdload-box__box-2" style={{ position: 'relative' }}>
+							<Flip top cascade>
+
+							<img
+									src={devicePhone}
+									alt="exchange"
+									style={{ position: 'absolute', zIndex: 100, top: 70, left: 90, width: '50%' }}
+								/>
+
+								<img
+									src={deviceLaptop}
+									alt="exchange"
+									style={{ position: 'absolute', zIndex: 100, top: 40, left: 200, width: '120%' }}
+								/>
+							</Flip>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		);
+	};
 
     public render() {
         return (
@@ -103,7 +198,8 @@ class Landing extends React.Component<Props> {
                                     {this.translate('page.body.landing.marketInfo.title.button')}
                                 </Link>
                             </div>
-                            <MarketsTable />
+                            {/* <MarketsTable /> */}
+                            <HomepageMarket />
                         </div>
                     </div>
                     <div className="pg-landing-screen__platform-info">
@@ -199,7 +295,7 @@ class Landing extends React.Component<Props> {
                     className="pg-landing-screen__trade-on-the-go"
                     contentClassName="pg-landing-screen__trade-on-the-go-content">
                     <div className="pg-landing-screen__trade-on-the-go__wrap">
-                        <div className="pg-landing-screen__trade-on-the-go__wrap__image" />
+                        {/* <div className="pg-landing-screen__trade-on-the-go__wrap__image" />
                         <div className="pg-landing-screen__trade-on-the-go__wrap__content">
                             <h1>{this.translate('page.body.landing.tradeOnTheGo.item.title')}</h1>
                             <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text1')}</h2>
@@ -208,11 +304,29 @@ class Landing extends React.Component<Props> {
                             <Link to="/trading/" className="landing-button">
                                 {this.translate('page.body.landing.tradeOnTheGo.item.button')}
                             </Link>
-                        </div>
+                        </div> */}
+                                        
+                {/* <h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
+										Tenha tudo 
+										<span className="color-accent">.<br /></span>
+										<span>Em uma única Plataforma</span>
+										<span className="color-accent">.<br /></span>
+										<span>Em um único App</span>
+										<span className="color-accent">.</span>
+										<span> Na palma da sua mão</span>
+										<span className="color-accent">...</span>
+
+				</h2> */}
+			
+                        {this.renderDownloadDevices()}
+
                     </div>
                 </LandingBlock>
                 <div className="pg-landing-screen__start-trading">
                     <div className="pg-landing-screen__start-trading__wrap">
+                    <Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
+				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+			        </Parallax>
                         <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
                         <div className="pg-landing-screen__start-trading__wrap__content">
                             <Link to="/signup" className="landing-button">
@@ -265,7 +379,7 @@ class Landing extends React.Component<Props> {
                         {this.translate('page.body.landing.footer.rights')}
                     </span>
                 </div>
-                <HomepageMarket />
+                
                 {/* <h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
 										Tenha tudo 
 										<span className="color-accent">.<br /></span>
@@ -278,9 +392,9 @@ class Landing extends React.Component<Props> {
 
 				</h2> */}
 			
-			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
-			</Parallax>
+
+            
+            
             </div>
         );
     }
