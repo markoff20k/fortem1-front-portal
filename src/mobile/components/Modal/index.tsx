@@ -3,9 +3,6 @@ import * as React from 'react';
 import { CloseIcon } from '../../../assets/images/CloseIcon';
 import { ArrowIcon } from '../../../containers/ToolBar/icons/ArrowIcon';
 
-import logo from '../../../assets/images/logo-icon-dark.svg'
-
-
 const ModalComponent = props => {
     const [shouldAnimate, setShouldAnimate] = React.useState(false);
 
@@ -52,8 +49,7 @@ const ModalComponent = props => {
                     <span>{props.backTitle}</span>
                     </React.Fragment> : null}
             </div>
-            {/* <div className="cr-mobile-modal__header-title">{props.title}</div> */}
-            <div className="cr-mobile-modal__header-title"><img src={logo} alt="logo" /></div>
+            <div className="cr-mobile-modal__header-title">{props.title}</div>
             <div className="cr-mobile-modal__header-close" onClick={handleOnClose}>
                 <CloseIcon />
             </div>

@@ -93,7 +93,7 @@ class EmailVerificationComponent extends React.Component<Props> {
         return (
             <div className="pg-emailverification-container">
                 <div className="pg-emailverification">
-                    {!isMobileDevice && <div className="pg-emailverification-title"> <img className="cr-sign-in-form__image" src={logo} alt="logo" /> </div>}
+                    <div className="pg-emailverification-title"> <img className="cr-sign-in-form__image" src={logo} alt="logo" /> </div>
                     
                     <div className="pg-emailverification-body">
                         <div className="pg-emailverification-body-text">{text}</div>
