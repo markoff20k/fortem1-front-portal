@@ -446,7 +446,7 @@ export const pt: LangType = {
     'page.body.profile.header.account.content.password': 'Senha',
     'page.body.profile.header.account.content.password.button.change': 'Alterar',
     'page.body.profile.header.account.content.password.old': 'Senha atual',
-    'page.body.profile.header.account.content.password.new': 'Nova senha';
+    'page.body.profile.header.account.content.password.new': 'Nova senha',
     'page.body.profile.header.account.content.password.button.save': 'Alterar',
     'page.body.profile.header.account.content.password.button.cancel': 'Cancelar',
     'page.body.profile.header.account.content.password.conf': 'Подтверждение пароля',
