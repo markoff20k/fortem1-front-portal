@@ -59,6 +59,7 @@ const BeneficiariesActivateModalComponent: React.FC<Props> = (props: Props) => {
             const payload = {
                 id: beneficiariesAddData.id,
             };
+            
 
             dispatch(beneficiariesResendPin(payload));
         }
