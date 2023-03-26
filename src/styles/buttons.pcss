@@ -27,6 +27,40 @@
   }
 }
 
+.btn-primary-visible {
+  background: var(--button-primary-cta-background-color);
+  border: none;
+  color: var(--button-primary-cta-text-color);
+  font-weight: var(--button-font-weight);
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--button-primary-cta-background-color-hover);
+    color: var(--button-primary-cta-text-color-hover);
+    transition: 0.2s;
+  }
+
+  &:active,
+  &:focus {
+    background: var(--button-primary-cta-background-color-active);
+    border: none;
+    box-shadow: none;
+    color: var(--button-primary-cta-text-color-active);
+  }
+
+  &:disabled {
+    background: var(--button-primary-cta-background-color-disabled);
+    border: none;
+    color: var(--button-primary-cta-text-color-disabled);
+    cursor: not-allowed;
+    display: none;
+  }
+}
+
+
+
+
+
 .btn-primary:not(:disabled):not(.disabled):active:focus {
   background: var(--button-primary-cta-background-color-active);
   box-shadow: none;

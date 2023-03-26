@@ -715,7 +715,8 @@ export const pt: LangType = {
 	'page.header.signUp.modal.body':
 		'Seu cadastro na Fortem One foi inicado com sucesso. ' +
 		'Agora, verifique sua caixa de email para ativar a sua conta ' +
-		'e ter acesso à plataforma. Caso não encontre o email, verifique sua caixa de spam.',
+		'e ter acesso à plataforma.',
+    'page.header.signUp.modal.body2': 'Caso não encontre o email, verifique sua caixa de spam.',
     'page.header.signUp.modal.footer': 'OK',
     'page.header.signUp.strength.password': '',
     'page.header.signUp.password.too.weak': 'Sua senha é muito fraca',

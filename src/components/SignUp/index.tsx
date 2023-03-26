@@ -277,7 +277,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     return (
         <form>
             <div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
-                {isMobileDevice && (
+                {/* {isMobileDevice && (
                     <div className="cr-sign-up-form__options-group">
                         <div className="cr-sign-up-form__option">
                             <div
@@ -290,7 +290,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             <div className="cr-sign-up-form__option-inner __selected">{labelSignUp || 'Sign Up'}</div>
                         </div>
                     </div>
-                )}
+                )} */}
                 <div className="cr-sign-up-form__form-content">
                 {logo ? (
                         <div className="cr-sign-up-form__title">

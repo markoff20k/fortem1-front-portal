@@ -49,7 +49,7 @@
       img {
 
         width: 40px;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
 
       }
     }
@@ -66,7 +66,8 @@
         align-items: center;
         color: var(--primary-text-color);
         display: flex;
-        font-size: calc(var(--big-gap) * 0.21);
+        /* font-size: calc(var(--big-gap) * 0.21); */
+        font-size: 1rem;
         font-weight: 200;
         justify-content: center;
         padding: 0 calc(var(--big-gap) * 0.9);
@@ -81,15 +82,14 @@
         justify-content: center;
 
         &-button {
-          background: none;
-          border: none;
-          color: var(--secondary-contrast-cta-color);
+          
+          border-radius: 12px;
+          color: var(--button-primary-cta-text-color-hover);
           cursor: pointer;
-          font-size: calc(var(--big-gap) * 0.23);
-          outline: none;
-          text-decoration: underline;
-          transition: 0.3s;
+          font-size: 16px;
+          transition: 0.35s;
           margin-top: 15px;
+          width: 100%;
 
           &:hover {
             color: var(--primary-text-color);

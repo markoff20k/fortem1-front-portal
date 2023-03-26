@@ -171,19 +171,10 @@ const SignIn: React.FC<SignInProps> = ({
                         {formatMessage({ id: 'page.header.signIN.noAccountYet' })}
                     </div>
 
-                    <div  className="pg-sign-in-screen__register-button">
-                        <Button
-                            block={true}
-                            type="button"
-                            // disabled={isLoading || !email.match(EMAIL_REGEX) || !password || isButtonDisabled}
-                            onClick={() => history.push('/signup')}
-                            size="lg"
-                            variant="outline-primary">
-                            
-                            {formatMessage({id: 'page.body.landing.header.button3'})}
-                        </Button>
-
+                    <div className="pg-sign-in-screen__register-button" onClick={() => history.push('/signup')}>
+                        {formatMessage({id: 'page.body.landing.header.button3'})}
                     </div>
+                    
             </div>
         ),
         [formatMessage, history]
@@ -192,7 +183,7 @@ const SignIn: React.FC<SignInProps> = ({
     return (
         <form>
             <div className="cr-sign-in-form" onKeyPress={handleEnterPress}>
-                {isMobileDevice && (
+                {/* {isMobileDevice && (
                     <div className="cr-sign-in-form__options-group">
                         <div className="cr-sign-in-form__option">
                             <div className="cr-sign-in-form__option-inner __selected">
@@ -207,7 +198,7 @@ const SignIn: React.FC<SignInProps> = ({
                             </div>
                         </div>
                     </div>
-                )}
+                )} */}
                 <div className="cr-sign-in-form__form-content">
                 {logo ? (
                         <div className="cr-sign-in-form__title">
@@ -252,8 +243,9 @@ const SignIn: React.FC<SignInProps> = ({
                         />
                         {passwordError && <div className={'cr-sign-in-form__error'}>{passwordError}</div>}
                     </div>
+                    {renderForgotButton}
                     {captchaLogin() && renderCaptcha}
-                    {isMobileDevice && renderForgotButton}
+                    {/* {isMobileDevice && renderForgotButton} */}
                     <div className="cr-sign-in-form__button-wrapper">
                         <Button
                             block={true}
@@ -265,7 +257,7 @@ const SignIn: React.FC<SignInProps> = ({
                             {isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Sign in'}
                         </Button>
                     </div>
-                    {!isMobileDevice && renderForgotButton}
+                    {/* {!isMobileDevice && renderForgotButton} */}
                     {renderRegister}
                 </div>
             </div>

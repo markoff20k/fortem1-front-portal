@@ -699,9 +699,8 @@ export const en = {
     'page.header.signUp.terms': 'I have read and agree to the Terms of Service',
     'page.header.signUp.modal.header': 'VERIFY YOUR EMAIL ADDRESS',
     'page.header.signUp.modal.body': 'To complete registration, check for an ' +
-                                      'email in your inbox with further ' +
-                                      'instruction. If you cannot find the email, ' +
-                                      'please check your spam folder',
+                                      'email in your inbox with further instruction.',
+    'page.header.signUp.modal.body2': 'If you cannot find the email, please check your spam folder',
     'page.header.signUp.modal.footer': 'OK',
     'page.header.signUp.strength.password': 'Password Strength',
     'page.header.signUp.password.too.weak': 'TOO WEAK',

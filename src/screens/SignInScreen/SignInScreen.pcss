@@ -41,10 +41,10 @@
 
   .pg-sign-in-screen__register {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background: transparent;
     margin-top: calc(var(--gap) * 3);
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 12px 0;
@@ -57,16 +57,23 @@
     }
     .pg-sign-in-screen__register-button {
 
-      width: 100%;
+         
+      color: var(--button-primary-cta-background-color);
+      font-size: calc(var(--gap) * 2);
+      line-height: calc(var(--gap) * 2.05);
+      margin-left: 10px;
+      transition: 0.35s;
+
+
+      &:hover {
+        color: var(--secondary-contrast-cta-color);
+        opacity: 0.94;
+        transition: 0.35s;
+        cursor: pointer;
+                
+      }
     
-      button {
-        border-radius: 12px;
-        width: 100%;
-        margin-top: calc(var(--gap) * 1.33);
-        min-height: 48px;
-        font-size: 16px;
-     
-     }
+
   }
     
   }
@@ -92,7 +99,8 @@
     }
 
     &__button-wrapper {
-      bottom: calc(var(--gap) * 3.8);
+      margin-top: calc(var(--gap) * 3);
+      margin-bottom: calc(var(--gap) * 2.5);
       min-height: calc(var(--gap));
     }
 
@@ -102,7 +110,7 @@
       border-top-right-radius: 16px;
       boder-color: transparent;
       .__selected {
-        border-bottom: 1px solid var(--primary-cta-color);
+        border-bottom: 2px solid var(--primary-cta-color);
         color: var(--primary-text-color);
       }
     }

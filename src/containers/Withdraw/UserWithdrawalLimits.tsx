@@ -59,7 +59,7 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
             if (id === index && ctx) {
                 ctx.clearRect(0, 0, 46, 46);
                 ctx.beginPath();
-                ctx.strokeStyle = '#3C78E0';
+                ctx.strokeStyle = '#009991';
                 ctx.lineWidth = 4;
                 ctx.arc(21, 24, 18, offset, end);
                 ctx.stroke();

@@ -86,6 +86,7 @@ class EmailVerificationComponent extends React.Component<Props> {
 
         const title = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.header' });
         const text = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body' });
+        const text2 = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body2' });
         const button = this.props.intl.formatMessage({ id: 'page.resendConfirmation' });
 
 
@@ -96,14 +97,28 @@ class EmailVerificationComponent extends React.Component<Props> {
                     
                     <div className="pg-emailverification-body">
                         <div className="pg-emailverification-body-text">{text}</div>
+                        <div className="pg-emailverification-body-text">{text2}</div>
                         {this.renderCaptcha()}
                         {
                             !isMobileDevice && (
                                 <div className="pg-emailverification-body-container">
                                     {emailVerificationLoading ? <Spinner animation="border" variant="primary"/> :
-                                        <button className="pg-emailverification-body-container-button"
+                                        <div className="pg-emailverification-body-container-button">
+                                            <Button
+                                                block={true}
+                                                type="button"
                                                 onClick={this.handleClick}
-                                                disabled={this.disableButton()}>{button}</button>}
+                                                size="lg"
+                                                variant="primary-visible"
+                                                disabled={this.disableButton()}>{button}
+                                            </Button>
+                                                        
+                                            
+                                                
+                                            
+
+
+                                        </div>}
                                 </div>)
                         }
                         {isMobileDevice &&
