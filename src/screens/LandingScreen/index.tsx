@@ -7,7 +7,7 @@ import { compose } from 'redux';
 
 import { IntlProps } from '../../';
 import { Logo } from '../../components';
-import { MarketsTable } from '../../containers';
+import { MarketsTable, NavBar } from '../../containers';
 import { toggleColorTheme } from '../../helpers';
 import {
     RootState,
@@ -183,6 +183,7 @@ class Landing extends React.Component<Props> {
                                     <Link to="/signup" className="landing-button">
                                         {this.translate('page.body.landing.header.button3')}
                                     </Link>
+                                    <NavBar />
                                 </>
                             )}
                         </div>

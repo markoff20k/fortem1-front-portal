@@ -42,7 +42,7 @@ export const defaultConfig: Config = {
     wizard_step: 'false',
     barong_upload_size_min_range: '0.1',
     barong_upload_size_max_range: '20',
-    themeSwitcher: 'visible',
+    themeSwitcher: 'hidden',
     peatio_platform_currency: 'brl',
     useSharedLayout: 'false',
     tvDefaultCandles: 30,

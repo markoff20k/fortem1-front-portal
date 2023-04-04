@@ -78,7 +78,28 @@ class NavBarComponent extends React.Component<Props> {
 
 
         if (themeSwitcher() !== 'visible') {
-            return null;
+            return (
+
+
+                <div className="btn-group pg-navbar__header-settings__account-dropdown-menu ">
+                <Dropdown>
+                    <Dropdown.Toggle variant="primary" id={languageClassName}>
+                        <img src={this.getLanguageIcon(lang)} alt={lang} />
+                        {/* <span className="dropdown-menu-language-selected">{languageName}</span> */}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>{this.getLanguageDropdownItems()}</Dropdown.Menu>
+                </Dropdown>
+            </div>
+
+
+
+            )
+
+
+
+
+
+
         }
 
         return (
