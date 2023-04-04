@@ -42,7 +42,7 @@ export const pt: LangType = {
 	'page.body.trade.header.newOrder.content.filterPrice': 'Valid price step is {priceStep}',
     'page.body.trade.header.newOrder.locked.minLevel.text': 'Você precisa concluir seu cadastro para começar a negociar nestes mercados',
     'page.body.trade.header.newOrder.locked.minLevel.buttonText': 'Concluir cadastro',
-    'page.body.trade.header.newOrder.locked.login.text': 'Faça o login com o email utilizado no cadastro',
+    'page.body.trade.header.newOrder.locked.login.text': 'Faça o login com seu email de cadastro',
     'page.body.trade.header.newOrder.locked.login.buttonText': 'Acessar plataforma',
 
 	'error.order.create.minAmount': 'Quantidade inválida. A quantidade mínima é de {amount} {currency}',
@@ -1404,7 +1404,7 @@ export const pt: LangType = {
     'page.body.profile.whitelisted.paste': 'Colar',
 
 
-    'page.header.signIn.title': 'Faça o login com o email utilizado no cadastro',
+    'page.header.signIn.title': 'Faça o login com o seu email de cadastro',
     'page.header.signUp.title': 'Inicie sua jornada de investimentos',
 
     'page.header.signUp.username': 'Como prefere ser chamado ?',

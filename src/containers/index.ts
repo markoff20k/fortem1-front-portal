@@ -39,3 +39,4 @@ export * from './CanCan';
 export * from './Wallets';
 
 export * from './HomepageMarket';
+export * from './Footer';

@@ -33,7 +33,7 @@ import MediumIcon from 'src/assets/images/landing/social/Medium.svg';
 import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
 
-import { HomepageMarket } from '../../containers';
+import { HomepageMarket, Footer } from '../../containers';
 // import { MarketOverviewList } from '../MarketOverviewList';
 
 
@@ -291,6 +291,35 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                 </LandingBlock>
+
+                {/* <div className="flex flex-wrap w-full relative isolate self-center mb-28">
+        <SectionStats>
+            <div className="flex flex-col w-full self-center gap-y-4">
+                <div className="flex flex-col items-center gap-x-4">
+                    <div className="text-4xl text-fortem1green-900 border-0 border-b-2 border-b-fortem1green-900">+192</div>
+                    <div className="text-lg text-fortem1typo-100">Countries</div>
+                </div>
+                <div className="flex flex-col items-center gap-x-4">
+                    <div className="text-4xl text-fortem1green-900 border-0 border-b-2 border-b-fortem1green-900">99,98%</div>
+                    <div className="text-lg text-fortem1typo-100">UP</div>
+                </div>              
+            </div>
+
+            <div className="flex flex-col w-full self-center gap-y-4">
+                <div className="flex flex-col items-center gap-x-4">
+                    <div className="text-4xl text-fortem1green-900 border-0 border-b-2 border-b-fortem1green-900">+192</div>
+                    <div className="text-lg text-fortem1typo-100">Countries</div>
+                </div>
+                <div className="flex flex-col items-center gap-x-4">
+                    <div className="text-4xl text-fortem1green-900 border-0 border-b-2 border-b-fortem1green-900">99,98%</div>
+                    <div className="text-lg text-fortem1typo-100">UP</div>
+                </div>              
+            </div>   
+            </SectionStats>
+    </div> */}
+
+
+
                 <LandingBlock
                     className="pg-landing-screen__trade-on-the-go"
                     contentClassName="pg-landing-screen__trade-on-the-go-content">
@@ -338,7 +367,8 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                 </div>
-                <div className="pg-landing-screen__footer">
+                <Footer />
+                {/* <div className="pg-landing-screen__footer">
                     <div className="pg-landing-screen__footer__wrap">
                         <div className="pg-landing-screen__footer__wrap__left" onClick={(e) => this.handleScrollTop()}>
                             <Logo />
@@ -378,7 +408,7 @@ class Landing extends React.Component<Props> {
                     <span className="pg-landing-screen__footer__rights">
                         {this.translate('page.body.landing.footer.rights')}
                     </span>
-                </div>
+                </div> */}
                 
                 {/* <h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
 										Tenha tudo 
