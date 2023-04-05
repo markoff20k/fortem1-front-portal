@@ -105,11 +105,11 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 								onChange={inputEmail}
 							/>
 							<button className="btn-primary" onClick={sendEmail}>
-								Enviar
+								Inscrever-se
 							</button>
 						</div>
 						<br />
-						<p className="footer__news__title">REDES SOCIAIS</p>
+						<p className="footer__news__title">MÍDIAS SOCIAIS</p>
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">
 								<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
@@ -141,7 +141,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 				<div className="fortem-line"></div>
 
 				<p className="footer__copyright">
-					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem ONE S.A. © 2023 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
+					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem One SA © 2023 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
 				</p>
 			</div>
 		</div>

@@ -47,8 +47,9 @@ const config: webpack.Configuration = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.svelte' ],
         alias: alias.webpack,
+       
     },
     externals: {
         config: JSON.stringify({

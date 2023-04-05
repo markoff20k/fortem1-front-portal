@@ -5,3 +5,8 @@ declare module '*.svg' {
 
 declare module '*.png';
 declare module '*.jpg';
+
+declare module "*.svelte" {
+    const value: any;
+    export default value;
+  }

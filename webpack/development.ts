@@ -10,7 +10,7 @@ import commonConfig from './common';
 const rootDir = path.resolve(__dirname, '..');
 
 const config = merge(commonConfig, {
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-cheap-module-source-map',
     plugins: [
         new HotModuleReplacementPlugin(),
         new ForkTsCheckerWebpackPlugin({}),
@@ -20,6 +20,7 @@ const config = merge(commonConfig, {
             chunks: ['common', 'bundle', 'styles'],
         }),
     ],
+
     module: {
         rules: [
             {
@@ -66,20 +67,33 @@ const config = merge(commonConfig, {
                 exclude: /node_modules/,
             },
 
+            {
+                test: /\.svelte$/,
+				use: {
+					loader: 'svelte-loader',
+                    
+					options: {
+						compilerOptions: {
+							dev: true
+						},
+						emitCss: true,
+						hotReload: true
+					}
+				}              },
+
             
 
-                //   {
-                //     // Match js, jsx, ts & tsx files
-                //     test: /\.jsx?$/,
-                //     loader: 'babel-loader',
-                //     exclude: /node_modules/,
-                //     options: {
-                //         presets: [
-                //           ['@babel/preset-react']
-                //         ],
-                //         plugins: ['@babel/plugin-proposal-class-properties']
-                //       }
-                //  },
+                  {
+                    // Match js, jsx, ts & tsx files
+                    test: /.(js|jsx)$/,
+                    
+
+                    
+                    use: {
+                        loader: "babel-loader"
+                      }
+                    
+                 },
         ],
     },
     devServer: {

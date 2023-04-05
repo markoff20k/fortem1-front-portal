@@ -118,8 +118,8 @@ export const pt: LangType = {
 
     /* Landing */
     'page.body.landing.header.button1': 'Perfil',
-    'page.body.landing.header.button2': 'Entrar',
-    'page.body.landing.header.button3': 'Criar conta',
+    'page.body.landing.header.button2': 'Acessar Plataforma',
+    'page.body.landing.header.button3': 'Abrir conta',
 
     'page.body.landing.marketInfo.title.text1': 'Bem-vindo à Fortem One.',
     'page.body.landing.marketInfo.title.text2': 'Compre, venda e negocie ativos digitais.',
@@ -134,17 +134,17 @@ export const pt: LangType = {
 
     'page.body.landing.register.item.title': 'Não importa o seu nível de experiência',
     'page.body.landing.register.item.text': 'Fortem One offers an intuitive interface with real time orderbooks, charting tools, trade history, and a simple order process so you can trade from day one.',
-    'page.body.landing.register.item.button': 'register',
+    'page.body.landing.register.item.button': 'Abra sua conta',
 
     'page.body.landing.features.title': 'Fortem One platform features',
     'page.body.landing.features.features.item1.title': 'Exchange',
     'page.body.landing.features.features.item2.title': 'Tipos de Ordens',
     'page.body.landing.features.features.item3.title': 'Interface amigável e customizável',
     'page.body.landing.features.features.item4.title': 'Segurança',
-    'page.body.landing.features.features.item5.title': 'Cuminidade',
+    'page.body.landing.features.features.item5.title': 'Comunidade',
     'page.body.landing.features.features.item6.title': 'API para todas as necessidades',
-    'page.body.landing.features.features.item1.text': 'Baseapp offers the most liquid order book in the world, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.',
-    'page.body.landing.features.features.item2.text': 'Baseapp offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.',
+    'page.body.landing.features.features.item1.text': 'Fortem One offers the most liquid order book in the world, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.',
+    'page.body.landing.features.features.item2.text': 'Fortem One offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.',
     'page.body.landing.features.features.item3.text': 'Organize your workspace according to your needs: compose your layout, choose between themes, set up notifications and data preferences.',
     'page.body.landing.features.features.item4.text': 'Security of user information and funds is our first priority. Contact us to learn more about our security features and integrations.',
     'page.body.landing.features.features.item5.text': 'Join a global community that believes in the power of crypto.',
@@ -157,7 +157,7 @@ export const pt: LangType = {
     'page.body.landing.tradeOnTheGo.item.button': 'let’s try',
 
     'page.body.landing.startTrading.title': 'Start trading now',
-    'page.body.landing.startTrading.button1': 'register',
+    'page.body.landing.startTrading.button1': 'Abra sua conta',
     'page.body.landing.startTrading.button2': 'Start trading',
 
     'page.body.landing.footer.exchange': 'Exchange Pro',
@@ -671,7 +671,7 @@ export const pt: LangType = {
     'page.body.kyc.documents.select.utilityBill': 'Conta de consumo',
 
     'page.body.kyc.next': 'Дальше',
-    'page.body.kyc.submit': 'Отправить',
+    'page.body.kyc.submit': 'Enviar',
     'page.body.kyc.head.phone': 'Верификация телефона',
     'page.body.kyc.head.identity': 'Верификация личности',
     'page.body.kyc.head.document': 'Верификация документов',
@@ -698,7 +698,7 @@ export const pt: LangType = {
     'page.header.signIn.resetPassword.button': 'Сбросить',
     'page.header.signIn.resetPassword.error': 'Поля пустые или не совпадают',
 
-    'page.header.signUp': 'Criar conta',
+    'page.header.signUp': 'Abrir conta',
     'page.header.signUp.username.minLength.error': 'Digite uma quantidade maior do que 4 caracteres',
     'page.header.signUp.username.maxLength.error': 'Digite uma quantidade menor do que 12 caracteres',
     'page.header.signUp.username.uniqueness.error': 'This username is already taken',

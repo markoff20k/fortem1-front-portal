@@ -1,5 +1,6 @@
 import { LandingBlock } from '@openware/react-components';
 import * as React from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { Link, RouteProps, withRouter } from 'react-router-dom';
@@ -49,6 +50,25 @@ import deviceLaptop from './Home/fortemDevices-Laptop.png';
 import Flip from 'react-reveal/Flip';
 
 
+// import {render} from '@testing-library/react';
+
+// import "svelte";
+
+// import { reactify } from "svelte-preprocess-react";
+
+
+
+// import type { SvelteComponent } from 'svelte';
+// import UIiconHand from "./UIiconHand.svelte";
+// import UIiconCalendar from "./UIiconCalendar.svelte";
+
+// import CardKnowledge from "./cardKnowledge.svelte";
+
+
+
+
+
+
 interface ReduxProps {
     isLoggedIn: boolean;
     colorTheme: string;
@@ -63,6 +83,9 @@ class Landing extends React.Component<Props> {
         }
     }
 
+
+    
+
     public componentWillReceiveProps(next: Props) {
         if (next.colorTheme === 'light') {
             toggleColorTheme('dark');
@@ -74,6 +97,9 @@ class Landing extends React.Component<Props> {
             toggleColorTheme(this.props.colorTheme);
         }
     }
+
+
+  
 
 	public renderDownloadDevices = () => {
 		return (
@@ -163,6 +189,8 @@ class Landing extends React.Component<Props> {
 	};
 
     public render() {
+
+        
         return (
             <div className="pg-landing-screen">
                 <div className="pg-landing-screen__header">
@@ -355,7 +383,7 @@ class Landing extends React.Component<Props> {
                 <div className="pg-landing-screen__start-trading">
                     <div className="pg-landing-screen__start-trading__wrap">
                     <Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', objectFit: 'contain', }} className="theme-shape-center" />
 			        </Parallax>
                         <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
                         <div className="pg-landing-screen__start-trading__wrap__content">
@@ -368,7 +396,14 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                 </div>
-                <Footer />
+
+    
+   
+
+
+
+
+                
                 {/* <div className="pg-landing-screen__footer">
                     <div className="pg-landing-screen__footer__wrap">
                         <div className="pg-landing-screen__footer__wrap__left" onClick={(e) => this.handleScrollTop()}>
@@ -422,19 +457,23 @@ class Landing extends React.Component<Props> {
 										<span className="color-accent">...</span>
 
 				</h2> */}
-			
 
+
+
+
+
+    <Footer />
             
-            
-            </div>
+    </div>
         );
     }
 
-    private handleScrollTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+private handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
-    private translate = (key: string) => this.props.intl.formatMessage({ id: key });
+private translate = (key: string) => this.props.intl.formatMessage({ id: key });
+
 }
 
 const mapStateToProps = (state: RootState): ReduxProps => ({

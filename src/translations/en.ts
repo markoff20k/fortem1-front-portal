@@ -134,15 +134,15 @@ export const en = {
     'page.body.landing.register.item.text': 'Baseapp offers an intuitive interface with real time orderbooks, charting tools, trade history, and a simple order process so you can trade from day one.',
     'page.body.landing.register.item.button': 'register',
 
-    'page.body.landing.features.title': 'Baseapp platform features',
+    'page.body.landing.features.title': 'Fortem One platform features',
     'page.body.landing.features.features.item1.title': 'Exchange',
     'page.body.landing.features.features.item2.title': 'Order Types',
     'page.body.landing.features.features.item3.title': 'Customizable Interface',
     'page.body.landing.features.features.item4.title': 'Security',
     'page.body.landing.features.features.item5.title': 'Community',
     'page.body.landing.features.features.item6.title': 'Industry leading API',
-    'page.body.landing.features.features.item1.text': 'Baseapp offers the most liquid order book in the world, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.',
-    'page.body.landing.features.features.item2.text': 'Baseapp offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.',
+    'page.body.landing.features.features.item1.text': 'Fortem One offers the most liquid order book in the world, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.',
+    'page.body.landing.features.features.item2.text': 'Fortem One offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.',
     'page.body.landing.features.features.item3.text': 'Organize your workspace according to your needs: compose your layout, choose between themes, set up notifications and data preferences.',
     'page.body.landing.features.features.item4.text': 'Security of user information and funds is our first priority. Contact us to learn more about our security features and integrations.',
     'page.body.landing.features.features.item5.text': 'Join a global community that believes in the power of crypto.',
@@ -155,7 +155,7 @@ export const en = {
     'page.body.landing.tradeOnTheGo.item.button': 'let’s try',
 
     'page.body.landing.startTrading.title': 'Start trading now',
-    'page.body.landing.startTrading.button1': 'register',
+    'page.body.landing.startTrading.button1': 'Create account',
     'page.body.landing.startTrading.button2': 'Start trading',
 
     'page.body.landing.footer.exchange': 'Exchange',
