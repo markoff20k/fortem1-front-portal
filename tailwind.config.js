@@ -1,9 +1,9 @@
 const customTailwindColors = {
     colors: {
-        'primary-cta-color-main': '#3c78e9',
-        'primary-cta-color-hover': '#3c78e9',
-        'dropdown-background-color': '#FFFFFF',
-        'main-background-color': '#FFFFFF',
+        // 'primary-cta-color-main': '#3c78e9',
+        // 'primary-cta-color-hover': '#3c78e9',
+        // 'dropdown-background-color': '#FFFFFF',
+        // 'main-background-color': '#FFFFFF',
         fortem1neutral: {
             100: '#FFFFFF',
             300: '#F2F4F8',
@@ -20,32 +20,32 @@ const customTailwindColors = {
             700: '#38BCA4',
             900: '#16837C',
             hov: '#046C66',
-          },
-          fortem1orange: {
+        },
+        fortem1orange: {
             100: '#fff6e6',
             200: '#fff3d8',
             300: '#ffe5b3',
             500: '#ffcb66',
             700: '#ffb933',
             900: '#F9A912',
-          },
-          fortem1high: {
-            green:  '#11ECC7',
+        },
+        fortem1high: {
+            green: '#11ECC7',
             orange: '#F9A912',
-          },
-          fortem1warn: {
+        },
+        fortem1warn: {
             500: '#F15B5B',
             900: '#ff271a',
-          },
-          fortem1feed: {
+        },
+        fortem1feed: {
             100: '#22C55E',
-          },         
-          fortem1typo: {
+        },
+        fortem1typo: {
             100: '#FFFFFF',
             300: '#D9D9D9',
             500: '#494949',
             900: '#000000',
-          },   
+        },
     },
     textColor: {
         'color-contrast': '#FFFFFF',
@@ -57,8 +57,8 @@ const customTailwindColors = {
     },
     borderColor: {
         'divider-color-20': '1px solid #DCDCDC',
-    }
-}
+    },
+};
 
 module.exports = {
     // we need it for prod
@@ -73,4 +73,4 @@ module.exports = {
     },
     variants: {},
     plugins: [],
-}
+};

@@ -51,14 +51,26 @@
 
   .pg-sign-up-screen__login {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 300;
     color: var(--primary-text-color);
 
     &-button {
-      padding-left: 2px;
+      font-size: 14px;
+      font-weight: 300;
       color: var(--button-primary-cta-background-color);
       -webkit-appearance: button;
       cursor: pointer;
+      margin-left: 10px;
+      transition: 0.25s;
+
+      &:hover {
+        color: var(--secondary-contrast-cta-color);
+        opacity: 0.94;
+        transition: 0.25s;
+        cursor: pointer;
+                
+      }
     }
   }
 

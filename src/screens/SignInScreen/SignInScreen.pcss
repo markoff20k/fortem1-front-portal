@@ -43,32 +43,33 @@
     display: flex;
     flex-direction: row;
     background: transparent;
-    margin-top: calc(var(--gap) * 3);
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 12px 0;
+    
 
     .pg-sign-in-screen__register-text {
 
       color: var(--primary-text-color);
-      font-size: calc(var(--gap) * 2);
-      line-height: calc(var(--gap) * 2.05);
+      font-size: 14px;
+      font-weight: 300;
+    
     }
     .pg-sign-in-screen__register-button {
 
-         
+      font-size: 14px;
+      font-weight: 300;
       color: var(--button-primary-cta-background-color);
-      font-size: calc(var(--gap) * 2);
-      line-height: calc(var(--gap) * 2.05);
+      -webkit-appearance: button;
+      cursor: pointer;
       margin-left: 10px;
-      transition: 0.35s;
+      transition: 0.25s;
 
 
       &:hover {
         color: var(--secondary-contrast-cta-color);
         opacity: 0.94;
-        transition: 0.35s;
+        transition: 0.25s;
         cursor: pointer;
                 
       }

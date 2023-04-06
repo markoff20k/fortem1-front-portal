@@ -87,6 +87,8 @@ import {
     P2POrderScreen,
 } from '../../screens';
 
+import Blog from '../../components/blog/BlogDetailsContent'
+
 import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
@@ -347,7 +349,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <Route path="/restriction" component={RestrictedScreen} />
                     <Route path="/maintenance" component={MaintenanceScreen} />
                     <Route exact={true} path="/trading/:market?" component={TradingScreen} />
-                    {showLanding() && <Route exact={true} path="/" component={LandingScreen} />}
+                    
+                    <PublicRoute loading={userLoading} isLogged={isLoggedIn} exact={true} path="/" component={LandingScreen} />
+                    <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/blog-details/:id" component={Blog} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
@@ -371,7 +375,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
                     <PublicRoute path="/markets" component={MarketsList} />
 
-                    <Route path="**"><Redirect to="/trading/" /></Route>
+                    <Route path="**"><Redirect to="/" /></Route>
+                    
 
                     
                     {/* <Route path="/ui" component={App} /> */}

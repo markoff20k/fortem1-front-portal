@@ -47,7 +47,7 @@ const config: webpack.Configuration = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.svelte' ],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
         alias: alias.webpack,
        
     },

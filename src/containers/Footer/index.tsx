@@ -53,12 +53,12 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 			<div className="container-footer-screen">
 				<div className="footer d-flex flex-row justify-content-between ">
 					<div className="footer__logo">
-					<div className="footer__info">
-						<p className="footer__info__title">POWERED BY:</p>
+						<div className="footer__info">
+							<p className="footer__info__title">POWERED BY:</p>
 				
-							<img src={logoTechno} alt="" style={{width: '220px'}}  onClick={handleScrollTop}  />
+							<img src={logoTechno} onClick={handleScrollTop}  />
 						
-					</div>
+						</div>
 					</div>
 
 					<div className="footer__info">
@@ -69,45 +69,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 						<p className="footer__info__item">
 							<FaEnvelope className="footer__info__item__icon" /> contato@fortem1.com.br
 						</p>
-					</div>
 
-					<div className="footer__info">
-						<p className="footer__info__title">SUPORTE</p>
-						<p className="footer__info__item">
-							<Link to="/fee">Taxas </Link>
-						</p>
-						<p className="footer__info__item">
-							<Link to="/announcement">Comunicados </Link>
-						</p>
-						<p className="footer__info__item">
-							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
-								Dúvidas frequentes
-							</a>
-						</p>
-						<p className="footer__info__item">
-							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
-								Documentação das APIs
-							</a>
-						</p>
-					</div>
-
-					<div className="footer__news">
-						<p className="footer__news__title">NEWSLETTER</p>
-
-						<div className="footer__news__take-email">
-							
-							<div className="footer__news__take-email__label">Receba nossa newsletter</div>
-							<input
-								className="footer__news__take-email__input"
-								placeholder="Digite seu email"
-								type="email"
-								value={valueInput}
-								onChange={inputEmail}
-							/>
-							<button className="btn-primary" onClick={sendEmail}>
-								Inscrever-se
-							</button>
-						</div>
 						<br />
 						<p className="footer__news__title">MÍDIAS SOCIAIS</p>
 						<div className="footer__news__list-icon ">
@@ -133,6 +95,86 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 								</a>
 							</div>
 						</div>
+					</div>
+
+					<div className="footer__info">
+						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__item">
+							<Link to="/fee">Taxas </Link>
+						</p>
+						<p className="footer__info__item">
+							<Link to="/announcement">Comunicados </Link>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
+								Dúvidas frequentes
+							</a>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
+								Documentação das APIs
+							</a>
+						</p>
+					</div>
+					<div className="footer__info">
+						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__item">
+							<Link to="/fee">Taxas </Link>
+						</p>
+						<p className="footer__info__item">
+							<Link to="/announcement">Comunicados </Link>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
+								Dúvidas frequentes
+							</a>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
+								Documentação das APIs
+							</a>
+						</p>
+					</div>
+
+					<div className="footer__info">
+						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__item">
+							<Link to="/fee">Taxas </Link>
+						</p>
+						<p className="footer__info__item">
+							<Link to="/announcement">Comunicados </Link>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
+								Dúvidas frequentes
+							</a>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
+								Documentação das APIs
+							</a>
+						</p>
+					</div>
+
+					<div className="footer__news">
+					
+{/* 
+						<div className="footer__news__take-email">
+							
+							<div className="footer__news__take-email__label">Receba nossa newsletter</div>
+							<input
+								className="footer__news__take-email__input"
+								placeholder="Digite seu email"
+								type="email"
+								value={valueInput}
+								onChange={inputEmail}
+							/>
+							<button className="btn-primary" onClick={sendEmail}>
+								Inscrever-se
+							</button>
+						</div> */}
+						
+				
 					</div>
 				</div>
 			</div>
