@@ -62,7 +62,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 					</div>
 
 					<div className="footer__info">
-						<p className="footer__info__title">CONTATO</p>
+						<p className="footer__info__title">FALE CONOSCO</p>
 						<p className="footer__info__item">
 							<FaPhoneAlt className="footer__info__item__icon" /> (11) - 3000-2022
 						</p>
@@ -71,7 +71,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 						</p>
 
 						<br />
-						<p className="footer__news__title">MÍDIAS SOCIAIS</p>
+						<p className="footer__news__title">Siga-nos em nossas redes</p>
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">
 								<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
@@ -98,35 +98,43 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 					</div>
 
 					<div className="footer__info">
-						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__title">INSTITUCIONAL</p>
 						<p className="footer__info__item">
-							<Link to="/fee">Taxas </Link>
+							<Link to="/fee">Quem somos </Link>
 						</p>
 						<p className="footer__info__item">
-							<Link to="/announcement">Comunicados </Link>
+							<Link to="/announcement">Produtos </Link>
 						</p>
 						<p className="footer__info__item">
 							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
-								Dúvidas frequentes
+								Serviços
 							</a>
 						</p>
+						< br/>
+						<p className="footer__info__title">TERMOS E POLÍTICAS</p>
 						<p className="footer__info__item">
-							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
-								Documentação das APIs
+							<Link to="/fee">Termo de uso </Link>
+						</p>
+						<p className="footer__info__item">
+							<Link to="/announcement">Política de privacidade</Link>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
+								Disclaimers
 							</a>
 						</p>
 					</div>
 					<div className="footer__info">
-						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__title">CENTRAL DE SUPORTE</p>
 						<p className="footer__info__item">
-							<Link to="/fee">Taxas </Link>
+							<Link to="/fee">Nossas Taxas </Link>
 						</p>
 						<p className="footer__info__item">
-							<Link to="/announcement">Comunicados </Link>
+							<Link to="/announcement">Comunicados ao mercado</Link>
 						</p>
 						<p className="footer__info__item">
 							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
-								Dúvidas frequentes
+								Dúvidas frequentes (FAQ)
 							</a>
 						</p>
 						<p className="footer__info__item">
@@ -137,21 +145,21 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 					</div>
 
 					<div className="footer__info">
-						<p className="footer__info__title">SUPORTE</p>
+						<p className="footer__info__title">ARENA DO CONHECIMENTO</p>
 						<p className="footer__info__item">
-							<Link to="/fee">Taxas </Link>
+							<Link to="/fee">Notícias do mundo cripto </Link>
 						</p>
 						<p className="footer__info__item">
-							<Link to="/announcement">Comunicados </Link>
+							<Link to="/announcement">Artigos </Link>
 						</p>
 						<p className="footer__info__item">
 							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
-								Dúvidas frequentes
+								Fortem Academy
 							</a>
 						</p>
 						<p className="footer__info__item">
 							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
-								Documentação das APIs
+								Documentações
 							</a>
 						</p>
 					</div>
