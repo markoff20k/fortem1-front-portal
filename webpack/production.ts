@@ -55,6 +55,17 @@ const config = merge(commonConfig, {
                 use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
             },
             {
+                // Match js, jsx, ts & tsx files
+                test: /.(js|jsx)$/,
+                
+
+                
+                use: {
+                    loader: "babel-loader"
+                  }
+                
+             },
+            {
                 test: /\.(tsx|ts)?$/,
                 use: [
                     {
