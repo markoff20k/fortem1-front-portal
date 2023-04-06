@@ -143,6 +143,11 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 								Documentação das APIs
 							</a>
 						</p>
+						<p className="footer__info__item">
+							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
+								Status dos serviços
+							</a>
+						</p>
 					</div>
 
 					<div className="footer__info">
