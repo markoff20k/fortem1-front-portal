@@ -72,6 +72,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 
 						<br />
 						<p className="footer__news__title">Siga-nos em nossas redes</p>
+						<br />
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">
 								<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
@@ -191,7 +192,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 				<div className="fortem-line"></div>
 
 				<p className="footer__copyright">
-					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem One SA © 2023 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
+					<img src={fortemIcon} style={{width: '13px'}}/>Fortem One SA © 2023 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
 				</p>
 			</div>
 		</div>

@@ -89,6 +89,8 @@ import {
 
 import Blog from '../../components/blog/BlogDetailsContent'
 
+import {Home} from '../../screens/home/index';
+
 import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
@@ -372,6 +374,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p/order/:id" component={P2POrderScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p/:currency" component={P2POffersScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p" component={P2POffersScreen} />
+
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/main" component={Home} />
 
                     <PublicRoute path="/markets" component={MarketsList} />
 
