@@ -23,7 +23,7 @@ import {
     ConfirmMobileScreen,
     EmailVerificationMobileScreen,
     ForgotPasswordMobileScreen,
-    LandingScreenMobile,
+    
     OrdersMobileScreen,
     ProfileAccountActivityMobileScreen,
     ProfileApiKeysMobileScreen,
@@ -85,6 +85,7 @@ import {
     P2PUserOffersScreen,
     CreateP2POfferScreen,
     P2POrderScreen,
+    LandingScreenMobile,
 } from '../../screens';
 
 import Blog from '../../components/blog/BlogDetailsContent'

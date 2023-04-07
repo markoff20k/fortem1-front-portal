@@ -33,6 +33,8 @@ import FacebookIcon from 'src/assets/images/landing/social/Facebook.svg';
 import MediumIcon from 'src/assets/images/landing/social/Medium.svg';
 import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
+import { useSelector } from 'react-redux';
+
 
 import { HomepageMarket, Footer } from '../../containers';
 // import { MarketOverviewList } from '../MarketOverviewList';
@@ -58,6 +60,8 @@ var BlogListData = BlogClassicData.slice(0, 6);
 import HeaderTopNews from "./components/HeaderTopNews";
 import { FiX , FiArrowRight} from "react-icons/fi";
 
+import {HeaderLanding} from '../../containers/HeaderLanding';
+
 
 
 
@@ -69,6 +73,10 @@ interface ReduxProps {
 type Props = ReduxProps & RouteProps & IntlProps;
 
 class Landing extends React.Component<Props> {
+
+
+    
+
     public componentDidMount() {
         if (this.props.colorTheme === 'light') {
             toggleColorTheme('dark');
@@ -189,55 +197,11 @@ class Landing extends React.Component<Props> {
         return (
             <div className="pg-landing-screen">
                 
-                <div className={`header-top-news bg_image`} >
-            <div className="wrapper">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="inner">
-                                <div className="content">
-                                    <span className="rn-badge">Limited Time Offer</span>
-                                    <span className="news-text">Intro price. Get Doob for Big Sale <strong>-95% off.</strong></span>
-                                </div>
-                                <div className="right-button">
-                                    <a className="btn-read-more" target="_blank" href="https://themeforest.net/checkout/from_item/33571911?license=regular"><span>Purchase Now <FiArrowRight /></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="icon-close">
-                <button className="close-button"><FiX /></button>
-            </div>
-        </div>
 
 
 
-                <div className="pg-landing-screen__header">
-                    <div className="pg-landing-screen__header__wrap">
-                        <div className="pg-landing-screen__header__wrap__left" onClick={(e) => this.handleScrollTop()}>
-                            <Logo />
-                        </div>
-                        <div className="pg-landing-screen__header__wrap__right">
-                            {this.props.isLoggedIn ? (
-                                <Link to="/profile" className="landing-button">
-                                    {this.translate('page.body.landing.header.button1')}
-                                </Link>
-                            ) : (
-                                <>
-                                    <Link to="/signup" className="landing-button">
-                                        {this.translate('page.body.landing.header.button3')}
-                                    </Link>
-                                    <Link to="/signin" className="landing-button landing-button--simple">
-                                        {this.translate('page.body.landing.header.button2')}
-                                    </Link>
-                                      <NavBar />
-                                </>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                <HeaderLanding/>
+
                 <LandingBlock>
 
                 

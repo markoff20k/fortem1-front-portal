@@ -71,8 +71,8 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 						</p>
 
 						<br />
-						<p className="footer__news__title">Siga-nos em nossas redes</p>
-						<br />
+						{/* <p className="footer__news__title">Siga-nos em nossas redes</p>
+						<br /> */}
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">
 								<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">

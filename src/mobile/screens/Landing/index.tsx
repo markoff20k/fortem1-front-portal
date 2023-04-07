@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { MarketsTable } from '../../../containers';
 
+import { LandingScreenMobile } from '../../../screens/LadindScreenMobile';
+
 const LandingComponent: React.FC = () => {
     return (
         <div className="pg-landing-screen-mobile">
-            <MarketsTable />
+            {/* <MarketsTable /> */}
+            <LandingScreenMobile />
         </div>
     );
 };
 
-export const LandingScreenMobile = React.memo(LandingComponent);
+export const LandingScreen = React.memo(LandingComponent);

@@ -13421,6 +13421,11 @@
     "react-fit" "^1.0.3"
     "update-input-width" "^1.1.1"
 
+"react-dimmer@^1.0.7":
+  "integrity" "sha512-WgS19MiBA/geVpy/PHhhmcoujP1/OJ4v5M/nwpaQZq8cytt9dHHLxNk+xCgVefS0SKRKnNpY45BpvUcsZpsxfw=="
+  "resolved" "https://registry.npmjs.org/react-dimmer/-/react-dimmer-1.0.7.tgz"
+  "version" "1.0.7"
+
 "react-docgen-typescript@^1.20.5":
   "integrity" "sha512-MPLbF8vzRwAG3GcjdL+OHQlhgtWsLTXs+7uJiHfEeT3Ur7IsZaNYqRTLQ9sj2nB6M6jylcPCeCmH7qbszJmecg=="
   "resolved" "https://registry.npmjs.org/react-docgen-typescript/-/react-docgen-typescript-1.22.0.tgz"

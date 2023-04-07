@@ -10,6 +10,12 @@ $sm-layout:'only screen and (max-width: 767px)';
 $large-mobile: 'only screen and (max-width: 575px)';
 $small-mobile: 'only screen and (max-width: 479px)';
 
+.dimmer {
+
+    top: 830px !important;
+
+}
+
 .theme-gradient {
 
     background: -moz-linear-gradient(95deg, #f5f5f5 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95%/200% 100%;
@@ -1476,7 +1482,7 @@ img,video {
 }
 
 .flex-auto {
-    flex: 1 1 auto
+    /* flex: 1 1 auto */
 }
 
 .flex-none {
@@ -2959,7 +2965,7 @@ img,video {
     }
 
     .sm\:flex-auto {
-        flex: 1 1 auto
+        /* flex: 1 1 auto */
     }
 
     .sm\:flex-none {

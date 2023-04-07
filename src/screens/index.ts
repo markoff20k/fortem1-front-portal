@@ -22,3 +22,5 @@ export * from './SetupScreen';
 export * from './InternalTransfer';
 export * from './P2P';
 export * from './WalletsScreen';
+
+export * from './LadindScreenMobile';
