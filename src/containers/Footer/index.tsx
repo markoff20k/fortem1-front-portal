@@ -61,11 +61,14 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 						</div>
 					</div>
 
+
 					<div className="footer__info">
 						<p className="footer__info__title">FALE CONOSCO</p>
+						<br/>
 						<p className="footer__info__item">
 							<FaPhoneAlt className="footer__info__item__icon" /> (11) - 3000-2022
 						</p>
+						<br/>
 						<p className="footer__info__item">
 							<FaEnvelope className="footer__info__item__icon" /> contato@fortem1.com.br
 						</p>
