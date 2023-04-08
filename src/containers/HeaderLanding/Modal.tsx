@@ -16,7 +16,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
             closeModal(false);
           }}
         >
-          Fechar
+          Fechar X
         </h2>
       </div>
       <div className="modal-body">

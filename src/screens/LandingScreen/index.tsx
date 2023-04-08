@@ -104,94 +104,6 @@ class Landing extends React.Component<Props> {
 
    
 
-  
-
-	public renderDownloadDevices = () => {
-		return (
-			<div className="homepage-download rn-section-gap">
-				<div className="container">
-					<div className="main-homepage-download">
-						<div className="row dowdload-box">
-							<div className="col-5 dowdload-box__box-1" style={{ paddingTop: 100 }}>
-								<div className="row ">
-									<div className="col-12">
-										<div className="d-flex justify-content-start">
-										<h3 className="trading-title">Agora não há mais motivos para você ficar de fora. </h3>
-									</div>
-									<div>
-									<p className="trading-description">
-							Download Fortem APP, you will be able to easily at any time, anywhere trading global mainstream,
-							popular digital assets.
-						</p>
-										</div>
-					
-									</div>
-								</div>
-								<div className="row pt-5">
-									<div className="col-12">
-										<div
-											className="grid-container"
-											style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
-										>
-											<div>
-												<img
-													className="img-fluid"
-													src={DownloadAPP}
-													style={{ borderRadius: 10 }}
-													alt="google+play"
-												/>
-											</div>
-											<div style={{ marginLeft: -100 }}>
-												<img
-													className="img-fluid"
-													src={DownloadGG}
-													style={{ borderRadius: 10 }}
-													alt="android+store"
-												/>
-											</div>
-											<div className="mt-3">
-												<img
-													className="img-fluid"
-													src={Download2}
-													style={{ borderRadius: 10 }}
-													alt="app+store"
-												/>
-											</div>
-											<div className="mt-3" style={{ marginLeft: -100 }}>
-												<img
-													className="img-fluid"
-													src={Download1}
-													style={{ borderRadius: 10 }}
-													alt="scan+qrcode"
-												/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-7 dowdload-box__box-2" style={{ position: 'relative' }}>
-							<Flip top cascade>
-
-							<img
-									src={devicePhone}
-									alt="exchange"
-									style={{ position: 'absolute', zIndex: 100, top: 70, left: 90, width: '50%' }}
-								/>
-
-								<img
-									src={deviceLaptop}
-									alt="exchange"
-									style={{ position: 'absolute', zIndex: 100, top: 40, left: 200, width: '120%' }}
-								/>
-							</Flip>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		);
-	};
 
     public render() {
 
@@ -200,14 +112,9 @@ class Landing extends React.Component<Props> {
         
         return (
             <div className="pg-landing-screen">
-                
-
-
-
+    
                 <HeaderLanding/>
-                {/* <HeaderTwo btnStyle="btn-small" HeaderSTyle="header-not-transparent" /> */}
                 
-
                 <LandingBlock>
 
                 
@@ -240,11 +147,14 @@ class Landing extends React.Component<Props> {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-16 lg:px-8 lg:pt-24">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">Invista em tokens com os melhores rendimentos e com a segurança da blockchain.</h1>
+                  <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM ATIVOS DIGITAIS</h1>
                   <p className="relative mt-6 text-xl leading-8 text-fortem1neutral-300 sm:max-w-md lg:max-w-none">Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
                   <div className="mt-10 flex items-center gap-x-6">
-                    <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a>
-                    {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Live demo <span aria-hidden="true">→</span></a> */}
+                    {/* <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a> */}
+                    <Link to="/signup" className="landing-button">
+                        {this.translate('page.body.landing.register.item.button')}
+                    </Link>
+                    
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -509,7 +419,7 @@ class Landing extends React.Component<Props> {
 
                 
 
-                <LandingBlock className="pg-landing-screen__features">
+                {/* <LandingBlock className="pg-landing-screen__features">
                     <div className="pg-landing-screen__features__wrap">
                         <h1>{this.translate('page.body.landing.features.title')}</h1>
                         <div className="pg-landing-screen__features__content">
@@ -571,39 +481,7 @@ class Landing extends React.Component<Props> {
                     </div>
                 </LandingBlock>
 
-
-                <LandingBlock
-                    className="pg-landing-screen__trade-on-the-go"
-                    contentClassName="pg-landing-screen__trade-on-the-go-content">
-                    <div className="pg-landing-screen__trade-on-the-go__wrap">
-                     {/* <div className="pg-landing-screen__trade-on-the-go__wrap__image" />
-                        <div className="pg-landing-screen__trade-on-the-go__wrap__content">
-                            <h1>{this.translate('page.body.landing.tradeOnTheGo.item.title')}</h1>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text1')}</h2>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text2')}</h2>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text3')}</h2>
-                            <Link to="/trading/" className="landing-button">
-                                {this.translate('page.body.landing.tradeOnTheGo.item.button')}
-                            </Link>
-                        </div>  */}
-                                        
-                 {/* <h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
-										Tenha tudo 
-										<span className="color-accent">.<br /></span>
-										<span>Em uma única Plataforma</span>
-										<span className="color-accent">.<br /></span>
-										<span>Em um único App</span>
-										<span className="color-accent">.</span>
-										<span> Na palma da sua mão</span>
-										<span className="color-accent">...</span>
-
-				</h2> */}
-			
-                        {this.renderDownloadDevices()}
-
-                    </div>
-                </LandingBlock>
-
+ */}
                 
                 <LandingBlock> 
                 <div className="pg-landing-screen__start-trading">
