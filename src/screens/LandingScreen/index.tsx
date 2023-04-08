@@ -461,7 +461,7 @@ class Landing extends React.Component<Props> {
 
                             
                         </div>
-                        <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Portfólio diversificado de ativos digitais</h3>
+                        <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Portifólio diversificado de ativos digitais</h3>
 
                                 <p className="text-sm leading-6 text-fortem1typo-100">
                                     Nosso marketplace oferece as melhores opções de tokens de acordo com suas necessidades e expectativas. São várias opções de rentabilidade, prazos para resgate e investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança da blockchain.
