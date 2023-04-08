@@ -112,7 +112,7 @@ export const App = () => {
         dispatch(configsFetch());
 
         const rootElement = document.documentElement;
-        const fontFamily = window.env?.fontFamily ? window.env?.fontFamily : `'IBM Plex Sans', sans-serif`;
+        const fontFamily = window.env?.fontFamily ? window.env?.fontFamily : `'Inter', IBM Plex Sans', sans-serif`;
 
         if (rootElement) {
             rootElement.style.setProperty('--font-family', fontFamily);
