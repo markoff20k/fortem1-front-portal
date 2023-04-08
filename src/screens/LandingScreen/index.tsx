@@ -334,17 +334,15 @@ class Landing extends React.Component<Props> {
                             </svg>
                         </div>
 
-                        <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Estabilidade, desempenho e capacidade</h3>
-                        <span className="color-accent">.</span>
+                        <h3 className="text-lg font-bold mb-2 color-accent  text-fortem1typo-100">Estabilidade, desempenho e capacidade</h3>
+                        {/* <span className="color-accent">.</span> */}
 
-                                <p className="text-sm leading-6 text-fortem1typo-100">
-                                Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.
+                                <p className="text-md leading-6 text-fortem1typo-100">
+                                    Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.
                                 </p>
+                                <br/>
                                 <Link to={""}>
-                                    Conheça nossa página de status dos serviços 
-                                    <span>
-                                        <i className="icon"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></i>
-                                    </span>
+                                    <p className="color-accent"> Conheça nossa página de status dos serviços  <i className="icon"><svg stroke="currentColor" fill="009991" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></i></p>
                                 </Link>
 
                     </div>
@@ -453,15 +451,20 @@ class Landing extends React.Component<Props> {
                         <div className="mb-5">
 
                         
-                            <svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
+                            {/* <svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" viewBox="0 0 48 48">
                                     <path fill="#009991" d="m22.1 33.7-6.7-1-3-6.1c-.2-.3-.5-.6-.9-.6s-.7.2-.9.6l-3 6.1-6.7 1c-.4 0-.7.3-.9.6-.1.4 0 .8.3 1l4.9 4.8L4 46.8c-.1.4.1.8.4 1 .3.2.7.3 1.1.1l6-3.2 6 3.2c.1.1.6.3 1.1-.1.3-.2.5-.6.4-1l-1.2-6.7 4.9-4.8c.3-.3.4-.7.3-1-.2-.3-.5-.6-.9-.6zm-6 5.4c-.2.2-.3.6-.3.9l.9 5.2-4.7-2.5c-.3-.2-.6-.2-.9 0l-4.7 2.5.9-5.2c.1-.3-.1-.7-.3-.9l-3.8-3.7 5.3-.8c.3 0 .6-.3.8-.5l2.3-4.8 2.3 4.8c.1.3.4.5.8.5l5.3.8-3.9 3.7zM33.7 7.6l-6.7-1-3-6.1c-.3-.3-.6-.5-1-.5s-.7.2-.9.6l-3 6.1-6.7 1c-.4 0-.7.3-.8.6-.1.4 0 .8.3 1l4.9 4.8-1.2 6.7c-.1.4.1.8.4 1 .3.2.7.3 1.1.1l6-3.2 6 3.2c.1.1.6.3 1.1-.1.3-.2.5-.6.4-1l-1.2-6.7 4.9-4.8c.3-.3.4-.7.3-1-.3-.3-.6-.6-.9-.7zM27.6 13c-.2.2-.3.6-.3.9l.9 5.2-4.7-2.5c-.3-.2-.6-.2-.9 0l-4.7 2.5.9-5.2c.1-.3-.1-.7-.3-.9l-3.8-3.7 5.3-.8c.3 0 .6-.3.8-.5L23 3.3 25.4 8c.1.3.4.5.8.5l5.3.8-3.9 3.7zM47.1 33.7l-6.7-1-3-6.1c-.2-.3-.5-.6-.9-.6s-.7.2-.9.6l-3 6.1-6.7 1c-.4.1-.7.3-.8.7-.1.4 0 .8.3 1l4.9 4.8-1.3 6.6c-.1.4.1.8.4 1 .3.2.7.3 1.1.1l6-3.2 6 3.2c.1.1.6.3 1.1-.1.3-.2.5-.6.4-1l-1.2-6.7 4.9-4.8c.3-.3.4-.7.3-1-.2-.3-.5-.6-.9-.6zm-6 5.4c-.2.2-.3.6-.3.9l.9 5.2-4.7-2.5c-.3-.2-.6-.2-.9 0l-4.7 2.5.9-5.2c.1-.3-.1-.7-.3-.9l-3.8-3.7 5.3-.8c.3 0 .6-.3.8-.5l2.3-4.8 2.3 4.8c.1.3.4.5.8.5l5.3.8-3.9 3.7z" />
                                 </svg>
+                            </svg> */}
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 32 32" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
+                                <rect width="32" height="32" fill="none"/>
+                                <path fill="#009991" d="M41.767,197.818L41.745,195.98L40.628,193.989C40.457,193.685 40.457,193.315 40.628,193.011L41.745,191.02L41.773,188.738C41.777,188.389 41.963,188.068 42.262,187.89L44.225,186.725L45.39,184.762C45.568,184.463 45.889,184.277 46.238,184.273L48.52,184.245L50.511,183.128C50.815,182.957 51.185,182.957 51.489,183.128L53.48,184.245L55.762,184.273C56.111,184.277 56.432,184.463 56.61,184.762L57.775,186.725L59.738,187.89C60.037,188.068 60.223,188.389 60.227,188.738L60.255,191.02L61.372,193.011C61.543,193.315 61.543,193.685 61.372,193.989L60.255,195.98L60.232,197.84L64.705,202.291C64.967,202.552 65.064,202.935 64.957,203.289C64.851,203.642 64.558,203.908 64.196,203.981C64.196,203.981 61.985,204.423 60.504,204.719C60.108,204.798 59.798,205.108 59.719,205.504C59.423,206.985 58.981,209.196 58.981,209.196C58.908,209.558 58.643,209.85 58.29,209.957C57.937,210.064 57.554,209.968 57.293,209.707L51.469,203.883C51.176,204.039 50.824,204.039 50.531,203.883L44.707,209.707C44.446,209.968 44.063,210.064 43.71,209.957C43.357,209.85 43.092,209.558 43.019,209.196C43.019,209.196 42.577,206.985 42.281,205.504C42.202,205.108 41.892,204.798 41.496,204.719C40.015,204.423 37.804,203.981 37.804,203.981C37.442,203.908 37.15,203.643 37.043,203.29C36.936,202.937 37.032,202.554 37.293,202.293L41.767,197.818ZM59.071,199.506L57.775,200.275L56.61,202.238C56.432,202.537 56.111,202.723 55.762,202.727L53.48,202.755L53.281,202.867L57.386,206.972L57.758,205.111C57.995,203.924 58.924,202.995 60.111,202.758L61.966,202.387L59.071,199.506ZM42.916,199.498L40.028,202.386L41.889,202.758C43.076,202.995 44.005,203.924 44.242,205.111L44.614,206.972L48.719,202.867L48.52,202.755L46.238,202.727C45.889,202.723 45.568,202.537 45.39,202.238L44.225,200.275L42.916,199.498ZM50.863,201.777L51,201.853L52.724,200.887C52.869,200.805 53.033,200.761 53.201,200.759L55.177,200.734L56.186,199.035C56.271,198.891 56.391,198.771 56.535,198.686L58.234,197.677L58.259,195.701C58.261,195.533 58.305,195.369 58.387,195.224L59.353,193.5L58.387,191.776C58.305,191.631 58.261,191.467 58.259,191.299L58.234,189.323L56.535,188.314C56.391,188.229 56.271,188.109 56.186,187.965L55.177,186.266L53.201,186.241C53.033,186.239 52.869,186.195 52.724,186.113L51,185.147L49.276,186.113C49.131,186.195 48.967,186.239 48.799,186.241L46.823,186.266L45.814,187.965C45.729,188.109 45.609,188.229 45.465,188.314L43.766,189.323L43.741,191.299C43.739,191.467 43.695,191.631 43.613,191.776L42.647,193.5L43.613,195.224C43.695,195.369 43.739,195.533 43.741,195.701L43.766,197.677L45.465,198.686C45.609,198.771 45.729,198.891 45.814,199.035L46.823,200.734L48.799,200.759C48.967,200.761 49.131,200.805 49.276,200.887L50.835,201.761L50.846,201.767L50.863,201.777ZM48.86,190.518L50.116,188.138C50.289,187.81 50.629,187.605 51,187.605C51.371,187.605 51.711,187.81 51.884,188.138L53.14,190.518L55.792,190.977C56.158,191.04 56.458,191.301 56.573,191.653C56.687,192.006 56.597,192.393 56.339,192.659L54.463,194.589L54.846,197.253C54.899,197.62 54.744,197.986 54.444,198.204C54.144,198.422 53.748,198.456 53.415,198.293L51,197.105L48.585,198.293C48.252,198.456 47.856,198.422 47.556,198.204C47.256,197.986 47.101,197.62 47.154,197.253L47.537,194.589L45.661,192.659C45.403,192.393 45.313,192.006 45.427,191.653C45.542,191.301 45.842,191.04 46.208,190.977L48.86,190.518ZM51,190.748L50.399,191.886C50.254,192.161 49.991,192.352 49.685,192.405L48.416,192.625L49.314,193.548C49.53,193.77 49.631,194.08 49.587,194.387L49.403,195.662L50.559,195.094C50.837,194.957 51.163,194.957 51.441,195.094L52.597,195.662L52.413,194.387C52.369,194.08 52.47,193.77 52.686,193.548L53.584,192.625L52.315,192.405C52.009,192.352 51.746,192.161 51.601,191.886L51,190.748Z" transform="translate(-35 -180)"/>
                             </svg>
 
                             
                         </div>
-                        <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Portifólio diversificado de ativos digitais</h3>
+                        <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Portfólio diversificado de ativos digitais</h3>
 
                                 <p className="text-sm leading-6 text-fortem1typo-100">
                                     Nosso marketplace oferece as melhores opções de tokens de acordo com suas necessidades e expectativas. São várias opções de rentabilidade, prazos para resgate e investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança da blockchain.
