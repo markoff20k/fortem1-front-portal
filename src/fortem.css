@@ -364,6 +364,11 @@ $small-mobile: 'only screen and (max-width: 479px)';
             }
 		}
 
+        svg {
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+
     }
 
 
