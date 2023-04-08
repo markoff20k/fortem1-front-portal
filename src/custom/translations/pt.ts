@@ -133,7 +133,7 @@ export const pt: LangType = {
     'page.body.landing.platformInfo.item.third.title': 'Países atendidos',
 
     'page.body.landing.register.item.title': 'Não importa o seu nível de experiência',
-    'page.body.landing.register.item.text': 'A Fortem One oferece interfaces intuitivas e amigáveis desenvolvida por especialistas, com informações de mercado atualizadas em tempo real, ferramentas gráficas e processos simplificados.',
+    'page.body.landing.register.item.text': 'A Fortem One oferece interfaces intuitivas e amigáveis desenvolvidas por especialistas, com informações de mercado atualizadas em tempo real, ferramentas gráficas e processos simplificados.',
     'page.body.landing.register.item.button': 'Abra sua conta',
 
     'page.body.landing.features.title': 'Segurança é importante, mas não é tudo... Nós oferecemos muito mais:',

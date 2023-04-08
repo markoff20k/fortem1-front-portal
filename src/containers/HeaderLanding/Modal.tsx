@@ -21,7 +21,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
 
   
 
-<div className="inset-x-0 top-0 -z-10 bg-white pt-4 ring-1 ring-gray-900/5">
+<div className="inset-x-0 top-0 -z-10 bg-white">
       
     <div className="flex flex-wrap w-full">
 
