@@ -9,13 +9,17 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 import {Modal} from './Modal';
 import { Logo } from '../../components';
 
+import useStickyHeader from "./useStickyHeader";
+
 
 import { ReactDimmer } from 'react-dimmer'
+import { setTimezone } from 'src/helpers';
 
 export const HeaderLanding: React.FC = () => {
 	const history = useHistory();
 	const intl = useIntl();
 	const isLoggedIn = useSelector(selectUserLoggedIn);
+	
 	const [activeNow, setActiveNow] = React.useState('');
 	const [activeItemDrop, setActiveItemDrop] = React.useState('');
 
@@ -23,6 +27,9 @@ export const HeaderLanding: React.FC = () => {
 
 	const dispatch = useDispatch();
 	const locationHeader = window.location.href.split('/').pop();
+
+	const sticky = useStickyHeader( 50 );
+	const ref = React.useRef();
   
 	React.useEffect(() => {
 		setStateActiveNow(String(locationHeader));
@@ -261,7 +268,7 @@ export const HeaderLanding: React.FC = () => {
 	};
 
 	return (
-		<div className="headerDesktop-screen">
+		<header ref={ref} className="headerDesktop-screen sticky rn-header header-default">
 			<div className="container-header">
 				<nav className="header d-flex flex-row justify-content-around align-items-center">
 					<div className="header__left-menu d-flex flex-row align-items-center">
@@ -280,7 +287,7 @@ export const HeaderLanding: React.FC = () => {
 								>
 									Corretora
 								</p>
-								{isModalOpen && <Modal closeModal={setModal} />}
+								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
 						<div className="header__left-menu__dropdown flex-shrink-0 ">
@@ -359,6 +366,6 @@ export const HeaderLanding: React.FC = () => {
 					</div>
 				</nav>
 			</div>
-		</div>
+		</header>
 	);
 };

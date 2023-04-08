@@ -15,6 +15,7 @@ import WebSocketProvider from './websocket/WebSocket';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 
+
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
 
@@ -99,7 +100,7 @@ const RenderDeviceContainers = () => {
             <MobileHeader />
             <AlertsContainer/>
             <LayoutContainer/>
-            <MobileFooter />
+            {/* <MobileFooter /> */}
         </div>
     );
 };

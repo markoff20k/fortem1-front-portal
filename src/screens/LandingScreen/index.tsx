@@ -62,6 +62,10 @@ import { FiX , FiArrowRight} from "react-icons/fi";
 
 import {HeaderLanding} from '../../containers/HeaderLanding';
 
+import HeaderTwo from './components/header/HeaderTwo';
+
+
+
 
 
 
@@ -201,6 +205,8 @@ class Landing extends React.Component<Props> {
 
 
                 <HeaderLanding/>
+                {/* <HeaderTwo btnStyle="btn-small" HeaderSTyle="header-not-transparent" /> */}
+                
 
                 <LandingBlock>
 

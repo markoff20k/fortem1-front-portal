@@ -10,6 +10,26 @@ $sm-layout:'only screen and (max-width: 767px)';
 $large-mobile: 'only screen and (max-width: 575px)';
 $small-mobile: 'only screen and (max-width: 479px)';
 
+.rn-header.sticky {
+    position: fixed;
+    /* top: 0;
+    left: 0; */
+    /* background-color: var(--color-dark) !important; */
+    width: 100vw;
+    /* height: 60px; */
+    animation: headerSticky .95s ease forwards;
+    z-index: 999999999999999;
+}
+
+@keyframes headerSticky {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .color-accent {
     color: #1EDED0;

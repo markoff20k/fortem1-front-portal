@@ -5,6 +5,9 @@ interface IModalProps {
 }
 
 export const Modal = ({ closeModal }: IModalProps) => {
+
+    const [activeNow, setActiveNow] = React.useState('');
+
   return (
     <div className="modal">
       <div className="modal-header">
@@ -13,7 +16,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
             closeModal(false);
           }}
         >
-          X
+          Fechar
         </h2>
       </div>
       <div className="modal-body">
