@@ -11,13 +11,13 @@ export const Modal = ({ closeModal }: IModalProps) => {
   return (
     <div className="modal">
       <div className="modal-header">
-        <h2
+        <p
           onClick={() => {
             closeModal(false);
           }}
         >
           Fechar X
-        </h2>
+        </p>
       </div>
       <div className="modal-body">
       

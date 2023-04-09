@@ -3,7 +3,7 @@
 	.modal {
 	
 		top: 120px;
-		width: 100vw;
+		width: 90vw;
 		
 		height: fit-content;
 		min-width: 20rem;
@@ -13,17 +13,37 @@
 		z-index: 9999;
 		display: flex;		
 		flex-direction: column;
-	  }
+		left: 5%;
+	}
 	  
-	  .modal .modal-header {
-		height: 2.5rem;
+	.modal .modal-header {
+		height: 2.3rem;
 
 		background-color: transparent;
 		position: relative;
 		border: none;
-	  }
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		color: var(--secondary-contrast-cta-color);
+		font-size: 16px;
+		font-weight: 500;
+
+		p {
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--secondary-contrast-cta-color);
+			&:hover {
+				color: #666666
+			}
+		}
+
+		&:hover {
+			color: #666666
+		}
+	}
 	  
-	  .modal .modal-header h2 {
+	.modal .modal-header h2 {
 		color: black;
 		position: absolute;
 		top: 0;
@@ -31,16 +51,14 @@
 		margin: 0;
 		padding: 0.4rem;
 		cursor: pointer;
-	  }
+	}
 	  
-	  .modal .modal-body {
+	.modal .modal-body {
 		height: 100%;
 		border: none;
 		padding: 0;
 		margin-top: 0;
-		
-
-
+	
 		a {
 			font-size: 16px;
 			color: #000;
@@ -57,20 +75,31 @@
 		}
 
 
-	  }
+	}
 
 	
-	font-family: Inter;
+	font-family: 'Inter';
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 24px;
 	background: var(--subheader-background-color);
 	color: var(--primary-text-color);
 	padding: 0.5rem 0.5rem;
 	
 	height: 120px;
+
+	@media (max-width: 768px) {
+		height: 40px;
+	  }
+	
 	vertical-align: middle;
 	
+    @media (max-width: 1128px) {
+		font-size: 16px;
+		font-weight: 600;
+  
+	}
+
 
 	.container-header {
 		margin: 20px 20px;
@@ -91,24 +120,43 @@
 	}
 
 	.header {
-		&__left-menu {
-			&__logo {
-				/* margin-left: 32px;
-				padding-right: 44px; */
-				max-width: 240px;
 
-				a {
-					img {
-						padding-bottom: 6px;
-					}
-				}
+		&__logo {
+			/* margin-left: 32px;
+			padding-right: 44px; */
+			max-width: 240px;
 
-				@media screen and (max-width: 768px) {
-					width: 0px;
-					
+			a {
+				img {
+					padding-bottom: 6px;
 				}
+			}
+
+			@media screen and (max-width: 768px) {
+				width: 0px;
+				display: none;
 				
 			}
+
+			@media (max-width: 1128px) {
+				width: 170px;
+		  
+			  }
+		  
+			  @media (max-width: 1023px) {
+				width: 160px;
+		  
+			  }
+			  
+			  @media (max-width: 928px) {
+				width: 140px;
+		  
+			
+				}
+			}
+
+		&__left-menu {
+
 
 			&__dropdown {
 				
@@ -144,11 +192,17 @@
 					&__dropbtn {
 						color: var(--primary-text-color);
 						font-size: 18px;
-						font-weight: 500;
+						font-weight: 700;
 						letter-spacing: 0.5px;
 						-webkit-appearance: button;
 						opacity: 0.91;
 						border-bottom: 2px solid transparent;
+
+						@media (max-width: 1128px) {
+							font-size: 16px;
+							font-weight: 600;
+					  
+						}
 
 						&::before {
 							background-color: #fff;
@@ -227,7 +281,7 @@
 							
 							color: var(--primary-text-color);
 							font-size: 18px;
-							font-weight: 500;
+							font-weight: 700;
 							letter-spacing: 0.5px;
 							-webkit-appearance: button;
 							opacity: 0.91;
@@ -236,6 +290,12 @@
 							padding: 20px 16px;
 							text-decoration: none !important;
 							transition: 0.25;
+
+							@media (max-width: 1128px) {
+								font-size: 16px;
+								font-weight: 600;
+						  
+							}
 
 							div {
 								&:hover {
@@ -298,7 +358,7 @@
 					position: relative;
 
 					&--active {
-						/* border-bottom: 2px solid #009991 !important; */
+
 
 						a {
 							color: var(--primary-text-color);
@@ -309,10 +369,16 @@
 						border: none;
 						color: var(--primary-text-color);
 						font-size: 18px;
-						font-weight: 500;
+						font-weight: 700;
 						letter-spacing: 0.5px;
 						-webkit-appearance: button;
 						opacity: 0.91;
+
+						@media (max-width: 1128px) {
+							font-size: 16px;
+							font-weight: 600;
+					  
+						}
 
 						outline: none;
 						text-decoration: none !important;
@@ -367,10 +433,16 @@
 						&__title {
 							color: var(--primary-text-color);
 							font-size: 18px;
-							font-weight: 500;
+							font-weight: 700;
 							letter-spacing: 0.5px;
 							-webkit-appearance: button;
 							opacity: 0.91;
+
+							@media (max-width: 1128px) {
+								font-size: 16px;
+								font-weight: 600;
+						  
+							}
 							
 
 							&:hover {
@@ -402,7 +474,7 @@
 							color: var(--primary-text-color);
 							display: block;
 							font-size: 18px;
-							font-weight: bold;
+							font-weight: 700;
 							letter-spacing: 0.5px;
 							-webkit-appearance: button;
 							border: 1px solid #009991;
@@ -410,6 +482,12 @@
 							opacity: 0.91;
 							padding: 20px 16px;
 							text-decoration: none !important;
+
+							@media (max-width: 1128px) {
+								font-size: 16px;
+								font-weight: 600;
+						  
+							}
 						}
 
 						link {
@@ -434,7 +512,6 @@
 					}
 
 					&:hover .header__right-menu__dropdown__wrap__dropbtn {
-						/* color: var(--yellow) !important; */
 						outline: none !important;
 						text-decoration: none !important;
 						border: 1px solid #009991;
@@ -461,12 +538,18 @@
 
 				&__title {
 					font-size: 18px;
-					font-weight: 500;
+					font-weight: 700;
 					letter-spacing: 0.5px;
 					margin-right: 20px;
 					/* padding: 16px 20px; */
 					text-align: center;
 					transition: all 0.3s;
+
+					@media (max-width: 1128px) {
+						font-size: 16px;
+						font-weight: 600;
+				  
+					}
 					
 					@media screen and (max-width: 768px) {
 						display: none;
@@ -479,7 +562,7 @@
 					span {
 						color: var(--primary-text-color);
 						font-size: 18px;
-						font-weight: 500;
+						font-weight: 700;
 						letter-spacing: 0.5px;
 						-webkit-appearance: button;
 						opacity: 0.91;
@@ -487,7 +570,15 @@
 						text-decoration: none;
 						border: 1px solid #009991;
 						border-radius: 10px;
-						padding: 6px 20px;
+						padding: 12px 20px;
+
+						@media (max-width: 1128px) {
+							font-size: 16px;
+							font-weight: 600;
+							padding: 9px 15px;
+					  
+						}
+
 					}
 
 					&--active {
@@ -505,11 +596,18 @@
 						border-radius: 10px;
 						color: var(--primary-text-color);
 						font-size: 18px;
-						font-weight: 500;
-						padding: 6px 20px;
+						font-weight: 700;
+						padding: 12px 20px;
 						letter-spacing: 0.5px;
 						-webkit-appearance: button;
 						opacity: 0.91;
+
+						@media (max-width: 1128px) {
+							font-size: 16px;
+							font-weight: 600;
+							padding: 9px 15px;
+					  
+						}
 
 						@media screen and (max-width: 768px) {
 							display: none;

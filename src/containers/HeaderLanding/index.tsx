@@ -271,13 +271,12 @@ export const HeaderLanding: React.FC = () => {
 		<header ref={ref} className="headerDesktop-screen sticky rn-header header-default">
 			<div className="container-header">
 				<nav className="header d-flex flex-row justify-content-around align-items-center">
+				<div className="header__logo" onClick={() => setStateActiveNow('')}>
+					<Link to="/">
+						<Logo />
+					</Link>
+				</div>
 					<div className="header__left-menu d-flex flex-row align-items-center">
-						<div className="header__left-menu__logo" onClick={() => setStateActiveNow('')}>
-							<Link to="/">
-								<Logo />
-							</Link>
-						</div>
-
 						<div className="header__left-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<p
@@ -292,22 +291,26 @@ export const HeaderLanding: React.FC = () => {
 						</div>
 						<div className="header__left-menu__dropdown flex-shrink-0 ">
 							<div className={classLinkActive('ieo')} onClick={() => setStateActiveNow('ieo')}>
-								<Link
-									to="/ieo"
+								<p
+								
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+									onClick={() => setModal((prevState) => !prevState)}
 								>
 									Tokenizadora
-								</Link>
+								</p>
+								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
 						<div className="header__left-menu__dropdown flex-shrink-0 d-none d-lg-block d-xl-block ">
 							<div className={classLinkActive('stake')} onClick={() => setStateActiveNow('stake')}>
-								<Link
-									to="/stake"
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
-								>
-									Meio de Pagamento
-								</Link>
+							<p
+								
+								className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+								onClick={() => setModal((prevState) => !prevState)}
+							>
+								Tokenizadora
+							</p>
+							{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
 

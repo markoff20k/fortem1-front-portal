@@ -69,7 +69,35 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 
 .pg-logo {
-	max-width: 70%;
+	max-width: 180px;
+
+    a {
+        img {
+            padding-bottom: 6px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 0px;
+        
+        
+    }
+
+    @media (max-width: 1128px) {
+        width: 160px;
+  
+      }
+  
+      @media (max-width: 1023px) {
+        width: 140px;
+  
+      }
+      
+      @media (max-width: 928px) {
+        width: 130px;
+  
+    
+        }
 
 }
 
