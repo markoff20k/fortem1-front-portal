@@ -61,7 +61,7 @@ var BlogListData = BlogClassicData.slice(0, 6);
 import HeaderTopNews from "./components/HeaderTopNews";
 import { FiX , FiArrowRight} from "react-icons/fi";
 
-import {HeaderLanding} from '../../containers/HeaderLanding';
+import {HeaderLandingMobile} from '../../containers/HeaderLandingMobile';
 
 import Typed from 'react-typed';
 
@@ -115,7 +115,7 @@ class Landing extends React.Component<Props> {
 
 
 
-                {/* <HeaderLanding/> */}
+                <HeaderLandingMobile/>
 
                 <LandingBlock>
 
