@@ -146,7 +146,8 @@ class Landing extends React.Component<Props> {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-16 lg:px-8 lg:pt-24">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className='w-hero-container-left'>
-                    <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM 
+                    <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM...</h1>
+                        <h1>
                         <Typed
                                 strings={[
                                     "ativos digitais",
