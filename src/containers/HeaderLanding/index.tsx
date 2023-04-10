@@ -308,7 +308,7 @@ export const HeaderLanding: React.FC = () => {
 								className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								onClick={() => setModal((prevState) => !prevState)}
 							>
-								Tokenizadora
+								Meio de Pagamento
 							</p>
 							{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
@@ -354,12 +354,12 @@ export const HeaderLanding: React.FC = () => {
 
 					
 					<ReactDimmer
-        isOpen={isModalOpen}
-        exitDimmer={setModal}
-        zIndex={100}
-        blur={1.25}
-		transition={0.25}
-      />
+        				isOpen={isModalOpen}
+        				exitDimmer={setModal}
+        				zIndex={100}
+        				blur={1.5}
+						transition={0.25}
+      				/>
 
 					<div className="header__right-menu d-flex align-items-center flex-row">
 						{renderUnLogin()}

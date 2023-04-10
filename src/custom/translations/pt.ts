@@ -104,16 +104,16 @@ export const pt: LangType = {
 
     /* Charts */
     'page.body.charts.tabs.chart': 'Gráfico',
-    'page.body.charts.tabs.depth': 'Profundidade do Livro',
+    'page.body.charts.tabs.depth': 'Profundidade do livro',
 
     /* Markets Table */
 	'page.body.marketsTable.filter.all': 'Todos',
 	'page.body.marketsTable.header.pair': 'Mercado',
 	'page.body.marketsTable.header.lastPrice': 'Último preço',
 	'page.body.marketsTable.header.change': 'Variação (24H)',
-	'page.body.marketsTable.header.high': 'Maior valor (24H)',
-	'page.body.marketsTable.header.low': 'Menor valor (24H)',
-	'page.body.marketsTable.header.volume': 'Volume financeiro (24H)',
+	'page.body.marketsTable.header.high': 'Maior (24H)',
+	'page.body.marketsTable.header.low': 'Menor (24H)',
+	'page.body.marketsTable.header.volume': 'Volume (24H)',
 
 
     /* Landing */

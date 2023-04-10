@@ -1,9 +1,9 @@
 const customTailwindColors = {
     colors: {
-        // 'primary-cta-color-main': '#3c78e9',
-        // 'primary-cta-color-hover': '#3c78e9',
-        // 'dropdown-background-color': '#FFFFFF',
-        // 'main-background-color': '#FFFFFF',
+        'primary-cta-color-main': '#009991',
+        'primary-cta-color-hover': '#009991',
+        'dropdown-background-color': '#009991',
+        'main-background-color': '#009991',
         fortem1neutral: {
             100: '#FFFFFF',
             300: '#F2F4F8',
@@ -49,14 +49,14 @@ const customTailwindColors = {
     },
     textColor: {
         'color-contrast': '#FFFFFF',
-        'cta-contrast': '#090909',
-        'secondary-color': '#737373',
+        'cta-contrast': '#009991',
+        'secondary-color': '#009991',
     },
     boxShadow: {
         'lg-updated': '0px 0px 2px rgba(0, 0, 0, 0.12), 0px 10px 15px -3px rgba(0, 0, 0, 0.12), 0px 4px 6px -2px rgba(0, 0, 0, 0.04)',
     },
     borderColor: {
-        'divider-color-20': '1px solid #DCDCDC',
+        'divider-color-20': '1px solid #009991',
     },
 };
 

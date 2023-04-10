@@ -7,6 +7,9 @@
   justify-content: space-between;
   padding: 10px 14px;
   width: 100%;
+  position: fixed;
+  z-index: 10;
+  
 
   &__logo {
     align-items: center;
@@ -14,7 +17,7 @@
     height: 100%;
     justify-content: flex-start;
     max-height: 20px;
-    max-width: 35%;
+    max-width: 30%;
 
     .pg-logo__img {
       max-height: 48px;
@@ -24,6 +27,10 @@
   }
 
   &__account {
+    display: flex;
+    max-width: 60vw;
+
+
     &__profile__icon {
       align-items: center;
       display: flex;
@@ -32,6 +39,30 @@
     }
 
     &__log-in {
+      text-decoration: none;
+      margin-right: calc(var(--gap) * 2);
+
+      button {
+        align-items: center;
+        border-radius: 4px;
+        display: flex;
+        font-size: 14px;
+        height: 28px;
+        justify-content: center;
+        letter-spacing: 0.1px;
+        line-height: 22px;
+        min-width: 89px;
+        padding: 0 12px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      
+    }
+
+    &__sign-up {
       text-decoration: none;
 
       button {
@@ -52,5 +83,7 @@
         text-decoration: none;
       }
     }
+
+
   }
 }

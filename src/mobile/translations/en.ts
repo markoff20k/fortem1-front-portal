@@ -1,5 +1,7 @@
 export const en = {
     'page.mobile.header.signIn': 'Log In',
+    'page.mobile.header.signUp': 'Register',
+
     'page.mobile.footer.home': 'Home',
     'page.mobile.footer.orders': 'Orders',
     'page.mobile.footer.trading': 'Trade',

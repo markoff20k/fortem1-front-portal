@@ -1,31 +1,32 @@
 export const pt = {
     'page.mobile.header.signIn': 'Entrar',
+    'page.mobile.header.signUp': 'Cadastrar',
     'page.mobile.footer.home': 'Home',
     'page.mobile.footer.orders': 'Orders',
     'page.mobile.footer.trading': 'Negociar',
     'page.mobile.footer.wallets': 'Carteira',
-    'page.mobile.footer.profile': 'Profile',
+    'page.mobile.footer.profile': 'Perfil',
 
-    'page.mobile.tradingTabs.label.createOrder': 'Create Order',
-    'page.mobile.tradingTabs.label.charts': 'Charts',
-    'page.mobile.tradingTabs.label.orders': 'Orders',
+    'page.mobile.tradingTabs.label.createOrder': 'Nova ordem',
+    'page.mobile.tradingTabs.label.charts': 'Gráfico',
+    'page.mobile.tradingTabs.label.orders': 'Ordens',
 
-    'page.mobile.charts.label.orderBook': 'Order book',
-    'page.mobile.charts.label.trades': 'Trades',
+    'page.mobile.charts.label.orderBook': 'Livro de ofertas',
+    'page.mobile.charts.label.trades': 'Negócios',
 
     'page.mobile.order.price.placeholder': 'Price ({currency})',
     'page.mobile.order.trigger.placeholder.stop': 'Stop ({currency})',
     'page.mobile.order.trigger.placeholder.take': 'Take ({currency})',
     'page.mobile.order.amount.placeholder': 'Amount ({currency})',
 
-    'page.mobile.orderButtons.buy': 'Buy {base_unit}',
-    'page.mobile.orderButtons.sell': 'Sell {base_unit}',
+    'page.mobile.orderButtons.buy': 'Comprar {base_unit}',
+    'page.mobile.orderButtons.sell': 'Vender {base_unit}',
 
-    'page.mobile.orders.tabs.open': 'Open',
-    'page.mobile.orders.tabs.all': 'All',
-    'page.mobile.orders.cancelAll': 'Cancel All',
+    'page.mobile.orders.tabs.open': 'Abertas',
+    'page.mobile.orders.tabs.all': 'Todas',
+    'page.mobile.orders.cancelAll': 'Cancelar todas',
 
-    'page.mobile.orders.open.title': 'Open Orders',
+    'page.mobile.orders.open.title': 'Ordens abertas',
     'page.mobile.orders.header.orderType.buy.market': 'Buy market',
     'page.mobile.orders.header.orderType.buy.limit': 'Buy limit',
     'page.mobile.orders.header.orderType.sell.market': 'Sell market',
@@ -64,14 +65,14 @@ export const pt = {
     'page.mobile.wallet.deposit.generating': 'Gerando endereço...',
 
     'page.mobile.wallet.withdraw.modal.new.account': 'Confirm new account',
-    'page.mobile.wallet.withdraw.modal.confirmation': 'Withdraw confirmation',
+    'page.mobile.wallet.withdraw.modal.confirmation': 'Confirmação de saque',
     'page.mobile.wallet.withdraw.modal.confirmation.warning': 'Please check the target address carefully before confirming the withdrawal.',
     'page.mobile.wallet.withdraw.modal.confirmation.message1': 'You\'ve requested to withdraw',
     'page.mobile.wallet.withdraw.modal.confirmation.message2': 'To this address',
 
     'page.mobile.userInfo.details.uid': 'Fortem ID: {uid}',
     'page.mobile.userInfo.logout.button': 'Sair',
-    'page.mobile.profileLinks.main.verification': 'Profile verification',
+    'page.mobile.profileLinks.main.verification': 'Cadastro',
     'page.mobile.profileLinks.main.2fa': 'Two-factor authentication',
     'page.mobile.profileLinks.main.changePassword': 'Alterar senha',
     'page.mobile.profileLinks.main.activity': 'Account activity',
@@ -91,13 +92,13 @@ export const pt = {
     'page.mobile.profileColorTheme.theme.dark': 'Dark',
     'page.mobile.profileColorTheme.theme.light': 'Light',
 
-    'page.mobile.wallets.title': 'Wallets',
+    'page.mobile.wallets.title': 'Carteiras',
 
     'page.mobile.profile.accountActivity.title': 'Account activity',
     'page.mobile.profile.apiKeys.title': 'My API keys',
     'page.mobile.profile.theme.title': 'Theme',
-    'page.mobile.profile.language.title': 'Language',
-    'page.mobile.profile.changePassword.title': 'Change password',
+    'page.mobile.profile.language.title': 'Idioma',
+    'page.mobile.profile.changePassword.title': 'Alterar senha',
 
     'page.mobile.profile.accountActivity.action': 'Action',
     'page.mobile.profile.accountActivity.ip': 'IP address',

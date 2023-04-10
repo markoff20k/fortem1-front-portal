@@ -100,7 +100,7 @@ const RenderDeviceContainers = () => {
             <MobileHeader />
             <AlertsContainer/>
             <LayoutContainer/>
-            {/* <MobileFooter /> */}
+            <MobileFooter />
         </div>
     );
 };
