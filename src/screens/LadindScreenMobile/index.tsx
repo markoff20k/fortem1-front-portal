@@ -41,7 +41,8 @@ import { HomepageMarket, Footer } from '../../containers';
 
 
 import { Parallax } from 'react-scroll-parallax';
-import mobile from './fortem-mobile.png';
+// import mobile from './fortem-mobile.png';
+import mobile from './mobileFortem.png';
 import DownloadAPP from './Home/Screen1.png';
 import DownloadGG from './Home/Screen2.png';
 import Download1 from './Home/Screen4.png';
@@ -445,8 +446,8 @@ class Landing extends React.Component<Props> {
                 
 
                 
-            <LandingBlock> 
-                    <div className="pg-landing-screen__start-trading">
+                <LandingBlock> 
+                <div className="pg-landing-screen__start-trading">
                     <div className="pg-landing-screen__start-trading__wrap">
                     <Parallax rotateX={[-60, 0]} easing="easeInOutCirc">
 				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '80px', marginLeft: 'auto', marginRight: 'auto', objectFit: 'contain', }} className="theme-shape-center" />
@@ -462,7 +463,7 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                 </div>
-            </LandingBlock>
+                </LandingBlock>
 
                 <LandingBlock>
 
