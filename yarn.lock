@@ -13731,6 +13731,14 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
+"react-typed@^1.2.0":
+  "integrity" "sha512-aDsaA6zkjAFJs8285APOqE85l/kwJ0/ZJmBhARwUrza4TTttrMM5FcMCGEDdThdfUdHo/0l9WXmxp1m2ik4qdw=="
+  "resolved" "https://registry.npmjs.org/react-typed/-/react-typed-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "prop-types" "^15.6.0"
+    "typed.js" "^2.0.6"
+
 "react-use-websocket@^2.7.1":
   "integrity" "sha512-n0H429jQGaZAnn8BJljCcAgeSezXYzTLO0tb5QvdZnNjhAA8Br3A3GjU5ziNMlxant++Iv/IRQRNMKCfWnsHrQ=="
   "resolved" "https://registry.npmjs.org/react-use-websocket/-/react-use-websocket-2.7.1.tgz"
@@ -16411,6 +16419,11 @@
   dependencies:
     "media-typer" "0.3.0"
     "mime-types" "~2.1.24"
+
+"typed.js@^2.0.6":
+  "integrity" "sha512-kQNtvm6+dEcUc5sdskEgV17rsdvimQNsDRHnp8PasBY85dYqVoo4TCanakSkfherMN+lZEko5ccMMKJpuR42Fw=="
+  "resolved" "https://registry.npmjs.org/typed.js/-/typed.js-2.0.15.tgz"
+  "version" "2.0.15"
 
 "typedarray-to-buffer@^3.1.5":
   "integrity" "sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q=="

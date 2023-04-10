@@ -64,7 +64,7 @@ import { FiX , FiArrowRight} from "react-icons/fi";
 import {HeaderLanding} from '../../containers/HeaderLanding';
 
 import HeaderTwo from './components/header/HeaderTwo';
-
+import Typed from 'react-typed';
 
 
 
@@ -146,7 +146,21 @@ class Landing extends React.Component<Props> {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-16 lg:px-8 lg:pt-24">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className='w-hero-container-left'>
-                  <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM ATIVOS DIGITAIS</h1>
+                    <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM 
+                        <Typed
+                                strings={[
+                                    "ativos digitais",
+                                    "melhores créditos",
+                                    "alta rentabilidade",
+                                    "diversificação",
+                                    "segurança",
+                                ]}
+                                typeSpeed={100}
+                                backSpeed={50}
+                                backDelay={1900}
+                                loop
+                        />
+                    </h1>
                   <p className="relative mt-6 text-xl leading-8 text-fortem1neutral-300 sm:max-w-md lg:max-w-none">Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link to="/signup" className="landing-button">
