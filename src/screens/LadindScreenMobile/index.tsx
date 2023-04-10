@@ -41,7 +41,8 @@ import { HomepageMarket, Footer } from '../../containers';
 
 
 import { Parallax } from 'react-scroll-parallax';
-import mobile from './fortem-mobile.png';
+// import mobile from './fortem-mobile.png';
+import mobile from './mobileFortem.png';
 import DownloadAPP from './Home/Screen1.png';
 import DownloadGG from './Home/Screen2.png';
 import Download1 from './Home/Screen4.png';
@@ -61,6 +62,9 @@ import HeaderTopNews from "./components/HeaderTopNews";
 import { FiX , FiArrowRight} from "react-icons/fi";
 
 import {HeaderLanding} from '../../containers/HeaderLanding';
+
+import Typed from 'react-typed';
+
 
 
 
@@ -100,8 +104,6 @@ class Landing extends React.Component<Props> {
 
    
 
-  
-
 
     public render() {
 
@@ -109,16 +111,10 @@ class Landing extends React.Component<Props> {
 
         
         return (
-            <div className="pg-landing-screen">
-                
-
-
-
-                {/* <HeaderLanding/> */}
-
-                <LandingBlock>
-
-                
+    <>
+    <HeaderLanding/>
+        <div className="pg-landing-screen" >
+            
         <div className="relative isolate">
           <svg className="absolute opacity-30 inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
             <defs>
@@ -144,37 +140,43 @@ class Landing extends React.Component<Props> {
 
 
           </div>
+          
           <div className="overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-16 lg:px-8 lg:pt-24">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">Invista em tokens com os melhores rendimentos e com a segurança da blockchain.</h1>
+                <div className='w-hero-container-left'>
+                    <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM...</h1>
+                        <h1>
+                        <Typed
+                                strings={[
+                                    "ativos digitais",
+                                    "melhores créditos",
+                                    "alta rentabilidade",
+                                    "diversificação",
+                                    "segurança",
+                                ]}
+                                typeSpeed={100}
+                                backSpeed={50}
+                                backDelay={1900}
+                                loop
+                        />
+                    </h1>
                   <p className="relative mt-6 text-xl leading-8 text-fortem1neutral-300 sm:max-w-md lg:max-w-none">Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
                   <div className="mt-10 flex items-center gap-x-6">
-                    <Link to="/signup" className="pg-mobile-header__account__sign-up">
-                            {/* <Button
-                                block={true}
-                                type="button"
-                                size="lg"
-                                variant="primary"
-                            >
-                                
-                                
-                            </Button> */}
-                            {this.translate('page.mobile.header.signUp')}
-                        </Link>
-                    <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a>
-                    {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Live demo <span aria-hidden="true">→</span></a> */}
+                    <Link to="/signup" className="landing-button">
+                        {this.translate('page.body.landing.register.item.button')}
+                    </Link>
                   </div>
                 </div>
+                <div className="w-hero-container-right">
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div className="ml-auto w-hero flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                     </div>
                   </div>
-                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <div className="mr-auto w-hero flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
@@ -184,7 +186,7 @@ class Landing extends React.Component<Props> {
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                     </div>
                   </div>
-                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                  <div className="w-hero flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
                       <img src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
@@ -195,14 +197,17 @@ class Landing extends React.Component<Props> {
                     </div>
                   </div>
                 </div>
+            </div>
               </div>
             </div>
           </div>
+          
         </div>
 
 
-                </LandingBlock>
-                <LandingBlock className="pg-landing-screen__top" contentClassName="pg-landing-screen__top-content">
+
+
+                <LandingBlock className="pg-landing-screen__top">
                     <div className="pg-landing-screen__market-info">
                         <div className="pg-landing-screen__market-info__wrap">
                             <div className="pg-landing-screen__market-info__wrap__title">
@@ -429,7 +434,7 @@ class Landing extends React.Component<Props> {
 
                 
 
-                <LandingBlock className="pg-landing-screen__features">
+                {/* <LandingBlock className="pg-landing-screen__features">
                     <div className="pg-landing-screen__features__wrap">
                         <h1>{this.translate('page.body.landing.features.title')}</h1>
                         <div className="pg-landing-screen__features__content">
@@ -491,12 +496,13 @@ class Landing extends React.Component<Props> {
                     </div>
                 </LandingBlock>
 
+ */}
                 
                 <LandingBlock> 
                 <div className="pg-landing-screen__start-trading">
                     <div className="pg-landing-screen__start-trading__wrap">
-                    <Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', objectFit: 'contain', }} className="theme-shape-center" />
+                    <Parallax rotateX={[-60, 0]} easing="easeInOutCirc">
+				            <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '80px', marginLeft: 'auto', marginRight: 'auto', objectFit: 'contain', }} className="theme-shape-center" />
 			        </Parallax>
                         <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
                         <div className="pg-landing-screen__start-trading__wrap__content">
@@ -601,10 +607,11 @@ class Landing extends React.Component<Props> {
 
 
 
-
+        <div className="w-full h-auto absolute inset-0 z-[-1]"><div style={{position: 'relative', width: '100%', height: '100%', overflow: 'hidden', pointerEvents: 'auto'}}><div style={{width: '100%', height: '100%'}}><canvas style={{display: 'block', width: '1161px', height: '1547px'}} data-engine="three.js r149" width="1161" height="1547"></canvas></div></div></div>
     <Footer />
             
     </div>
+    </>
         );
     }
 
