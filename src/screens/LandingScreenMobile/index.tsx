@@ -3,6 +3,9 @@ import * as React from 'react';
 import { useRef, useLayoutEffect, useState } from 'react';
 import { injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
+
+import { Button } from 'react-bootstrap';
+
 import { Link, RouteProps, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 
@@ -168,7 +171,7 @@ class Landing extends React.Component<Props> {
                   <p className="relative mt-6 text-xl leading-8 text-fortem1neutral-300 sm:max-w-md lg:max-w-none">Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link to="/signup" className="pg-mobile-header__account__sign-up">
-                            {/* <Button
+                            <Button
                                 block={true}
                                 type="button"
                                 size="lg"
@@ -176,10 +179,10 @@ class Landing extends React.Component<Props> {
                             >
                                 
                                 
-                            </Button> */}
+                            </Button>
                             {this.translate('page.mobile.header.signUp')}
                         </Link>
-                    <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a>
+                    {/* <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a> */}
                     {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Live demo <span aria-hidden="true">→</span></a> */}
                   </div>
                 </div>

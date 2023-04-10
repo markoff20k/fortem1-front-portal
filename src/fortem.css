@@ -32,18 +32,19 @@ $small-mobile: 'only screen and (max-width: 479px)';
 }
 
 .color-accent {
-    color: #1EDED0;
+    color: #009991;
 }
 
 .dimmer {
 
-    top: 830px !important;
+    top: 650px !important;
 
 }
 
 .close-icon {
 
 	cursor: pointer !important;
+    color: black;
 
 }
 

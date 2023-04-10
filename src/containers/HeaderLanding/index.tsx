@@ -12,7 +12,7 @@ import { Logo } from '../../components';
 import useStickyHeader from "./useStickyHeader";
 
 
-import { ReactDimmer } from 'react-dimmer'
+import { ReactDimmer } from 'react-dimmer';
 import { setTimezone } from 'src/helpers';
 
 export const HeaderLanding: React.FC = () => {

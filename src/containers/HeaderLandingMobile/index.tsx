@@ -270,14 +270,14 @@ export const HeaderLandingMobile: React.FC = () => {
 	return (
 		<div ref={ref} className="headerMobile-screen pg-mobile-header sticky rn-header header-default">
 			
-				<nav className="header d-flex flex-row justify-content-around align-items-center">
+				<div className="headerMobile d-flex flex-row justify-content-around align-items-center">
 
-					<div className="header__secondary-menu d-flex flex-row align-items-center">
-						<div className="header__secondary-menu__dropdown flex-shrink-0">
+					<div className="headerMobile__secondary-menu d-flex flex-row align-items-center">
+						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<p
 								
-									className="header__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+									className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 									onClick={() => setModal((prevState) => !prevState)}
 								>
 									Corretora
@@ -285,11 +285,11 @@ export const HeaderLandingMobile: React.FC = () => {
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
-						<div className="header__secondary-menu__dropdown flex-shrink-0 ">
+						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0 ">
 							<div className={classLinkActive('ieo')} onClick={() => setStateActiveNow('ieo')}>
 								<p
 								
-									className="header__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+									className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 									onClick={() => setModal((prevState) => !prevState)}
 								>
 									Tokenizadora
@@ -297,11 +297,11 @@ export const HeaderLandingMobile: React.FC = () => {
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
-						<div className="header__secondary-menu__dropdown flex-shrink-0">
+						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('stake')} onClick={() => setStateActiveNow('stake')}>
 							<p
 								
-								className="header__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+								className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								onClick={() => setModal((prevState) => !prevState)}
 							>
 								Meio de Pagamento
@@ -358,7 +358,7 @@ export const HeaderLandingMobile: React.FC = () => {
       				/>
 
 
-				</nav>
+				</div>
 			</div>
 
 	);
