@@ -32,7 +32,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
       
     <div className="flex flex-wrap w-full">
 
-        <div className="flex flex-col flex-wrap w-full md:w-6/12 gap-x-6 gap-y-1 p-4 bg-green-5000">
+        <div className="flex flex-col flex-wrap w-full md:w-6/12 gap-x-6 p-2 bg-green-5000">
 
           <div className="flex w-full border-b border-fortem1green-700 justify-center">
             <div className="bg-green-7000 font-semibold text-lg text-fortem1green-900">
