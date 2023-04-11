@@ -286,6 +286,7 @@ export const HeaderLanding: React.FC = () => {
 								>
 									Corretora
 								</p>
+								{/* <div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div> */}
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
