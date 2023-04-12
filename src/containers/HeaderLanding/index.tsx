@@ -278,7 +278,10 @@ export const HeaderLanding: React.FC = () => {
 				</div>
 					<div className="header__left-menu d-flex flex-row align-items-center">
 						<div className="header__left-menu__dropdown flex-shrink-0">
-							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
+							<div className={classLinkActive('exchange')} onClick={() => setStateActiveNow('exchange')}>
+								<span className={classLinkActiveTitleDrop('exchange')}>
+						
+								</span>
 								<p
 								
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
@@ -286,6 +289,7 @@ export const HeaderLanding: React.FC = () => {
 								>
 									Corretora
 								</p>
+								
 								{/* <div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div> */}
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
@@ -302,8 +306,10 @@ export const HeaderLanding: React.FC = () => {
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0 d-none d-lg-block d-xl-block ">
-							<div className={classLinkActive('stake')} onClick={() => setStateActiveNow('stake')}>
+
+												{/* MP */}
+						<div className="header__left-menu__dropdown flex-shrink-0 ">
+							<div className={classLinkActive('payments')} onClick={() => setStateActiveNow('payments')}>
 							<p
 								
 								className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
@@ -314,6 +320,45 @@ export const HeaderLanding: React.FC = () => {
 							{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
+
+						 <div className="header__left-menu__dropdown flex-shrink-0  ">
+							<div className={classLinkActive('EarnCoinFree')} onClick={() => setStateActiveNow('EarnCoinFree')}>
+								<span className={classLinkActiveTitleDrop('EarnCoinFree')}>
+									Earn Coin Free
+									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+								</span>
+								{isModalOpen && <Modal closeModal={setModal } />}
+								<div className="header__left-menu__dropdown__wrap__content">
+									<Link
+										to="/airdrops"
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('EarnCoinFree');
+											setActiveItemDrop('airdrops');
+										}}
+									>
+										<div className={classActiveLeftItemDrop('airdrops')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Airdrop
+										</div>
+									</Link>
+									<Link
+										to="/competition"
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('EarnCoinFree');
+											setActiveItemDrop('trading-competition');
+										}}
+									>
+										<div className={classActiveLeftItemDrop('trading-competition')}>
+											<FaAward className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Competition
+										</div>
+									</Link>
+								</div>
+							</div>
+						</div>
+
 
 						{/* <div className="header__left-menu__dropdown flex-shrink-0  ">
 							<div className={classLinkActive('EarnCoinFree')} onClick={() => setStateActiveNow('EarnCoinFree')}>

@@ -384,6 +384,8 @@
 						line-height: 20px;
 						outline: none;
 						text-decoration: none !important;
+						visibility: hidden;
+						width: 0;
 
 						@media (max-width: 1128px) {
 							font-size: 16px;
@@ -403,7 +405,8 @@
 						}
 
 						&--active {
-							color: var(--body-background-color) !important;
+							/* color: var(--body-background-color) !important; */
+							color: #009991 !important;
 
 							.header__left-menu__dropdown__wrap__dropbtn__icon-drop-down,
 							.header__right-menu__dropdown__wrap__dropbtn__icon-drop-down {
