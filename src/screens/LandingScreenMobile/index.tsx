@@ -177,10 +177,10 @@ class Landing extends React.Component<Props> {
                                 size="lg"
                                 variant="primary"
                             >
-                                
+                            {this.translate('page.mobile.header.signUp')}    
                                 
                             </Button>
-                            {this.translate('page.mobile.header.signUp')}
+                            
                         </Link>
                     {/* <a href="#" className="rounded-md bg-fortem1high-green px-3.5 py-2.5 text-base font-semibold text-fortem1neutral-900 shadow-sm hover:fortem1high-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fortem1high-green">Crie sua conta</a> */}
                     {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Live demo <span aria-hidden="true">→</span></a> */}
