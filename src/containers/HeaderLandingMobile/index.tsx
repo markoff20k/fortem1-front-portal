@@ -49,31 +49,31 @@ export const HeaderLandingMobile: React.FC = () => {
 		});
 
 	const classActiveLeftItemDrop = (nameItem: string) => {
-		return classNames('header__left-menu__dropdown__wrap__content__title d-flex align-items-center', {
-			'header__left-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
+		return classNames('headerMobile__secondary-menu__dropdown__wrap__content__title d-flex align-items-center', {
+			'headerMobile__secondary-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
 		});
 	};
 
 	const classLinkActive = (nameActive: string) => {
-		return classNames('header__left-menu__dropdown__wrap', {
-			'header__left-menu__dropdown__wrap--active': activeNow === nameActive,
+		return classNames('headerMobile__secondary-menu__dropdown__wrap', {
+			'headerMobile__secondary-menu__dropdown__wrap--active': activeNow === nameActive,
 		});
 	};
 	const classLinkRightActive = (nameActive: string) => {
 		return classNames('header__right-menu__dropdown__wrap', {
-			'header__right-menu__dropdown__wrap--active': activeNow === nameActive,
+			'headerMobile__right-menu__dropdown__wrap--active': activeNow === nameActive,
 		});
 	};
 
 	const classLinkActiveTitleDrop = (nameActive: string) => {
 		return classNames('header__right-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center', {
-			'header__right-menu__dropdown__wrap__dropbtn--active': activeNow === nameActive,
+			'headerMobile__right-menu__dropdown__wrap__dropbtn--active': activeNow === nameActive,
 		});
 	};
 
 	const renderWalletLink = () => {
 		const classItemTitle = classNames('header__right-menu__item__title', {
-			'header__right-menu__item__title--active': activeNow === 'Wallet',
+			'headerMobile__right-menu__item__title--active': activeNow === 'Wallet',
 		});
 
 		return (
@@ -90,7 +90,7 @@ export const HeaderLandingMobile: React.FC = () => {
 	const renderOrderTab = () => {
 		return (
 			isLoggedIn && (
-				<div className="header__left-menu__dropdown flex-shrink-0  ">
+				<div className="headerMobile__left-menu__dropdown flex-shrink-0  ">
 					<div className={classLinkRightActive('orders')} onClick={() => setStateActiveNow('orders')}>
 						<span className={classLinkActiveTitleDrop('orders')}>
 							{translate('page.body.landing.header.orders')}
@@ -297,8 +297,8 @@ export const HeaderLandingMobile: React.FC = () => {
 								{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
 						</div>
-						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0">
-							<div className={classLinkActive('stake')} onClick={() => setStateActiveNow('stake')}>
+						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0 ">
+							<div className={classLinkActive('payments')} onClick={() => setStateActiveNow('payments')}>
 							<p
 								
 								className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
@@ -307,6 +307,44 @@ export const HeaderLandingMobile: React.FC = () => {
 								Meio de Pagamento
 							</p>
 							{isModalOpen && <Modal closeModal={setModal } />}
+							</div>
+						</div>
+
+						<div className="headerMobile__seconday-menu__dropdown flex-shrink-0  ">
+							<div className={classLinkActive('EarnCoinFree')} onClick={() => setStateActiveNow('EarnCoinFree')}>
+								<span className={classLinkActiveTitleDrop('EarnCoinFree')}>
+									
+									{/* <div className="headerMobile__secondary-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div> */}
+								</span>
+								{isModalOpen && <Modal closeModal={setModal } />}
+								<div className="headerMobile__secondary-menu__dropdown__wrap__content">
+									<Link
+										to="/airdrops"
+										className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('EarnCoinFree');
+											setActiveItemDrop('airdrops');
+										}}
+									>
+										<div className={classActiveLeftItemDrop('airdrops')}>
+											<FaGift className="headerMobile__secondary-menu__dropdown__wrap__content__title__icon mr-2" />
+											Airdrop
+										</div>
+									</Link>
+									<Link
+										to="/competition"
+										className="headerMobile__secondary-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('EarnCoinFree');
+											setActiveItemDrop('trading-competition');
+										}}
+									>
+										<div className={classActiveLeftItemDrop('trading-competition')}>
+											<FaAward className="headerMobile__secondary-menu__dropdown__wrap__content__title__icon mr-2" />
+											Competition
+										</div>
+									</Link>
+								</div>
 							</div>
 						</div>
 
@@ -354,6 +392,7 @@ export const HeaderLandingMobile: React.FC = () => {
         				exitDimmer={setModal}
         				zIndex={100}
         				blur={1.5}
+						opacity={1}
 						transition={0.25}
       				/>
 
