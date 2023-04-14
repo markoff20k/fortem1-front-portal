@@ -13,6 +13,7 @@
         "@formatjs/intl-pluralrules": "^3.2.5",
         "@formatjs/intl-relativetimeformat": "^7.0.0",
         "@ionic/cli": "^6.11.11",
+        "@mui/icons-material": "^5.11.16",
         "@mui/material": "^5.12.0",
         "@openware/cryptofont": "2.3.0",
         "@openware/react-opendax": "^0.1.37",

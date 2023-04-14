@@ -22,6 +22,8 @@ const FooterComponent: React.FC = () => {
     const { pathname } = useLocation();
     const intl = useIntl();
 
+    
+
     return (
         
 
