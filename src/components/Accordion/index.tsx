@@ -14,19 +14,22 @@ import { Link, useHistory } from 'react-router-dom';
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
+    backgroundColor: 'rgb(22, 29, 38)',
+    color: 'white',
   border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
     borderBottom: 0,
   },
   '&:before': {
+    color: 'white',
     display: 'none',
-    background: 'transparent',
+    backgroundColor: 'rgb(22, 29, 38)',
   },
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ color: 'white', fontSize: '0.9rem' }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -34,7 +37,8 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 //     theme.palette.mode === 'dark'
 //       ? 'rgba(255, 255, 255, .05)'
 //       : 'rgba(0, 0, 0, .03)',
-backgroundColor: 'transparent',
+color: 'white',
+backgroundColor: 'rgb(22, 29, 38)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -47,7 +51,8 @@ backgroundColor: 'transparent',
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: '1px solid rgba(0, 0, 0, .125)',
-  backgroundColor: 'transparent',
+  backgroundColor: 'rgb(22, 29, 38)',
+  color: 'white',
 }));
 
 export default function CustomizedAccordions() {
