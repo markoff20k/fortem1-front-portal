@@ -39,6 +39,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 //       : 'rgba(0, 0, 0, .03)',
 color: 'white',
 backgroundColor: 'rgb(22, 29, 38)',
+padding: '16px 0px',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -49,10 +50,11 @@ backgroundColor: 'rgb(22, 29, 38)',
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
+  paddingLeft: '22px',
   borderTop: '1px solid rgba(0, 0, 0, .125)',
   backgroundColor: 'rgb(22, 29, 38)',
   color: 'white',
+  marginBottom: '14px'
 }));
 
 export default function CustomizedAccordions() {

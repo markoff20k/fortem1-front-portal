@@ -268,11 +268,11 @@ export const HeaderLandingMobile: React.FC = () => {
 	};
 
 	return (
-		<div ref={ref} className="headerMobile-screen pg-mobile-header sticky rn-header header-default">
+		<div ref={ref} className="headerMobile-screen pg-mobile-header rn-header header-default">
 			
-				<div className="headerMobile d-flex flex-row justify-content-around align-items-center">
+				<div className="headerMobile justify-content-around align-items-center">
 
-					<div className="headerMobile__secondary-menu d-flex flex-row align-items-center">
+					<div className="headerMobile__secondary-menu align-items-center">
 						<div className="headerMobile__secondary-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<p
