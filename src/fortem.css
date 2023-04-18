@@ -457,12 +457,23 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 .footer-copyright {
 
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
     height: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+
+    img, svg {
+        width: 1rem;
+    }
 
     a, p {
 
         color: #c4c4c4;
-        margin-top: -5px;
+        font-size: 0.8rem;
+        font-weight: 400;
 
     }
 }
@@ -722,11 +733,13 @@ $small-mobile: 'only screen and (max-width: 479px)';
             padding: 15px;
             
             .desc {
-                
+                font-family: 'IBM Plex Sans' !important;
                 font-size: 16px !important;
+                color: var(--primary-text-color);
                 line-height: 19.5px !important;
-				font-weight: 300 !important;
+				font-weight: 500 !important;
 				margin-bottom: 20px !important;
+                padding-top: 10px !important;
 
             }
             .title {
@@ -738,6 +751,8 @@ $small-mobile: 'only screen and (max-width: 479px)';
                 margin-top: 15px !important;
                 flex-basis: 100%;
 				text-decoration: none !important;
+                
+
 
 				&hover {
 
