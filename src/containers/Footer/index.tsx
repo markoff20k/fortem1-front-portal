@@ -49,7 +49,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 	return (
 
 		<div className="footerDesktop-screen">
-			<div className="fortem-line"></div>
+			{/* <div className="fortem-line"></div> */}
 			<div className="container-footer-screen">
 				<div className="footer d-flex flex-row justify-content-between ">
 					<div className="footer__logo">
@@ -199,7 +199,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 			<div>
 				<div className="fortem-line"></div>
 
-				<div className="footer_copyright flex flex-row flex-wrap">
+				<div className="footer-copyright flex flex-row flex-wrap align-center justify-center">
 					<img src={fortemIcon} style={{width: '14px'}}/>
 					<p>
 						Fortem1 Digital Assets Technology SA © 2023 Copyright :  <a href="https://www.fortem1.com.br"> www.fortem1.com.br </a> | | CNPJ: 50.093.874/0001-09 | | São Paulo, Brasil

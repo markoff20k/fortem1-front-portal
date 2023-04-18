@@ -363,11 +363,12 @@ $small-mobile: 'only screen and (max-width: 479px)';
 	
 	background: var(--subheader-background-color);
 	color: var(--primary-text-color);
+    border-top: 1px solid var(--divider-color-level-2);
 
-	opacity: 0.84;
+	
 
     .container-footer-screen {
-		margin: 0 20px;
+		/* margin: 0 20px; */
 	}
 
     button {
@@ -384,26 +385,26 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 	.footer__logo {
 		img {
-			width: 160px;
+			max-width: 160px;
 		}
 	}
 
 	.footer__info__title {
-        font-family: Inter;
+        font-family: 'IBM Plex Sans';
 		font-weight: 400;
 		letter-spacing: 0.5px;
 		margin-bottom: 0.5rem;
 	}
 
 	.footer__info__item {
-		color: var(--secondary-contrast-cta-color);
-		font-weight: 600;
+        font-family: 'IBM Plex Sans';
 		letter-spacing: 0.15px;
 		margin-bottom: 0.25rem;
 		transition: 0.25s;
         padding-bottom: 2px;
         display: flex;
         flex-wrap: nowrap;
+        cursor: pointer;
 
 
 		&:hover {
@@ -413,8 +414,10 @@ $small-mobile: 'only screen and (max-width: 479px)';
 		}
 
 		a, p  {
-			color: var(--secondary-contrast-cta-color);
+			color: var(--primary-text-color);
             letter-spacing: 0.15px;
+            opacity: 0.61;
+            cursor: pointer;
 
             &:hover {
 
@@ -435,7 +438,6 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 
 
-
     
 
     
@@ -447,12 +449,23 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 	.footerDesktop-screen .footer__logo {
 		img {
-			width: 180px;
+			width: 160px;
 		}
 	}
 
 }
 
+.footer-copyright {
+
+    height: 30px;
+
+    a, p {
+
+        color: #c4c4c4;
+        margin-top: -5px;
+
+    }
+}
 
 
 
@@ -588,18 +601,21 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 .crisp-fortem {
     margin-top: -30px !important;
+    top: -30px !important;
     display: flex;
     position: absolute !important;
 }
 
 .crisp-client {
     margin-top: -30px !important;
+    top: -30px !important;
     display: flex;
     position: absolute !important;
 }
 
 #crisp-fortem {
     margin-top: -30px !important;
+    top: -30px !important;
     display: flex;
     position: absolute !important;
 }
@@ -652,6 +668,17 @@ $small-mobile: 'only screen and (max-width: 479px)';
       }
 }
  
+.fortem-landing-hero {
+
+    margin-top: 3rem !important;
+    padding: 0 !important;
+
+    p {
+        padding: 0 !important;
+        margin-top: 1rem !important;
+    }
+
+}
 
 .pg-landing-screen__start-trading {
 
