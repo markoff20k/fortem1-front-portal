@@ -433,27 +433,9 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 	}
 
-	.footer__copyright {
-		font-size: 13px;
-		font-weight: 500;
-		padding-bottom: 0.1rem;
-		padding-top: 0.1rem;
-		text-align: center;
-	}
 
-	.footer__copyright a {
-		color: var(--button-primary-cta-background-color);
-		font-size: 13px;
-		font-weight: 100;
-		outline: none;
-		text-decoration: none;
 
-		&:hover {
-			text-decoration: underline;
 
-		}
-	}
-	
     
 
     
@@ -600,6 +582,24 @@ $small-mobile: 'only screen and (max-width: 479px)';
 .pg-logo__img {
 	height: 128px;
 	width: 128px;
+}
+
+.footer_copyright {
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	padding-bottom: 0.8rem;
+	padding-top: 0.8rem;
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+
+	a {
+		color: var(--primary-text-color);
+		font-size: 14px;
+		outline: none;
+		text-decoration: none;
+	}
 }
 
 .pg-landing-screen__start-trading {

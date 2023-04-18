@@ -15,11 +15,10 @@ const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
     backgroundColor: 'rgb(22, 29, 38)',
+    fontFamily: 'Inter',
     color: 'white',
-  border: `1px solid ${theme.palette.divider}`,
-  '&:not(:last-child)': {
-    borderBottom: 0,
-  },
+    border: 'none',
+    borderBottom: '1px solid rgba(0, 0, 0, .425)',
   '&:before': {
     color: 'white',
     display: 'none',
@@ -37,24 +36,38 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 //     theme.palette.mode === 'dark'
 //       ? 'rgba(255, 255, 255, .05)'
 //       : 'rgba(0, 0, 0, .03)',
-color: 'white',
-backgroundColor: 'rgb(22, 29, 38)',
-padding: '16px 0px',
-  flexDirection: 'row-reverse',
-  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    
+    fontFamily: 'Inter',
+    color: 'white',
+    opacity: '0.91',
+    backgroundColor: 'rgb(22, 29, 38)',
+    paddingLeft: '1.5rem',
+    paddingTop: '0.5rem',
+    flexDirection: 'row-reverse',
+    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
   },
   '& .MuiAccordionSummary-content': {
-    marginLeft: theme.spacing(1),
+    marginLeft: '0.5rem',
+    border: 'none',
   },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  paddingLeft: '22px',
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
+  fontFamily: 'Inter',
+  marginLeft: '2rem',
+  // borderTop: '1px solid rgba(0, 0, 0, .125)',
   backgroundColor: 'rgb(22, 29, 38)',
   color: 'white',
-  marginBottom: '14px'
+  marginBottom: '14px',
+  opacity: '0.91',
+  border: 'none',
+
+  '& .MuiAccordionDetails-content': {
+    marginTop: '0.5rem',
+    
+  },
+
 }));
 
 export default function CustomizedAccordions() {
@@ -69,7 +82,7 @@ export default function CustomizedAccordions() {
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>INSTITUCIONAL</Typography>
+          <div style={{fontFamily: 'Inter'}}><Typography>INSTITUCIONAL</Typography></div>
         </AccordionSummary>
         <AccordionDetails>
           

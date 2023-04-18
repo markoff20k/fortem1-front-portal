@@ -199,9 +199,13 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 			<div>
 				<div className="fortem-line"></div>
 
-				<p className="footer__copyright">
-					<img src={fortemIcon} style={{width: '13px'}}/>Fortem One SA © 2023 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
-				</p>
+				<div className="footer_copyright flex flex-row flex-wrap">
+					<img src={fortemIcon} style={{width: '14px'}}/>
+					<p>
+						Fortem1 Digital Assets Technology SA © 2023 Copyright :  <a href="https://www.fortem1.com.br"> www.fortem1.com.br </a> | | CNPJ: 50.093.874/0001-09 | | São Paulo, Brasil
+					</p>
+				</div>
+				
 			</div>
 		</div>
 	);
