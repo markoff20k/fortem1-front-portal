@@ -656,20 +656,25 @@ $small-mobile: 'only screen and (max-width: 479px)';
 }
 
 .home-market__trading-btn {
-    background: transparent;
-    border: 1px solid #009991;
+    
+    color: var(--button-primary-cta-text-color) !important;
+    background: var(--button-primary-cta-background-color) !important;
+    border: 1px solid transparent !important;
     border-radius: 5px;
     box-sizing: border-box;
-    color: #c4c4c4;
+    
     float: right;
     height: 36px;
     outline: none;
     width: 8em;
+    transition: 0.25s;
 }
 
 .home-market__trading-btn:hover {
-    color: #1EDED0;
     transition: 0.25s;
+    color: #f5f5f5;
+    -webkit-filter: brightness(115%);
+    
 }
 
 

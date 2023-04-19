@@ -13,7 +13,7 @@ const TableStyles = styled.div`
 			margin: 0;
 		
 			font-size: 14px;
-			color: #fff;
+			color: #f5f5f5;
 			text-align: justify;
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -61,13 +61,14 @@ const TableStyles = styled.div`
 		}
 		tr:hover td{
 
-			background: #4a4a4a;
-			color: #fff;
+			background-color: var(--sidebar-item-background-color-active);
+			border-radius: 4px;
+			color: #f5f5f5;
 		}
 
 		td:hover {
 
-			color: #fff;
+			color: #f5f5f5;
 		}
 	}
 `;
