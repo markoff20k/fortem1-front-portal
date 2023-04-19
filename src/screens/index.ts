@@ -24,3 +24,5 @@ export * from './P2P';
 export * from './WalletsScreen';
 
 export * from './LandingScreenMobile';
+
+export * from './Dashboard';

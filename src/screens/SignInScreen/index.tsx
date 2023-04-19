@@ -64,7 +64,7 @@ export const SignInScreen: React.FC = () => {
 
     useEffect(() => {
         if (isLoggedIn) {
-            history.push('/wallets');
+            history.push('/dashboard');
         }
     }, [isLoggedIn, history]);
 

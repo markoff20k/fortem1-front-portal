@@ -95,6 +95,8 @@ import {Home} from '../../screens/home/index';
 import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
+import { Dashboard } from '../../screens/Dashboard/index';
+
 
 interface ReduxProps {
     colorTheme: string;
@@ -163,7 +165,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
     }
 
     if (isLogged && rest['path'] !== '/setup') {
-        return <Route {...rest}><Redirect to={'/wallets'} /></Route>;
+        return <Route {...rest}><Redirect to={'/dashboard'} /></Route>;
     }
 
     const renderCustomerComponent = props => <CustomComponent {...props} />;
@@ -376,7 +378,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p/:currency" component={P2POffersScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p" component={P2POffersScreen} />
 
-                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/main" component={Home} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" component={Dashboard} />
 
                     <PublicRoute path="/markets" component={MarketsList} />
 
