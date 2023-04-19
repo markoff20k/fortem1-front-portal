@@ -9,6 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  color: var(--primary-text-color);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,16 +17,19 @@ export const Content = styled.div`
   justify-content: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.backgroundCards};
+  background-color: var(--main-background-color);
 
   &:nth-child(n + 2):nth-child(-n + 4) {
     margin-left: 20px;
   }
 
   p {
-    font-size: 22px;
+    font-size: 20px;
+    font-height: 400;
+    line-height: 24px;
     margin-top: 20px;
     margin-bottom: 25px;
+    color: var(--primary-text-color);
 
     @media screen and (max-width: 1440px) {
       font-size: 18px;
@@ -33,7 +37,12 @@ export const Content = styled.div`
   }
 
   h2 {
+    color: var(--primary-text-color);
     margin-bottom: 15px;
+    font-size: 24px;
+    font-height: 700;
+    line-height: 29px;
+
     @media screen and (max-width: 1440px) {
       font-size: 25px;
     }

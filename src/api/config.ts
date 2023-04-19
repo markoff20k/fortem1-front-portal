@@ -4,11 +4,11 @@ const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'wss:
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `http://www.fortem1.com.br/api/v2/barong`,
-        tradeUrl: `http://www.fortem1.com.br/api/v2/peatio`,
-        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://www.fortem1.com.br/api/v2/ranger`,
-        finexUrl: `http://www.fortem1.com.br/api/v2/peatio`,
+        authUrl: `https://www.fortem1.com.br/api/v2/barong`,
+        tradeUrl: `https://www.fortem1.com.br/api/v2/peatio`,
+        applogicUrl: `https://www.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `wss://www.fortem1.com.br/api/v2/ranger`,
+        finexUrl: `https://www.fortem1.com.br/api/v2/peatio`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
@@ -42,7 +42,7 @@ export const defaultConfig: Config = {
     wizard_step: 'false',
     barong_upload_size_min_range: '0.1',
     barong_upload_size_max_range: '20',
-    themeSwitcher: 'hidden',
+    themeSwitcher: 'visible',
     peatio_platform_currency: 'brl',
     useSharedLayout: 'false',
     tvDefaultCandles: 30,

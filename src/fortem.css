@@ -41,7 +41,7 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 .dimmer {
 
-    top: 600px !important;
+    top: 680px !important;
 
 }
 
@@ -81,7 +81,318 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 .accordion-content {
     transition: max-height 0.3s ease-out, padding 0.3s ease;
-}   
+}
+
+.carousel-control-next{
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    top: 180px;
+    right: 70px;
+    background-color: var(--button-primary-cta-background-color);
+    background-size: cover;
+
+    @media screen and (max-width: 1440px) {
+      right: 20px;
+    }
+  }
+
+  .carousel-control-prev{
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    top: 180px;
+    left: 70px;
+    background-color: var(--button-primary-cta-background-color);
+    background-size: cover;
+
+    @media screen and (max-width: 1440px) {
+      left: 20px;
+    }
+  }
+
+.carousel-indicators [data-bs-target]{
+    width: 8px;
+    height: 8px;
+    border-radius: 50px !important;
+    border: none;
+    margin-bottom: 20px;
+    background-color: var(--button-primary-cta-background-color);
+  }
+
+  .btn-caption{
+    border: none;
+    outline: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    color: var(--input-text-color);
+    background-color: var(--button-primary-cta-background-color);
+    cursor: pointer;
+  }
+
+
+.card{
+    width: 348px;
+    height: 467px;
+    margin-right: 20px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #161D26;
+    /* float: left; */
+
+      @media screen and (max-width: 1440px) {
+        height: 337px;
+      }
+
+
+
+    span{
+      position: absolute;
+      color: #000;
+      background-color: #11ECC7;
+      top: 10px;
+      left: 10px;
+      padding: 1px 5px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  }
+
+  .cardImg{
+    width: 162px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 60px;
+    margin-bottom: -40px;
+  }
+
+  .cardBody{
+    margin-top: 90px;
+    background-color: #F2F4F8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+  }
+
+.carouselTokens{
+    width: 100%;
+    border: 1px solid red;
+  }
+
+  .cardTitle{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-top: -40px !important;
+
+    div{
+      padding: 13px 15px;
+      border-radius: 10px;
+      background-color: #161D26;
+      border: 3px solid #fff;
+    }
+
+    p{
+      margin: 10px 8px;
+      font-size: 14px;
+    }
+
+    .validation{
+      width: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .div-description1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p{
+      font-size: 22px;
+      margin: 0px;
+    }
+
+    span{
+      font-size: 12px;
+    }
+  }
+
+  .div-description2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p{
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    strong {
+      color: #16837C;
+    }
+  }
+
+  .div-description3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p{
+      font-size: 14px;
+      margin: 0px 0;
+    }
+
+    span{
+      font-size: 12px;
+    }
+  }
+
+.evolution{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .progress-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--bs-progress-bar-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: #16837C !important;
+    transition: var(--bs-progress-bar-transition);
+  }
+
+.div-cripto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid var(--sidebar-border-color);
+    width: 100%;
+    height: 90px;
+    vertical-align: middle;
+    
+
+    button{
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      margin: 5px;
+      background-color: var(--button-primary-cta-background-color);
+      
+      
+
+      &:nth-child(2){
+        opacity: 0.4;
+      }
+    }
+  }
+
+.div-cripto2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    button{
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      margin: 5px;
+      color: var(--input-text-color);
+      background-color: transparent;
+    }
+  }
+
+.btn-percent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 50px;
+
+    @media screen and (max-width: 1440px) {
+      padding: 15px 30px;
+    }
+
+    button{
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--input-background-color);
+    }
+  }
+
+.input-select{
+    color: var(--input-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    margin-top: 20px;
+}
+
+
+
+.select{
+    width: 25%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none !important;
+    border-radius: 10px;
+    border: 1px solid var(--input-border-color);
+    outline: none;
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
+    padding-left: 15px;
+
+      &::-webkit-input-placeholder {
+        color: var(--input-text-color);
+        background-color: transparent;
+        font-family: "Inter", sans-serif;
+      }
+  }
+
+  .input-insta{
+    width: 75% !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+    border: none !important;
+  }
+
+  .option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h3-card{
+    @media screen and (max-width: 1440px) {
+      font-size: 18px;
+    }
+  }
+
+  .text-card{
+      @media screen and (max-width: 1440px) {
+        font-size: 14px !important;
+      }
+  }
 
 .pg-logo {
 	max-width: 180px;

@@ -30,6 +30,20 @@ import arrowRightLight from './arrows/arrowRightLight.svg';
 import backIcon from './back.svg';
 import backLightIcon from './backLight.svg';
 
+import {
+    Container,
+    Search,
+    Buttons,
+    ButtonLight,
+    ButtonDark,
+    Li,
+  } from "./style";
+
+  import btn from "./botao.svg";
+  import { AiOutlineEye, AiOutlineUser } from "react-icons/ai";
+  import { BsBell } from "react-icons/bs";
+
+
 interface ReduxProps {
     currentMarket: Market | undefined;
     colorTheme: string;
@@ -90,6 +104,30 @@ class Head extends React.Component<Props> {
                     <div className="pg-header__navbar">
                         {this.renderMarketToolbar()}
                         {!useSharedLayout() && <NavBar onLinkChange={this.closeMenu} />}
+
+                        {/* <ButtonLight>Depositar</ButtonLight> */}
+                        <Buttons>
+                            {/* <Li to="" onClick={() => this.props.colorTheme()}>
+                                {" "}
+                                <HiLightBulb size={22} />
+                            </Li> */}
+
+                            <Li to="">
+                                <AiOutlineEye size={22} />
+                            </Li>                        
+
+                            <Li to="">
+                                <BsBell size={22} />
+                            </Li>                        
+
+                            <Li to="/profile" className="active-menu-header">
+                                <AiOutlineUser size={22} />
+                            </Li>
+
+                            <ButtonDark>
+                                <img src={btn} alt="" />
+                            </ButtonDark>
+                        </Buttons>
                     </div>
                 </div>
             </header>

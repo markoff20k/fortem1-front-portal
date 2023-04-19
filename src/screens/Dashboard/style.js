@@ -33,15 +33,18 @@ export const Alert = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    max-width: 80%;
 
     p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
       margin-left: 30px;
-      line-height: 23px;
       color: var(--primary-text-color);
 
       @media screen and (max-width: 1440px) {
         font-size: 14px;
-        line-height: 21px;
+        line-height: 18px;
         margin-top: 15px;
       }
     }
@@ -49,13 +52,14 @@ export const Alert = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 18px 25px;
   border-radius: 10px;
   border: none;
-  font-size: 18px;
-  color: ${(props) => props.theme.white};
-  background-color: ${(props) => props.theme.primary};
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--button-primary-cta-text-color);
+  background: var(--button-primary-cta-background-color);
   cursor: pointer;
+  padding: 12px 22px;
 `;
 
 export const CardsPatrimony = styled.div`
@@ -74,8 +78,8 @@ export const Slid = styled.div`
   flex: 1;
   margin-right: 20px;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.backgroundCards};
-
+  background-color: var(--main-background-color);
+  
   @media screen and (max-width: 1440px) {
     width: 70%;
   }
@@ -103,15 +107,17 @@ export const SlidTokens = styled.div`
 `;
 
 export const Deposit = styled.div`
-  width: 370px;
+  width: 348px;
   height: 100%;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  
   border-radius: 10px;
   background-color: var(--main-background-color);
   color: var(--primary-text-color);
+  padding: 10px 20px;
 
   @media screen and (max-width: 1440px) {
     width: 310px;
@@ -121,48 +127,61 @@ export const Deposit = styled.div`
     width: 100%;
     height: 80px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--divide-color-level-2);
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--sidebar-border-color);
 
     p {
       font-size: 20px;
-      margin-top: 20px;
+      font-weight: 700;
+      line-height: 24px;
       color: var(--primary-text-color);
+      
     }
   }
-  .input {
+  .input-group {
     flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 20px;
+
 
     p {
+      color: var(--primary-text-color);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
       margin-top: 20px;
-      margin-left: 20px;
       align-self: flex-start;
     }
 
     span {
+      color: var(--primary-text-color);
       font-size: 12px;
-      margin-left: 20px;
+      font-weight: 400;
+      line-height: 20px;
       align-self: flex-start;
     }
 
     input {
-      width: 90%;
+      border: 1px solid var(--input-border-color);
+      -webkit-box-shadow: 0 0 0 1000px var(--input-background-color) inset;
+      background-color: var(--input-background-color);
+      color: var(--input-text-color);
+      width: 100%;
       height: 50px;
       border-radius: 10px;
-      border: 1px solid ${(props) => props.theme.search};
       outline: none;
-      color: ${(props) => props.theme.search};
-      background-color: ${(props) => props.theme.backgroundCards};
       padding-left: 15px;
+      
 
       &::-webkit-input-placeholder {
-        color: ${(props) => props.theme.search};
+        color: var(--input-text-color);
         background-color: transparent;
         font-family: "Inter", sans-serif;
       }
@@ -181,17 +200,17 @@ export const Deposit = styled.div`
       border: none;
       border-radius: 10px;
       padding: 12px;
-      color: ${(props) => props.theme.white};
-      background-color: ${(props) => props.theme.primary};
+      color: var(--primary-text-color);
+      border: 1px solid #009991;
     }
 
     .btn-ver {
       width: 90%;
-      border: 1px solid ${(props) => props.theme.primary};
+      border: 1px solid #009991;
       border-radius: 10px;
       padding: 12px;
       margin-bottom: 20px;
-      color: ${(props) => props.theme.primary};
+      color: #009991;
       background-color: transparent;
     }
   }
@@ -221,7 +240,7 @@ export const Tokens = styled.div`
       border: none;
       border-radius: 10px;
       outline: none;
-      background-color: ${(props) => props.theme.backgroundCards};
+      
     }
   }
 `;
@@ -237,7 +256,17 @@ export const Tables = styled.div`
   flex: 1;
   margin-right: 20px;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.backgroundCards};
+  background-color: var(--main-background-color);
+  
+  h4 {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-self: flex-start;
+  }
 
   @media screen and (max-width: 1440px) {
     width: 70%;
@@ -245,14 +274,15 @@ export const Tables = styled.div`
 `;
 
 export const Negotiation = styled.div`
-  width: 370px;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  width: 348px;
+  height: 610px;
+  
+  
+  
+  
   border-radius: 10px;
-  background-color: ${(props) => props.theme.backgroundCards};
+  
+  background-color: var(--main-background-color);
 
   @media screen and (max-width: 1440px) {
     width: 310px;
@@ -265,23 +295,36 @@ export const Knowledge = styled.div`
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 50px;
+  background-color: var(--main-background-color);
+  border-radius: 10px;
 
   .header-knowledge {
     width: 100%;
+    height: 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--sidebar-border-color);
+    padding-left: 20px;
+    padding-right: 20px;
 
     p {
-      font-size: 25px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: var(--primary-text-color);
+      
     }
 
     button {
+      color: var(--primary-text-color);
       padding: 10px 15px;
       border: none;
       border-radius: 10px;
       outline: none;
-      background-color: ${(props) => props.theme.backgroundCards};
+      
     }
   }
 

@@ -17,9 +17,9 @@ import {
   Knowledge,
 } from "./style";
 import imgBell from "../../assets/bell.svg";
-// import { Patrimony } from "../../components/Cards/Patrimony";
+import { Patrimony } from "../../components/Cards/Patrimony";
 import { CarouselSlide } from "../../components/Carousel";
-// import { TokensSlid } from "../../components/Cards/Tokens";
+import { TokensSlid } from "../../components/Cards/Tokens";
 // import { KnowledgeCards } from "../../components/Cards/Knowledge";
 import img1 from "../../assets/image-1.svg";
 import img2 from "../../assets/image-2.svg";
@@ -30,23 +30,30 @@ import imgBTC from "../../assets/BTC.svg";
 import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/QRCode";
 
+import { HomepageMarket } from '../../containers';
+
+import BlogList from "../../components/blog/itemProp/BlogList";
+
+import BlogClassicData from '../../data/blog/BlogList.json';
+var BlogListData = BlogClassicData.slice(0, 6);
+
 export function Dashboard() {
   
   // const [fastDeposit, setFastDeposit] = useState(false);
 
   const patrimony = [
     {
-      description: "Patrimônio total",
+      description: "Patrimônio Total",
       value: "R$ 0,00",
       type: "D",
     },
     {
-      description: "Disponível em fiat",
+      description: "Disponível em Reais",
       value: "R$ 0,00",
       type: "D",
     },
     {
-      description: "Disponível em cripto",
+      description: "Disponível em Cripto",
       value: "R$ 0,00",
       type: "V",
     },
@@ -82,13 +89,8 @@ export function Dashboard() {
               {/* <p
                 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
               > */}
-                            <p
-                
-              >
-
-                A Fortem One preza a sua segurança, para utilizar todos os
-                recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu
-                cadastro, é rápido e simples.
+              <p>
+                A Fortem One preza pela sua segurança, para utilizar todos os recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu cadastro, é rápido e simples.
               </p>
             </div>
             <div className="btn">
@@ -97,7 +99,7 @@ export function Dashboard() {
           </Alert>
         {/* )} */}
         <CardsPatrimony>
-          {/* <Patrimony patrimony={patrimony} themeDark={props.themeDark} /> */}
+          <Patrimony patrimony={patrimony} />
         </CardsPatrimony>
         <Carousel>
           <Slid>
@@ -111,102 +113,58 @@ export function Dashboard() {
                 Depósito rápido
               </p>
             </div>
-            <div className="input">
+            <div className="input-group">
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
                 Quanto você quer depostitar?
               </p>
-              <input type="text" placeholder="R$ 0,00" />
+              <input className="input" type="text" placeholder="R$ 0,00" />
               <span
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Você ainda pode depostitar: R$ 150.000,00
+                Você ainda pode depostitar: R$ 50.000,00 este mês
               </span>
             </div>
             <div className="buttons">
-              <button onClick={() => setFastDeposit(true)} className="btn-ajuste">Ver dados para depósito</button>
-              <button className="btn-ver">Ajuste limite mensal</button>
+              <button onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
+              <button className="btn btn-primary-outline btn-block">Ajustar limite mensal</button>
             </div>
           </Deposit>
         </Carousel>
-        <Tokens>
+        {/* <Tokens>
           <div className="highlights">
-            <h3 style={{ color: "#000" }}>
+            <h3 style={{ color: "var(--primary-text-color)" }}>
               Tokens em destaques
             </h3>
             <button
-              style={{ color: "#000" }}
+              style={{ color: "var(--primary-text-color)" }}
             >
               Ver todos
             </button>
           </div>
-          {/* <SlidTokens>
-            <TokensSlid themeDark={props.themeDark} />
-            <TokensSlid themeDark={props.themeDark} />
-            <TokensSlid themeDark={props.themeDark} />
-            <TokensSlid themeDark={props.themeDark} />
-            <TokensSlid themeDark={props.themeDark} />
-            <TokensSlid themeDark={props.themeDark} />
-          </SlidTokens> */}
-        </Tokens>
+          <SlidTokens>
+            <TokensSlid  />
+
+          </SlidTokens>
+        </Tokens> */}
         <Criptos>
           <Tables>
             <div className="div-cripto">
-              <h4
-                style={{ color: "#000" }}
-              >
-                Preço de mercado atual
-              </h4>
-              <div>
-                <button
-                  style={
-                    { color: "#000" }
-                  }
-                >
-                  Cripto
-                </button>
-                <button
-                  style={
-                    { color: "#000" }
-                  }
-                >
-                  Tokens
-                </button>
-              </div>
+              <h4> Preço de mercado atual </h4>
             </div>
-            <div className="div-cripto2">
-              <p
-                style={{ color: "#000" }}
-              >
-                Criptos em alta
-              </p>
-              <button>Ver todos</button>
-            </div>
-            {/* <TabelCripto themeDark={props.themeDark} /> */}
+            <HomepageMarket/>
           </Tables>
           <Negotiation>
             <Deposit>
               <div className="header">
-                <p
-                  style={
-                    { color: "#000" }
-                  }
-                >
-                  Negociação instantânea
-                </p>
+                <p> Negociação instantânea </p>
               </div>
-              <div className="input">
-                <p
-                  style={
-                    { color: "#000" }
-                  }
-                >
-                  Quanto você quer negociar?
-                </p>
+              <div className="input-group">
+                <p> Quanto você quer negociar? </p>
                 <div className="input-select">
                   <input
-                    style={{ backgroundImage: `url(${imgUSDT})` }}
+                    // style={{ backgroundImage: `url(${imgUSDT})` }}
                     className="input-insta"
                     type="text"
                     placeholder="R$ 3.045,00"
@@ -216,48 +174,36 @@ export function Dashboard() {
                   </select>
                 </div>
                 <span
-                  style={
-                     { color: "#000", marginTop: 10 }
-                  }
+                  style={{ color: "var(--primary-text-color)" }}
                 >
-                  Saldo total: R$ 500.000
+                  Saldo disponível: R$ 0,00
                 </span>
               </div>
               <div className="btn-percent">
                 <button
-                  style={
-                    { color: "#000" }
-                  }
+                  style={{ color: "var(--primary-text-color)" }}
                 >
                   25%
                 </button>
                 <button
-                  style={
-                    { color: "#000" }
-                  }
+                  style={{ color: "var(--primary-text-color)" }}
                 >
                   50%
                 </button>
                 <button
-                  style={
-                    { color: "#000" }
-                  }
+                  style={{ color: "var(--primary-text-color)" }}
                 >
                   75%
                 </button>
                 <button
-                  style={
-                    { color: "#000" }
-                  }
+                 style={{ color: "var(--primary-text-color)" }}
                 >
                   100%
                 </button>
               </div>
               <div className="input">
                 <p
-                  style={
-                    { color: "#000" }
-                  }
+                  style={{ color: "var(--primary-text-color)" }}
                 >
                   Qual ativo deseja receber?
                 </p>
@@ -277,7 +223,7 @@ export function Dashboard() {
 
                 <span
                   style={
-                    { color: "#000", marginTop: 10 }
+                    { color: "var(--primary-text-color)", marginTop: 10 }
                   }
                 >
                   Preço unitário: $ 120.000,00
@@ -291,26 +237,31 @@ export function Dashboard() {
         </Criptos>
         <Knowledge>
           <div className="header-knowledge">
-            <p style={ { color: "#000" }}>
-              Arena do conhecimento
-            </p>
+            <p> Arena do conhecimento </p>
             <button
               style={
-                 { color: "#000", marginBottom: 50 }
+                 { color: "var(--primary-text-color)" }
               }
             >
-              Ver todos
+              Ver mais
             </button>
           </div>
           <div className="cards-knowledge">
-            {images.map((result) => (
-              <>
+            
+            
                 {/* <KnowledgeCards
                   themeDark={props.themeDark}
                   images={result.img}
                 /> */}
-              </>
-            ))}
+                                            <div className="row row--15">
+                                {BlogListData.map((item) => (
+                                    <div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
+                                        <BlogList StyleVar="box-card-style-default" data={item} />
+                                    </div>
+                                ))}
+                            </div>
+            
+            
           </div>
         </Knowledge>
       </Content>
