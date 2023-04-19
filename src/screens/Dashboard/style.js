@@ -2,16 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 100vw;
-  width: calc(100% - 296px);
+  background-color: black;
   right: 0;
+  left: 300px;
 `;
 
 export const Content = styled.div`
   width: calc(100% - 296px);
   position: absolute;
-  top: 100px;
   right: 0;
-  padding: 35px 30px;
+  padding: 35px 10px;
+  background-color: black;
 
   @media screen and (max-width: 1440px) {
     width: calc(100% - 296px);
@@ -20,13 +21,13 @@ export const Content = styled.div`
 `;
 
 export const Alert = styled.div`
-  width: calc(100% - 296px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: gray;
+  background-color: var(--main-background-color);
 
   .description {
     display: flex;
@@ -36,6 +37,7 @@ export const Alert = styled.div`
     p {
       margin-left: 30px;
       line-height: 23px;
+      color: var(--primary-text-color);
 
       @media screen and (max-width: 1440px) {
         font-size: 14px;
@@ -108,7 +110,8 @@ export const Deposit = styled.div`
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.backgroundCards};
+  background-color: var(--main-background-color);
+  color: var(--primary-text-color);
 
   @media screen and (max-width: 1440px) {
     width: 310px;
@@ -120,11 +123,12 @@ export const Deposit = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid ${(props) => props.theme.lineDeposit};
+    border-bottom: 1px solid var(--divide-color-level-2);
 
     p {
       font-size: 20px;
       margin-top: 20px;
+      color: var(--primary-text-color);
     }
   }
   .input {

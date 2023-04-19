@@ -18,7 +18,7 @@ import {
 } from "./style";
 import imgBell from "../../assets/bell.svg";
 // import { Patrimony } from "../../components/Cards/Patrimony";
-// import { CarouselSlide } from "../../components/Carousel";
+import { CarouselSlide } from "../../components/Carousel";
 // import { TokensSlid } from "../../components/Cards/Tokens";
 // import { KnowledgeCards } from "../../components/Cards/Knowledge";
 import img1 from "../../assets/image-1.svg";
@@ -74,7 +74,7 @@ export function Dashboard() {
 
   return (
     <Container>
-      <Content style={{width: "calc(100% - 100px)"}}>
+      <Content style={{width: "calc(100% - 300px)"}}>
         {/* {!props.user.validation && ( */}
           <Alert>
             <div className="description">
@@ -83,18 +83,16 @@ export function Dashboard() {
                 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
               > */}
                             <p
-                style={{color: "#000" }}
+                
               >
 
                 A Fortem One preza a sua segurança, para utilizar todos os
-                recursos da plataforma, você precisa
-                <br />
-                habilitar o duplo fator de autenticação e concluir o seu
+                recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu
                 cadastro, é rápido e simples.
               </p>
             </div>
             <div className="btn">
-              <Button>Hbilitar agora</Button>
+              <Button>Habilitar agora</Button>
             </div>
           </Alert>
         {/* )} */}
@@ -103,25 +101,25 @@ export function Dashboard() {
         </CardsPatrimony>
         <Carousel>
           <Slid>
-            {/* <CarouselSlide themeDark={props.themeDark} /> */}
+            {/* <CarouselSlide /> */}
           </Slid>
           <Deposit>
             <div className="header">
               <p
-                style={{ color: "#000" }}
+                style={{ color: "var(--primary-text-color)" }}
               >
                 Depósito rápido
               </p>
             </div>
             <div className="input">
               <p
-                style={{ color: "#000" }}
+                style={{ color: "var(--primary-text-color)" }}
               >
                 Quanto você quer depostitar?
               </p>
               <input type="text" placeholder="R$ 0,00" />
               <span
-                style={{ color: "#000" }}
+                style={{ color: "var(--primary-text-color)" }}
               >
                 Você ainda pode depostitar: R$ 150.000,00
               </span>

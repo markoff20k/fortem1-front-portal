@@ -2,15 +2,15 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import img from "../../assets/Card-slid-1.svg";
 
-export function CarouselSlide(props) {
+export function CarouselSlide() {
   return (
     <Carousel interval={3000} className="carousel">
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <h1 style={{ color: "#fff" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <p style={{ color: "#fff" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain.
@@ -26,10 +26,10 @@ export function CarouselSlide(props) {
       </Carousel.Item>
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <h1 stylestyle={{ color: "#fff" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <p style={{ color: "#fff" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain.
@@ -45,10 +45,10 @@ export function CarouselSlide(props) {
       </Carousel.Item>
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <h1 style={{ color: "#fff" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+          <p style={{ color: "#fff" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain.

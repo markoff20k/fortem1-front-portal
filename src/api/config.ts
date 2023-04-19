@@ -12,7 +12,7 @@ export const defaultConfig: Config = {
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
-    withCredentials: false,
+    withCredentials: true,
     incrementalOrderBook: true,
     isResizable: true,
     isDraggable: false,
