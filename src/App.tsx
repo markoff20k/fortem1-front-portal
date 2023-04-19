@@ -17,7 +17,9 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import './assets/scss/theme.scss';
+import './_remixicon.scss';
+
+import './bootstrap.css';
 
 
 const gaKey = gaTrackerKey();

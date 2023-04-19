@@ -35,6 +35,10 @@ $small-mobile: 'only screen and (max-width: 479px)';
     color: #009991;
 }
 
+.img-depositar {
+    transform: rotate(180deg);
+}
+
 .dimmer {
 
     top: 600px !important;

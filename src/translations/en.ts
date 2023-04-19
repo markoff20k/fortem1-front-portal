@@ -5,13 +5,16 @@ import { nationalitiesNames } from './nationalities';
 export const en = {
     'page.header.navbar.signIn': 'Sign In',
     'page.header.navbar.quick.exchange': 'Quick exchange',
-    'page.header.navbar.trade': 'Trade',
+    'page.header.navbar.trade': 'Crypto Exchange Pro',
     'page.header.navbar.wallets': 'Wallets',
     'page.header.navbar.openOrders': 'Orders',
     'page.header.navbar.history': 'History',
     'page.header.navbar.api': 'API Documentation',
     'page.header.navbar.internal.transfer': 'Internal transfer',
     'page.header.navbar.p2p': 'P2P',
+    'page.header.navbar.main': 'Main',
+    'page.header.navbar.tokens': 'Tokens',
+    'page.header.navbar.deposit': 'Deposit',
 
     'page.header.navbar.profile': 'Profile',
     'page.header.navbar.logout': 'Logout',
