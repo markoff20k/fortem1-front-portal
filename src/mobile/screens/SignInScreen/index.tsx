@@ -12,7 +12,7 @@ const SignInMobileScreen: React.FC = () => {
     const require2FA = useSelector(selectSignInRequire2FA);
     const history = useHistory();
     const intl = useIntl();
-    const title = require2FA ? { id: 'page.mobile.signin.kyc.header' } : { id: 'page.body.landing.header.button2' };
+    const title = require2FA ? { id: 'page.mobile.signin.kyc.header' } : { id: 'page.body.landing.header.login' };
     const className = classnames({
         'cr-mobile-signin': !require2FA,
         'cr-mobile-kyc': require2FA,
@@ -23,7 +23,7 @@ const SignInMobileScreen: React.FC = () => {
             isOpen={true}
             onClose={() => history.push('/trading')}
             onBack={() => !require2FA && history.push('/signup')}
-            backTitle={intl.formatMessage({ id: 'page.body.landing.header.button3' })}
+            backTitle={intl.formatMessage({ id: 'page.body.landing.header.register' })}
             title={intl.formatMessage(title)}>
             <SignInScreen/>
         </Modal>

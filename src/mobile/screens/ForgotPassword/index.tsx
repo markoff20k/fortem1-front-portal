@@ -14,7 +14,7 @@ const ForgotPasswordMobileScreen: React.FC = () => {
                 isOpen={true}
                 onClose={() => history.push('/trading')}
                 onBack={() => history.push('/signin')}
-                backTitle={intl.formatMessage({ id: 'page.body.landing.header.button2' })}
+                backTitle={intl.formatMessage({ id: 'page.body.landing.header.login' })}
                 title={intl.formatMessage({ id: 'page.forgotPassword' })}>
                 <ForgotPasswordScreen/>
             </Modal>

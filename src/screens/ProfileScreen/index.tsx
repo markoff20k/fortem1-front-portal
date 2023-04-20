@@ -32,7 +32,7 @@ export const ProfileScreen: FC = (): ReactElement => {
     const { routeTab } = useParams<ParamType>();
     const abilities = useSelector(selectAbilities);
 
-    useDocumentTitle('Profile');
+    useDocumentTitle('Perfil');
 
     useEffect(() => {
         if (abilities && CanCan.checkAbilityByAction('read', 'P2P', abilities)) {

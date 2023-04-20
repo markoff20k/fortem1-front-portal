@@ -14,8 +14,8 @@ const SignUpMobileScreen: React.FC = () => {
             isOpen={true}
             onClose={() => history.push('/trading')}
             onBack={() => history.push('/signin')}
-            backTitle={intl.formatMessage({ id: 'page.body.landing.header.button2' })}
-            title={intl.formatMessage({ id: 'page.body.landing.header.button3' })}>
+            backTitle={intl.formatMessage({ id: 'page.body.landing.header.login' })}
+            title={intl.formatMessage({ id: 'page.body.landing.header.register' })}>
             <SignUpScreen/>
         </Modal>
     </div>;

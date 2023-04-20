@@ -11,10 +11,19 @@
     font-style: normal;
     height: calc(var(--gap) * 9.66);
     line-height: calc(var(--gap) * 9.66);
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    
 
-    img {
+    img, svg {
       cursor: pointer;
+      display: flex;
+      justify-content: right;
+      position: relative;
+      right: 0px;
     }
   }
 
@@ -42,7 +51,7 @@
 
     fieldset {
       background: inherit;
-      border: 2px solid var(--input-border-color);
+      border: 1px solid var(--input-border-color);
       border-radius: calc(var(--gap) * 0.66);
       flex-grow: 1;
       overflow: hidden;
@@ -191,7 +200,9 @@
         }
 
         span {
-          font-size: var(--font-size);
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--primary-text-color);
         }
 
         div {

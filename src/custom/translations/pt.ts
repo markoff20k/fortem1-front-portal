@@ -123,6 +123,8 @@ export const pt: LangType = {
     'page.body.landing.header.button1': 'Perfil',
     'page.body.landing.header.button2': 'Acessar Plataforma',
     'page.body.landing.header.button3': 'Abrir conta',
+    'page.body.landing.header.register': 'Cadastrar',
+    'page.body.landing.header.login': 'Entrar',
 
     'page.body.landing.marketInfo.title.text1': 'Bem-vindo à Fortem One.',
     'page.body.landing.marketInfo.title.text2': 'Compre, venda e negocie ativos digitais.',
@@ -460,16 +462,16 @@ export const pt: LangType = {
     'page.body.profile.header.account.content.twoFactorAuthentication': 'Autenticação 2FA',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Habilitado',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.disable': 'Desabilitado',
-    'page.body.profile.header.account.content.twoFactorAuthentication.header': 'AUTENTICAÇÃO EM DUAS ETAPAS',
-    'page.body.profile.header.account.content.twoFactorAuthentication.message.1': 'Baixe gratuitamente e instale no seu celular a última versão do aplicativo Google Authenticator disponível na ',
+    'page.body.profile.header.account.content.twoFactorAuthentication.header': 'Autenticação em duas etapas (2FA)',
+    'page.body.profile.header.account.content.twoFactorAuthentication.message.1': 'Baixe gratuitamente e instale no seu celular o aplicativo Google Authenticator disponível na ',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.or': 'ou ',
-    'page.body.profile.header.account.content.twoFactorAuthentication.message.2': 'Crie uma nova conta, digitalize o QR code ao lado ou digite o CÓDIGO MFA apresentado abaixo.',
+    'page.body.profile.header.account.content.twoFactorAuthentication.message.2': 'Crie uma nova conta, digitalize o QR code ou digite o CÓDIGO MFA.',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.3': '* Salve este código em um local seguro.',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.mfa': 'Código MFA',
-    'page.body.profile.header.account.content.twoFactorAuthentication.message.4': 'Insira seu código de autenticação de 6 dígitos do aplicativo Google Authenticator no campo ao lado:',
-    'page.body.profile.header.account.content.twoFactorAuthentication.subHeader': 'Código de 6 dígitos',
-    'page.body.profile.header.account.content.twoFactorAuthentication.enable': 'HABILITAR',
-    'page.body.profile.header.account.content.twoFactorAuthentication.disable': 'DESABILITAR 2FA',
+    'page.body.profile.header.account.content.twoFactorAuthentication.message.4': 'Insira seu token de autenticação de 6 dígitos do aplicativo Google Authenticator no campo abaixo.',
+    'page.body.profile.header.account.content.twoFactorAuthentication.subHeader': 'Token de 6 dígitos',
+    'page.body.profile.header.account.content.twoFactorAuthentication.enable': 'Confirmar autenticação',
+    'page.body.profile.header.account.content.twoFactorAuthentication.disable': 'Desabilitar 2FA',
     'page.body.profile.header.account.content.twoFactorAuthentication.modalBody': 'Por favor, entre em contato com o suporte para desabilitar',
     'page.body.profile.header.account.content.twoFactorAuthentication.modalHeader': 'Duplo fator de autenticação (2FA)',
 
@@ -702,7 +704,7 @@ export const pt: LangType = {
     'page.header.signIn.resetPassword.error': 'Поля пустые или не совпадают',
 
     'page.header.signUp': 'Abrir conta',
-    'page.header.signUp.username.minLength.error': 'Digite uma quantidade maior do que 4 caracteres',
+    'page.header.signUp.username.minLength.error': 'Digite uma quantidade maior do que 3 caracteres',
     'page.header.signUp.username.maxLength.error': 'Digite uma quantidade menor do que 12 caracteres',
     'page.header.signUp.username.uniqueness.error': 'This username is already taken',
     'page.header.signUp.email': 'Email',
@@ -901,7 +903,7 @@ export const pt: LangType = {
     'resource.profile.exist': 'Профиль уже существует',
     'resource.api_key.2fa_disabled': 'Разрешены только аккаунты с включенным 2FA',
     'resource.api_key.missing_otp': 'Отсутствует код 2FA',
-    'resource.api_key.invalid_otp': 'Код 2FA недействителен',
+    'resource.api_key.invalid_otp': 'Token 2FA incorreto',
     'resource.phone.twillio': 'Ошибка с Twilio',
     'resource.phone.invalid_num': 'Номер телефона недействителен',
     'resource.phone.exists': 'Номер телефона уже существует',
@@ -910,7 +912,7 @@ export const pt: LangType = {
     'resource.documents.limit_reached': 'Достигнуто максимальное количество документов',
     'resource.documents.limit_will_be_reached': 'Количество документов достигнет предела при этой загрузке',
     'resource.otp.already_enabled': '2FA уже включен для этого аккаунта',
-    'resource.otp.invalid': 'Код 2FA недействителен',
+    'resource.otp.invalid': 'Token 2FA inválido',
     'resource.password.doesnt_match': 'Новые пароли не совпадают',
     'resource.password.prev_pass_not_correct': 'Предыдущий пароль неверен',
     'resource.password.no_change_provided': 'Новый пароль не может быть таким же, как старый',
@@ -950,7 +952,7 @@ export const pt: LangType = {
     'postcode.blank': 'Почтовый индекс отсутствует',
     'country.must have alpha2 or alpha3 format': 'Страна должна быть в буквенном формате',
 
-    'totp.error': 'Код 2FA неверен',
+    'totp.error': 'Token 2FA incorreto',
 
     'record.not_found': 'Запись не найдена',
     'jwt.decode_and_verify': 'Не удалось декодировать и проверить JWT',
@@ -984,8 +986,8 @@ export const pt: LangType = {
     'identity.session.invalid_captcha_format': 'Неверный формат captcha',
 
     // resource module
-    'resource.otp.missing_code': '2FA отсутствует',
-    'resource.otp.empty_code': '2FA отсутствует',
+    'resource.otp.missing_code': 'Digite seu token 2FA',
+    'resource.otp.empty_code': 'Digite seu token 2FA',
 
     'resource.labels.missing_key': 'Ключ отсутствует',
     'resource.labels.empty_key': 'Ключ отсутствует',
@@ -1027,7 +1029,7 @@ export const pt: LangType = {
     'resource.api_key.empty_totp': '2FA отсутствует',
     'resource.api_key.missing_kid': 'KID отсутствует',
     'resource.api_key.empty_state': 'Состояние отсутствует',
-    'resource.api_key.invalid_totp': 'Код 2FA недействителен',
+    'resource.api_key.invalid_totp': 'Token 2FA incorreto',
 
     'resource.phone.missing_phone_number': 'Номер телефона отсутствует',
     'resource.phone.empty_phone_number': 'Номер телефона отсутствует',

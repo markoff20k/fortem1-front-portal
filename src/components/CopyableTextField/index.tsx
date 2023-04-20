@@ -65,7 +65,7 @@ class CopyableTextField extends React.Component<CopyableTextFieldProps> {
                 type="text"
                 disabled={disabled}
                 label={label}
-                buttonText={copyButtonText || 'Copy'}
+                buttonText=''
                 buttonClassName="cr-copyable-text-field__button"
                 icon={<CopyIcon />}
             />

@@ -65,8 +65,8 @@
       transition: 0.25s;
 
       &:hover {
-        color: var(--secondary-contrast-cta-color);
-        opacity: 0.94;
+        
+        -webkit-filter: brightness(115%);
         transition: 0.25s;
         cursor: pointer;
                 
@@ -97,7 +97,9 @@
 
       &--focused {
         .cr-sign-up-form__label {
-          color: var(--input-legend-color-active);
+          /* color: var(--input-legend-color-active); */
+          opacity: 0.81;
+
         }
 
         input {
@@ -110,10 +112,13 @@
       &--errored {
         .cr-sign-up-form__label {
           color: var(--system-red);
+          opacity: 1;
+          -webkit-filter: brightness(120%);
         }
 
         .input-group {
-          border-color: var(--input-border-color-error) !important;
+          border: 1px solid var(--input-border-color-error) !important;
+          border-radius: 12px;
         }
       }
     }
@@ -197,12 +202,16 @@
 
     &__error {
       color: var(--system-red);
+      opacity: 1;
+      -webkit-filter: brightness(120%);
     }
   }
 
   .cr-sign-in-form {
     &__error-message {
       color: var(--system-red);
+      opacity: 1;
+      -webkit-filter: brightness(120%);
     }
   }
 }

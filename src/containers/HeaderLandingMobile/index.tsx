@@ -250,7 +250,7 @@ export const HeaderLandingMobile: React.FC = () => {
 						}}
 					>
 						<div className={classLinkActiveLogin}>
-							<span>{translate('page.body.landing.header.button2')}</span>
+							<span>{translate('page.body.landing.header.login')}</span>
 						</div>
 					</div>
 					<div

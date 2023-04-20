@@ -18,6 +18,7 @@ import {
     setMobileWalletUi,
     toggleMarketSelector,
     toggleSidebar,
+    selectUserLoggedIn
 } from '../../modules';
 import { HeaderToolbar } from '../HeaderToolbar';
 import { NavBar } from '../NavBar';
@@ -50,6 +51,7 @@ interface ReduxProps {
     mobileWallet: string;
     sidebarOpened: boolean;
     marketSelectorOpened: boolean;
+    isLoggedIn: boolean;
 }
 
 interface DispatchProps {
@@ -70,8 +72,10 @@ type Props = ReduxProps & DispatchProps & IntlProps & LocationProps;
 
 class Head extends React.Component<Props> {
     public render() {
-        const { mobileWallet, location } = this.props;
+        const { isLoggedIn, mobileWallet, location } = this.props;
         const tradingCls = location.pathname.includes('/trading') ? 'pg-container-trading' : '';
+
+        
         const shouldRenderHeader =
             !noHeaderRoutes.some((r) => location.pathname.includes(r)) && location.pathname !== '/';
 
@@ -104,8 +108,11 @@ class Head extends React.Component<Props> {
                     <div className="pg-header__navbar">
                         {this.renderMarketToolbar()}
                         {!useSharedLayout() && <NavBar onLinkChange={this.closeMenu} />}
-
+                        
                         {/* <ButtonLight>Depositar</ButtonLight> */}
+
+                        
+                    {isLoggedIn &&
                         <Buttons>
                             {/* <Li to="" onClick={() => this.props.colorTheme()}>
                                 {" "}
@@ -128,6 +135,7 @@ class Head extends React.Component<Props> {
                                 <img src={btn} alt="" />
                             </ButtonDark>
                         </Buttons>
+                }
                     </div>
                 </div>
             </header>
@@ -194,6 +202,8 @@ const mapStateToProps = (state: RootState): ReduxProps => ({
     mobileWallet: selectMobileWalletUi(state),
     sidebarOpened: selectSidebarState(state),
     marketSelectorOpened: selectMarketSelectorState(state),
+    isLoggedIn: selectUserLoggedIn(state),
+
 });
 
 const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> = (dispatch) => ({

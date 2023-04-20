@@ -10,6 +10,7 @@
 
   &__header {
     align-items: center;
+    color: var(--primary-text-color);
     background: var(--subheader-background-color);
     border-bottom: 1px solid rgba(var(--rgb-divider-color), var(--alpha-level-2));
     border-radius: 4px 4px 0 0;
@@ -17,6 +18,7 @@
     height: 36px;
     padding: 0 14px;
     text-transform: capitalize;
+    opacity: 0.81;
 
     &-title {
       flex: 2;
@@ -37,6 +39,11 @@
     &-back,
     &-close {
       flex: 1;
+      cursor: pointer;
+      text-align: right !important;
+      justify-content: right !important;
+      display: flex !important;
+
     }
 
     &-back {

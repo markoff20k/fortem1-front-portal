@@ -94,10 +94,10 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
         return (
             <div className="container mt-5 pg-profile-two-factor-auth__form p-0">
                 <div className="row m-0 pg-profile-two-factor-auth__header">
-                    <div className="col-11 col-lg-7 offset-lg-4 mt-0 p-0 pl-3">
+                    <div className="col-11 col-lg-7 mt-0 p-0 pl-3">
                         {this.translate('page.body.profile.header.account.content.twoFactorAuthentication.header')}
                     </div>
-                    <div className="col-1 mx-0 p-0 px-1" onClick={this.goBack}>
+                    <div onClick={this.goBack}>
                         <CloseIcon className="close-icon" />
                     </div>
                 </div>

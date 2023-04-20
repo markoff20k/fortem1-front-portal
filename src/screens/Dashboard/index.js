@@ -35,6 +35,7 @@ import { HomepageMarket } from '../../containers';
 import BlogList from "../../components/blog/itemProp/BlogList";
 
 import BlogClassicData from '../../data/blog/BlogList.json';
+import { Link } from "react-router-dom";
 var BlogListData = BlogClassicData.slice(0, 6);
 
 export function Dashboard() {
@@ -58,7 +59,7 @@ export function Dashboard() {
       type: "V",
     },
     {
-      description: "Investido em Token",
+      description: "Disponível em Token",
       value: "R$ 0,00",
       type: "V",
     },
@@ -94,7 +95,11 @@ export function Dashboard() {
               </p>
             </div>
             <div className="btn">
-              <Button>Habilitar agora</Button>
+              <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
+                <Button> Habilitar agora </Button>
+              </Link>
+
+              
             </div>
           </Alert>
         {/* )} */}
@@ -103,7 +108,7 @@ export function Dashboard() {
         </CardsPatrimony>
         <Carousel>
           <Slid>
-            {/* <CarouselSlide /> */}
+            <CarouselSlide />
           </Slid>
           <Deposit>
             <div className="header">

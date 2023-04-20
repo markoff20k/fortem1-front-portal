@@ -67,8 +67,7 @@
 
 
       &:hover {
-        color: var(--secondary-contrast-cta-color);
-        opacity: 0.94;
+        -webkit-filter: brightness(115%);
         transition: 0.25s;
         cursor: pointer;
                 
@@ -178,6 +177,8 @@
     &__error,
     &__error-message {
       color: var(--system-red);
+      opacity: 1;
+      -webkit-filter: brightness(120%);
     }
 
     &__footer {
@@ -209,7 +210,8 @@
 
     &__group--focused {
       .cr-sign-in-form__label {
-        color: var(--input-legend-color-active);
+        /* color: var(--input-legend-color-active); */
+        opacity: 0.81;
       }
 
       input {
