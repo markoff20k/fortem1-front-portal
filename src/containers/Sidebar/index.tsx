@@ -196,7 +196,10 @@ class SidebarContainer extends React.Component<Props, State> {
             <div className="pg-sidebar-wrapper-logout">
                 <div className="pg-sidebar-wrapper-logout-link" onClick={this.props.logoutFetch}>
                     {/* <LogoutIcon className="pg-sidebar-wrapper-logout-link-img" /> */}
-                    <i className="ri-shut-down-line align-middle me-2 text-danger"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22px" className='text-danger pg-sidebar-wrapper-logout-link-img'>
+                        <path fill="#ff3d60" d="M53.42 32.299a21.42 21.42 0 1 1-36.24-15.47 2 2 0 0 1 2.77 2.887 17.42 17.42 0 1 0 24.102 0 2 2 0 0 1 2.77-2.887A21.253 21.253 0 0 1 53.42 32.3ZM32 35.045a2 2 0 0 0 2-2V12.279a2 2 0 0 0-4 0v20.766a2 2 0 0 0 2 2Z"/>
+                    </svg>
+                    
                     <p className="pg-sidebar-wrapper-logout-link-text">
                         <FormattedMessage id={'page.body.profile.content.action.logout'} />
                     </p>

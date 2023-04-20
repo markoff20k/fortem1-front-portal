@@ -420,6 +420,7 @@ $small-mobile: 'only screen and (max-width: 479px)';
     }
   }
 
+  
 .evolution{
     width: 100%;
     margin-top: 10px;
@@ -590,9 +591,12 @@ $small-mobile: 'only screen and (max-width: 479px)';
       @media (max-width: 928px) {
         width: 130px;
   
-    
-        }
+          }
 
+}
+
+.pg-trading-screen-mobile {
+    padding-top: 20px;
 }
 
 .header-top-news {

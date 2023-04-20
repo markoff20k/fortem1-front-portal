@@ -210,6 +210,7 @@
     .pg-sidebar-wrapper-nav-item,
     .pg-sidebar-wrapper-profile-link {
       background-color: var(--sidebar-item-background-color-active);
+      border-radius: 12px;
 
       .fill-stroke {
         path {
@@ -274,7 +275,20 @@
             fill: var(--sidebar-item-text-color-hover);
           }
         }
+      
+      
       }
+
+
+      &-img-logout {
+        
+        &-wrapper {
+          margin-right: 14px;
+          width: 24px;
+        }
+      }
+
+      
 
       &-text {
         font-size: calc(var(--font-size) * 1.16);
@@ -292,20 +306,24 @@
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    height: 60px;
     margin-left: 20px;
     margin-right: 20px;
-    padding: 9px 30px;
+    
     opacity: 0.81;
 
     &-link {
+      font-family: 'Inter';
+      font-size: 16px;
+      font-weight: 500;
       color: var(--primary-text-color);
       align-items: center;
       cursor: pointer;
       display: flex;
       justify-content: flex-start;
+      height: 60px;
       margin-left: 20px;
-      margin-right: 20px;
+     
+      
       padding: 9px 30px;
       width: 100%;
 
@@ -318,32 +336,22 @@
         background-color: var(--sidebar-item-background-color-hover) !important;
         border: 1px solid transparent;
         border-radius: 12px;
-        opacity: 0.71;
+        
 
-        path {
-          fill: var(--sidebar-item-text-color-hover);
-        }
 
-        p {
-          color: var(--primary-text-color);
-          font-family: 'Inter';
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 20px;
-          opacity: 0.81;
-        }
       }
 
       &-img {
         margin-right: 14px;
+        width: 20px;
       }
 
       &-text {
         color: var(--primary-text-color);
-        font-family: 'Poppins';
+        font-family: 'Inter';
+        font-size: calc(var(--font-size) * 1.16);
+        font-weight: 600;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 21px;
         text-align: center;
         margin: 0;

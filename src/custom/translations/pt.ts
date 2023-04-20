@@ -692,6 +692,7 @@ export const pt: LangType = {
     'page.footer.faq': 'FAQ',
 
     'page.header.signIn': 'Acessar plataforma',
+    'page.header.signIn.mobile': 'Entrar',
     'page.header.signIn.email': 'Email',
     'page.header.signIn.password': 'Senha',
     'page.header.signIn.password.message.error': 'Неправильный пароль',

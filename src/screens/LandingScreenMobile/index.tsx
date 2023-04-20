@@ -68,6 +68,8 @@ import {HeaderLandingMobile} from '../../containers/HeaderLandingMobile';
 
 import Typed from 'react-typed';
 
+import {FooterWebMobile} from '../../mobile/components/FooterWebMobile';
+
 
 interface ReduxProps {
     isLoggedIn: boolean;
@@ -567,7 +569,7 @@ class Landing extends React.Component<Props> {
 
 
 
-        {/* <Footer /> */}
+        <FooterWebMobile />
             
     </div>
         );
