@@ -13,7 +13,6 @@ const TableStyles = styled.div`
 			margin: 0;
 		
 			font-size: 14px;
-			color: #f5f5f5;
 			text-align: justify;
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -90,8 +89,8 @@ export const NewHomeMarketTable: React.FC<MarketTableProps> = (props: MarketTabl
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.pair' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.lastPrice' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.change' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th>
+							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
+							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th> */}
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.volume' })}</th>
 							<th scope="col"></th>
 						</tr>
@@ -105,8 +104,8 @@ export const NewHomeMarketTable: React.FC<MarketTableProps> = (props: MarketTabl
 										<td>{item.name}</td>
 										<td>{item.last}</td>
 										<td>{item.change}</td>
-										<td>{item.high}</td>
-										<td>{item.low}</td>
+										{/* <td>{item.high}</td>
+										<td>{item.low}</td> */}
 										<td>{item.volume}</td>
 										<td>{item.trade}</td>
 									</tr>

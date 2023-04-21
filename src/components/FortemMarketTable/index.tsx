@@ -3,8 +3,6 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import ReactPaginate from 'react-paginate';
 
-import './FortemMarketTable.pcss';
-
 interface MarketTableProps {
 	columns: any;
 	data: any;
@@ -34,7 +32,7 @@ const TableStyles = styled.div`
 			font-weight: 500;
 			font-size: 15px;
 			line-height: 20px;
-			color: #fff;
+			color: var(--primary-text-color);
 			background-color: var(--header-background-color);
 		}
 		th:not(:first-child) {
@@ -48,7 +46,7 @@ const TableStyles = styled.div`
 		}
 		tr:hover td {
 			background-color: var(--body-background-color-level-5);
-			color: #fff;
+			color: var(--primary-text-color);
 		}
 	}
 `;

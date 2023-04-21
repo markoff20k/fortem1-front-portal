@@ -845,6 +845,10 @@ $small-mobile: 'only screen and (max-width: 479px)';
     outline: none;
     width: 8em;
     transition: 0.25s;
+
+    @media screen and (max-width: 1128px) {
+        width: 6em;
+    }
 }
 
 .home-market__trading-btn:hover {

@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 90vw;
-  background-color: black;
-  right: 0;
+  // width: calc(100vw - 300px);
+  background-color: var(--main-background-color);
+  // margin-right: 50%;
+  // margin-left: 50%;
+  display: flex;
+  justify-content: center;
   position: relative;
 `;
 
 export const Content = styled.div`
   
-  position: absolute;
   right: 0;
   padding: 35px 10px;
-  background-color: black;
+  background-color: var(--main-background-color);
 
   @media screen and (max-width: 1440px) {
   
@@ -27,7 +29,7 @@ export const Alert = styled.div`
   justify-content: space-between;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
 
   .description {
     display: flex;
@@ -78,7 +80,7 @@ export const Slid = styled.div`
   flex: 1;
   margin-right: 20px;
   border-radius: 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
   
   @media screen and (max-width: 1440px) {
     width: 70%;
@@ -115,7 +117,7 @@ export const Deposit = styled.div`
   align-items: center;
   
   border-radius: 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
   color: var(--primary-text-color);
   padding: 10px 20px;
 
@@ -256,7 +258,7 @@ export const Tables = styled.div`
   flex: 1;
   margin-right: 20px;
   border-radius: 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
   
   h4 {
     color: var(--primary-text-color);
@@ -276,13 +278,8 @@ export const Tables = styled.div`
 export const Negotiation = styled.div`
   width: 348px;
   height: 610px;
-  
-  
-  
-  
   border-radius: 10px;
-  
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
 
   @media screen and (max-width: 1440px) {
     width: 310px;
@@ -295,7 +292,7 @@ export const Knowledge = styled.div`
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 50px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
   border-radius: 10px;
 
   .header-knowledge {

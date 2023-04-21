@@ -17,7 +17,7 @@ export const Content = styled.div`
   justify-content: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
 
   &:nth-child(n + 2):nth-child(-n + 4) {
     margin-left: 20px;

@@ -7,8 +7,6 @@ import { ConvertUsd, Decimal, NewHomeMarketTable } from '../../components';
 import { useMarketsFetch, useMarketsTickersFetch, useRangerConnectFetch } from '../../hooks';
 import { Market, selectMarkets, selectMarketTickers, setCurrentMarket, selectCurrencies } from '../../modules';
 
-import './HomepageMarket.pcss'
-
 const defaultTicker = {
 	amount: '0.0',
 	last: '0.0',
@@ -77,7 +75,7 @@ export const HomepageMarket = props => {
 				}))
 
 				.map(market => {
-					const marketChangeColor = +(market.change || 0) < 0 ? '#D92121' : '#00CC99';
+					const marketChangeColor = +(market.change || 0) < 0 ? '#ff3d60' : '#0ac074';
 					const marketName = market.name.split('/');
 					const marketID = market.name.toUpperCase();
 					const baseCurrency = marketID.split('/')[0];
@@ -103,7 +101,8 @@ export const HomepageMarket = props => {
 						open: <span style={{ color: marketChangeColor }}>{market.open}</span>,
 						change: <span style={{ color: marketChangeColor }}>{market.change}</span>,
 						volume: <span style={{ color: marketChangeColor }}>{market.volume}</span>,
-						price_change_percent: <span style={{ color: marketChangeColor }}>{market.price_change_percent}</span>,
+						// change here 
+						price_change_percent: <span style={{ color: marketChangeColor }}>{market.change}</span>,
 						trade: (
 							<button
 								onClick={() => handleRedirectToTrading(market.id)}
