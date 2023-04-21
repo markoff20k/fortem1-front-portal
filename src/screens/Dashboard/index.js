@@ -31,6 +31,7 @@ import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/QRCode";
 
 import { HomepageMarket } from '../../containers';
+import { Sidebar } from '../../containers';
 
 import BlogList from "../../components/blog/itemProp/BlogList";
 
@@ -81,8 +82,10 @@ export function Dashboard() {
   ];
 
   return (
+    
     <Container>
-      <Content style={{width: "calc(100% - 300px)"}}>
+      
+      <Content>
         {/* {!props.user.validation && ( */}
           <Alert>
             <div className="description">

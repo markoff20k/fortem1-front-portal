@@ -58,6 +58,7 @@ import {
     walletsReset,
     AbilitiesInterface,
     selectAbilities,
+    selectSidebarState,
 } from '../../modules';
 import {
     ChangeForgottenPasswordScreen,
@@ -107,6 +108,7 @@ interface ReduxProps {
     userLoading?: boolean;
     platformAccessStatus: string;
     abilities: AbilitiesInterface;
+    isActive: boolean;
 }
 
 interface DispatchProps {
@@ -282,10 +284,16 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
             userLoading,
             location,
             platformAccessStatus,
+            isActive, 
         } = this.props;
         const { isShownExpSessionModal } = this.state;
         const desktopCls = classnames('container-fluid pg-layout', {
             'trading-layout': location.pathname.includes('/trading'),
+            'pg-layout--sidebar-lg' : isActive,
+            'pg-layout--sidebar-sm' : !isActive,
+            'pg-layout--sidebar-disabled' : !isLoggedIn,
+
+            
         });
         const mobileCls = classnames('container-fluid pg-layout pg-layout--mobile', {
             'pg-layout--mobile-setup': location.pathname.includes('/setup'),
@@ -472,6 +480,7 @@ const mapStateToProps: MapStateToProps<ReduxProps, {}, RootState> = state => ({
     userLoading: selectUserFetching(state),
     platformAccessStatus: selectPlatformAccessStatus(state),
     abilities: selectAbilities(state),
+    isActive: selectSidebarState(state),
 });
 
 const mapDispatchToProps: MapDispatchToProps<DispatchProps, {}> = dispatch => ({

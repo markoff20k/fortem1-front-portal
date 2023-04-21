@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100vw;
+  max-width: 90vw;
   background-color: black;
   right: 0;
-  left: 300px;
+  position: relative;
 `;
 
 export const Content = styled.div`
-  width: calc(100% - 296px);
+  
   position: absolute;
   right: 0;
   padding: 35px 10px;
   background-color: black;
 
   @media screen and (max-width: 1440px) {
-    width: calc(100% - 296px);
+  
     padding: 10px 30px;
   }
 `;

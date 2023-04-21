@@ -86,17 +86,18 @@ class SidebarContainer extends React.Component<Props, State> {
 
         const sidebarClassName = classnames('pg-sidebar-wrapper', {
             'pg-sidebar-wrapper--active': isActive,
-            'pg-sidebar-wrapper--hidden': !isActive,
+            'pg-sidebar-wrapper--hidden pg-sidebar-wrapper-nav-item-text-disabled': !isActive,
+            
         });
 
-        if (isLoggedIn) (this.props.toggleSidebar(true));
+        // if (isLoggedIn) (this.props.toggleSidebar(false));
 
         return (
-            <div className={sidebarClassName}>
+            <aside className={sidebarClassName}>
                 {this.renderProfileLink()}
                 <div className="pg-sidebar-wrapper-nav">{pgRoutes(isLoggedIn, this.props.abilities).map(this.renderNavItems(address))}</div>
                 {this.renderLogout()}
-            </div>
+            </aside>
         );
     }
 

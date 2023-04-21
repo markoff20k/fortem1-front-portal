@@ -23,7 +23,6 @@
 .pg-sidebar-wrapper {
   background-color: var(--sidebar-background-color);
   box-shadow: 0 10px 15px var(--shadow-color-level-2);
-  width: 296px;
   z-index: 99990;
   position: fixed;
   max-height: 100vh;
@@ -57,11 +56,61 @@
     top: 102px;
     position: fixed;
     max-height: 100vh;
+    width: 296px;
   }
 
   &--hidden {
     -webkit-animation: slide-left 0.3s ease-out;
     -moz-animation: slide-left 0.3s ease-out;
+    /* display: none; */
+
+    bottom: 0;
+    display: block;
+    left: 0;
+    top: 102px;
+    position: fixed;
+    max-height: 100vh;
+    width: 120px;
+
+    .pg-sidebar-wrapper-nav-item-text  {
+
+      display: none !important;
+    }
+
+    .pg-sidebar-wrapper-logout-link-text {
+
+      display: none !important;
+    }
+
+    .pg-sidebar-wrapper-profile-area-text-name {
+      display: none !important;
+    }
+  
+    .pg-sidebar-wrapper-profile-area-text-verified {
+      display: none !important;
+    }
+
+    .pg-sidebar-wrapper-profile-area-text-account {
+      display: none !important;
+    }
+
+    .pg-sidebar-wrapper-profile-area {
+
+      svg {
+        width: 50px !important;
+      }
+    }
+
+    .pg-sidebar-wrapper-logout-link-img {
+      width: 28px !important;
+      margin: 0 !important;
+    }
+
+
+    
+  }
+
+  &--disabled {
     display: none;
   }
 
@@ -291,10 +340,30 @@
       
 
       &-text {
-        font-size: calc(var(--font-size) * 1.16);
+        /* font-size: calc(var(--font-size) * 1.16); */
+        font-size: 16px;
         font-weight: 600;
         margin: 0;
+        display: block;
+
+        &-disabled {
+          color: blue !important;
+        }
+
       }
+
+      &-text--hidden {
+        font-size: 0 !important;
+        color: pink !important;
+      }
+
+      &-text-sm {
+        /* font-size: calc(var(--font-size) * 1.16);
+        font-weight: 600;
+        margin: 0; */
+        
+      }
+
     }
   }
 
@@ -321,7 +390,7 @@
       display: flex;
       justify-content: flex-start;
       height: 60px;
-      margin-left: 20px;
+      
      
       
       padding: 9px 30px;
@@ -330,26 +399,21 @@
       svg {
         color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
         margin-right: 5px;
+        width: 24px;
       }
 
       &:hover {
         background-color: var(--sidebar-item-background-color-hover) !important;
-        border: 1px solid transparent;
         border-radius: 12px;
         
-
-
       }
 
-      &-img {
-        margin-right: 14px;
-        width: 20px;
-      }
 
       &-text {
         color: var(--primary-text-color);
         font-family: 'Inter';
-        font-size: calc(var(--font-size) * 1.16);
+        /* font-size: calc(var(--font-size) * 1.16); */
+        font-size: 16px;
         font-weight: 600;
         font-size: 14px;
         line-height: 21px;

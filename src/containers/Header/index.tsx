@@ -44,6 +44,7 @@ import {
   import { AiOutlineEye, AiOutlineUser } from "react-icons/ai";
   import { BsBell } from "react-icons/bs";
 
+  import { Sidebar } from '../Sidebar';
 
 interface ReduxProps {
     currentMarket: Market | undefined;
@@ -113,6 +114,8 @@ class Head extends React.Component<Props> {
 
                         
                     {isLoggedIn &&
+<>
+                        <Sidebar />
                         <Buttons>
                             {/* <Li to="" onClick={() => this.props.colorTheme()}>
                                 {" "}
@@ -135,6 +138,7 @@ class Head extends React.Component<Props> {
                                 <img src={btn} alt="" />
                             </ButtonDark>
                         </Buttons>
+                        </>
                 }
                     </div>
                 </div>

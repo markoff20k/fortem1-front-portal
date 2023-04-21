@@ -93,11 +93,13 @@ const RenderDeviceContainers = () => {
         return (
             <React.Fragment>
                 <HeaderContainer />
-                <SidebarContainer />
-                <CustomizationContainer />
-                <AlertsContainer />
-                <P2PAlertsContainer />
-                <LayoutContainer />
+                
+                    {/* <SidebarContainer /> */}
+                    <CustomizationContainer />
+                    <AlertsContainer />
+                    <P2PAlertsContainer />
+                    <LayoutContainer />
+                
             </React.Fragment>
         );
     }

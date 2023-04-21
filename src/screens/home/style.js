@@ -6,7 +6,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: calc(100% - 300px);
   position: absolute;
   top: 100px;
   right: 0;
