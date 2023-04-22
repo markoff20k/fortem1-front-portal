@@ -89,13 +89,13 @@ class Head extends React.Component<Props> {
                 <div className={`pg-container pg-header__content ${tradingCls}`}>
                     {!useSharedLayout() &&
                         <>
-                            <div
+                            {/* <div
                                 className={`pg-sidebar__toggler ${mobileWallet && 'pg-sidebar__toggler-mobile'}`}
                                 onClick={this.openSidebar}>
                                 <span className="pg-sidebar__toggler-item" />
                                 <span className="pg-sidebar__toggler-item" />
                                 <span className="pg-sidebar__toggler-item" />
-                            </div>
+                            </div> */}
                             <div onClick={(e) => this.redirectToLanding()} className="pg-header__logo">
                                 <Logo />
                             </div>

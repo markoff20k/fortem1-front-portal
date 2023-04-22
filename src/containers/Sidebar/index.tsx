@@ -49,6 +49,7 @@ interface ReduxProps {
     isActive: boolean;
     user: User;
     abilities: AbilitiesInterface;
+    sidebarOpened: boolean;
 }
 
 interface OwnProps {
@@ -73,6 +74,8 @@ class SidebarContainer extends React.Component<Props, State> {
         }
     }
 
+    private openSidebar = () => this.props.toggleSidebar(!this.props.sidebarOpened);
+
     public render() {
         const { isLoggedIn, isActive, lang } = this.props;
         const { isOpenLanguage } = this.state;
@@ -94,6 +97,14 @@ class SidebarContainer extends React.Component<Props, State> {
 
         return (
             <aside className={sidebarClassName}>
+                <div
+                    className={"pg-sidebar__toggler"}
+                    onClick={this.openSidebar}>
+                    <span className="pg-sidebar__toggler-item" />
+                    <span className="pg-sidebar__toggler-item" />
+                    <span className="pg-sidebar__toggler-item" />
+                </div>
+                
                 {this.renderProfileLink()}
                 <div className="pg-sidebar-wrapper-nav">{pgRoutes(isLoggedIn, this.props.abilities).map(this.renderNavItems(address))}</div>
                 {this.renderLogout()}
@@ -259,6 +270,7 @@ const mapStateToProps = (state: RootState): ReduxProps => ({
     isActive: selectSidebarState(state),
     abilities: selectAbilities(state),
     user: selectUserInfo(state),
+    sidebarOpened: selectSidebarState(state),
 });
 
 const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> = (dispatch) => ({
@@ -266,6 +278,7 @@ const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> = (dispa
     toggleSidebar: (payload) => dispatch(toggleSidebar(payload)),
     logoutFetch: () => dispatch(logoutFetch()),
     changeUserDataFetch: (payload) => dispatch(changeUserDataFetch(payload)),
+    
 });
 
 export const Sidebar = compose(
