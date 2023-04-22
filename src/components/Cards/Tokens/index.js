@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import img from "../../../assets/logo-dark.svg";
 import imgTokens from "../../../assets/logo-icon-dark.svg";
 import imgChecked from "../../../assets/checked.svg";
-// import ProgressBar from "react-bootstrap/ProgressBar";
+import ProgressBar from "react-bootstrap/ProgressBar";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 export function TokensSlid() {
@@ -50,7 +50,7 @@ export function TokensSlid() {
               <p>Valor captado</p>
               <p>Total</p>
             </div>
-            {/* <ProgressBar className="progress" now={60} /> */}
+            <ProgressBar className="progress" now={60} />
             <div className="div-description3">
               <p>R$ 461.925</p>
               <p>R$ 500.000</p>

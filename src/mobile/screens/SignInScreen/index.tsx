@@ -21,7 +21,7 @@ const SignInMobileScreen: React.FC = () => {
     return <div className={className}>
         <Modal
             isOpen={true}
-            onClose={() => history.push('/trading')}
+            onClose={() => history.push('/')}
             onBack={() => !require2FA && history.push('/signup')}
             backTitle={intl.formatMessage({ id: 'page.body.landing.header.register' })}
             title={intl.formatMessage(title)}>

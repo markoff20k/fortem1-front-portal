@@ -91,12 +91,12 @@ import {
 
 import Blog from '../../components/blog/BlogDetailsContent'
 
-import {Home} from '../../screens/home/index';
-
 import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
 import { Dashboard } from '../../screens/Dashboard/index';
+
+import { ReactDimmer } from 'react-dimmer';
 
 
 interface ReduxProps {
@@ -259,9 +259,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
         if (!isLoggedIn && prevProps.isLoggedIn && !userLoading) {
             this.props.walletsReset();
-
+            // redirect to website
             if (!this.props.location.pathname.includes('/trading')) {
-                this.props.history.push('/trading/');
+                this.props.history.push('/');
             }
         }
     }
@@ -323,6 +323,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/accounts/password_reset" component={ChangeForgottenPasswordMobileScreen} />
                         <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/accounts/confirmation" component={VerificationScreen} />
                         <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/email-verification" component={EmailVerificationMobileScreen} />
+                        <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/api" component={DocumentationScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:currency/history" component={SelectedWalletMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:currency/deposit" component={WalletDeposit} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:currency/withdraw" component={WalletWithdraw} />
@@ -339,7 +340,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileMobileScreen} />
                         <Route exact={true} path="/trading/:market?" component={TradingScreenMobile} />
                         {showLanding() && <Route exact={true} path="/" component={LandingScreenMobile} />}
-                        <Route path="**"><Redirect to="/trading/" /></Route>
+                        <Route path="**"><Redirect to="/" /></Route>
                     </Switch>
                     {isLoggedIn && <WalletsFetch />}
                     {isShownExpSessionModal && this.handleRenderExpiredSessionModal()}
@@ -358,7 +359,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/forgot_password" component={ForgotPasswordScreen} />
                     <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/accounts/password_reset" component={ChangeForgottenPasswordScreen} />
                     <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/email-verification" component={EmailVerificationScreen} />
-                    <Route path="/docs" component={DocumentationScreen} />
+                    <PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/api" component={DocumentationScreen} />
                     <Route path="/restriction" component={RestrictedScreen} />
                     <Route path="/maintenance" component={MaintenanceScreen} />
                     <Route exact={true} path="/trading/:market?" component={TradingScreen} />
@@ -456,12 +457,24 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
     };
 
     private handleRenderExpiredSessionModal = () => (
+        <>
         <ExpiredSessionModal
             title={this.translate('page.modal.expired.title')}
             buttonLabel={this.translate('page.modal.expired.submit')}
             handleChangeExpSessionModalState={this.handleChangeExpSessionModalState}
             handleSubmitExpSessionModal={this.handleSubmitExpSessionModal}
         />
+
+        <ReactDimmer
+        isOpen={true}
+        exitDimmer={this.handleSubmitExpSessionModal}
+        zIndex={100}
+        blur={1}
+        opacity={0.2}
+        transition={0.25}
+      />
+
+      </>
     );
 
     private handleChangeExpSessionModalState = () => {

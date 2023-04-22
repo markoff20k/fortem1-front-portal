@@ -1,5 +1,5 @@
 import { put } from 'redux-saga/effects';
-import { SaleItem } from '../../..';
+import { SaleItem } from '../../sale-item';
 // import { API, RequestOptions } from '../../../../../api';
 import axios from '../../../../plugins/api/index';
 

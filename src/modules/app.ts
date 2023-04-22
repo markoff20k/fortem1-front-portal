@@ -51,6 +51,25 @@ import { p2pOrdersReducer } from './user/p2pOrders';
 import { p2pDisputeReducer } from './user/p2pDispute';
 import { feeGroupReducer } from './user/feeGroup';
 
+import { buyReducer, totalBuyersReducer } from './sale/buy';
+import { priceReducer } from './sale/price';
+import { saleItemReducer } from './sale/sale-item';
+import { saleListReducer } from './sale/sale-list';
+
+import {
+	BuyersHistoryReducer,
+	BuyHistoryReducer,
+	buyIEOReducer,
+	IEODetailReducer,
+	IEOItemReducer,
+	IEOListReducer,
+	totalIEOBuyersReducer,
+} from './plugins/ieo';
+
+import { IEOCautionReducer } from './plugins/ieo/caution';
+
+
+
 export const publicReducer = combineReducers({
     alerts: alertReducer,
     blockchains: blockchainsReducer,
@@ -110,3 +129,23 @@ export const adminReducer = combineReducers({
     markets: marketsAdminReducer,
     platform: platformCreateReducer,
 });
+
+export const saleReducer = combineReducers({
+	saleList: saleListReducer,
+	saleItem: saleItemReducer,
+	buy: buyReducer,
+	price: priceReducer,
+	totalBuyers: totalBuyersReducer,
+});
+
+export const IEOReducer = combineReducers({
+	IEOItem: IEOItemReducer,
+	IEOList: IEOListReducer,
+	buyIEO: buyIEOReducer,
+	buyHistory: BuyHistoryReducer,
+	buyersHistory: BuyersHistoryReducer,
+	totalIEOBuyers: totalIEOBuyersReducer,
+	ieoDetail: IEODetailReducer,
+	ieoCaution: IEOCautionReducer,
+});
+

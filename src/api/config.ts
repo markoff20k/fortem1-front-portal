@@ -21,11 +21,11 @@ export const defaultConfig: Config = {
     captchaLogin: false,
     usernameEnabled: true,
     gaTrackerKey: '',
-    minutesUntilAutoLogout: '15',
+    minutesUntilAutoLogout: '1',
     msAlertDisplayTime: '5000',
     msPricesUpdates: '500',
     sessionCheckInterval: '5000',
-    balancesFetchInterval: '500',
+    balancesFetchInterval: '5000',
     passwordEntropyStep: '14',
     storage: {
         defaultStorageLimit: '50',

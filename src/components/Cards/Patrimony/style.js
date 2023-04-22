@@ -53,7 +53,7 @@ export const Content = styled.div`
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
-    color: ${(props) => props.theme.white};
+    color: var(--primary-text-color);
     background-color: ${(props) => props.theme.primary};
     cursor: pointer;
 

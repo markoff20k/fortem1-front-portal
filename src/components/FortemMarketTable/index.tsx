@@ -54,7 +54,7 @@ export const FortemMarketTable: React.FC<MarketTableProps> = (props: MarketTable
 	const { data } = props;
 	const intl = useIntl();
 
-	const NUMBER_ITEM_DISPLAY = 15;
+	const NUMBER_ITEM_DISPLAY = 5;
 	const [paginationState, setPaginationState] = React.useState(0);
 
 	const handlePageClick = (selectedItem: { selected: number }) => {

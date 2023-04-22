@@ -238,7 +238,7 @@ export function Dashboard() {
                     { color: "var(--primary-text-color)", marginTop: 10 }
                   }
                 >
-                  Preço unitário: $ 120.000,00
+                  Preço unitário: $ 20.000,00
                 </span>
               </div>
               <div className="buttons">
@@ -282,10 +282,8 @@ export function Dashboard() {
         				isOpen={fastDeposit}
         				exitDimmer={!setFastDeposit}
         				zIndex={100}
-        				blur={1.5}
-						opacity={0}
-						transition={0.25}
-            className={"dimmer-auth"}
+        				blur={10}
+						transition={0.5}
       				/>
     </Container>
   );

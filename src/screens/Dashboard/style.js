@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   // width: calc(100vw - 300px);
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
   // margin-right: 50%;
   // margin-left: 50%;
   display: flex;
@@ -20,7 +20,7 @@ export const Content = styled.div`
   
   right: 0;
   padding: 35px 10px;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
 
   @media screen and (max-width: 1440px) {
   

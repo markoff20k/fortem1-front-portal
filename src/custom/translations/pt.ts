@@ -486,8 +486,8 @@ export const pt: LangType = {
     'page.body.profile.header.account.profile.identity.message': 'Depósitos, saques e transaç!oes habilitados',
 
     'page.body.profile.referral.invite': 'Convide seus amigos.',
-    'page.body.profile.referral.earn': 'ganhe tokens juntos',
-    'page.body.profile.referral.commission': 'Receba até 30% em comissão quando seus amigos negociarem transações',
+    'page.body.profile.referral.earn': 'Ganhem tokens juntos',
+    'page.body.profile.referral.commission': 'Receba até 30% em comissão quando seus amigos efetuarem transações',
     'page.body.profile.header.referralProgram': 'Link de indicação',
     'page.body.profile.content.copyLink': 'Copiar',
 

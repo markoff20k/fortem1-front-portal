@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Button } from 'react-bootstrap';
 import { ClockIcon } from '../../assets/images/ClockIcon';
 
+
 export interface ExpiredSessionModalProps {
     title: string;
     buttonLabel: string;
@@ -44,6 +45,7 @@ export class ExpiredSessionModal extends React.Component<ExpiredSessionModalProp
                     </div>
                 </div>
             </div>
+            
         );
     }
 }

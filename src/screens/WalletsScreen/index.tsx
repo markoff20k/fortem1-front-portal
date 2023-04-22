@@ -52,6 +52,7 @@ export const WalletsScreen: FC = (): ReactElement => {
     useEffect(() => {
         // if (abilities && CanCan.checkAbilityByAction('read', 'P2P', abilities)) {
             setTabMapping(['overview', 'spot', 'p2p', 'transfer']);
+            
         // }
     }, [abilities]);
 
@@ -80,8 +81,8 @@ export const WalletsScreen: FC = (): ReactElement => {
     }, [tabMapping]);
 
     const renderTabs = React.useCallback(() => {
-        const isP2PEnabled = true;
-        // const isP2PEnabled = CanCan.checkAbilityByAction('read', 'P2P', abilities);
+        //const isP2PEnabled = true;
+        const isP2PEnabled = CanCan.checkAbilityByAction('read', 'P2P', abilities);
         const p2pTabs = [
             {
                 content: currentTabIndex === 2 ? <WalletsP2P /> : null,
@@ -95,9 +96,9 @@ export const WalletsScreen: FC = (): ReactElement => {
 
         return [
             {
-                content: currentTabIndex === 0 ? <WalletsOverview isP2PEnabled={isP2PEnabled} /> : null,
-                label: translate('page.body.wallets.tab.overview'),
-            },
+                 content: currentTabIndex === 0 ? <WalletsOverview isP2PEnabled={isP2PEnabled} /> : null,
+                 label: translate('page.body.wallets.tab.overview'),
+             },
             {
                 content: currentTabIndex === 1 ? <WalletsSpot currency={currency} action={action}/> : null,
                 label: translate('page.body.wallets.tab.spot'),

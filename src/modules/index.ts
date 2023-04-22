@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { all, call } from 'redux-saga/effects';
-import { adminReducer, publicReducer, userReducer } from './app';
+import { adminReducer, publicReducer, userReducer, saleReducer, IEOReducer } from './app';
 import { ConfigUpdateState, rootConfigUpdateSaga } from './admin/config';
 import { AlertState, rootHandleAlertSaga } from './public/alert';
 import { BlockchainsState } from './public/blockchains';
@@ -52,6 +52,19 @@ import { rootFeeGroupSaga, FeeGroupState } from './user/feeGroup';
 import { rootWithdrawLimitsSaga, WithdrawLimitsState } from './public/withdrawLimits';
 
 import { RangerState } from './public/ranger/reducer';
+
+import { BuyIEOLoadingState, rootBuyIEOSaga, TotalIEOBuyersState } from './plugins/ieo';
+import { IEOCautionState, rootIEOCautionSaga } from './plugins/ieo/caution';
+import { DetailIEOState, rootIEODetailSaga } from './plugins/ieo/detail';
+import { BuyersHistoryState, BuyHistoryListState, rootHistoryBuySaga } from './plugins/ieo/history';
+import { IEOItemState, rootIEOItemSaga } from './plugins/ieo/item';
+import { IEOListState, rootIEOListSaga } from './plugins/ieo/list';
+
+import { BuyState, rootBuySaga, TotalBuyersState } from './sale/buy';
+import { PriceState, rootPriceSaga } from './sale/price';
+import { rootSaleItemSaga, SaleItemState } from './sale/sale-item';
+import { rootSaleListSaga, SaleListState } from './sale/sale-list';
+
 
 export * from './admin/config';
 export * from './admin/markets';
@@ -156,12 +169,32 @@ export interface RootState {
         markets: MarketsAdminState;
         platform: PlatformCreateState;
     };
+    IEO: {
+		IEOItem: IEOItemState;
+		IEOList: IEOListState;
+		buyIEO: BuyIEOLoadingState;
+		totalIEOBuyers: TotalIEOBuyersState;
+		buyersHistory: BuyersHistoryState;
+		buyHistory: BuyHistoryListState;
+		ieoDetail: DetailIEOState;
+		ieoCaution: IEOCautionState;
+	};
+	sale: {
+		saleList: SaleListState;
+		saleItem: SaleItemState;
+		buy: BuyState;
+		price: PriceState;
+		totalBuyers: TotalBuyersState;
+	};
+
 }
 
 export const rootReducer = combineReducers({
     public: publicReducer,
     user: userReducer,
     admin: adminReducer,
+    sale: saleReducer,
+	IEO: IEOReducer,
 });
 
 export function* rootSaga() {
@@ -210,5 +243,14 @@ export function* rootSaga() {
         call(rootP2PTransfersSaga),
         call(rootP2PDisputeSaga),
         call(rootConfigsSaga),
+        call(rootSaleListSaga),
+		call(rootSaleItemSaga),
+		call(rootIEOItemSaga),
+		call(rootIEOListSaga),
+		call(rootBuyIEOSaga),
+        call(rootIEODetailSaga),
+		call(rootIEOCautionSaga),
+		call(rootBuySaga),
+		call(rootPriceSaga),
     ]);
 }

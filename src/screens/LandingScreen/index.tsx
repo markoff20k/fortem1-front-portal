@@ -67,7 +67,7 @@ import HeaderTwo from './components/header/HeaderTwo';
 import Typed from 'react-typed';
 
 
-
+import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
 
 
 interface ReduxProps {
@@ -543,6 +543,10 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
 
+                </LandingBlock>
+
+                <LandingBlock>
+                    <SaleListTablesUpcoming />     
                 </LandingBlock>
     
    
