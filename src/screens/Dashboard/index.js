@@ -28,7 +28,8 @@ import img4 from "../../assets/image-4.svg";
 import imgUSDT from "../../assets/USDT.svg";
 import imgBTC from "../../assets/BTC.svg";
 import { TabelCripto } from "../../components/Table";
-import { QRCode } from "../../components/QRCode";
+import { QRCode } from "../../components/FastDeposit/QRCode";
+
 
 import { HomepageMarket } from '../../containers';
 import { Sidebar } from '../../containers';
@@ -37,11 +38,14 @@ import BlogList from "../../components/blog/itemProp/BlogList";
 
 import BlogClassicData from '../../data/blog/BlogList.json';
 import { Link } from "react-router-dom";
+
+import { ReactDimmer } from 'react-dimmer';
+
 var BlogListData = BlogClassicData.slice(0, 6);
 
 export function Dashboard() {
   
-  // const [fastDeposit, setFastDeposit] = useState(false);
+  const [fastDeposit, setFastDeposit] = useState(false);
 
   const patrimony = [
     {
@@ -125,13 +129,13 @@ export function Dashboard() {
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Quanto você quer depostitar?
+                Quanto você quer depositar?
               </p>
               <input className="input" type="text" placeholder="R$ 0,00" />
               <span
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Você ainda pode depostitar: R$ 50.000,00 este mês
+                Você ainda pode depositar: R$ 50.000,00 este mês
               </span>
             </div>
             <div className="buttons">
@@ -159,7 +163,7 @@ export function Dashboard() {
         <Criptos>
           <Tables>
             <div className="div-cripto">
-              <h4> Preço de mercado atual </h4>
+              <h4> Visão geral do mercado cripto </h4>
             </div>
             <HomepageMarket/>
           </Tables>
@@ -273,7 +277,16 @@ export function Dashboard() {
           </div>
         </Knowledge>
       </Content>
-      {/* {fastDeposit && <QRCode setFastDeposit={setFastDeposit} themeDark={props.themeDark} />} */}
+      {fastDeposit && <QRCode setFastDeposit={setFastDeposit} />}
+      <ReactDimmer
+        				isOpen={fastDeposit}
+        				exitDimmer={!setFastDeposit}
+        				zIndex={100}
+        				blur={1.5}
+						opacity={0}
+						transition={0.25}
+            className={"dimmer-auth"}
+      				/>
     </Container>
   );
 }

@@ -9,10 +9,10 @@ export function CarouselSlide() {
     <Carousel interval={3000} className="carousel">
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 style={{ color: "#fff" }}>
+          <h1 style={{ color: "var(--input-text-color)" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "#fff" }}>
+          <p style={{ color: "var(--input-text-color)" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain.
@@ -28,13 +28,13 @@ export function CarouselSlide() {
       </Carousel.Item>
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 stylestyle={{ color: "#fff" }}>
+          <h1 style={{ color: "var(--input-text-color)" }} >
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "#fff" }}>
+          <p style={{ color: "var(--input-text-color)", marginTop: '10px' }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
-            da blockchain.
+            da blockchain. (2)
           </p>
           <button className="btn-caption">Conheça as opções</button>
         </Carousel.Caption>
@@ -42,18 +42,18 @@ export function CarouselSlide() {
           // style={!props.isOpened ? {} : { marginLeft: 490 }}
           // className="d-block w-100"
           src={img}
-          alt="First slide"
+          alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <Carousel.Caption>
-          <h1 style={{ color: "#fff" }}>
+          <h1 style={{ color: "var(--input-text-color)" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "#fff" }}>
+          <p style={{ color: "var(--input-text-color)", marginTop: '10px' }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
-            da blockchain.
+            da blockchain. (3)
           </p>
           <button className="btn-caption">Conheça as opções</button>
         </Carousel.Caption>
@@ -61,7 +61,7 @@ export function CarouselSlide() {
           // style={!props.isOpened ? {} : { marginLeft: 490 }}
           // className="d-block w-100"
           src={img}
-          alt="First slide"
+          alt="Third slide"
         />
       </Carousel.Item>
     </Carousel>
