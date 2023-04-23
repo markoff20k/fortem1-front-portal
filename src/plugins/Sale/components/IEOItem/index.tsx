@@ -28,6 +28,8 @@ import 'ui-neumorphism/dist/index.css';
 import ccVisa from '../../assets/creditCards.png';
 import real from './real.svg';
 import ether from './ether-logo.png';
+import usdc from './usdc.svg';
+import usdt from './usdt.svg';
 
 
 
@@ -279,9 +281,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={real}/></span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between', }}>
-								<span style={{}}>Cripto </span><span style={{fontSize: '13px', display: 'flex'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={findIcon('ETH')}
-									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('BTC')}
-									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('USDT')}
+								<span style={{}}>Cripto </span><span style={{fontSize: '13px', display: 'flex'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={ether}
+									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={usdt}
+									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={usdc}
 									alt="" /></span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
