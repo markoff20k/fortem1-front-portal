@@ -28,8 +28,8 @@ import 'ui-neumorphism/dist/index.css';
 import ccVisa from '../../assets/creditCards.png';
 import real from './real.svg';
 import ether from './ether-logo.png';
-import usdc from './usdc.svg';
-import usdt from './usdt.svg';
+import usdc from './usdc-logo.svg';
+import usdt from './usdt-logo.svg';
 
 
 
