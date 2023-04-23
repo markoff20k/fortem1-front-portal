@@ -161,7 +161,7 @@ $small-mobile: 'only screen and (max-width: 479px)';
 .sale-item {
 	position: relative;
 	font-family: Inter, sans-serif;
-	background: #e4ebf5 !important;
+	background: #fbfcfd !important;
 	border: 2px solid #000;
 	border-radius: 10px;
 	transition: all 0.3s;
@@ -175,16 +175,15 @@ $small-mobile: 'only screen and (max-width: 479px)';
 	padding: 0 !important;
 }
 
-.sale-item:hover {
+/* .sale-item:hover {
     background: #363944;
-}
+} */
 
 .sale-item-badge {
 	position: absolute;
 	width: 100%;
 	margin-right: 5px !important;
 	margin-bottom: 10px !important;
-
 	padding: 4px 16px;
 	border-radius: 3px;
 	border-bottom-left-radius: 0px !important;
@@ -197,21 +196,19 @@ $small-mobile: 'only screen and (max-width: 479px)';
 	z-index: 9;
 	text-align: center;
 	vertical-align: middle;
-	
-	
-	
 }
 
 .tokenCard {
 	padding: 20px;
-	background-color: #dde1e7 !important;
+	background-color: #fbfcfd;
 	font-color: rgba(6, 6, 6, 0.7) !important;
     height: 320px !important;
 }
 
 .tokenCard:hover {
-	padding: 20px;
-	background-color: #dde1e7 !important;
+
+
+    background-color: #fbfcfd;
 }
 
 
@@ -220,10 +217,10 @@ $small-mobile: 'only screen and (max-width: 479px)';
 	left: 10%;
 	top: 110px;
 	background-color: transparent !important;
-	border-radius: 50px;
-	border: 2px solid #c0c0c0 !important;
-	width: 60px !important;
-	height: 60px !important;
+	border-radius: 12px;
+	border: 3px solid #fbfcfd !important;
+	width: 56px !important;
+	height: 56px !important;
 	align-itens: center !important;
 
 }

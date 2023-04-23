@@ -177,7 +177,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
-				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
+				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{minHeight: '520px'}} >
 					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
 					</div>
 	
@@ -231,9 +231,8 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 					 />
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
 								<a className="btn btn-more"  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
-								<br />
-								<br />
-								<a className="btn-default" onClick={handleDetailClick}>Comprar Token</a>
+								{/* <button className="btn-default" onClick={handleDetailClick}>Comprar Token</button> */}
+								<button type="button" className="btn btn-primary btn-block btn-lg" onClick={handleDetailClick}>Comprar Token</button>
 							
 
 								
@@ -311,9 +310,8 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						/>*/}
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
 								<a className="btn-more" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
-								<br />
-								<br />
-								<button className="btn-primary" onClick={handleDetailClick}>Comprar Token</button>
+							{/* <button className="btn-primary" onClick={handleDetailClick}>Comprar Token</button> */}
+								<button type="button" className="btn btn-primary btn-block btn-lg" onClick={handleDetailClick}>Comprar Token</button>
 
 							
 							</div>
