@@ -22,19 +22,12 @@ import { Decimal } from "../../../../components";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
 import { ProgressLinear } from 'ui-neumorphism';
-import 'ui-neumorphism/dist/index.css'
+import 'ui-neumorphism/dist/index.css';
 
 
-
-
-
-
-
-
-
-
-
-const ccVisa = require('../../assets/creditCards.png');
+import ccVisa from '../../assets/creditCards.png';
+import real from './real.svg';
+import ether from './ether-logo.png';
 
 
 
@@ -182,7 +175,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
-				<div className="sale-item pricing-table bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
+				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
 					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
 					</div>
 	
@@ -252,7 +245,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div>	
 				<div>
 					
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}}>
+				<div className="sale-item pricing-table pricing-body text-center justify-content-center  box-shadow-large border-radius-10px " style={{minHeight: '580px'}}>
 				<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor, fontSize: '12px'}}>{saleBadgeDescription}
 					</div>
 	
@@ -283,10 +276,10 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<span>Formas de pagamento:</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src="https://fortem.fra1.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
+								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={real}/></span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Cripto </span><span style={{fontSize: '13px'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={findIcon('ETH')}
+							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between', }}>
+								<span style={{}}>Cripto </span><span style={{fontSize: '13px', display: 'flex'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={findIcon('ETH')}
 									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('BTC')}
 									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('USDT')}
 									alt="" /></span>
@@ -318,14 +311,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<a className="btn-more" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
 								<br />
 								<br />
-								<a className="btn-default" onClick={handleDetailClick}>Comprar Token</a>
+								<button className="btn-primary" onClick={handleDetailClick}>Comprar Token</button>
 
-								{/*<a className="btn btn-medium  btn-fast-gray modal-popup wow animate__fadeIn" href="#modal-popup">Comprar Modal</a>*/}
-								<div id="modal-popup" className="col-11 col-xl-3 col-lg-6 col-md-8 col-sm-9 mx-auto bg-white text-center modal-popup-main padding-4-half-rem-all mfp-hide border-radius-6px sm-padding-2-half-rem-lr">
-                            <span className="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Simple modal popup</span>
-                            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry's standard dummy text ever.</p>
-                            <a className="btn btn-fancy btn-small btn-transparent-light-gray popup-modal-dismiss" href="#">Dismiss</a>
-                        </div>
+							
 							</div>
 						</ul>
 					</div>

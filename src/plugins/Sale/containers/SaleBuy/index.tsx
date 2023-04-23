@@ -7,24 +7,24 @@ import { useHistory } from 'react-router';
 import {
 	Buy,
 	buySaleItem,
-	currenciesFetch,
-	findSalebyId,
-	getPrice,
 	getTotalBuyers,
 	resetBuyResponse,
-	SaleItem,
 	selectBuy,
-	selectCurrencies,
-	selectPrice,
-	selectWallets,
-	walletsFetch,
-} from '../../../../modules';
-import { BuyConfirmModal } from '../BuyConfirmModal';
+	
+	
+} from 'src/modules/sale/buy';
 
+import { currenciesFetch } from 'src/modules';
+import { findSalebyId, SaleItem } from 'src/modules/sale/sale-item';
+import { getPrice } from 'src/modules/sale/price';
+import { selectCurrencies, selectWallets, walletsFetch } from 'src/modules';
+import { selectPrice } from 'src/modules/sale/price';
+
+
+import { BuyConfirmModal } from '../BuyConfirmModal';
 
 import { FiLogIn } from "react-icons/fi";
 import { Decimal } from '../../../../components';
-
 
 
 //import './SaleBuy.css';

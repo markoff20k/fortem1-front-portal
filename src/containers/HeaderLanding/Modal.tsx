@@ -48,7 +48,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
               </svg>
             </div>
             <div>
-              <a href="#" >
+              <a href="/tokens" >
                 Compre Tokens
                 <span className="absolute inset-0"></span>
               </a>

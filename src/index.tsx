@@ -10,6 +10,7 @@ import { sentryEnabled } from './api/config';
 import { App } from './App';
 import './index.pcss';
 import './fortem.css';
+import './antd.css';
 import { rootSaga } from './modules';
 import { sagaMiddleware, store } from './store';
 

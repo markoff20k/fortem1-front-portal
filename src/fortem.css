@@ -10,6 +10,446 @@ $sm-layout:'only screen and (max-width: 767px)';
 $large-mobile: 'only screen and (max-width: 575px)';
 $small-mobile: 'only screen and (max-width: 479px)';
 
+.homepage-event {
+    max-height: 32px !important;
+}
+
+.theme-shape-root {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.slick-slide {
+    display: block;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+    margin-bottom: 0;
+}
+
+.pricing-table-style-02 .pricing-table {
+    overflow: hidden;
+    max-height: 540px;
+    max-width: 360px;
+}
+
+.bg-white {
+    background-color: #f5f5f5 !important;
+}
+
+.btn-more .btn-default .ant-btn .ant-btn-default {
+    cursor: pointer;
+    display: flex;
+
+}
+
+.btn-more {
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center !important;
+    border: none !important;
+    border-radius: 0px !important;
+    width: 100% !important;
+    color: #009991 !important;
+    margin: 0 auto !important;
+    vertical-align: middle;
+
+    svg {
+        margin-top: 5px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-default .btn-icon .icon-btn-wrap {
+    display: flex;
+    cursor: pointer;
+    justify-content: center !important;
+    background: #009991;
+    border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    color: #F5F5F5;
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: var(--button-font-weight);
+    transition: 0.3s !important;
+    padding: 6px 15px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.sale-list {
+    background-color: #131313 !important;
+    width: 120%;
+    padding-top: 2rem;
+    margin-bottom: 10px;
+    padding-bottom: 30vh;
+}
+
+.sale-item {
+	position: relative;
+	font-family: Inter, sans-serif;
+	background: #e4ebf5 !important;
+	border: 2px solid #000;
+	border-radius: 10px;
+	transition: all 0.3s;
+	font-size: 16px;
+	font-weight: bold;
+	width: 320px !important;
+	max-height: 90% !important;
+	left: 30px;
+	color: rgba(6, 6, 6, 0.7) !important;
+	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+	padding: 0 !important;
+}
+
+.sale-item:hover {
+    background: #363944;
+}
+
+.sale-item-badge {
+	position: absolute;
+	width: 100%;
+	margin-right: 5px !important;
+	margin-bottom: 10px !important;
+
+	padding: 4px 16px;
+	border-radius: 3px;
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	line-height: 18px;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #f5f5f5;
+	z-index: 9;
+	text-align: center;
+	vertical-align: middle;
+	
+	
+	
+}
+
+.tokenCard {
+	padding: 20px;
+	background-color: #dde1e7 !important;
+	font-color: rgba(6, 6, 6, 0.7) !important;
+    height: 320px !important;
+}
+
+.tokenCard:hover {
+	padding: 20px;
+	background-color: #dde1e7 !important;
+}
+
+
+.itemLogo {
+	position: absolute;
+	left: 10%;
+	top: 110px;
+	background-color: transparent !important;
+	border-radius: 50px;
+	border: 2px solid #c0c0c0 !important;
+	width: 60px !important;
+	height: 60px !important;
+	align-itens: center !important;
+
+}
+
+.itemLogo2 {
+	position: absolute;
+	left: 10%;
+	top: 50px;
+
+	width: 60px !important;
+	height: 60px !important;
+	align-itens: center !important;
+
+}
+
+.itemLogo-img {
+	width: 100%;
+	height: 140px;
+	margin-top: 5px;
+	background-color: #000 !important;
+	color: #000 !important;
+	border-bottom: 2px solid #c0c0c0;
+	padding-top: 5px;
+}
+
+.sale-item:hover {
+	background:  #363944 ;
+}
+
+.sale-item__title {
+	color: #ffff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	margin: 20px auto;
+
+
+}
+
+.sale-item__description {
+	color: #a4acb6;
+	height: 80px !important;
+	font-size: 16px;
+	line-height: 20px;
+	padding-left: 80px;
+	width: 100%;
+	margin-top: 50px !important;
+
+	align-text: right;
+}
+
+.progress {
+
+	background-color: #DAE1E8 !important;
+
+}
+
+.sale-item-emissor {
+	color: #ffff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+
+#sale_item__timer #days {
+	font-size: 15px  !important;
+	color: #009991;
+	padding-right: 4px;
+	padding-left: 4px;
+	
+}
+
+#sale_item__timer #hours {
+	font-size: 15px  !important;
+	color: #009991;
+	padding-right: 4px;
+	padding-left: 4px;
+
+
+}
+
+#sale_item__timer #minutes {
+	font-size: 15px  !important;
+	color: #009991;
+	padding-right: 4px;
+	padding-left: 4px;
+
+}
+
+#sale_item__timer #seconds {
+	font-size: 15px  !important;
+	color: #009991;
+	padding-right: 4px;
+	padding-left: 4px;
+
+}
+
+#sale_item__timer {
+	display: flex;
+	font-size: 12px  !important;
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#sale_item__timer div {
+	display: inline-block;
+	font-size: 12px  !important;
+}
+
+#sale_item__timer div span {
+	font-size: 12px  !important;
+	color: gray;
+}
+
+.ant-progress-text {
+
+	font-size: 14px !important;
+}
+
+.ant-progress-bg {
+	width: 100% !important;
+
+}
+
+.btn-dark-gray {
+	background: #009991 !important;
+	border-color: #009991 !important;
+	border-radius: 10px !important;
+
+	&:hover {
+
+		background: white !important;
+
+
+	}
+
+}
+
+.btn-dark-gray:hover {
+	background: #fff !important;
+	border-color: #009991 !important;
+	border-radius: 10px !important;
+
+}
+
+.text-sale {
+
+font-size: 16px !important;
+
+}
+
+.btn-round-edge {
+
+	color: var(--color-darker);
+	margin-bottom: 20px;
+    
+
+}
+
+
+
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+
+.text-extra-dark-gray, .btn-link.text-extra-dark-gray, a.text-extra-dark-gray-hover:hover {
+    color: #232323;
+}
+
+.list-style-03 {
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.ant-col-12 {
+    display: block;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.ant-col {
+    position: relative;
+    max-width: 100%;
+    min-height: 1px;
+}
+
+.ml--30 {
+    margin-left: 30px !important;
+}
+.mr--30 {
+    margin-right: 30px !important;
+}
+.mt--10 {
+    margin-top: 10px !important;
+}
+.mt--15 {
+    margin-top: 15px !important;
+}
+.mb--10 {
+    margin-bottom: 10px !important;
+}
+.m-0 {
+    margin: 0 !important;
+}
+hr:not([size]) {
+    height: 1px;
+}
+
+@media (min-width: 768px) {
+.px-md-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+}
+[class^=ant-], [class*= ant-], [class^=ant-] *, [class*= ant-] *, [class^=ant-] *::before, [class*= ant-] *::before, [class^=ant-] *::after, [class*= ant-] *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .rn-header.sticky {
     position: fixed;
     /* top: 0;
@@ -2637,12 +3077,10 @@ img,video {
 
 .bg-white {
     --tw-bg-opacity: 1;
-    background-color: RGB(255 255 255 / var(--tw-bg-opacity))
+    background-color: #f5f5f5;
+
 }
 
-.bg-white\/5 {
-    background-color: #ffffff0d
-}
 
 .bg-yellow-700 {
     --tw-bg-opacity: 1;

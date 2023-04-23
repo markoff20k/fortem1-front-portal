@@ -9,7 +9,8 @@ import {
 	onGoingSaleListFetch,
 	selectSaleList,
 	upComingSaleListFetch,
-} from '../../../../modules';
+} from 'src/modules/sale/sale-list';
+
 import { IEOItem } from '../../components';
 import './SaleListTables.css';
 

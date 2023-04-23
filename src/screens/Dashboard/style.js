@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   // width: calc(100vw - 300px);
-  background-color: var(--header-background-color);
+  background-color: #131313;
   // margin-right: 50%;
   // margin-left: 50%;
   display: flex;
@@ -20,7 +20,7 @@ export const Content = styled.div`
   
   right: 0;
   padding: 35px 10px;
-  background-color: var(--header-background-color);
+  background-color: #131313;
 
   @media screen and (max-width: 1440px) {
   
@@ -231,6 +231,8 @@ export const Tokens = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 30px;
+  border-radius: 10px;
+  background-color: var(--header-background-color);
 
   @media screen and (max-width: 1440px) {
     height: 640px;
@@ -248,6 +250,7 @@ export const Tokens = styled.div`
       border: none;
       border-radius: 10px;
       outline: none;
+      
       
     }
   }

@@ -15,7 +15,7 @@ import { Parallax } from 'react-scroll-parallax';
 import './SaleListScreen.css';
 
 
-const bgF  = require ('./bf-fortem.png');
+import bgF from './bf-fortem.png';
 
 const settingEvents = {
 	dots: false,
@@ -86,11 +86,11 @@ const renderEvent = () => {
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
-
+		<div style={{backgroundColor: '#131313'}}>
 			{renderEvent()}	
 
-			<div style={{ position: 'relative', padding: '0 5%' }}>
-				<img style={{ width: '100%', height: '22rem', margin: 0 }} src={bgF} alt="token_banner" />
+			<div style={{ position: 'relative', padding: '20px', marginTop: '20px', borderRadius: '20px' }}>
+				<img style={{ width: '100%', height: '22rem', margin: 0,  borderRadius: '20px' }} src={bgF} alt="token_banner" />
 			
 			</div>
 
@@ -112,7 +112,7 @@ export const SaleListScreen: React.FC = () => {
 					<SaleListTables />
 				</div>
 			</div>
-			
+			</div>			
 		</React.Fragment>
 	);
 };

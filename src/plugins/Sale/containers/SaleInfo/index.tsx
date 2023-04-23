@@ -7,7 +7,9 @@ import Countdown from 'react-countdown';
 
 import { Col, Row, Statistic } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTotalBuyers, SaleItem, selectTotalBuyers } from '../../../../modules';
+import { getTotalBuyers, selectTotalBuyers } from 'src/modules/sale/buy';
+import { SaleItem } from 'src/modules/sale/sale-item';
+
 
 //import Stack from '@mui/material/Stack';
 //import LinearProgress from '@mui/material/LinearProgress';

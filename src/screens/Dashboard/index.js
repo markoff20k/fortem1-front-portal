@@ -41,6 +41,9 @@ import { Link } from "react-router-dom";
 
 import { ReactDimmer } from 'react-dimmer';
 
+import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
+
+
 var BlogListData = BlogClassicData.slice(0, 6);
 
 export function Dashboard() {
@@ -144,22 +147,23 @@ export function Dashboard() {
             </div>
           </Deposit>
         </Carousel>
-        {/* <Tokens>
+        <Tokens>
           <div className="highlights">
-            <h3 style={{ color: "var(--primary-text-color)" }}>
+            <h4 style={{ color: "var(--primary-text-color)" }}>
               Tokens em destaques
-            </h3>
+            </h4>
             <button
               style={{ color: "var(--primary-text-color)" }}
             >
               Ver todos
             </button>
           </div>
-          <SlidTokens>
+          {/* <SlidTokens>
             <TokensSlid  />
 
-          </SlidTokens>
-        </Tokens> */}
+          </SlidTokens> */}
+          <SaleListTablesUpcoming />
+        </Tokens>
         <Criptos>
           <Tables>
             <div className="div-cripto">

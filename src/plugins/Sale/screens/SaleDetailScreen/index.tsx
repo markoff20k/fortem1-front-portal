@@ -2,11 +2,13 @@ import { Button, Col, message, Result, Row } from 'antd';
 import React, { useState }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
-import { findSalebyId, selectSaleItem, selectUserInfo } from '../../../../modules';
+import { findSalebyId, selectSaleItem } from 'src/modules/sale/sale-item';
+import { selectUserInfo } from 'src/modules';
+
 import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
 //import './SaleDetailScreen.pcss';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import SectionTitle from "../../../../template_react/doob/src/elements/sectionTitle/SectionTitle";
+// import SectionTitle from "../../../../template_react/doob/src/elements/sectionTitle/SectionTitle";
 
 
 

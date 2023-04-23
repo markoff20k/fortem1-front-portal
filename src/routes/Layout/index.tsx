@@ -98,6 +98,8 @@ import { Dashboard } from '../../screens/Dashboard/index';
 
 import { ReactDimmer } from 'react-dimmer';
 
+import { SaleListScreen, SaleDetailScreen } from '../../plugins/Sale';
+
 
 interface ReduxProps {
     colorTheme: string;
@@ -390,6 +392,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" component={Dashboard} />
 
                     <PublicRoute path="/markets" component={MarketsList} />
+
+                    <PublicRoute path="/tokens" exact component={SaleListScreen} />
+					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
 
                     <Route path="**"><Redirect to="/" /></Route>
                     
