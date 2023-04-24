@@ -21,7 +21,7 @@ export const Container = styled.div`
 `
 export const Content = styled.div`
   max-width: 380px;
-  width: 100%;
+  width: 100vw;
   height: 535px;
   display: flex;
   flex-direction: column;

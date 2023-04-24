@@ -12,7 +12,7 @@ export function CarouselSlide() {
           <h1 style={{ color: "var(--input-text-color)" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "var(--input-text-color)" }}>
+          <p style={{ color: "var(--input-text-color)", marginTop: "10px" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain.

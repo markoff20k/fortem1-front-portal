@@ -4,7 +4,7 @@ export const Container = styled.div`
 position: fixed;
   
 max-width: 380px;
-width: 60%;
+width: 100vw;
 height: 100vh;
 display: flex;
 align-items: center;

@@ -125,7 +125,7 @@ export function Dashboard() {
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Depósito rápido
+                Depósito em Reais
               </p>
             </div>
             <div className="input-group">
@@ -158,11 +158,13 @@ export function Dashboard() {
               Ver todos
             </button>
           </div>
-          {/* <SlidTokens>
-            <TokensSlid  />
-
-          </SlidTokens> */}
-          <SaleListTablesUpcoming />
+          <SlidTokens>
+            {/* <TokensSlid  /> */}
+            <SaleListTablesUpcoming />
+            
+            
+          </SlidTokens> 
+          {/* <SaleListTablesUpcoming /> */}
         </Tokens>
         <Criptos>
           <Tables>

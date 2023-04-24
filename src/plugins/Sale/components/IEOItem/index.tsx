@@ -174,7 +174,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 	return (
 		<div>
 			
-			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
+			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
 				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{height: '467px'}} >
@@ -182,7 +182,14 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						{saleBadgeDescription}
 					</div>
 					<img className="itemLogo-img" src={props.sale.image_link} alt="" />
-					<img className="itemLogo" src={props.sale.sale_logo} alt="" /><span style={{color: '#000', marginLeft: '-10px'}}>{props.sale.host_uid}</span>
+					<img className="itemLogo" src={props.sale.sale_logo} alt="" />
+					<span style={{color: '#131313', marginLeft: '30%', display: 'flex', flexDirection: 'row'}}>{props.sale.host_uid}
+						<span style={{marginTop: '5px', marginLeft: '5px'}}>
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_152_16557)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.73225 1.43743L7.39367 0.138916L5.05504 1.43743L2.4832 2.17289L1.74773 4.74474L0.449219 7.08336L1.74773 9.42196L2.4832 11.9938L5.05504 12.7293L7.39367 14.0278L9.73225 12.7293L12.3042 11.9938L13.0396 9.42196L14.3381 7.08336L13.0396 4.74474L12.3042 2.17289L9.73225 1.43743ZM10.8012 5.5458C11.1026 5.19801 11.065 4.67171 10.7172 4.37028C10.3694 4.06886 9.84308 4.10646 9.54167 4.45425L6.56033 7.89429L5.24563 6.37733C4.9442 6.02953 4.41791 5.99194 4.07011 6.29336C3.72232 6.59478 3.68472 7.12108 3.98614 7.46888L5.93059 9.71246C6.08888 9.89513 6.31865 10 6.56033 10C6.80201 10 7.03178 9.89513 7.19007 9.71246L10.8012 5.5458Z" fill="#0CAF60"></path></g><defs><clipPath id="clip0_152_16557"><rect width="15" height="15" fill="white"></rect></clipPath></defs>
+						</svg>
+						</span>
+					</span>
 
 				<div className="pricing-body tokenCard">
 						

@@ -65,7 +65,8 @@ export const ProfileScreen: FC = (): ReactElement => {
     }, [tabMapping]);
 
     const renderTabs = useCallback(() => {
-        const isP2PEnabled = CanCan.checkAbilityByAction('read', 'P2P', abilities);
+        // const isP2PEnabled = CanCan.checkAbilityByAction('read', 'P2P', abilities);
+        const isP2PEnabled = true;
         const p2pTabs = [
             {
                 content: tab === 'payment' ? <ProfilePayment/> : null,

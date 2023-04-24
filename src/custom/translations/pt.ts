@@ -309,40 +309,40 @@ export const pt: LangType = {
     'page.body.wallets.beneficiaries.addAddressModal.body.otpCode': 'Enter 2fa code from the Google Authenticator app',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Beneficiary Name',
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Full Name',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Nome completo',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'Account Number',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Bank Name',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankSwiftCode': 'Bank Swift Code (optional)',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankName': 'Intermediary Bank Name (optional)',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankSwiftCode': 'Intermediary Bank Swift Code (optional)',
 
-    'page.body.wallets.beneficiaries.network.fee': 'Network Fee',
-    'page.body.wallets.beneficiaries.min.withdraw': 'Min. withdraw:',
-    'page.body.wallets.beneficiaries.fee': 'Fee:',
+    'page.body.wallets.beneficiaries.network.fee': 'Taxa de rede',
+    'page.body.wallets.beneficiaries.min.withdraw': 'Min. saque:',
+    'page.body.wallets.beneficiaries.fee': 'Taxa:',
     'page.body.wallets.beneficiaries.tab.panel.add.whitelisted': 'Add Whitelisted',
     'page.body.wallets.beneficiaries.tab.panel.whitelisted': 'Whitelisted',
-    'page.body.wallets.beneficiaries.delete.2fa.button': 'Confirm',
-    'page.body.wallets.beneficiaries.delete.2fa.header': 'Enter 2fa code',
+    'page.body.wallets.beneficiaries.delete.2fa.button': 'Confirmar',
+    'page.body.wallets.beneficiaries.delete.2fa.header': 'Digite seu token 2FA',
 
-    'page.body.wallets.withdraw.blockchain.network': 'Blockchain Network',
-    'page.body.wallets.withdraw.details': 'Withdrawal details',
+    'page.body.wallets.withdraw.blockchain.network': 'Rede blockchain',
+    'page.body.wallets.withdraw.details': 'Detalhes do saque',
 
-    'page.body.wallets.beneficiaries.addAddressModal.body.button': 'Submit for confirmation',
+    'page.body.wallets.beneficiaries.addAddressModal.body.button': 'Enviar para confirmação',
 
-    'page.body.wallets.beneficiaries.confirmationModal.header': 'Confirm new address',
+    'page.body.wallets.beneficiaries.confirmationModal.header': 'Confirmar novo endereço',
     'page.body.wallets.beneficiaries.confirmationModal.body.text': 'We have sent you an email containing a confirmation code pin, please enter it below to save the new address:',
-    'page.body.wallets.beneficiaries.confirmationModal.body.confirmationModalCode': 'Pin code',
-    'page.body.wallets.beneficiaries.confirmationModal.body.resendButton': 'Resend pin',
-    'page.body.wallets.beneficiaries.confirmationModal.body.button': 'Confirm',
+    'page.body.wallets.beneficiaries.confirmationModal.body.confirmationModalCode': 'Código pin',
+    'page.body.wallets.beneficiaries.confirmationModal.body.resendButton': 'Reenviar pin',
+    'page.body.wallets.beneficiaries.confirmationModal.body.button': 'Confirmar',
 
-    'page.body.wallets.beneficiaries.tipAddress': 'Address',
-    'page.body.wallets.beneficiaries.memo': 'Memo',
+    'page.body.wallets.beneficiaries.tipAddress': 'Endereço',
+    'page.body.wallets.beneficiaries.memo': 'Observação',
     'page.body.wallets.beneficiaries.destinational.tag': 'Destination Tag',
-    'page.body.wallets.beneficiaries.tipName': 'Name',
-    'page.body.wallets.beneficiaries.tipDescription': 'Note',
+    'page.body.wallets.beneficiaries.tipName': 'Nome',
+    'page.body.wallets.beneficiaries.tipDescription': 'Atenção',
 
-    'page.body.wallets.beneficiaries.failAddModal.header': 'Warning',
-    'page.body.wallets.beneficiaries.failAddModal.content': 'You need to confirm your account to add a beneficiary',
+    'page.body.wallets.beneficiaries.failAddModal.header': 'Atenção',
+    'page.body.wallets.beneficiaries.failAddModal.content': 'Você precisa concluir seu cadastro antes de adicionar destinatáros',
     'page.body.wallets.beneficiaries.failAddModal.button': 'Confirm phone',
 
     'page.body.openOrders.tab.all': 'Todas',
@@ -429,7 +429,7 @@ export const pt: LangType = {
     'page.body.history.trade': 'Histórico de nogociações',
     'page.body.history.trade.header.id': 'ID',
     'page.body.history.trade.header.date': 'Data',
-    'page.body.history.trade.header.side': 'Lado',
+    'page.body.history.trade.header.side': 'Operação',
 
     'page.body.history.trade.content.side.buy': 'Compra',
     'page.body.history.trade.content.side.sell': 'Venda',
@@ -440,11 +440,11 @@ export const pt: LangType = {
     'page.body.history.trade.header.amount': 'Quantidade',
     'page.body.history.trade.header.balance': 'Saldo',
 
-    'page.body.profile.header.account': 'Профиль',
+    'page.body.profile.header.account': 'Perfil',
 
     'page.body.profile.tabs.security': 'Segurança',
     'page.body.profile.tabs.api_keys': 'Chaves de API',
-    'page.body.profile.tabs.payment': 'Payment',
+    'page.body.profile.tabs.payment': 'Métodos de Pagamento',
     'page.body.profile.tabs.referral': 'Indicações',
 
     'page.body.profile.header.account.username': 'Nome',
@@ -454,10 +454,10 @@ export const pt: LangType = {
     'page.body.profile.header.account.content.password.new': 'Nova senha',
     'page.body.profile.header.account.content.password.button.save': 'Alterar',
     'page.body.profile.header.account.content.password.button.cancel': 'Cancelar',
-    'page.body.profile.header.account.content.password.conf': 'Подтверждение пароля',
+    'page.body.profile.header.account.content.password.conf': 'Confirme a nova senha',
     'page.body.profile.header.account.content.password.dont.match': 'As senhas não são iguais',
     'page.body.profile.header.account.content.password.change.success': 'Senha alterada com sucesso',
-    'page.body.profile.header.account.content.password.change': 'Alterar',
+    'page.body.profile.header.account.content.password.change': 'Alterar senha',
 
     'page.body.profile.header.account.content.twoFactorAuthentication': 'Autenticação 2FA',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Habilitado',
@@ -483,7 +483,7 @@ export const pt: LangType = {
     'page.body.profile.header.account.profile.phone.message': 'Acesso à plataforma habilitado',
     'page.body.profile.header.account.profile.identity.unverified.title': 'Confirmação de identidade',
     'page.body.profile.header.account.profile.identity.title': 'Identidade verificada',
-    'page.body.profile.header.account.profile.identity.message': 'Depósitos, saques e transaç!oes habilitados',
+    'page.body.profile.header.account.profile.identity.message': 'Depósitos, saques e transações habilitados',
 
     'page.body.profile.referral.invite': 'Convide seus amigos.',
     'page.body.profile.referral.earn': 'Ganhem tokens juntos',
@@ -506,7 +506,7 @@ export const pt: LangType = {
     'page.body.profile.payment.modal.body.popular': 'POPULAR',
     'page.body.profile.payment.modal.error.empty': 'Please enter {name}',
 
-    'page.body.profile.apiKeys.header': 'Minhas chaves de API',
+    'page.body.profile.apiKeys.header': 'Chaves de API',
     'page.body.profile.apiKeys.header.create': 'Criar nova API',
 
     'page.body.profile.apiKeys.noOtp': 'Por favor, habilite seu 2FA',
@@ -543,7 +543,7 @@ export const pt: LangType = {
     'success.api_keys.updated': 'Chave de API atualizada',
     'success.api_keys.deleted': 'Chave de API desabilitada',
 
-    'page.body.profile.header.accountActivity': 'Suas últimas atividades',
+    'page.body.profile.header.accountActivity': 'Últimas atividades da conta',
     'page.body.profile.header.accountActivity.content.date': 'Data',
     'page.body.profile.header.accountActivity.content.addressip': 'Endereço IP',
     'page.body.profile.header.accountActivity.content.action': 'Operação',
@@ -551,7 +551,7 @@ export const pt: LangType = {
     'page.body.profile.header.accountActivity.content.userAgent': 'Dispositivo',
 
     'page.body.profile.content.action.login': 'Acessar plataforma',
-    'page.body.profile.content.action.logout': 'Sair da plataforma',
+    'page.body.profile.content.action.logout': 'Sair da conta',
     'page.body.profile.content.action.request2fa': 'Solicitar QR code para 2FA',
     'page.body.profile.content.action.enable2fa': 'Habilitar 2FA',
     'page.body.profile.content.action.login.2fa': 'Acessar com 2FA',

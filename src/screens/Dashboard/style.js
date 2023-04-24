@@ -226,14 +226,16 @@ export const Deposit = styled.div`
 
 export const Tokens = styled.div`
   width: 100%;
+  max-maxWidth: 
   height: 640px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 30px;
   border-radius: 10px;
-  background-color: var(--header-background-color);
-  overflow-x: scroll;
+  // background-color: var(--header-background-color);
+  background-color: transparent;
+  // overflow-x: scroll;
 
   @media screen and (max-width: 1440px) {
     height: 640px;
@@ -255,6 +257,7 @@ export const Tokens = styled.div`
       border: none;
       border-radius: 10px;
       outline: none;
+      background-color: var(--sidebar-item-background-color-hover) !important;
       
       
     }

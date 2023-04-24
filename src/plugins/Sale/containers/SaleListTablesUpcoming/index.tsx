@@ -55,7 +55,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 		saleItems = (
 			<div className="col-12 d-flex justify-content-center">
 				<Empty
-					image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+					// image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
 					imageStyle={{ marginTop: '3rem' }}
 					description={<span>Nenhuma captação encontrada no momento</span>}
 				/>
@@ -84,8 +84,8 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	}, [saleList.loading]);
 
 	return (
-		<div className="container" style={{display: 'flex', justifyContent: 'space-between'}}>
-		<div className="container2 justify-content-center" style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
+		<div className="container" style={{display: 'flex'}}>
+		<div style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
 
 			</div>
 	);

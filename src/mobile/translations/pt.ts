@@ -73,15 +73,15 @@ export const pt = {
     'page.mobile.userInfo.details.uid': 'Fortem ID: {uid}',
     'page.mobile.userInfo.logout.button': 'Sair',
     'page.mobile.profileLinks.main.verification': 'Cadastro',
-    'page.mobile.profileLinks.main.2fa': 'Two-factor authentication',
+    'page.mobile.profileLinks.main.2fa': 'Autenticação em duas etapas (2FA)',
     'page.mobile.profileLinks.main.changePassword': 'Alterar senha',
-    'page.mobile.profileLinks.main.activity': 'Account activity',
-    'page.mobile.profileLinks.main.apiKeys': 'My API keys',
+    'page.mobile.profileLinks.main.activity': 'Atividades na conta',
+    'page.mobile.profileLinks.main.apiKeys': 'Chaves de API',
 
-    'page.mobile.profileLinks.settings.language': 'Idioma',
-    'page.mobile.profileLinks.settings.theme': 'Theme',
+    'page.mobile.profileLinks.settings.language': 'Idiomas',
+    'page.mobile.profileLinks.settings.theme': 'Temas',
 
-    'page.mobile.profileLinks.additional.referral': 'Referral Link',
+    'page.mobile.profileLinks.additional.referral': 'Afiliado',
     'page.mobile.profileLinks.link.referral.success': 'Copiado com sucesso!',
 
     'page.mobile.profileLinks.link.verification': 'Nível {level}',
@@ -89,14 +89,14 @@ export const pt = {
     'page.mobile.profileLinks.link.2fa.disabled': 'Desabilitado',
     'page.mobile.profileLinks.link.referral': 'Copiar link',
 
-    'page.mobile.profileColorTheme.theme.dark': 'Dark',
-    'page.mobile.profileColorTheme.theme.light': 'Light',
+    'page.mobile.profileColorTheme.theme.dark': 'Escuro',
+    'page.mobile.profileColorTheme.theme.light': 'Claro',
 
     'page.mobile.wallets.title': 'Carteiras',
 
-    'page.mobile.profile.accountActivity.title': 'Account activity',
-    'page.mobile.profile.apiKeys.title': 'My API keys',
-    'page.mobile.profile.theme.title': 'Theme',
+    'page.mobile.profile.accountActivity.title': 'Últimas atividades na conta',
+    'page.mobile.profile.apiKeys.title': 'Chaves de API',
+    'page.mobile.profile.theme.title': 'Temas',
     'page.mobile.profile.language.title': 'Idioma',
     'page.mobile.profile.changePassword.title': 'Alterar senha',
 
@@ -115,14 +115,14 @@ export const pt = {
     'page.mobile.confirm.address': 'Residence verification',
     'page.mobile.confirm.back': 'Back',
 
-    'page.body.profile.header.account.content.twoFactorAuthentication':  'Two-factor authentication',
+    'page.body.profile.header.account.content.twoFactorAuthentication':  'Autenticação em duas etapas',
 
     'page.profile.kyc.title': '2FA',
 
-    'page.mobile.twoFactorModal.title': '2FA Verification',
-    'page.mobile.twoFactorModal.subtitle': 'Enter 2fa code from the app',
-    'page.mobile.twoFactorModal.send': 'Send',
+    'page.mobile.twoFactorModal.title': 'Autenticação em duas etapas (2FA)',
+    'page.mobile.twoFactorModal.subtitle': 'Digite seu token de 6 dígitos',
+    'page.mobile.twoFactorModal.send': 'Confirmar',
 
-    'page.mobile.createdApiKeyModal.title': 'Created',
-    'page.mobile.createdApiKeyModal.confirm': 'confirm'
+    'page.mobile.createdApiKeyModal.title': 'Criado',
+    'page.mobile.createdApiKeyModal.confirm': 'Confirmar'
 };
