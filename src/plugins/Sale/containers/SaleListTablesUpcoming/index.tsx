@@ -55,7 +55,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 		saleItems = (
 			<div className="col-12 d-flex justify-content-center">
 				<Empty
-					// image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+					image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
 					imageStyle={{ marginTop: '3rem' }}
 					description={<span>Nenhuma captação encontrada no momento</span>}
 				/>
@@ -64,7 +64,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	} else {
 		saleItems = [...saleList.payload].map(sale => {
 			return (
-				<Col span={12} key={sale.id}>
+				<Col key={sale.id}>
 					<IEOItem key={sale.id} sale={sale} type={sale.type} />
 				</Col>
 			);
@@ -84,7 +84,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	}, [saleList.loading]);
 
 	return (
-		<div className="container" style={{display: 'flex'}}>
+		<div className="container2" style={{display: 'flex'}}>
 		<div style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
 
 			</div>

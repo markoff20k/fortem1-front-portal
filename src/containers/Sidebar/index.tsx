@@ -165,8 +165,9 @@ class SidebarContainer extends React.Component<Props, State> {
                             </svg>
                             <p className="pg-sidebar-wrapper-profile-area-text-name">
                                 {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}
-                                {/* {this.props.user.username} */}
-                                Jeferson Martin
+                                {this.props.user.username}
+                                {this.props.user.email}
+                                {/* Jeferson Martin */}
                             </p>
                             <p className="pg-sidebar-wrapper-profile-area-text-verified">
                                 {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}

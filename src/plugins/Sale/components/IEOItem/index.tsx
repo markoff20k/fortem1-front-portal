@@ -174,7 +174,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 	return (
 		<div>
 			
-			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom ml--30 mr--30" >
+			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
 				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{height: '467px'}} >

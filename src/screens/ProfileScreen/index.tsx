@@ -35,9 +35,10 @@ export const ProfileScreen: FC = (): ReactElement => {
     useDocumentTitle('Perfil');
 
     useEffect(() => {
-        if (abilities && CanCan.checkAbilityByAction('read', 'P2P', abilities)) {
-            setTabMapping(['security', 'api_keys', 'payment', 'referral']);
-        }
+        setTabMapping(['security', 'api_keys', 'payment', 'referral']);
+        // if (abilities && CanCan.checkAbilityByAction('read', 'P2P', abilities)) {
+        //     setTabMapping(['security', 'api_keys', 'payment', 'referral']);
+        // }
     }, [abilities]);
 
     useEffect(() => {
