@@ -800,12 +800,12 @@ export const pt: LangType = {
 
 
     /* Documentation */
-    'page.documentation.header.version.title': 'Version:',
-    'page.documentation.header.contactInfo.title': 'Contact information:',
-    'page.documentation.header.license.title': 'License:',
+    'page.documentation.header.version.title': 'Versão:',
+    'page.documentation.header.contactInfo.title': 'Informação de contato:',
+    'page.documentation.header.license.title': 'Licença de uso:',
 
     'page.documentation.endpoints.requestTypeItem.description.title': 'Description',
-    'page.documentation.endpoints.requestTypeItem.parameters.title': 'Parameters',
+    'page.documentation.endpoints.requestTypeItem.parameters.title': 'Parâmetros',
     'page.documentation.endpoints.requestTypeItem.responses.title': 'Responses',
 
     'page.documentation.endpoints.requestTypeItem.parameters.table.header.name': 'Name',
@@ -813,13 +813,13 @@ export const pt: LangType = {
     'page.documentation.endpoints.requestTypeItem.parameters.table.header.description': 'Description',
     'page.documentation.endpoints.requestTypeItem.parameters.table.header.required': 'Required',
     'page.documentation.endpoints.requestTypeItem.parameters.table.header.schema': 'Schema',
-    'page.documentation.endpoints.requestTypeItem.parameters.table.data.required.true': 'Yes',
-    'page.documentation.endpoints.requestTypeItem.parameters.table.data.required.false': 'No',
+    'page.documentation.endpoints.requestTypeItem.parameters.table.data.required.true': 'Sim',
+    'page.documentation.endpoints.requestTypeItem.parameters.table.data.required.false': 'Não',
 
     'page.documentation.endpoints.requestTypeItem.responses.table.header.code': 'Code',
     'page.documentation.endpoints.requestTypeItem.responses.table.header.description': 'Description',
     'page.documentation.endpoints.requestTypeItem.responses.table.header.schema': 'Schema',
-    'page.documentation.endpoints.requestTypeItem.responses.table.data.noSchema': 'no',
+    'page.documentation.endpoints.requestTypeItem.responses.table.data.noSchema': 'não',
 
     'page.documentation.models.title': 'Models',
     'page.documentation.models.item.table.header.name': 'Name',
@@ -837,9 +837,9 @@ export const pt: LangType = {
     'page.body.quick.exchange.label.currency': 'Currency',
 
     'page.body.quick.exchange.sublabel.min_amount': 'Min exchange amount is',
-    'page.body.quick.exchange.sublabel.balance': 'Balance',
+    'page.body.quick.exchange.sublabel.balance': 'Saldo',
 
-    'page.body.quick.exchange.estimated_price': 'Estimated price',
+    'page.body.quick.exchange.estimated_price': 'Preço estimado',
     'page.body.quick.exchange.slippage': 'Slippage is higher than 1%. Enter a lower amount to get a better price',
 
     'page.body.quick.exchange.placeholder.exchange': 'You exchange',
@@ -847,7 +847,7 @@ export const pt: LangType = {
 
     'page.body.quick.exchange.button.exchange': 'Exchange',
 
-    'success.quick.exchange.order.created': 'Order successfully created',
+    'success.quick.exchange.order.created': 'Ordem criada com sucesso',
 
     'page.body.quick.exchange.quotes': 'New quotes in',
     'page.body.quick.exchange.buy': 'Buy',

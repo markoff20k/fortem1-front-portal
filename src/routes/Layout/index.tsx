@@ -378,7 +378,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
-                    <PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} />
+                    {/* <PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} /> */}
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/internal-transfer" component={InternalTransfer} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/create-offer" component={CreateP2POfferScreen} />
@@ -395,6 +395,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
                     <PublicRoute path="/tokens" exact component={SaleListScreen} />
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+
+                    <PublicRoute exact={true} path="/api" component={DocumentationScreen} />
 
                     <Route path="**"><Redirect to="/" /></Route>
                     

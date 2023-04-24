@@ -150,7 +150,7 @@ export function Dashboard() {
         <Tokens>
           <div className="highlights">
             <h4 style={{ color: "var(--primary-text-color)" }}>
-              Tokens em destaques
+              Tokens em destaque
             </h4>
             <button
               style={{ color: "var(--primary-text-color)" }}

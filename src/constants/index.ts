@@ -16,7 +16,7 @@ export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isL
         ["page.header.navbar.deposit", "/deposit", `deposit${isLight ? "Light" : ""}`],
         // ["page.header.navbar.p2p", "/p2p",`p2p${isLight ? "Light" : ""}`],
         // ["page.header.navbar.internal.transfer", "/internal-transfer", `internal_transfer${isLight ? "Light" : ""}`],
-        // ["page.header.navbar.api", "/docs", `api${isLight ? "Light" : ""}`],
+        // ["page.header.navbar.api", "/api", `api${isLight ? "Light" : ""}`],
     ];
 
     const routesUnloggedIn = [

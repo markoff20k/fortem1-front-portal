@@ -32,8 +32,8 @@ describe('Documentation trade user api', () => {
     describe('Fetch trade user api', () => {
         const fakeResponse: DocTradeUserApiDataInterface = {
             info: {
-                title: 'Peatio User API v2',
-                description: 'API for Peatio application.',
+                title: 'Fortem API v2',
+                description: 'Documentação da API for Peatio application.',
                 contact: {
                     name: 'openware.com',
                     email: 'hello@openware.com',

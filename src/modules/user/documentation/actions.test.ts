@@ -9,10 +9,10 @@ import { DocTradeUserApiDataInterface } from './types';
 describe('Documentation actions', () => {
     const fakeResponse: DocTradeUserApiDataInterface = {
         info: {
-            title: 'Peatio User API v2',
+            title: 'Fortem API v2',
             description: 'API for Peatio application.',
             contact: {
-                name: 'openware.com',
+                name: 'fortem.com.br',
                 email: 'hello@openware.com',
                 url: 'https://www.openware.com',
             },

@@ -177,40 +177,37 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
-				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{minHeight: '520px'}} >
-					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
+				<div className="sale-item pricing-table box-shadow-large border-radius-10px " style={{height: '467px'}} >
+					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>
+						{saleBadgeDescription}
 					</div>
-	
-				<img className="itemLogo-img" src={props.sale.image_link} alt="" />
-			
-				<img className="itemLogo" src={props.sale.sale_logo} alt="" />TOKEN {props.sale.currency_id}
+					<img className="itemLogo-img" src={props.sale.image_link} alt="" />
+					<img className="itemLogo" src={props.sale.sale_logo} alt="" /><span style={{color: '#000', marginLeft: '-10px'}}>{props.sale.host_uid}</span>
+
 				<div className="pricing-body tokenCard">
 						
 					<div className="font-weight-500 text-extra-dark-gray ">
 						<ul className="list-style-03">
 
-							<div className="font-weight-500 text-extra-dark-gray " style={{marginTop: '-10px', fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Preço unitário:</span><span>R$ {props.sale.price}</span>
+							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{color: 'rgba(0, 5, 4, 1)', marginTop: '-10px', fontSize: '20px', lineHeight: '24px', fontWeight: '700', display: 'flex', justifyContent: 'space-between'}}>
+								<span>token {props.sale.currency_id}</span><span>R$ {props.sale.price}</span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Rendimento ao mês:</span><span style={{color: '#13b887'}}>{props.sale.host_uid}</span>
+							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '16px', lineHeight: '19px', fontWeight: '500', display: 'flex', justifyContent: 'space-between'}}>
+								<span>Pgto juros mensal</span><span style={{color: '#16837c'}}>1.52% a.m</span>
 							</div>
-							<Separator />
-							<div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
+							{/* <Separator /> */}
+							{/* <div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Investimento mínimo:</span><span style={{}}>R$ 100,00</span>
+							</div> */}
+							<div className="font-weight-500 text-extra-dark-gray " style={{fontSize: '16px', lineHeight: '19px', fontWeight: '500', display: 'flex', justifyContent: 'space-between'}}>
+								<span>Carência</span><span style={{}}>90 dias</span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Carência:</span><span style={{}}>90 dias</span>
-							</div>
-							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
+							{/* <div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Pagamento de juros:</span><span style={{}}>Mensal</span>
-							</div>
-							<Separator />
-							<div className="font-weight-500 text-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Valor captado:</span><span>Total ofertado:</span>
-							</div>
-							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{ display: 'flex', justifyContent: 'space-between'}}>
-								<span>R$ <Decimal fixed={0} thousSep="." floatSep=",">{((props.sale.total_ieo - props.sale.remains) * props.sale.price)}</Decimal></span><span style={{}}>R$ <Decimal fixed={0} thousSep="." floatSep=",">{(props.sale.total_ieo * props.sale.price)}</Decimal></span>
+							</div> */}
+							{/* <Separator /> */}
+							<div className="font-weight-500 text-dark-gray mt--10" style={{fontSize: '16px', lineHeight: '19px', fontWeight: '500', display: 'flex', justifyContent: 'space-between'}}>
+								<span>Valor captado</span><span>Total</span>
 							</div>
 							
 							{/*<Progress
@@ -229,15 +226,15 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						color='#009991'
 						value={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 					 />
-							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn btn-more"  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
-								{/* <button className="btn-default" onClick={handleDetailClick}>Comprar Token</button> */}
-								<button type="button" className="btn btn-primary btn-block btn-lg" onClick={handleDetailClick}>Comprar Token</button>
-							
 
-								
-								
-														</div>
+<div className="font-weight-500 text-extra-dark-gray mb--10" style={{ display: 'flex', justifyContent: 'space-between'}}>
+								<span>R$ <Decimal fixed={0} thousSep="." floatSep=",">{((props.sale.total_ieo - props.sale.remains) * props.sale.price)}</Decimal></span><span style={{}}>R$ <Decimal fixed={0} thousSep="." floatSep=",">{(props.sale.total_ieo * props.sale.price)}</Decimal></span>
+							</div>
+
+							<div className="pricing-footer mb--10 mt--20">
+								<button type="button" className="btn btn-primary btn-block btn-lg mt--20" onClick={handleDetailClick}>Comprar Token</button>
+								<a className="btn btn-more mt--5"  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -246,7 +243,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div>	
 				<div>
 					
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  box-shadow-large border-radius-10px " style={{minHeight: '580px'}}>
+				<div className="sale-item pricing-table pricing-body text-center justify-content-center  box-shadow-large border-radius-10px " style={{height: '467px'}}>
 				<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor, fontSize: '12px'}}>{saleBadgeDescription}
 					</div>
 	
@@ -276,29 +273,27 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							<div className="font-weight-500 text-extra-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Formas de pagamento:</span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
+							<div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={real}/></span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between', }}>
+							<div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between', }}>
 								<span style={{}}>Cripto </span><span style={{fontSize: '13px', display: 'flex'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={ether}
 									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={usdt}
 									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={usdc}
 									alt="" /></span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
+							<div className="font-weight-500 text-extra-dark-gray mt--10 mb--10" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Cartão de crédito</span><span style={{}}><img style={{ maxWidth: '160px', height: '26px', marginLeft: '1rem', }} src={ccVisa} /></span>
 							</div>
-							<Separator />
-							<div className="font-weight-500 text-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
+							{/* <Separator /> */}
+							{/* <div className="font-weight-500 text-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Total de tokens ofertados:</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.total_ieo}</Decimal></span>
 								
 							</div>
 							<div className="font-weight-500 text-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 							<span>Total de tokens disponíveis:</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.remains}</Decimal></span> 
-							</div>
-							<div className="font-weight-500 text-dark-gray" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Progresso:</span><span style={{}}>{Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}%</span>
-							</div>
+							</div> */}
+			
 							{/*<Progress
 								strokeColor={{
 								'0%': '#2a9d8f',
@@ -308,12 +303,11 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						
 							percent={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 						/>*/}
-							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn-more" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
+							<div className="pricing-footer mb--10 mt--20">
+								<button type="button" className="btn btn-primary btn-block btn-lg mt--20" onClick={handleDetailClick}>Comprar Token</button>
+								<a className="btn-more mt--5" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
 							{/* <button className="btn-primary" onClick={handleDetailClick}>Comprar Token</button> */}
-								<button type="button" className="btn btn-primary btn-block btn-lg" onClick={handleDetailClick}>Comprar Token</button>
-
-							
+								
 							</div>
 						</ul>
 					</div>

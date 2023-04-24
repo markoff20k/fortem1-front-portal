@@ -9,7 +9,7 @@ import { DocTradeUserApiDataInterface } from './types';
 describe('Documentation reducer', () => {
     const fakeResponse: DocTradeUserApiDataInterface = {
         info: {
-            title: 'Peatio User API v2',
+            title: 'Fortem API v2',
             description: 'API for Peatio application.',
             contact: {
                 name: 'openware.com',

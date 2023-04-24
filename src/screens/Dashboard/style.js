@@ -233,6 +233,7 @@ export const Tokens = styled.div`
   margin-top: 30px;
   border-radius: 10px;
   background-color: var(--header-background-color);
+  overflow-x: scroll;
 
   @media screen and (max-width: 1440px) {
     height: 640px;
@@ -240,10 +241,14 @@ export const Tokens = styled.div`
 
   .highlights {
     width: 100%;
-    padding: 30px 0;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    h4 {
+      margin-left: 20px;
+    }
 
     button {
       padding: 10px 15px;
