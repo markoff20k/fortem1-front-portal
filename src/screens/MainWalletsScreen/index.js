@@ -221,8 +221,9 @@ export function Wallet(props) {
           </div> */}
           
         </Report>
-        {/* <WalletsScreen /> */}
+        
       </Content>
+      <WalletsScreen />
     </Container>
   );
 }
