@@ -85,8 +85,8 @@ const renderEvent = () => {
 
 export const SaleListScreen: React.FC = () => {
 	return (
-		<React.Fragment>
-		{/* <div className="sale-list" style={{backgroundColor: '#131313'}}> */}
+		
+		<div className="token-screen" >
 			{/* {renderEvent()}	 */}
 
 			<div className="sale-list-banner">
@@ -94,11 +94,12 @@ export const SaleListScreen: React.FC = () => {
 				{/* <div  style={{ backgroundImage: `url(${bgF})` }} /> */}
 
 
-					<img src={bgF}  style={{ height: '500px' }}/>
-
-					<div className="sale-list-title" id="sale-list-title">Título do artigo sobre tokens</div>
-					<div className="sale-list-subtitle" id="sale-list-subtitle">Texto sobre a notícia principal com uma chamada para o usuário clicar no banner com até 256 caracteres.</div>
-					<button className="btn-token" > Comprar tokens</button>
+					<img src={bgF} style={{ height: 'auto', maxWidth: '100%' }} className='img-fluid'/>
+					<div className='sale-list-slider-content'>
+						<div className="sale-list-title">Título do artigo sobre tokens</div>
+						<div className="sale-list-subtitle">Texto sobre a notícia principal com uma chamada para o usuário clicar no banner com até 256 caracteres.</div>
+						<button className="landing-button btn-token" > Comprar tokens</button>
+					</div>
 			
 				
 				{/* <img src={bgF} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )',objectFit: 'contain', }} className="theme-shape-center" /> */}
@@ -120,8 +121,8 @@ export const SaleListScreen: React.FC = () => {
 							<SaleListTablesUpcoming />
 						</div>
 			</div>
-		{/* </div> */}
-		</React.Fragment>
+		</div>
+		
 	);
 };
  

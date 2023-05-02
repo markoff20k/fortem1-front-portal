@@ -95,6 +95,7 @@ import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
 import { Dashboard } from '../../screens/Dashboard/index';
+import { Wallet } from '../../screens/MainWalletsScreen/index';
 
 import { ReactDimmer } from 'react-dimmer';
 
@@ -394,6 +395,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/p2p" component={P2POffersScreen} />
 
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" component={Dashboard} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallet" component={Wallet} />
 
                     <PublicRoute path="/markets" component={MarketsList} />
 

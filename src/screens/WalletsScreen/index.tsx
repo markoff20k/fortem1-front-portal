@@ -28,7 +28,7 @@ export const WalletsScreen: FC = (): ReactElement => {
     const currencies = useSelector(selectCurrencies);
     const abilities = useSelector(selectAbilities);
 
-    useDocumentTitle('Wallets');
+    useDocumentTitle('Carteiras');
     useWalletsFetch();
     useP2PWalletsFetch();
 
@@ -109,7 +109,7 @@ export const WalletsScreen: FC = (): ReactElement => {
 
     return (
         <React.Fragment>
-            <EstimatedValue wallets={mergedWallets} />
+            {/* <EstimatedValue wallets={mergedWallets} /> */}
             <div className="pg-wallets-tab pg-container">
                 <div className="pg-wallets-tab__tabs-content">
                     <TabPanel

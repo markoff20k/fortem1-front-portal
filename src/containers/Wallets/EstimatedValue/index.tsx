@@ -52,7 +52,13 @@ const EstimatedValue: React.FC<Props> = (props: Props): React.ReactElement => {
         <div className="pg-estimated-value">
             <span className="pg-estimated-value__title">{translate('page.body.wallets.estimated_value')}</span>
             <div className="pg-estimated-value__container">
-                <span className="value-container">
+                <span className="value-container card">
+                    <span className="value card-title">
+                        {translate('page.body.wallets.estimated_value')} R$ {formatWithSeparators(estimatedValue, ',')}
+                    </span>
+                    <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
+                </span>
+                <span className="value-container card">
                     <span className="value">
                         {formatWithSeparators(estimatedValue, ',')}
                     </span>
