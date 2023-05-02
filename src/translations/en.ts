@@ -886,7 +886,7 @@ export const en = {
     'error.bad_request': 'Order - bad request',
     'error.request_entity_too_large': 'Order - request entity too large',
 
-    // barong
+    // authz
     'resource.labels.private': 'Can\'t update label',
     'resource.user.no_activity': 'No activity recorded or wrong topic',
     'resource.profile.not_exist': 'User has no profile',

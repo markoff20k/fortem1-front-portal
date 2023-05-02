@@ -100,6 +100,10 @@ import { ReactDimmer } from 'react-dimmer';
 
 import { SaleListScreen, SaleDetailScreen } from '../../plugins/Sale';
 
+// import { IEODetailScreen } from '../../plugins/IEO/screen/IEODetailScreen';
+// import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';
+
+
 
 interface ReduxProps {
     colorTheme: string;
@@ -395,6 +399,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
                     <PublicRoute path="/tokens" exact component={SaleListScreen} />
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+
+                    {/* <PublicRoute path="/ieo" exact component={IEOListingScreen} />
+					<PublicRoute path="/ieo/detail/:ieoID" exact component={IEODetailScreen} /> */}
 
                     <PublicRoute exact={true} path="/api" component={DocumentationScreen} />
 

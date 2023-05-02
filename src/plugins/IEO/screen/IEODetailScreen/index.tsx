@@ -3,7 +3,10 @@ import { IEODetail, BuyIEOComponent, CautionsDetail, InformationIEO, BuyersHisto
 import { useHistory } from 'react-router';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIEOItem, selectUserInfo, findIEOById } from '../../../../modules';
+import { selectUserInfo, findIEOById } from '../../../../modules';
+
+import { selectIEOItem } from 'src/modules/plugins/ieo';
+
 
 export const IEODetailScreen = () => {
 	const history = useHistory();

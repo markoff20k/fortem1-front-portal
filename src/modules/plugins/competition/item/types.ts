@@ -2,7 +2,7 @@ export interface NewCompetition {
 	id: number;
 	status: 'ended' | 'ongoing' | 'upcoming';
 	currency_id: string;
-	type: 'trade' | 'stake';
+	type: 'core' | 'stake';
 	currency_image?: string;
 	total_prize?: string;
 	market_ids: string;

@@ -886,7 +886,7 @@ export const ru: LangType = {
     'error.request_entity_too_large': 'Запрос - слишком большой объект запроса',
 
     // error messages
-    // barong
+    // authz
     'resource.labels.private': 'Нельзя обновить поле',
     'resource.user.no_activity': 'Активность не записана или неправильная тема',
     'resource.profile.not_exist': 'У пользователя нет профиля',

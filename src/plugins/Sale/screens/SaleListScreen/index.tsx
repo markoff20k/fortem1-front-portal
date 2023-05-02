@@ -15,7 +15,7 @@ import { Parallax } from 'react-scroll-parallax';
 import './SaleListScreen.css';
 
 
-import bgF from './bf-fortem.png';
+import bgF from './bfF-tokens.svg';
 
 const settingEvents = {
 	dots: false,
@@ -61,7 +61,7 @@ const renderEvent = () => {
 								
 			</div>
 
-			<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: '#000'}}>
+			{/* <div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: '#000'}}>
 
 
 				<Slider {...settingEvents}>
@@ -78,7 +78,7 @@ const renderEvent = () => {
 						);
 					})}
 				</Slider>
-			</div>
+			</div> */}
 		</div>
 	);
 };
@@ -86,33 +86,41 @@ const renderEvent = () => {
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
-		<div style={{backgroundColor: '#131313'}}>
-			{renderEvent()}	
+		{/* <div className="sale-list" style={{backgroundColor: '#131313'}}> */}
+			{/* {renderEvent()}	 */}
 
-			<div style={{ position: 'relative', padding: '20px', marginTop: '20px', borderRadius: '20px' }}>
-				<img style={{ width: '100%', height: '22rem', margin: 0,  borderRadius: '20px' }} src={bgF} alt="token_banner" />
+			<div className="sale-list-banner">
+			
+				{/* <div  style={{ backgroundImage: `url(${bgF})` }} /> */}
+
+
+					<img src={bgF}  style={{ height: '500px' }}/>
+
+					<div className="sale-list-title" id="sale-list-title">Título do artigo sobre tokens</div>
+					<div className="sale-list-subtitle" id="sale-list-subtitle">Texto sobre a notícia principal com uma chamada para o usuário clicar no banner com até 256 caracteres.</div>
+					<button className="btn-token" > Comprar tokens</button>
+			
+				
+				{/* <img src={bgF} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )',objectFit: 'contain', }} className="theme-shape-center" /> */}
+	
+				
+				
 			
 			</div>
 
 
 			<div id="sale-list" className="container-fluid">
-				
-			
-				<div className="row">
-					<div className="col-12 text-center">
-						{/*<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>*/}
-						<h2 className="sale-list__subtitle" style={{fontSize: '1.4rem'}}>
-							Seu ponto de partida para investir nos produtos mais rentáveis e seguros que o blockchain tem a oferecer.
-						</h2>
-					</div>
-				</div>
-			
 
-				<div className="mt-3">
-					<SaleListTables />
-				</div>
+					<div className="mt-3">
+						{/*<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>*/}
+						<div className="sale-list-highlight">Tokens em destaque</div>
+					</div>
+
+						<div className="mt-3">
+							<SaleListTablesUpcoming />
+						</div>
 			</div>
-			</div>			
+		{/* </div> */}
 		</React.Fragment>
 	);
 };

@@ -6,7 +6,7 @@ const initialCompetitionItemState: NewCompetitionState = {
 		id: 0,
 		status: 'ended',
 		currency_id: '',
-		type: 'trade',
+		type: 'core',
 		currency_image: '',
 		total_prize: '',
 		market_ids: '',

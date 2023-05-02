@@ -1,12 +1,14 @@
 import classnames from 'classnames';
 import * as React from 'react';
 import { useIntl } from 'react-intl';
+import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { HomeIcon } from '../../assets/images/footer/HomeIcon';
 import { OrderIcon } from '../../assets/images/footer/OrderIcon';
 import { ProfileIcon } from '../../assets/images/footer/ProfileIcon';
 import { TradeIcon } from '../../assets/images/footer/TradeIcon';
 import { WalletIcon } from '../../assets/images/footer/WalletIcon';
+import { selectUserLoggedIn } from '../../../modules';
 
 const handleGetActiveItemClass = (currentRoute: string, targetRoute: string, absolute?: boolean) => {
     return classnames('pg-mobile-footer__item', {
@@ -14,12 +16,14 @@ const handleGetActiveItemClass = (currentRoute: string, targetRoute: string, abs
     });
 };
 
+const userLoggedIn = useSelector(selectUserLoggedIn);
+
 const FooterComponent: React.FC = () => {
     const { pathname } = useLocation();
     const intl = useIntl();
 
     return (
-        <div className="pg-mobile-footer">
+       (userLoggedIn) && <div className="pg-mobile-footer">
             <Link to="/" className={handleGetActiveItemClass(pathname, '/', true)}>
                 <HomeIcon className="pg-mobile-footer__item__icon" />
                 <span className="pg-mobile-footer__item__title">{intl.formatMessage({id: 'page.mobile.footer.home'})}</span>

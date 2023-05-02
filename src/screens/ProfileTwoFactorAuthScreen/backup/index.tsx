@@ -93,8 +93,8 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
 
         return (
             <div className="container mt-5 pg-profile-two-factor-auth__form p-0">
-                <div className="m-0 pg-profile-two-factor-auth__header">
-                    <div className="mt-0 p-0">
+                <div className="row m-0 pg-profile-two-factor-auth__header">
+                    <div className="col-11 col-lg-7 mt-0 p-0 pl-3">
                         {this.translate('page.body.profile.header.account.content.twoFactorAuthentication.header')}
                     </div>
                     <div onClick={this.goBack}>
@@ -103,8 +103,8 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                 </div>
 
                 <div className="row m-0 pg-profile-two-factor-auth__body">
-                    <div className="pr-0 pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
-                        <div className="pg-profile-two-factor-auth__body--text--group">
+                    <div className="col-12 col-lg-8 col-md-9 pr-0 pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
+                        <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
                             <div className="d-inline">
                                 <span className="cr-item-number">1   </span>
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.1')}</span>
@@ -113,7 +113,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                                 <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl">Google play</a>
                             </div>
                         </div>
-                        <div className="pg-profile-two-factor-auth__body--text--group">
+                        <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
                             <div className="d-inline">
                                 <span className="cr-item-number">2    </span>
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.2')}</span>
@@ -124,30 +124,19 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                     </div>
  
                 </div>
-                <div className="pg-profile-two-factor-auth__body--barcode">
+                <div className="col-12 col-lg-4 col-md-3 pt-4 pg-profile-two-factor-auth__body--barcode">
                         {enable2fa && this.renderTwoFactorAuthQR(barcode)}
-                
-                    <div className="pg-profile-two-factor-auth__copyablefield">
-                        {enable2fa && secret && this.renderSecret(secret)}
                     </div>
+                <div className="row m-0 p-5 pg-profile-two-factor-auth__copyablefield">
+                    {enable2fa && secret && this.renderSecret(secret)}
                 </div>
                 <div className="row m-0 pg-profile-two-factor-auth__body">
-                    <div className="pr-0 pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
-                <div className="pg-profile-two-factor-auth__body--text--group">
-                            <div className="d-inline">
-                                <span className="cr-item-number">3    </span>
+                    <div className="col-12 pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
+                        <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
+                            <div className="col-12 col-sm-5">
+                                <span className="cr-item-number">3   </span>
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.4')}</span>
                             </div>
-                </div>
-                </div>
-                </div>
-                <div className="m-0 pg-profile-two-factor-auth__body">
-                    <div className="pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
-                        <div className="pg-profile-two-factor-auth__body--text--group">
-
-                                {/* <span className="cr-item-number">3   </span>
-                                <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.4')}</span> */}
-
                             <div className="col-12 col-sm-7">
                                 <fieldset className="pg-profile-two-factor-auth__body--input">
                                     <div className="hidden-label">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.subHeader')}</div>

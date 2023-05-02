@@ -4,11 +4,11 @@ const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'wss:
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `https://www.fortem1.com.br/api/v2/barong`,
-        tradeUrl: `https://www.fortem1.com.br/api/v2/peatio`,
-        applogicUrl: `https://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `wss://www.fortem1.com.br/api/v2/ranger`,
-        finexUrl: `https://www.fortem1.com.br/api/v2/peatio`,
+        authUrl: `http://www.fortem1.com.br/api/v2/barong`,
+        tradeUrl: `http://www.fortem1.com.br/api/v2/peatio`,
+        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `ws://www.fortem1.com.br/api/v2/ranger`,
+        finexUrl: `http://www.fortem1.com.br/api/v2/peatio`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
@@ -21,7 +21,7 @@ export const defaultConfig: Config = {
     captchaLogin: false,
     usernameEnabled: true,
     gaTrackerKey: '',
-    minutesUntilAutoLogout: '5',
+    minutesUntilAutoLogout: '15',
     msAlertDisplayTime: '5000',
     msPricesUpdates: '500',
     sessionCheckInterval: '5000',
@@ -82,7 +82,7 @@ export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates;
 export const defaultStorageLimit = () => Number(Cryptobase.config.storage.defaultStorageLimit);
 export const orderBookSideLimit = () => Number(Cryptobase.config.storage.orderBookSideLimit);
 export const passwordEntropyStep = () => Number(Cryptobase.config.passwordEntropyStep);
-export const languages = (Cryptobase.config.languages && Cryptobase.config.languages.length > 0) ? Cryptobase.config.languages : ['en'];
+export const languages = (Cryptobase.config.languages && Cryptobase.config.languages.length > 0) ? Cryptobase.config.languages : ['pt'];
 export const kycSteps = () => Cryptobase.config.kycSteps;
 export const isUsernameEnabled = () => convertToBoolean(Cryptobase.config.usernameEnabled);
 export const captchaType = () => Cryptobase.config.captcha_type;
