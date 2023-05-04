@@ -782,6 +782,12 @@ hr:not([size]) {
     }
   }
 
+  select {
+
+    border: 1px solid var(--input-border-color) !important;
+    
+  }
+
   .carousel-fortem{
     height: 100%;
     display: flex !important;

@@ -170,7 +170,8 @@ const WalletsOverview: FC<Props> = (props: Props): ReactElement => {
     return (
         <div className="cr-wallets-table">
             <div className="text-center">
-                {(walletsLoading || p2pWalletsLoading) && <Spinner animation="border" variant="primary" />}
+                {/* {(walletsLoading || p2pWalletsLoading) && <Spinner animation="border" variant="primary" />} */}
+
             </div>
             <div className="cr-wallets-table__table overview">
                 <WalletsHeader

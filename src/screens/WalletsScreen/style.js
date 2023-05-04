@@ -3,8 +3,9 @@ import imgGrafic from "../../assets/grafic.svg";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #131313;
+  position: absolute;
 `;
 
 export const Content = styled.div`
@@ -30,7 +31,8 @@ export const Graphic = styled.div`
   justify-content: space-between;
 
   .patrimony {
-    padding: 20px;
+    padding: 0;
+    padding-right: 20px;
 
     .patrimony-total,
     .patrimony-available {
@@ -59,14 +61,16 @@ export const Graphic = styled.div`
           padding: 10px;
           border-radius: 10px;
           border: none;
+          padding: 12px 18px;
           // color: var(--primary-text-color);
           // background-color: ${(props) => props.theme.primary};
 
           &:nth-child(2) {
             margin-left: 20px;
-            border: 1px solid blue;
+            border: 1px solid #009991;
             color: var(--primary-text-color);
             background-color: transparent;
+            padding: 12px 18px;
           }
         }
       }
@@ -81,6 +85,7 @@ export const Graphic = styled.div`
     flex: 1;
     border-radius: 10px;
     background-color: var(--header-background-color);
+    height: 360px;
 
     .patrimony-graphic-top {
       display: flex;
@@ -97,7 +102,8 @@ export const Graphic = styled.div`
         border-radius: 10px;
         text-align: left !important;
         color: var(--primary-text-color);
-        background-color: ${(props) => props.theme.lineDeposit};
+        background: var(--input-background-color);
+        border: 1px solid var(--input-border-color) !important;
       }
     }
 
@@ -117,10 +123,10 @@ export const Graphic = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        background: url(${imgGrafic});
-        background-repeat: no-repeat, repeat-x;
-        background-position: top right, center;
-        background-size: contain;
+        // background: url(${imgGrafic});
+        // background-repeat: no-repeat, repeat-x;
+        // background-position: top right, center;
+        // background-size: contain;
 
         h5 {
           font-size: 18px;

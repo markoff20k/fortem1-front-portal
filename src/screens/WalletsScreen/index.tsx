@@ -14,6 +14,13 @@ import imgLogoIcon from "../../assets/logo-icon-dark.svg";
 
 
 
+import DonutChart from "src/components/Charts/DonutChart";
+
+import ReactApexChart from "react-apexcharts";
+
+// import { Card, CardBody, CardTitle, Col, Row, Container } from "reactstrap"
+
+
 interface ParamType {
     routeTab?: string;
     currency?: string;
@@ -33,6 +40,127 @@ export const WalletsScreen: FC = (): ReactElement => {
     const p2pWallets = useSelector(selectP2PWallets) || [];
     const currencies = useSelector(selectCurrencies);
     const abilities = useSelector(selectAbilities);
+
+    const donutChartDataCharts1 = [10.000, 5.840, 0];
+
+    const donutChartOptionsCharts1 = {
+        series: [10.000, 5.840, 0],
+        labels: ["Reais", "Tokens", "Criptomoedas"],
+        colors: ["#11ECC7", "#F9A912", "#009991"],
+        chart: {
+          width: 380,
+          type: 'donut',
+        },
+        stroke: {
+          show: false,
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+            },
+          },
+        },
+        legend: {
+            show: true,
+            // position: "bottom",
+            // horizontalAlign: "center",
+            // verticalAlign: "middle",
+            // floating: false,
+            fontSize: "18px",
+            fontWeight: "700",
+            // fontColor: "#f5f5f5",
+            // color: "white",
+            offsetX: 0,
+            offsetY: -10,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        hover: { mode: null },
+        plotOptions: {
+            pie: {
+              startAngle: -90,
+              endAngle: 270
+            }
+        },
+        // plotOptions: {
+        //   donut: {
+        //     expandOnClick: false,
+        //     donut: {
+        //       labels: {
+        //         show: false,
+        //       },
+        //     },
+        //   },
+        // },
+      
+        fill: {
+          colors: ["#11ECC7", "#F9A912", "#009991"],
+          type: 'gradient',
+
+        },
+        tooltip: {
+          enabled: true,
+          theme: "dark",
+        },
+      };
+
+    // this one
+    const dountchartData = {
+        series: [10.000, 5.840, 0],
+        options: {
+          labels: ["Reais", "Tokens", "Criptomoedas"],
+          colors: ["#11ECC7", "#F9A912", "#009991"],
+          chart: {
+            width: 680,
+            type: 'donut',
+          },
+          legend: {
+            show: true,
+            position: "right",
+            // horizontalAlign: "center",
+            verticalAlign: "middle",
+            floating: false,
+            fontSize: "18px",
+            color: "rgb(0,0,0)",
+            offsetX: -40,
+            offsetY: 20,
+          },
+          responsive: [
+            {
+              breakpoint: 600,
+              options: {
+                chart: {
+                  height: 240,
+                },
+                legend: {
+                  show: false,
+                },
+              },
+            },
+          ],
+        },
+      }
+      
+      
+      
+      const dountchart = () => {
+        return(
+          <React.Fragment>
+              <ReactApexChart
+                options={dountchartData.options}
+                series={dountchartData.series}
+                type="donut"
+                height="320"
+                width="420"
+                className="apex-charts"
+              />
+            </React.Fragment>
+        )
+      }
+
+      
 
     useDocumentTitle('Carteiras');
     useWalletsFetch();
@@ -165,12 +293,22 @@ export const WalletsScreen: FC = (): ReactElement => {
               <select
                 style={{ color: "var(--primary-text-color)" }}
               >
-                <option>Visão gear</option>
+                <option>Visão geral</option>
               </select>
             </div>
             <div className="patrimony-graphic-bottom">
               {/* <img src={imgGrafic} alt="" /> */}
-              <div className="grafic">
+              {dountchart()}
+              {/* <DonutChart/> */}
+              {/* <DonutChart
+                    chartData={donutChartDataCharts1}
+                    chartOptions={donutChartOptionsCharts1}
+                    width={380}
+                    // height="320"
+                	// className="apex-charts"
+ 
+                /> */}
+              {/* <div className="grafic">
                 <h5
                     style={{ color: "var(--primary-text-color)" }}
                 >
@@ -178,8 +316,8 @@ export const WalletsScreen: FC = (): ReactElement => {
                   <br />
                   R$ 10.840.000,00
                 </h5>
-              </div>
-              <div className="ativos">
+              </div> */}
+              {/* <div className="ativos">
                 <p
                   style={{ color: "var(--primary-text-color)" }} >
                   <div></div>
@@ -195,7 +333,7 @@ export const WalletsScreen: FC = (): ReactElement => {
                   <br />
                   R$ 840.000,00
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </Graphic>
@@ -345,7 +483,7 @@ export const WalletsScreen: FC = (): ReactElement => {
                     />
                 </div>
             </div>
-            
+
     </Container>
 
 
