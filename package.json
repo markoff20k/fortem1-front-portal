@@ -1,6 +1,6 @@
 {
-    "name": "@openware/base-app",
-    "version": "3.1.0",
+    "name": "@fortem/frontend",
+    "version": "1.1.0",
     "private": true,
     "dependencies": {
         "@capacitor/android": "2.4.1",

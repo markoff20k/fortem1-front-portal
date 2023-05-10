@@ -3,7 +3,8 @@ import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 // import { Decimal, MarketsHotOnlist, FortemMarketTable, ButtonFIAT, FiatMarketFill } from '../../components';
-import { Decimal, FortemMarketTable, ButtonFIAT, FiatMarketFill } from '../../components';
+
+import { Decimal, FortemMarketTable, ButtonFIAT, FiatMarketFill, MarketsHotOnlist } from '../../components';
 
 import Tabs, { TabPane } from 'rc-tabs';
 
@@ -291,13 +292,13 @@ export const MarketsList = props => {
 		);
 	};
 
-	// const MarketsHotOnList = () => {
-	// 	return (
-	// 		<React.Fragment>
-	// 			<MarketsHotOnlist />
-	// 		</React.Fragment>
-	// 	);
-	// };
+	const MarketsHotOnList = () => {
+		return (
+			<React.Fragment>
+				<MarketsHotOnlist />
+			</React.Fragment>
+		);
+	};
 
 	const columns = React.useMemo(() => {
 		return [

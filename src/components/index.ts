@@ -64,3 +64,4 @@ export * from './FiatMarketFill';
 export * from './NewHomeMarketTable';
 export * from './ConvertUsd';
 
+export * from './MarketsHotOnList';

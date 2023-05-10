@@ -33,7 +33,7 @@ import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/FastDeposit/QRCode";
 
 
-import { HomepageMarket } from '../../containers';
+import { HomepageMarket, MarketsList } from '../../containers';
 import { Sidebar } from '../../containers';
 
 import BlogList from "../../components/blog/itemProp/BlogList";
@@ -209,6 +209,7 @@ export function Dashboard() {
               <h4> Visão geral do mercado cripto </h4>
             </div>
             <HomepageMarket/>
+            {/* <MarketsList /> */}
           </Tables>
           <Negotiation>
             <Deposit>
