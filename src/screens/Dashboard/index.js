@@ -6,6 +6,7 @@ import {
   Content,
   Button,
   CardsPatrimony,
+  CardsAnnoucement,
   Carousel,
   Slid,
   Deposit,
@@ -18,6 +19,7 @@ import {
 } from "./style";
 import imgBell from "../../assets/bell.svg";
 import { Patrimony } from "../../components/Cards/Patrimony";
+import { Announcement } from "../../components/Cards/Announcement";
 import { CarouselSlide } from "../../components/Carousel";
 import { TokensSlid } from "../../components/Cards/Tokens";
 // import { KnowledgeCards } from "../../components/Cards/Knowledge";
@@ -43,12 +45,28 @@ import { ReactDimmer } from 'react-dimmer';
 
 import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
 
+import {
+  entropyPasswordFetch,
+  Label,
+  labelFetch,
+  RootState,
+  selectCurrentPasswordEntropy,
+  selectLabelData,
+  selectMobileDeviceState,
+  selectUserInfo,
+  User,
+} from '../../modules';
+
+import { useSelector } from 'react-redux';
 
 var BlogListData = BlogClassicData.slice(0, 6);
 
 export function Dashboard() {
   
   const [fastDeposit, setFastDeposit] = useState(false);
+
+  
+  const user = useSelector(selectUserInfo);
 
   const patrimony = [
     {
@@ -73,6 +91,21 @@ export function Dashboard() {
     },
   ];
 
+
+  const announcement = [
+    {
+      description: "Aproveite a alta rentabilidade e liquidez dos tokens para aumentar seu patrimônio!",
+      cta: "Confira os tokens disponíveis",
+      type: "D",
+    },
+    {
+      description: "Compre cirptomoedas em poucos cliques.",
+      cta: "Confira as criptos disponíveis a partir de R$ 100,00",
+      type: "D",
+    },
+  ];
+
+
   const images = [
     {
       img: img1,
@@ -94,7 +127,7 @@ export function Dashboard() {
       
       <Content>
         {/* {!props.user.validation && ( */}
-          <Alert>
+        { !user.otp && ( <Alert>
             <div className="description">
               <img src={imgBell} alt="" />
               {/* <p
@@ -104,15 +137,19 @@ export function Dashboard() {
                 A Fortem One preza pela sua segurança, para utilizar todos os recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu cadastro, é rápido e simples.
               </p>
             </div>
-            <div className="btn">
+             <div className="btn">
               <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
                 <Button> Habilitar agora </Button>
               </Link>
-
-              
-            </div>
-          </Alert>
+            </div> 
+          </Alert> )}
         {/* )} */}
+
+        <CardsAnnoucement>
+          <Announcement announcement={announcement} />
+        </CardsAnnoucement>
+
+
         <CardsPatrimony>
           <Patrimony patrimony={patrimony} />
         </CardsPatrimony>
@@ -142,8 +179,8 @@ export function Dashboard() {
               </span>
             </div>
             <div className="buttons">
-              <button onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
-              <button className="btn btn-primary-outline btn-block">Ajustar limite mensal</button>
+              <button style={{borderRadius: '12px', padding: '12px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
+              <button style={{borderRadius: '12px', padding: '12px 18px', color: '#11ECC7', background: 'transparent'}} className="btn btn-primary-outline btn-block">Aumentar limites</button>
             </div>
           </Deposit>
         </Carousel>
@@ -244,11 +281,11 @@ export function Dashboard() {
                     { color: "var(--primary-text-color)", marginTop: 10 }
                   }
                 >
-                  Preço unitário: $ 20.000,00
+                  Preço unitário: R$ 28.800,00
                 </span>
               </div>
               <div className="buttons">
-                <button className="btn-ajuste">Confirmar</button>
+                <button className="btn-ajuste disabled">Confirmar</button>
               </div>
             </Deposit>
           </Negotiation>
@@ -294,3 +331,8 @@ export function Dashboard() {
     </Container>
   );
 }
+
+const mapStateToProps = (state) => ({
+  user: selectUserInfo(state),
+  
+});

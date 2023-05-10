@@ -10,7 +10,7 @@ export function Patrimony(props) {
         <Content>
           <p> {result.description} </p>
           <h2> R$ 0,00 </h2>
-          <button>{result.type === "D" ? "Depositar" : "Ver opções"}</button>
+          <button>{result.type === "D" ? "Depositar" : "Ver alocação"}</button>
         </Content>
       ))}
     </Container>

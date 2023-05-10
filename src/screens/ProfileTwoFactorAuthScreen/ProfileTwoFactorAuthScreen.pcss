@@ -1,23 +1,51 @@
 .pg-profile-two-factor-auth {
   display: block;
   margin: 0 auto;
-  width: 685px;
+  background: #131313;
+  width: 100%;
+  height: calc(100vh - 120px);
+  
+
+  &__form {
+    background: var(--body-background-color);
+    /* box-shadow: 0 10px 15px var(--shadow-color-level-2); */
+    width: 685px;
+    top: 60px;
+    border-radius: 20px;
+    position: relative;
+    
+
+    .cr-copyable-text-field {
+      border: none;
+
+      input {
+        margin: 0;
+      }
+    }
+  }
 
   &__header {
     background: var(--subheader-background-color);
-    border-bottom: 2px solid var(--divider-color-level-2);
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid var(--divider-color-level-2);
     color: var(--primary-text-color);
-    font-size: calc(var(--gap) * 2.33);
+    font-size: 20px;
+    line-height: 24.2px;
+    font-weight: 700;
     font-style: normal;
-    height: calc(var(--gap) * 9.66);
-    line-height: calc(var(--gap) * 9.66);
+    /* height: calc(var(--gap) * 9.66); */
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    /* text-align: center; */
     width: 100%;
-    height: 40px;
-    
+    height: 80px;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
 
     img, svg {
       cursor: pointer;
@@ -40,13 +68,16 @@
       width: 100%;
 
       legend {
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17.36px;
+        color: var(--primary-text-color);
+
       }
 
       &:focus-within {
         legend {
-          color: var(--input-legend-color-active);
+          color: var(--primary-text-color);
         }
       }
     }
@@ -55,7 +86,7 @@
       
       background: var(--input-background-color) !important;
       border: 1px solid var(--input-border-color);
-      border-radius: calc(var(--gap) * 0.66);
+      border-radius: 12px;
       flex-grow: 1;
       overflow: hidden;
       position: relative;
@@ -71,16 +102,23 @@
           justify-content: space-between;
 
           .custom-input {
-            width: 70%;
+            width: 100%;
+
 
             input {
-              background: none;
-              height: 48px;
+              background: transparent;
+              height: 50px;
+              
             }
           }
 
+          #basic-addon1 {
+
+            display: none;
+          }
+
           .btn-primary {
-            border-radius: 0.3rem;
+            border-radius: 12px;
           }
         }
       }
@@ -136,8 +174,8 @@
       width: auto;
 
       &:focus-within {
-        border-color: var(--input-border-color-active);
-        color: var(--input-text-color-active);
+        border-color: none;
+        color: var(--input-text-color);
       }
 
       .hidden-label {
@@ -145,6 +183,11 @@
         height: 0;
         padding: 0 10px;
         visibility: hidden;
+      }
+
+      .pg-code-verification__label {
+        display: none;
+        margin-top: 30px;
       }
 
       input {
@@ -187,7 +230,7 @@
 
     &--text {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
 
       &--last {
@@ -204,20 +247,57 @@
 
 
 
+      &--title {
+        align-items: center;
+        display: flex;
+        margin: calc(var(--gap) * 2) 0;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        opacity: 1;
+
+        a {
+          color: var(--primary-cta-color) !important;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
+        }
+
+        span {
+          color: var(--primary-text-color);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
+
+        }
+
+        div {
+          padding: 0 calc(var(--gap) * 1.5) 0 calc(var(--gap) * 4.16);
+        }
+      }
+
 
       &--group {
         align-items: center;
         display: flex;
         margin: calc(var(--gap) * 2) 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        opacity: 0.84;
+        padding-left: 12px;
 
         a {
-          color: var(--primary-cta-color);
+          color: var(--primary-cta-color) !important;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
         }
 
         span {
-          font-size: 14px;
-          font-weight: 400;
           color: var(--primary-text-color);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
+
         }
 
         div {
@@ -242,19 +322,6 @@
     }
   }
 
-  &__form {
-    background: var(--body-background-color);
-    box-shadow: 0 10px 15px var(--shadow-color-level-2);
-    
-
-    .cr-copyable-text-field {
-      border: none;
-
-      input {
-        margin: 0;
-      }
-    }
-  }
 
   &__error {
     color: var(--system-red);

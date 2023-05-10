@@ -120,6 +120,8 @@ export const DepositCryptoContainer = React.memo(({selectedWalletIndex}: Deposit
     const renderDepositWarningKYC = useMemo(() => {
         return (
             <React.Fragment>
+
+                
                 <span>{translate('page.body.wallets.warning.deposit.verification')}</span>
                 <Link to="/confirm" className="cr-warning-message--button">
                     <span>{translate('page.body.wallets.warning.deposit.verification.button')}</span>

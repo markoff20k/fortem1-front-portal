@@ -10636,7 +10636,7 @@ button, a {
   z-index: 1000;
 }
 .dropdown-menu.show {
-  top: 100% !important;
+  
 }
 
 .dropdown-menu-right {

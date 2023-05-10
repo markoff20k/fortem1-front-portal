@@ -29,6 +29,7 @@ import {
 
 import enIcon from 'src/assets/images/sidebar/en.svg';
 import ptIcon from 'src/assets/images/sidebar/pt.svg';
+import GlobeIcon from './Globe.svg';
 
 import {
     
@@ -121,8 +122,10 @@ class NavBarComponent extends React.Component<Props> {
                     <div className="btn-group pg-navbar__header-settings__account-dropdown-menu ">
                         <Dropdown>
                             <Dropdown.Toggle variant="primary" id={languageClassName}>
-                                <img src={this.getLanguageIcon(lang)} alt={lang} />
+                                <img src={GlobeIcon} alt={lang} />
                                 {/* <span className="dropdown-menu-language-selected">{languageName}</span> */}
+                                {/* <HiLightBulb size={22} /> */}
+
                             </Dropdown.Toggle>
                             <Dropdown.Menu>{this.getLanguageDropdownItems()}</Dropdown.Menu>
                         </Dropdown>
@@ -187,6 +190,8 @@ class NavBarComponent extends React.Component<Props> {
                 <div className="dropdown-row">
                     <img src={this.getLanguageIcon(l)} alt={l} />
                     <span>{l.toUpperCase()}</span>
+                    {l.toUpperCase() === 'PT' && <span> - Português</span> }
+                    {l.toUpperCase() === 'EN' && <span> - Inglês</span> }
                 </div>
             </Dropdown.Item>
         ));

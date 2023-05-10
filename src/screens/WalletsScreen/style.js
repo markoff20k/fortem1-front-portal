@@ -3,9 +3,11 @@ import imgGrafic from "../../assets/grafic.svg";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #131313;
   position: absolute;
+  overflow-y: auto;
+  overflow-x: auto;
 `;
 
 export const Content = styled.div`
@@ -24,8 +26,8 @@ export const Content = styled.div`
   // }
 `;
 
-export const Graphic = styled.div`
-  width: 100%;
+export const Dashboard = styled.div`
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,16 +35,25 @@ export const Graphic = styled.div`
   .patrimony {
     padding: 0;
     padding-right: 20px;
+    flex: 1;
+    height: 100%;
+    
 
     .patrimony-total,
     .patrimony-available {
-      padding: 20px 150px 20px 20px;
+      padding: 20px 20px 20px 20px;
       border-radius: 10px;
       // background-color: ${(props) => props.theme.backgroundCards};
       background-color: var(--header-background-color);
+      // width: 100%;
+      max-width: 100%;
 
       p {
         margin-bottom: 20px;
+        font-family: : 'Inter';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
       }
 
       span {
@@ -54,6 +65,11 @@ export const Graphic = styled.div`
 
       h4 {
         margin-bottom: 30px;
+        font-family: : 'Inter';
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+
       }
 
       .btn-deposit {
@@ -68,7 +84,7 @@ export const Graphic = styled.div`
           &:nth-child(2) {
             margin-left: 20px;
             border: 1px solid #009991;
-            color: var(--primary-text-color);
+            color: #16837C;
             background-color: transparent;
             padding: 12px 18px;
           }
@@ -85,7 +101,7 @@ export const Graphic = styled.div`
     flex: 1;
     border-radius: 10px;
     background-color: var(--header-background-color);
-    height: 360px;
+    height: 378px;
 
     .patrimony-graphic-top {
       display: flex;

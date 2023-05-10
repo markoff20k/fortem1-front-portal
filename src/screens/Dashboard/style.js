@@ -75,6 +75,14 @@ export const CardsPatrimony = styled.div`
   margin-top: 30px;
 `;
 
+export const CardsAnnoucement = styled.div`
+  width: 100%;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  
+`;
+
 export const Carousel = styled.div`
   width: 100%;
   height: 420px;

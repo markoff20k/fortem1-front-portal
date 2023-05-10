@@ -35,24 +35,28 @@ export const WalletsHeader: React.FunctionComponent<ParentProps> = (props: Paren
 
     return (
         <div className="cr-wallets-header">
-            <div className="cr-wallets-header__search">
-                <FilterInput
-                    data={wallets}
-                    onFilter={handleFilter}
-                    filter={searchFilter}
-                    placeholder={intl.formatMessage({id: 'page.body.wallets.overview.seach'})}
-                />
+            {/* 'page.header.navbar.wallets' */}
+            <p> {intl.formatMessage({id: 'page.header.navbar.wallets'})}</p>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'center'}}>
+                <div className="cr-wallets-header__search">
+                    <FilterInput
+                        data={wallets}
+                        onFilter={handleFilter}
+                        filter={searchFilter}
+                        placeholder={intl.formatMessage({id: 'page.body.wallets.overview.seach'})}
+                    />
+                </div>
+                <Form className="cr-wallets-header__checkbox" onClick={handleToggleCheckbox}>
+                    <Form.Check
+                        type="checkbox"
+                        custom
+                        id="nonZeroSelected"
+                        checked={nonZeroSelected}
+                        readOnly={true}
+                        label={intl.formatMessage({id: 'page.body.wallets.overview.nonZero'})}
+                    />
+                </Form>
             </div>
-            <Form className="cr-wallets-header__checkbox" onClick={handleToggleCheckbox}>
-                <Form.Check
-                    type="checkbox"
-                    custom
-                    id="nonZeroSelected"
-                    checked={nonZeroSelected}
-                    readOnly={true}
-                    label={intl.formatMessage({id: 'page.body.wallets.overview.nonZero'})}
-                />
-            </Form>
         </div>
     );
 };

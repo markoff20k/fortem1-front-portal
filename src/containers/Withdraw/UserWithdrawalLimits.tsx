@@ -78,9 +78,9 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
     const renderTime = useCallback((period) => {
         switch (period) {
             case 'D':
-                return 'in 24 hours';
+                return 'em 24 horas';
             case 'M':
-                return 'in 1 month';
+                return 'em 1 mês';
             default:
                 return;
         }

@@ -239,7 +239,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							</div>
 
 							<div className="pricing-footer mb--10 mt--20">
-								<button type="button" className="btn btn-primary btn-block btn-lg mt--20" onClick={handleDetailClick}>Comprar Token</button>
+								<button type="button" className="btn btn-primary btn-block btn-lg mt--20" style={{borderRadius: '10px'}} onClick={handleDetailClick}>Comprar Token</button>
 								<a className="btn-more mt--10"  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
 							</div>
 						</ul>

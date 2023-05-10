@@ -10,11 +10,13 @@
     display: flex;
     flex-grow: 2;
     justify-content: space-between;
+    width: 100%;
   }
 
   &__image-icon {
-    margin-right: 12px;
+    margin-right: 16px;
     width: 42px;
+    border-radius: 50%;
   }
 
   .cr-wallet-item {
@@ -32,9 +34,10 @@
     &__currency,
     &__amount-locked {
       background: transparent;
-      color: var(--secondary-contrast-cta-color);
+      color: var(--primary-text-color);
       display: flex;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 500;
       line-height: 22px;
       padding-top: 0;
 

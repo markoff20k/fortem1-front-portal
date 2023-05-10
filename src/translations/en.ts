@@ -18,6 +18,7 @@ export const en = {
 
     'page.header.navbar.profile': 'Profile',
     'page.header.navbar.logout': 'Logout',
+    'page.header.navbar.account': 'Account:',
 
     'page.sidebar.group.text': 'Fee Group:',
     'page.sidebar.group.value': 'Base',
@@ -118,8 +119,8 @@ export const en = {
 
 
     /* Landing */
-    'page.body.landing.header.button1': 'profile',
-    'page.body.landing.header.button2': 'log in',
+    'page.body.landing.header.button1': 'Profile',
+    'page.body.landing.header.button2': 'Log in',
     'page.body.landing.header.button3': 'Register',
     'page.body.landing.header.register': 'Register',
     'page.body.landing.header.login': 'Login',
@@ -182,7 +183,7 @@ export const en = {
 
     'page.body.wallets.locked': 'Locked',
     'page.body.wallets.balance': 'Balance',
-    'page.body.wallets.balance.spot': 'Spot Balance',
+    'page.body.wallets.balance.spot': 'Available',
     'page.body.wallets.balance.available': 'Available',
     'page.body.wallets.tabs.deposit': 'Deposit',
     'page.body.wallets.tabs.deposit.disabled.message': 'Deposit was disabled by administration',
@@ -213,8 +214,8 @@ export const en = {
     'page.body.wallets.tabs.deposit.fiat.bankName': 'Bank Name',
     'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Account number',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Account name',
-    'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Phone Number',
-    'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Your reference code',
+    'page.body.wallets.tabs.deposit.fiat.agencyNumber': 'Phone Number',
+    'page.body.wallets.tabs.deposit.fiat.CNPJ': 'CNPJ',
     'page.body.wallets.table.pending': 'Pending',
     'page.body.wallets.table.confirming': 'Confirming',
     'page.body.wallets.table.rejected': 'Rejected',
@@ -450,6 +451,7 @@ export const en = {
     'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Enabled',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.disable': 'Disabled',
     'page.body.profile.header.account.content.twoFactorAuthentication.header': 'Two factor authentication (2FA)',
+    'page.body.profile.header.account.content.twoFactorAuthentication.message.title': 'São três passos simples para habilitar a autenticação de dois fatores com o Google Authenticator e proteger ainda mais suas transações financeiras. [TRADUZIR]',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.1': 'Download and install Google Authenticator application from ',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.or': 'or ',
     'page.body.profile.header.account.content.twoFactorAuthentication.message.2': 'Scan QR code or use secret MFA code:',
@@ -1355,8 +1357,8 @@ export const en = {
     'page.body.wallets.tab.spot': 'Main account',
     'page.body.wallets.tab.p2p': 'P2P',
     'page.body.wallets.tab.transfer': 'Transfer',
-    'page.body.wallets.overview.header.wallet': 'Wallet',
-    'page.body.wallets.overview.header.total': 'Total balance',
+    'page.body.wallets.overview.header.wallet': 'Asset',
+    'page.body.wallets.overview.header.total': 'Quantity',
     'page.body.wallets.overview.header.estimated': 'Estimated value',
     'page.body.wallets.overview.header.spot': 'Spot balance',
     'page.body.wallets.overview.header.p2p': 'P2P balance',

@@ -134,8 +134,9 @@ const WalletsOverview: FC<Props> = (props: Props): ReactElement => {
                         </span>
                     ) : (<CryptoIcon className="cr-wallets-table__wallet--icon" code={currency?.toUpperCase()} />)}
                     <div className="cr-wallets-table__wallet--description">
-                        <span className="bold">{currency?.toUpperCase()}</span>
                         <span className="secondary">{name}</span>
+                        <span className="bold">{currency?.toUpperCase()}</span>
+                        
                     </div>
                 </div>,
                 <Decimal key={index} fixed={fixed} thousSep=",">{totalBalance ? totalBalance.toString() : '0'}</Decimal>,

@@ -170,7 +170,7 @@ export const SignInScreen: React.FC = () => {
                         isMobile={isMobileDevice}
                         isLoading={loading}
                         onSubmit={handle2FASignIn}
-                        title={formatMessage({ id: 'page.password2fa' })}
+                        title=""
                         buttonLabel={formatMessage({ id: 'page.header.signIn' })}
                         message={formatMessage({ id: 'page.password2fa.message' })}
                         otpCode={otpCode}

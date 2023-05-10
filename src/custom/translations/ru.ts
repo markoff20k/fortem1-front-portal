@@ -15,6 +15,7 @@ export const ru: LangType = {
 
     'page.header.navbar.profile': 'Профиль',
     'page.header.navbar.logout': 'Выйти',
+    'page.header.navbar.account': 'Conta:',
 
     'page.sidebar.group.text': 'Fee Group:',
     'page.sidebar.group.value': 'Base',
@@ -218,7 +219,7 @@ export const ru: LangType = {
     'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Номер счета',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Имя счета',
     'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Номер телефона',
-    'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Ваш уникальный код',
+    'page.body.wallets.tabs.deposit.fiat.CNPJ': 'Ваш уникальный код',
     'page.body.wallets.table.pending': 'Обрабатывается',
     'page.body.wallets.table.confirming': 'Подтверждается',
     'page.body.wallets.table.rejected': 'Отклонен',

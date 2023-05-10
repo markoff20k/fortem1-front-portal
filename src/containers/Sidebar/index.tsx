@@ -187,7 +187,7 @@ class SidebarContainer extends React.Component<Props, State> {
                             </p>
                             <p className="pg-sidebar-wrapper-profile-area-text-account">
                                 {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}
-                                Conta: <span className='pg-sidebar-wrapper-profile-area-text-fid'>{this.props.user.uid}</span>
+                                <FormattedMessage id={'page.header.navbar.account'} /> <span className='pg-sidebar-wrapper-profile-area-text-fid'>{this.props.user.uid}</span>
                             </p>
 
 

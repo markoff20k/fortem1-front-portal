@@ -421,11 +421,16 @@ input:-webkit-autofill {
 }
 
 .cr-tab-panel {
+
+  background: var(--tab-panel-background-color);
+  border-radius: 12px;
+
+
   &__navigation-container {
     background: var(--tab-panel-background-color);
-    border-bottom: 1px solid var(--tab-panel-border-line-color);
+    /* border-bottom: 1px solid var(--tab-panel-border-line-color);
     border-top-left-radius: var(--gap);
-    border-top-right-radius: var(--gap);
+    border-top-right-radius: var(--gap); */
 
     &-navigation {
       box-shadow: none;
@@ -434,10 +439,10 @@ input:-webkit-autofill {
 
   .cr-tab {
     box-shadow: none;
-    color: var(--tab-panel-text-color);
+    color: var(--primary-text-color);
     cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     padding-bottom: calc(var(--border-radius) * 2);
     padding-top: 14px;
     text-transform: none;
@@ -449,7 +454,7 @@ input:-webkit-autofill {
     }
 
     &__active {
-      color: var(--tab-panel-text-color-active);
+      color: #16837C;
 
       .cr-tab__pointer {
         background: var(--tab-panel-border-color-active);

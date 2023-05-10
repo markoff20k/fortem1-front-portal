@@ -18,23 +18,24 @@ export interface DepositFiatProps {
 const bankData = uid => [
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.bankName" />,
-        value: 'Diamant Bank',
+        value: 'Banco BTG (238)',
     },
     {
+        key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.agencyNumber" />,
+        value: '0050',
+    },
+
+    {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountNumber" />,
-        value: '10120212',
+        value: '453216-9',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountName" />,
-        value: 'name',
+        value: 'Fortem1 Digital Assets Technology S/A',
     },
     {
-        key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.phoneNumber" />,
-        value: '+3 8093 1212 12 12',
-    },
-    {
-        key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.referenceCode" />,
-        value: uid,
+        key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.CNPJ" />,
+        value: '50.093.874/0001-09',
     },
 ];
 

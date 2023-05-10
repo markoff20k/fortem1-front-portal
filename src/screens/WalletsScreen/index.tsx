@@ -8,7 +8,7 @@ import { CanCan, EstimatedValue, WalletsOverview, WalletsP2P, WalletsSpot, Walle
 import { useDocumentTitle, useP2PWalletsFetch, useWalletsFetch } from 'src/hooks';
 import { selectAbilities, selectCurrencies, selectP2PWallets, selectWallets, Wallet } from 'src/modules';
 
-import { Container, Content, Graphic, Report } from "./style";
+import { Container, Content, Dashboard, Report } from "./style";
 import imgBTC from "../../assets/BTC.svg";
 import imgLogoIcon from "../../assets/logo-icon-dark.svg";
 
@@ -112,20 +112,35 @@ export const WalletsScreen: FC = (): ReactElement => {
         options: {
           labels: ["Reais", "Tokens", "Criptomoedas"],
           colors: ["#11ECC7", "#F9A912", "#009991"],
-          chart: {
-            width: 680,
-            type: 'donut',
+        //   chart: {
+        //     width: 680,
+        //     type: 'donut',
+        //   },
+        
+          fill: {
+            type: 'gradient',
+          },
+          stroke: {
+            show: false,
+          },
+          plotOptions: {
+            pie: {
+              startAngle: -90,
+              endAngle: 270
+            }
           },
           legend: {
             show: true,
-            position: "right",
+            // position: 'right',
             // horizontalAlign: "center",
-            verticalAlign: "middle",
+            // verticalAlign: 'middle',
             floating: false,
             fontSize: "18px",
-            color: "rgb(0,0,0)",
             offsetX: -40,
-            offsetY: 20,
+            offsetY: 30,
+          },
+          dataLabels: {
+            enabled: true
           },
           responsive: [
             {
@@ -251,9 +266,9 @@ export const WalletsScreen: FC = (): ReactElement => {
         //   !props.isOpened ? { width: "calc(100vw - 130px)", left: 110 } : {}
         // }
       >
-        <Graphic>
+        <Dashboard>
           <div className="patrimony">
-            <div className="patrimony-total">
+            <div className="patrimony-total col-md-5">
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
@@ -266,11 +281,11 @@ export const WalletsScreen: FC = (): ReactElement => {
               </h4>
               <span>+ 13,87%</span>
             </div>
-            <div className="patrimony-available">
+            <div className="patrimony-available col-md-5">
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Disponível em fiat
+                Disponível em reais
               </p>
               <h4
                 style={{ color: "var(--primary-text-color)" }}
@@ -283,7 +298,7 @@ export const WalletsScreen: FC = (): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="patrimony-graphic">
+          <div className="patrimony-graphic col-md-7">
             <div className="patrimony-graphic-top">
               <p
                 style={{ color: "var(--primary-text-color)" }}
@@ -336,7 +351,7 @@ export const WalletsScreen: FC = (): ReactElement => {
               </div> */}
             </div>
           </div>
-        </Graphic>
+        </Dashboard>
         <Report>
           {/* <div className="reports">
             <p style={{ color: "var(--primary-text-color)" }} >
@@ -475,12 +490,14 @@ export const WalletsScreen: FC = (): ReactElement => {
 
       <div className="pg-wallets-tab">
                 <div className="pg-wallets-tab__tabs-content">
+                
                     <TabPanel
                         panels={renderTabs()}
                         onTabChange={onTabChange}
                         currentTabIndex={currentTabIndex}
                         onCurrentTabChange={onCurrentTabChange}
                     />
+                    
                 </div>
             </div>
 

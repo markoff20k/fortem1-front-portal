@@ -1,5 +1,6 @@
 .cr-dropdown {
-  background-color: var(--input-background-color);
+  
+  background-color: var(--sidebar-item-background-color-hover) !important;
   outline: none;
   position: relative;
 
@@ -18,7 +19,8 @@
 
     &-toggle {
       align-items: center;
-      background: var(--input-background-color) ;
+      
+      background-color: var(--sidebar-item-background-color-hover) !important;
       border: 1px solid var(--input-border-color);
       color: var(--input-placeholder-color);
       display: flex;
@@ -60,11 +62,13 @@
     }
 
     &-menu {
-      background: var(--dropdown-background-color);
+      background-color: var(--sidebar-item-background-color-hover) !important;
+      background: var(--sidebar-item-background-color-hover) !important;
       padding: 0;
       width: 100%;
       box-shadow: 0px 6px 12px var(--header-shadow-color-level-1);
       border: none;
+      opacity: 1 !important;
     }
 
     &-item {
@@ -77,7 +81,7 @@
       &:hover,
       &:focus,
       &:active {
-        background: var(--dropdown-background-color-hover);
+        background-color: var(--sidebar-item-background-color-hover) !important;
         color: var(--dropdown-text-color-hover);
         outline: none;
         transition: 0.2s;

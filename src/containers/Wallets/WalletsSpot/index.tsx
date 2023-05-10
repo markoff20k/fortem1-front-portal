@@ -302,8 +302,8 @@ class WalletsSpotComponent extends React.Component<Props, WalletsState> {
                     <div className="text-center">
                         {walletsLoading && <Spinner animation="border" variant="primary" />}
                     </div>
-                    <div className={`row no-gutters pg-wallet__tabs-content ${!historyList.length && 'pg-wallet__tabs-content-height'}`}>
-                        <div className={`col-md-3 col-sm-12 col-12 ${mobileWalletChosen && 'd-none d-md-block'}`}>
+                    <div className={`pg-wallet__tabs-content ${!historyList.length && 'pg-wallet__tabs-content-height'}`}>
+                        <div className={`pg-wallet__tabs ${mobileWalletChosen && 'd-none d-md-block'}`}>
                             <WalletsHeader
                                 wallets={wallets}
                                 nonZeroSelected={nonZeroSelected}
@@ -321,7 +321,7 @@ class WalletsSpotComponent extends React.Component<Props, WalletsState> {
                                 tickers={tickers}
                             />
                         </div>
-                        <div className={`pg-wallet__tabs col-md-9 col-sm-12 col-12 ${!mobileWalletChosen && 'd-none d-md-block'}`}>
+                        <div className={`pg-wallet__tabs col-md-7 col-sm-12 ${!mobileWalletChosen && 'd-none d-md-block'}`}>
                             <TabPanel
                                 panels={this.renderTabs()}
                                 onTabChange={(_, label) => this.onTabChange(label)}

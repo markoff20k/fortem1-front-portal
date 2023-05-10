@@ -43,13 +43,15 @@ const CurrencyInfo: React.FunctionComponent<CurrencyInfoProps> = (props: Currenc
                         <FormattedMessage id="page.body.wallets.balance.spot"/>
                     </span>
                     <span className="cr-wallet-item__balance-amount">
-                        <Decimal fixed={selectedFixed} thousSep=",">{balance}</Decimal>
+                        <Decimal fixed={selectedFixed} thousSep=",">{balance}</Decimal> 
+                        <span> {currency} </span>
+                        
                     </span>
-                    <span className="cr-wallet-item__currency">
+                    {/* <span className="cr-wallet-item__currency">
                         {currency}
-                    </span>
+                    </span> */}
                 </div>
-                <div>
+                {/* <div>
                     <span className="cr-wallet-item__balance">
                         <FormattedMessage id="page.body.wallets.balance.available"/>
                     </span>
@@ -59,17 +61,18 @@ const CurrencyInfo: React.FunctionComponent<CurrencyInfoProps> = (props: Currenc
                     <span className="cr-wallet-item__currency">
                         {currency}
                     </span>
-                </div>
+                </div> */}
                 <div>
                     <div className="cr-wallet-item__amount-locked">
                         <FormattedMessage id="page.body.wallets.locked" />
                     </div>
                     <span className="cr-wallet-item__balance-locked">
                         <Decimal fixed={selectedFixed} thousSep=",">{stringLocked}</Decimal>
+                        <span> {currency} </span>
                     </span>
-                    <span className="cr-wallet-item__currency">
+                    {/* <span className="cr-wallet-item__currency">
                         {currency}
-                    </span>
+                    </span> */}
                 </div>
                 <div>
                     {CanCan.checkAbilityByAction('read', 'P2P', abilities) && (
