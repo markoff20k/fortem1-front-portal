@@ -1,15 +1,31 @@
 @import './BeneficiariesCrypto/BeneficiariesBlockchainItem.pcss';
 
 .pg-beneficiaries {
-  &__modal.cr-modal {
+  &__modal .cr-modal {
+
+    close {
+
+      width: 40px;
+      height: 40px;
+
+    }
     background: var(--body-background-color);
     height: 100%;
     overflow-y: auto;
     justify-content: flex-start;
     width: 100%;
 
-    .cr-email-from__group-button,
-    .cr-email-from__group-button:focus, {
+    svg {
+      width: 200px;
+    }
+
+
+    .custom-input {margint-top: 40px;}
+    custom-input {margint-top: 40px;}
+    .cr-email-form__form-content {margin-top: -40px;}
+    .cr-tab-content cr-tab-content__active {margin-top: -40px;}
+    .cr-email-form__group-button,
+    .cr-email-form__group-button:focus, {
       background: none;
       border: 1px solid var(--secondary-contrast-cta-color-level-4);
       bottom: 45px;
@@ -41,12 +57,12 @@
     }
 
     .cr-dropdown {
-      border-radius: 4px;
+      border-radius: 12px;
       height: 48px;
       margin-bottom: 24px;
 
       .dropdown-menu {
-        border-radius: 4px;
+        border-radius: 12px;
         box-shadow: 0 6px 12px var(--header-shadow-color-level-1);
       }
 
@@ -69,12 +85,36 @@
         }
       }
     }
+    .cr-email-form__option-inner {
+
+      svg {
+        width: 100px;
+      }
+    
+    }
+
+
 
     .cr-email-form {
+
+      &__option-inner {
+
+      }
+
       &__options {
         border: none;
 
         &-group {
+
+          svg {
+            width: 200px;
+          }
+
+          img {
+            width: 200px;
+          }
+
+
           .cr-email-form__option {
             border: none;
 
@@ -86,10 +126,19 @@
                 position: relative;
                 right: 34px;
               }
+
+              svg {
+                width: 200px;
+              }
+
+              img {
+                max-width: 200px;
+              }
             }
           }
         }
       }
+
 
       &__button {
         &-wrapper {
@@ -104,14 +153,20 @@
     }
 
     .cr-tab-panel {
+
+      display: none !important;
+
       .cr-tab-panel__navigation-container {
         margin-top: 24px;
         padding: 0;
+        display: none !important;
 
         &-navigation {
-          width: 100%;
+          display: none !important;
+          
 
           .cr-tab {
+            display: none !important;
             align-items: center;
             border: 1px solid var(--divider-color-level-1);
             border-right: none;
@@ -158,11 +213,13 @@
 
       .cr-tab-content {
         padding: 0;
+        margin-top: -60px;
       }
     }
 
     .beneficiaries-add-address-modal,
     .beneficiaries-confirmation-modal {
+      
       .cr-email-form {
         background: none;
         box-shadow: none;
@@ -199,8 +256,8 @@
 
   &__add {
     align-items: center;
-    background-color: var(--beneficiaries-primary-0-06);
-    border-radius: 4px;
+    background: var(--input-background-color);
+    border-radius: 14px;
     cursor: pointer;
     display: flex;
     height: 50px;
@@ -210,7 +267,7 @@
 
     &__label {
       color: var(--primary-text-color);
-      font-size: 12px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 500;
       line-height: 12px;
@@ -228,6 +285,8 @@
   }
 
   .beneficiaries-add-address-modal--coin .cr-email-form {
+
+    margin-top: -100px;
     .pg-beneficiaries {
       &__error-text {
         color: var(--system-red);
@@ -264,8 +323,9 @@
 
   &__dropdown {
     align-items: center;
-    background-color: var(--beneficiaries-primary-0-06);
-    border-radius: 4px;
+    background: var(--input-background-color) !important;
+    color: var(--input-text-color);
+    border-radius: 12px;
     cursor: pointer;
     display: flex;
     position: relative;
@@ -273,6 +333,7 @@
     width: 100%;
 
     &__select,
+    
     .select {
       align-items: center;
       display: flex;
@@ -291,8 +352,8 @@
         width: 75%;
 
         &__title {
-          color: var(--secondary-contrast-cta-color);
-          font-size: 12px;
+          color: var(--primary-text-color);
+          font-size: 14px;
           font-style: normal;
           font-weight: 500;
           line-height: 15px;
@@ -300,7 +361,7 @@
 
         &__address {
           color: var(--primary-text-color);
-          font-size: 12px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 500;
           line-height: 15px;
@@ -338,7 +399,7 @@
         &__select,
         &__pending {
           color: var(--secondary-contrast-cta-color);
-          font-size: 12px;
+          font-size: 14px;
           font-style: normal;
           font-weight: normal;
           line-height: 12px;
@@ -635,3 +696,4 @@
     }
   }
 }
+

@@ -303,13 +303,13 @@ export const pt: LangType = {
 
     'page.body.wallets.beneficiaries.addAddressModal.body.coinAddress': 'Endereço Blockchain',
     'page.body.wallets.beneficiaries.addAddressModal.body.invalidAddress': 'Endereço inválido',
-    'page.body.wallets.beneficiaries.addAddressModal.body.testnetAddress': 'ATENÇÃO! Este é um endereço de TESNET',
-    'page.body.wallets.beneficiaries.addAddressModal.body.coinBeneficiaryName': 'Beneficiary Name',
+    'page.body.wallets.beneficiaries.addAddressModal.body.testnetAddress': 'ATENÇÃO! Este é um endereço TESNET',
+    'page.body.wallets.beneficiaries.addAddressModal.body.coinBeneficiaryName': 'Nome da carteira',
     'page.body.wallets.beneficiaries.addAddressModal.body.coinDescription': 'Descrição (opcional)',
     'page.body.wallets.beneficiaries.addAddressModal.body.coinDestinationTag': 'Destination Tag (optional)',
     'page.body.wallets.beneficiaries.addAddressModal.body.otpCode': 'Digite seu token 2FA de 6 dígitos',
 
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Beneficiary Name',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Fiat Name Destino',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Nome completo',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'Conta',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Banco',

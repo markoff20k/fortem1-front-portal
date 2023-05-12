@@ -474,15 +474,16 @@ const BeneficiariesComponent: React.FC<Props> = (props: Props) => {
     const renderBeneficiariesModal = React.useMemo(() => {
         return (
             <div className="cr-modal pg-beneficiaries__modal">
-                <div className="cr-email-form__options-group">
-                    <div className="cr-email-form__option">
-                        <div className="cr-email-form__option-inner">
+                {/* <div className="cr-email-form__options-group"> */}
+                    {/* <div className="cr-email-form__option"> */}
+                        {/* <div className="cr-email-form__option-inner">
                             <LogoIcon />
                             <HugeCloseIcon className="cr-email-form__option-inner-close" onClick={() => handleCloseModals()}/>
-                        </div>
-                    </div>
-                </div>
-                <h3>{renderTitle}</h3>
+                        </div> */}
+                    {/* </div> */}
+                {/* </div> */}
+                {/* <h3>{renderTitle}</h3> */}
+                <HugeCloseIcon className="close" onClick={() => handleCloseModals()}/>
                 {renderTabPanel}
             </div>
         );
@@ -527,7 +528,7 @@ const BeneficiariesComponent: React.FC<Props> = (props: Props) => {
                         type="text"
                         placeholder="X"
                         inputMode="decimal"
-                        showPaste2FA={true}
+                        showPaste2FA={false}
                         isMobile={isMobileDevice}
                     />
                 </div>
