@@ -21,6 +21,7 @@ export const Content = styled.div`
   right: 0;
   padding: 35px 10px;
   background-color: #131313;
+  margin-top: 20px;
 
   @media screen and (max-width: 1440px) {
   
@@ -68,6 +69,7 @@ export const Button = styled.button`
   background: var(--button-primary-cta-background-color);
   cursor: pointer;
   padding: 12px 22px;
+  border: none;
 `;
 
 export const CardsPatrimony = styled.div`
@@ -164,15 +166,15 @@ export const Deposit = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: 20px;
-
+    // margin-top: 20px;
 
     p {
       color: var(--primary-text-color);
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 22px;
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       align-self: flex-start;
     }
 
@@ -194,6 +196,7 @@ export const Deposit = styled.div`
       border-radius: 10px;
       outline: none;
       padding-left: 15px;
+      // margin-bottom: 20px;
       
 
       &::-webkit-input-placeholder {
@@ -213,11 +216,12 @@ export const Deposit = styled.div`
 
     .btn-ajuste {
       width: 90%;
-      border: none;
+      border: none !important;
       border-radius: 10px;
       padding: 12px;
       color: var(--primary-text-color);
-      border: 1px solid #009991;
+      // border: 1px solid #009991;
+      background: #555555 !important;
     }
 
     .btn-ver {
@@ -262,7 +266,7 @@ export const Tokens = styled.div`
 
     button {
       padding: 10px 15px;
-      border: none;
+      border: none !important;
       border-radius: 10px;
       outline: none;
       background-color: var(--sidebar-item-background-color-hover) !important;
@@ -343,7 +347,7 @@ export const Knowledge = styled.div`
     button {
       color: var(--primary-text-color);
       padding: 10px 15px;
-      border: none;
+      border: none !important;
       border-radius: 10px;
       outline: none;
       

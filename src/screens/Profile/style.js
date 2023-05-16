@@ -1,36 +1,51 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100vw;
-  width: 100%;
-  height: 100vh;
+display: flex;
+justify-content: center;
+position: relative;
+height: 100vh;
+background-color: #131313;
 `;
 
 export const Content = styled.div`
-  max-width: calc(100vw - 350px);
-  width: 100%;
+  // // max-width: calc(100vw - 350px);
+  // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 130px;
-  left: 325px;
+  
+  // top: 130px;
+  // left: 325px;
+  left: 2%;
+  right: 2%;
   border-radius: 20px;
-  background-color: ${(props) => props.theme.backgroundCards};
+  height: 80%;
+  background-color: var(--header-background-color);
+  
+  padding: 35px 10px;
+  
+  margin-top: 30px;
+  // margin-bottom: 130px;
+  // height: calc(100vh - 230px);
+
 
   @media screen and (max-width: 1440px) {
-    max-width: calc(100vw - 321px);
-    top: 105px;
-    left: 277px;
+    // max-width: calc(100vw - 321px);
+    // top: 105px;
+    // left: 277px;
   }
 
   .header-profile {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    // margin-top: 20px;
+    margin-bottom: 20px;
+    
 
     .btn-gerencial {
       width: 100%;
@@ -50,10 +65,11 @@ export const Content = styled.div`
 
       button {
         border: none;
+        border: 1px solid var(--input-border-color);
         padding: 12px 20px;
         margin: 0 10px;
         border-radius: 15px;
-        background-color: ${(props) => props.theme.backgroundTertiary};
+        background-color: var(--input-background-color);
 
         @media screen and (max-width: 1440px) {
           font-size: 14px;

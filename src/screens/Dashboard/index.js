@@ -33,8 +33,10 @@ import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/FastDeposit/QRCode";
 
 
-import { HomepageMarket, MarketsList } from '../../containers';
-import { Sidebar } from '../../containers';
+import { Sidebar, HomepageMarket, MarketsList } from '../../containers';
+import { UserWithdrawalLimits } from '../../containers/Withdraw/UserWithdrawalLimits';
+
+
 
 import BlogList from "../../components/blog/itemProp/BlogList";
 
@@ -172,15 +174,19 @@ export function Dashboard() {
                 Quanto você quer depositar?
               </p>
               <input className="input" type="text" placeholder="R$ 0,00" />
-              <span
+              <br/>
+              
+              {/* <span
                 style={{ color: "var(--primary-text-color)" }}
               >
                 Você ainda pode depositar: R$ 50.000,00 este mês
-              </span>
+                
+              </span> */}
+              <UserWithdrawalLimits/>
             </div>
             <div className="buttons">
-              <button style={{borderRadius: '12px', padding: '12px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
-              <button style={{borderRadius: '12px', padding: '12px 18px', color: '#11ECC7', background: 'transparent'}} className="btn btn-primary-outline btn-block">Aumentar limites</button>
+              <button style={{borderRadius: '12px', padding: '10px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
+              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent'}} className="btn btn-primary-outline btn-block">Aumentar limites</button>
             </div>
           </Deposit>
         </Carousel>
@@ -197,11 +203,11 @@ export function Dashboard() {
           </div>
           <SlidTokens>
             {/* <TokensSlid  /> */}
-            <SaleListTablesUpcoming />
+            {/* <SaleListTablesUpcoming /> */}
             
             
           </SlidTokens> 
-          {/* <SaleListTablesUpcoming /> */}
+          <SaleListTablesUpcoming />
         </Tokens>
         <Criptos>
           <Tables>
@@ -286,7 +292,7 @@ export function Dashboard() {
                 </span>
               </div>
               <div className="buttons">
-                <button className="btn-ajuste disabled">Confirmar</button>
+                <button disabled className="btn-ajuste disabled">Confirmar</button>
               </div>
             </Deposit>
           </Negotiation>

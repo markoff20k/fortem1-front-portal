@@ -105,6 +105,8 @@ import { SaleListScreen, SaleDetailScreen } from '../../plugins/Sale';
 // import { IEODetailScreen } from '../../plugins/IEO/screen/IEODetailScreen';
 // import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';
 
+import { ProfileScreen2 } from '../../screens/ProfileScreen2';
+
 
 
 interface ReduxProps {
@@ -380,6 +382,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/:routeTab" component={ProfileScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile-old" component={ProfileScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={Profile} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/cadastro" component={ProfileScreen2} />
+                    
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab/:currency/:action" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab/:currency" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab" component={WalletsScreen} />

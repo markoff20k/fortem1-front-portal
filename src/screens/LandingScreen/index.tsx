@@ -114,7 +114,7 @@ class Landing extends React.Component<Props> {
         
         return (
     <>
-    <HeaderLanding/>
+        <div className='pg-header '> <HeaderLanding/> </div>
         <div className="pg-landing-screen" >
             
         <div className="relative isolate">

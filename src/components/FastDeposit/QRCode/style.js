@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   -webkit-box-pack: center;
+  margin-top: 80px;
   // background-color: rgba(204, 204, 204, 0.4);
   
   z-index: 9999;

@@ -567,7 +567,7 @@ export const pt: LangType = {
 
     /* Profile - verification */
     'page.body.profile.verification.email.title': 'Endereço de email válido',
-    'page.body.profile.verification.email.subtitle': 'Acesso à plataforma liberado',
+    'page.body.profile.verification.email.subtitle': 'Acesso à plataforma',
     'page.body.profile.verification.email.rejected.tooltip': 'Seu endereço de email foi recusado',
     'page.body.profile.verification.phone.title': 'Verify Phone number',
     'page.body.profile.verification.phone.subtitle': 'Para habilitar depósitos e transações financeiras',
@@ -576,10 +576,10 @@ export const pt: LangType = {
     'page.body.profile.verification.profile.subtitle': 'Depósitos, saques e transações liberados',
     'page.body.profile.verification.profile.rejected.tooltip': 'Your profile was rejected',
     'page.body.profile.verification.document.title': 'Validar sua identificação',
-    'page.body.profile.verification.document.subtitle': 'Increase Withdrawal limit to 10 BTC',
-    'page.body.profile.verification.document.rejected.tooltip': 'Your identity was rejected',
+    'page.body.profile.verification.document.subtitle': 'Limite mensal de saques e depósitos: R$ 50.000',
+    'page.body.profile.verification.document.rejected.tooltip': 'ID não aprovada',
     'page.body.profile.verification.address.title': 'Verify Proof of residence',
-    'page.body.profile.verification.address.subtitle': 'Increase Withdrawal limit to 100 BTC',
+    'page.body.profile.verification.address.subtitle': 'Limite mensal de saques e depósitos: R$ 100.000',
     'page.body.profile.verification.address.rejected.tooltip': 'Seu comprovante de residência foi recusado',
     'page.body.profile.verification.pending': 'Em análise',
     'page.body.profile.verification.reverify': 'Verificar novamente',
@@ -1430,4 +1430,14 @@ export const pt: LangType = {
 
     'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 
+    'page.body.profile.verification.document.subtitle2': 'Saques e depósitos de criptoativos: ilimitado',
+	'page.body.profile.verification.document.subtitle3': 'Saques e depósitos na rede bancária: R$ 500.000 / mês',
+
+    'page.body.profile.verification.email.subtitle2': 'Saques e depósitos cripto: não permitido',
+    'page.body.profile.verification.email.subtitle3': 'Saques e depósitos na rede bancária: não permitido',
+
+    'page.body.profile.verification.profile.subtitle2': 'Saques e depósitos cripto: R$ 100.000 /mês',
+    'page.body.profile.verification.profile.subtitle3': 'Saques e depósitos na rede bancária: R$ 100.000 /mês',
+    
+    
 };

@@ -25,12 +25,12 @@ export function Security(props) {
           <Password>
             <div>
               <h4
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 Alterar senha
               </h4>
               <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 A segurança dos seus dados é muito importante para nós. Por
                 isso, recomendamos
@@ -50,12 +50,12 @@ export function Security(props) {
           <Authentication>
             <div>
               <h4
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 Autenticação em duas etapas (2FA)
               </h4>
               <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 Habilite a autenticação de dois fatores com o Google
                 Authenticator e proteja ainda
@@ -69,19 +69,20 @@ export function Security(props) {
             </button>
           </Authentication>
           <Activities>
-            <h4 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}>
+            <h4 style={{color: 'var(--primary-text-color)'}}
+            >
               Últimas atividades na conta
             </h4>
             <div>
               <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 Chrome
                 <br />
                 2804:7f0:6840:2df8:3d77:ea30:719d:1d6f
               </p>
               <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+                style={{color: 'var(--primary-text-color)'}}
               >
                 Solicitar QR code para 2FA / <span>Processado com sucesso</span>
                 <br /> 22-02-2023 15:02:22

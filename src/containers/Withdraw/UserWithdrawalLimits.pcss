@@ -9,12 +9,13 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 22px;
-    letter-spacing: 0.1px;
+    color: var(--primary-text-color);
+    /* letter-spacing: 0.1px; */
   }
 
   &__fee-group {
     background: var(--secondary-contrast-cta-color-level-1);
-    border-radius: 4px;
+    border-radius: 6px;
     color: var(--secondary-contrast-cta-color);
     font-size: 14px;
     line-height: 22px;
@@ -32,21 +33,26 @@
 
   &__group {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 100%;
 
     &-info {
       margin-left: 8px;
+      font-size: 14px;
+      line-height: 18px;
 
       &-usdt {
         font-weight: bold;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.15px;
+        font-size: 14px;
+        line-height: 18px;
         color: var(--primary-text-color);
         display: flex;
         align-items: center;
+        top: 4px;
 
         span {
+          font-size: 14px;
+          line-height: 18px;
           font-weight: bold;
           color: var(--primary-text-color);
         }

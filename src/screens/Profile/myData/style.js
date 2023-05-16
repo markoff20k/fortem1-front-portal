@@ -11,13 +11,16 @@ export const Container = styled.div`
 `;
 
 export const MyData = styled.div`
-  width: 88%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 30px;
   border-radius: 20px;
-  background-color: ${(props) => props.theme.backgroundTertiary};
+  background-color: var(--input-background-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
 
   div {
     display: flex;
@@ -85,7 +88,7 @@ export const MyData = styled.div`
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
-    color: ${(props) => props.theme.white};
+    color: var(--primary-text-color);
     background-color: ${(props) => props.theme.primary};
   }
 `;
@@ -123,8 +126,11 @@ export const PersonalData = styled.div`
     }
 
     input {
-      color: ${(props) => props.theme.search} !important;
-      height: 1em;
+      color: var(--input-text-color) !important;
+      border: 1px solid var(--input-border-color);
+      border-radius: 12px;
+      box-sizing: border-box;
+      height: 40px;
     }
   }
 `;
@@ -163,8 +169,8 @@ export const Address = styled.div`
   }
 
   input {
-    color: ${(props) => props.theme.search} !important;
-    height: 1em;
+    color: var(--input-text-color) !important;
+    // height: 40px;
   }
 
   .input-postal {
@@ -180,23 +186,17 @@ export const Buttons = styled.div`
 
   button {
     padding: 12px 20px;
-    border: none;
+    border: none !important;
     background-color: ${(props) => props.theme.primary};
     color: ${(props) => props.theme.white};
     border-radius: 10px;
 
-    &:nth-child(1) {
-      background-color: transparent;
-      border: 1px solid ${(props) => props.theme.primary};
-      color: ${(props) => props.theme.primary};
-      margin-right: 10px;
-    }
   }
 `;
 
 export const Terms = styled.div`
-  width: 88%;
-  margin: 15px 30px;
+  width: 90%;
+  margin: 15px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,7 +208,7 @@ export const Terms = styled.div`
     justify-content: space-between;
     border: none;
     border-radius: 12px;
-    background-color: ${(props) => props.theme.backgroundTertiary};
+    background-color: var(--input-background-color);
     padding: 12px;
     margin: 0 10px;
   }

@@ -107,9 +107,9 @@ class ProfileVerificationComponent extends React.Component<Props> {
 
         return (
             <div className="pg-profile-page__box pg-profile-page-verification">
-                <h3 className="pg-profile-page-verification__title">
+                {/* <h3 className="pg-profile-page-verification__title">
                     <FormattedMessage id="page.body.profile.header.account.profile" />
-                </h3>
+                </h3> */}
                 {this.renderProgressBar(labels)}
             </div>
         );

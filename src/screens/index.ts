@@ -26,3 +26,5 @@ export * from './WalletsScreen';
 export * from './LandingScreenMobile';
 
 export * from './Dashboard';
+
+export * from './ProfileScreen2';

@@ -1403,4 +1403,14 @@ export const en = {
     'page.body.profile.whitelisted.paste': 'Paste',
 
     'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
+
+    'page.body.profile.verification.document.subtitle2': 'Saques e depósitos de criptoativos: ilimitado',
+	'page.body.profile.verification.document.subtitle3': 'Saques e depósitos na rede bancária: até R$ 100.000,00 / mês',
+
+    'page.body.profile.verification.email.subtitle2': 'Saques e depósitos cripto: não permitido',
+    'page.body.profile.verification.email.subtitle3': 'Saques e depósitos na rede bancária: não permitido',
+
+    'page.body.profile.verification.profile.subtitle2': 'Saques e depósitos cripto: R$ 100.000 /mês',
+    'page.body.profile.verification.profile.subtitle3': 'Saques e depósitos na rede bancária: R$ 100.000 /mês',
+
 };

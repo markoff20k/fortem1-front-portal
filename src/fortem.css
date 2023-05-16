@@ -1,4 +1,61 @@
+/* KYC Screen */
+.kyc {
+    /* width: 1168px; */
+    margin: 0 auto;
+    /* margin-top: 30px;
+    background-color: #181819; */
+    /* border: 1px solid var(--wallets-item-border-color); */
+    /* border-radius: 10px; */
+    padding: 30px;
+    font-size: 17px;
+    
 
+    /* margin-top: 120px; */
+}
+
+.pg-profile-page-verification {
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.pg-profile-page-verification-labels {
+    
+    display: flex;
+
+
+    align-items: center;
+    display: flex;
+    height: 460px;
+    justify-content: center;
+
+    align-items: center;
+    /* background-color: #181819; */
+    /* opacity: 0.85; */
+    /* margin: 0 auto; */
+}
+
+.pg-profile-page-verification-labels__step__info {
+    background: transparent;
+    border: 1px solid var(--sidebar-border-color);
+    border-radius: 16px;
+
+    color: var(--input-text-color);
+    box-sizing: border-box;
+    padding: 20px;
+    height: 480px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -25px;
+
+}
+
+.pg-profile-page-verification-labels__step__info__title {
+    margin-top: 30px
+}
 
 /* Layouts Variation */
 $smlg-device: 'only screen and (max-width: 1199px)';
@@ -9,6 +66,42 @@ $md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
 $sm-layout:'only screen and (max-width: 767px)';
 $large-mobile: 'only screen and (max-width: 575px)';
 $small-mobile: 'only screen and (max-width: 479px)';
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, 
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate{
+  color: var(--primary-text-color) !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+  color: var(--primary-text-color) !important;
+  border-radius: 10px !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+  color: var(--input-text-color) !important;
+  border: 1px solid var(--input-border-color) !important;
+}
+
+.MuiOutlinedInput-notchedOutline{
+  /* border-color: ${(props) => props.theme.search} !important; */
+  border: 1px solid var(--input-border-color) !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused 
+.MuiOutlinedInput-notchedOutline{
+  /* border-color: ${(props) => props.theme.search}!important; */
+  border: 1px solid var(--input-border-color) !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 10px !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  padding: 10px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
 
 
 .pg-wallet .cr-withdraw__group__address .custom-input, .pg-wallet .cr-withdraw__group__amount .custom-input, .pg-wallet .cr-withdraw__group__code .custom-input {
@@ -46,10 +139,14 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
 }
 
+#dropdown-menu-language-field {
+    background: transparent !important;
+}
 .dropdown-toggle btn btn-primary {
 
     background: transparent !important;
 }
+
 .homepage-event {
     max-height: 32px !important;
 }
@@ -614,6 +711,11 @@ hr:not([size]) {
     background-image: linear-gradient(95deg, #f5f5f5 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95%/200% 100%;
 }
 
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    
+}
+
 /* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .theme-gradient {
         color: var(--color-secondary);
@@ -643,6 +745,7 @@ hr:not([size]) {
     box-shadow: 0 6px 12px var(--header-shadow-color-level-1);
   }
 
+
 .dropdown {
     background-color: var(--sidebar-item-background-color-active) !important;
     
@@ -650,11 +753,11 @@ hr:not([size]) {
 
 .dropdown-menu.show {
 
-    top: 80px;
-    margin-top: 80px !important;
-    background-color: var(--sidebar-item-background-color-active) !important;
+    /* top: 80px; */
+    /* margin-top: 80px !important; */
+    /* background-color: var(--sidebar-item-background-color-active) !important; */
     opacity: 1 !important;
-    /* background: #272C35 !important; */
+    background: #272C35 !important;
     /* padding-right: 20px; */
     /* width: fit-content; */
     

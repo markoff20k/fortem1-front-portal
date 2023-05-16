@@ -42,3 +42,5 @@ export * from './HomepageMarket';
 export * from './Footer';
 export * from './HeaderLanding';
 export * from './HeaderLandingMobile';
+
+export * from './ProfileVerificationLabels';

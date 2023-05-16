@@ -8,6 +8,7 @@ export const Container = styled.div`
   position: absolute;
   overflow-y: auto;
   overflow-x: auto;
+  // margin-top: 100px;
 `;
 
 export const Content = styled.div`

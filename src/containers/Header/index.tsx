@@ -85,7 +85,7 @@ class Head extends React.Component<Props> {
         }
 
         return (
-            <header className={`pg-header`}>
+            <header className={`pg-header rn-header sticky `}>
                 <div className={`pg-container pg-header__content ${tradingCls}`}>
                     {!useSharedLayout() &&
                         <>
