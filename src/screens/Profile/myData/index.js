@@ -121,7 +121,7 @@ export function Mydata() {
         </div>
       </Address>
       <Buttons>
-        <button>Editar</button>
+        <button>Atualizar cadastro</button>
       </Buttons>
       <Terms>
         <button style={{color: "var(--primary-text-color)"}} >

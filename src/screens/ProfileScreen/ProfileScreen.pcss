@@ -68,16 +68,16 @@
 
   &-header {
     background: var(--subheader-background-color);
-    border-bottom: 1px solid var(--divider-color-level-2);
-    border-radius: calc(var(--gap) * 0.66) calc(var(--gap) * 0.66) 0 0;
+    /* border-bottom: 1px solid var(--divider-color-level-2); */
+    /* border-radius: calc(var(--gap) * 0.66) calc(var(--gap) * 0.66) 0 0; */
     color: var(--primary-text-color);
     display: flex;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
     margin-left: 0;
     margin-right: 0;
-    padding: 8px 24px;
-    text-transform: uppercase;
+    /* padding: 8px 24px; */
+    /* text-transform: uppercase; */
   }
 
   &__box {
@@ -267,19 +267,20 @@
   }
 
   &__activity {
-    background: var(--body-background-color);
-    border-radius: calc(var(--gap) * 0.66);
-    box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1);
-    width: 100%;
+    background: transparent;
+    margin-top: 30px;
+    /* border-radius: calc(var(--gap) * 0.66); */
+    /* box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1); */
+    /* width: 100%; */
 
     .cr-table {
       thead {
         tr {
-          border: unset !important;
+          border: none !important;
         }
 
         th {
-          font-size: 12px;
+          font-size: 16px;
 
           &:last-child {
             width: unset;
@@ -289,12 +290,17 @@
 
       tr,
       td {
-        border-top: 1px solid var(--table-border-color);
+        /* border-top: 1px solid var(--table-border-color); */
+        font-family: 'Inter';
         color: var(--primary-text-color);
-        font-size: 14px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        /* width: 100%; */
+
 
         &:last-child {
-          border-bottom: 1px solid var(--table-border-color);
+          /* border-bottom: 1px solid var(--table-border-color); */
         }
       }
 

@@ -4,16 +4,16 @@ const protocolSSL = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `http://www.fortem1.com.br/api/v2/authz`,
-        tradeUrl: `http://www.fortem1.com.br/api/v2/trade`,
-        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://www.fortem1.com.br/api/v2/stream`,
-        finexUrl: `http://www.fortem1.com.br/api/v2/trade`,
+        authUrl: `https://www.fortem1.com.br/api/v2/authz`,
+        tradeUrl: `https://www.fortem1.com.br/api/v2/trade`,
+        applogicUrl: `https://www.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `wss://www.fortem1.com.br/api/v2/stream`,
+        finexUrl: `https://www.fortem1.com.br/api/v2/trade`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
     withCredentials: true,
-    incrementalOrderBook: false,
+    incrementalOrderBook: true,
     isResizable: true,
     isDraggable: false,
     showLanding: true,
@@ -24,7 +24,7 @@ export const defaultConfig: Config = {
     minutesUntilAutoLogout: '15',
     msAlertDisplayTime: '5000',
     msPricesUpdates: '500',
-    sessionCheckInterval: '5000',
+    sessionCheckInterval: '500000',
     balancesFetchInterval: '5000',
     passwordEntropyStep: '14',
     storage: {

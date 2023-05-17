@@ -4,6 +4,8 @@ import { ChangePassword } from "./changePassword";
 
 import { Container, Password, Authentication, Activities } from "./style";
 
+import { ProfileAccountActivity } from "src/containers";
+
 export function Security(props) {
   const [isChangePassword, setIsChangePassword] = useState(false);
   const [isAuthentication, setIsAuthentication] = useState(false);
@@ -68,70 +70,14 @@ export function Security(props) {
               Habilitar agora
             </button>
           </Authentication>
-          <Activities>
+          <ProfileAccountActivity />
+          {/* <Activities>
             <h4 style={{color: 'var(--primary-text-color)'}}
             >
               Últimas atividades na conta
             </h4>
             <div>
-              <p
-                style={{color: 'var(--primary-text-color)'}}
-              >
-                Chrome
-                <br />
-                2804:7f0:6840:2df8:3d77:ea30:719d:1d6f
-              </p>
-              <p
-                style={{color: 'var(--primary-text-color)'}}
-              >
-                Solicitar QR code para 2FA / <span>Processado com sucesso</span>
-                <br /> 22-02-2023 15:02:22
-              </p>
-            </div>
-            <div>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Chrome
-                <br />
-                2804:7f0:6840:2df8:3d77:ea30:719d:1d6f
-              </p>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Solicitar QR code para 2FA / <span>Processado com sucesso</span>
-                <br /> 22-02-2023 15:02:22
-              </p>
-            </div>
-            <div>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Chrome
-                <br />
-                2804:7f0:6840:2df8:3d77:ea30:719d:1d6f
-              </p>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Solicitar QR code para 2FA / <span>Processado com sucesso</span>
-                <br /> 22-02-2023 15:02:22
-              </p>
-            </div>
-            <div>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Chrome
-                <br />
-                2804:7f0:6840:2df8:3d77:ea30:719d:1d6f
-              </p>
-              <p
-                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
-              >
-                Solicitar QR code para 2FA / <span>Processado com sucesso</span>
-                <br /> 22-02-2023 15:02:22
-              </p>
+              
             </div>
             <div
               className="pagination"
@@ -153,7 +99,7 @@ export function Security(props) {
                 {">"}
               </button>
             </div>
-          </Activities>
+          </Activities> */}
         </>
       )}
       {isChangePassword && (

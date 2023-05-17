@@ -11,7 +11,7 @@
 		font-size: 18px;
 	
 	
-		flex-direction: column;
+		flex-direction: row;
 		border-radius: 1px;
 		width: 196px;
 		height: 100%;
@@ -71,7 +71,7 @@
 			align-items: center;
 			border-radius: 4px;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			height: 30px;
 			justify-content: center;
 			width: 100px;
@@ -92,7 +92,7 @@
 				margin-left: 9px;
 				max-height: 12px;
 				max-width: 12px;
-				flex-direction: column;
+				flex-direction: row;
 			}
 
 			&--pending {
@@ -128,13 +128,13 @@
 
 		&__button {
 			align-items: center;
-			border-radius: 4px;
+			border-radius: 12px;
 			display: flex;
-			flex-direction: column;
-			height: 8px;
+			flex-direction: row;
+			padding: 12px 18px;
 			justify-content: center;
 			width: 100px;
-			margin-top: 120px;
+			margin-top: -80px;
 		
 		
 
@@ -159,7 +159,7 @@
 			&--active,
 			&--blocked {
 				background: var(--button-primary-cta-background-color);
-				height: 30px;
+				/* height: 30px; */
 		
 
 				a {

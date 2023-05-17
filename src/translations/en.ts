@@ -1404,7 +1404,7 @@ export const en = {
 
     'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 
-    'page.body.profile.verification.document.subtitle2': 'Saques e depósitos de criptoativos: ilimitado',
+    'page.body.profile.verification.document.subtitle2': 'Saques e depósitos cripto: ilimitado',
 	'page.body.profile.verification.document.subtitle3': 'Saques e depósitos na rede bancária: até R$ 100.000,00 / mês',
 
     'page.body.profile.verification.email.subtitle2': 'Saques e depósitos cripto: não permitido',

@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 20px;
   justify-content: space-around;
+  height: 100%;
 `;
 
 export const Password = styled.div`
@@ -85,11 +86,11 @@ export const Authentication = styled.div`
   }
 `;
 export const Activities = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 35px 0;
+  // width: 700px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // padding: 35px 0;
 
   h4 {
     @media screen and (max-width: 1440px) {

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 89%;
+  width: 90%;
   height: calc(100vh - 290px);
   margin-top: 50px;
 
   @media screen and (max-width: 1440px) {
-    height: calc(100vh - -20px);
+    height: calc(100vh - 20px);
   }
 
   .div-header-limits {
