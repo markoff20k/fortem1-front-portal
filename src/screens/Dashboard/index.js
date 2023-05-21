@@ -141,7 +141,7 @@ export function Dashboard() {
             </div>
              <div className="btn">
               <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
-                <Button> Habilitar agora </Button>
+                <Button> Habilitar  </Button>
               </Link>
             </div> 
           </Alert> )}
@@ -207,14 +207,14 @@ export function Dashboard() {
             
             
           </SlidTokens> 
-          <SaleListTablesUpcoming />
+          {/* <SaleListTablesUpcoming /> */}
         </Tokens>
         <Criptos>
           <Tables>
             <div className="div-cripto">
               <h4> Visão geral do mercado cripto </h4>
             </div>
-            <HomepageMarket/>
+            {/* <HomepageMarket/> */}
             {/* <MarketsList /> */}
           </Tables>
           <Negotiation>

@@ -115,25 +115,27 @@ class ProfileSecurityComponent extends React.Component<Props, State> {
         ) : null;
 
         return (
-            <div className="row">
-                <div className="col-md-6">
+            
+            
                     <div className="pg-profile-page__security">
-                        <div className="pg-profile-page-header">{this.props.intl.formatMessage({id: 'page.body.profile.tabs.security'})}</div>
+                        {/* <div className="pg-profile-page-header">{this.props.intl.formatMessage({id: 'page.body.profile.tabs.security'})}</div> */}
                         <div className="pg-profile-page__box pg-profile-page__left-col__basic">
                             <div className="pg-profile-page__row">
                                 <div>
                                     <div className="pg-profile-page__label">
                                         {this.props.intl.formatMessage({ id: 'page.body.profile.header.account.content.password'})}
                                     </div>
-                                    <div>
-                                        ************
+                                    <div style={{color: 'var(--input-text-color)', fontSize: '14pxpx'}}>
+                                        A segurança dos seus dados é muito importante para nós. Por isso, recomendamos
+                                        <br/>
+                                        que você altere sua senha a cada 3 meses para evitar acessos não autorizados à sua conta.
                                     </div>
                                 </div>
                                 <Button
-                                    className="btn-block mt-3 mb-3 btn-lg btn btn-primary w-25"
+                                    className="btn-change"
                                     onClick={this.toggleChangeModal}
                                     size="lg"
-                                    variant="primary"
+                                    variant="change"
                                 >
                                     {this.props.intl.formatMessage({ id: 'page.body.profile.header.account.content.password.button.change'})}
                                 </Button>
@@ -149,140 +151,12 @@ class ProfileSecurityComponent extends React.Component<Props, State> {
                             />
                         </div>
                     </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="pg-profile-page__verification-list">
-                        <div className="pg-profile-page-header">{this.props.intl.formatMessage({id: 'page.body.profile.header.account.profile'})}</div>
-                        <div className="pg-profile-page__box">
-                            {kycSteps().map((step: string, index: number) => this.renderVerificationLabel(labels, step, index))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+
         );
     }
 
-    public renderVerificationLabel(labels: Label[], labelToCheck: string, index: number) {
-        const targetLabelStatus = this.handleCheckLabel(labels, labelToCheck);
-
-        switch (targetLabelStatus) {
-            case 'verified':
-                return (
-                    <div
-                        key={index}
-                        className="pg-profile-page-verification__step pg-profile-page-verification__step--verified">
-                        <div className="pg-profile-page-verification__step__info">
-                            <div className="pg-profile-page-verification__step__info__title">
-                                <span>{index + 1}.&nbsp;</span>
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-                            </div>
-                            <div className="pg-profile-page-verification__step__info__subtitle">
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
-                            </div>
-                        </div>
-                        <div className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--verified">
-                            <FormattedMessage id="page.body.profile.verification.verified" />
-                            <CheckBigIcon />
-                        </div>
-                    </div>
-                );
-            case 'drafted':
-            case 'pending':
-            case 'submitted':
-                return (
-                    <div
-                        key={index}
-                        className="pg-profile-page-verification__step pg-profile-page-verification__step--pending">
-                        <div className="pg-profile-page-verification__step__info">
-                            <div className="pg-profile-page-verification__step__info__title">
-                                <span>{index + 1}.&nbsp;</span>
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-                            </div>
-                            <div className="pg-profile-page-verification__step__info__subtitle">
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
-                            </div>
-                        </div>
-                        <div className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--pending">
-                            <FormattedMessage id="page.body.profile.verification.pending" />
-                            <ClocksIcon />
-                        </div>
-                    </div>
-                );
-            case 'rejected':
-                return (
-                    <div
-                        key={index}
-                        className="pg-profile-page-verification__step pg-profile-page-verification__step--rejected">
-                        <div className="pg-profile-page-verification__step__info">
-                            <div className="pg-profile-page-verification__step__info__title">
-                                <span>{index + 1}.&nbsp;</span>
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-                            </div>
-                            <div className="pg-profile-page-verification__step__info__subtitle">
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
-                            </div>
-                        </div>
-                        <OverlayTrigger
-                            placement="bottom"
-                            delay={{ show: 250, hide: 400 }}
-                            overlay={
-                                <Tooltip title={`page.body.profile.verification.${labelToCheck}.rejected.tooltip`} />
-                            }>
-                            <div className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--rejected">
-                                <Link to="/confirm">
-                                    <FormattedMessage id="page.body.profile.verification.reverify" />
-                                </Link>
-                                <CrossIcon />
-                            </div>
-                        </OverlayTrigger>
-                    </div>
-                );
-            case 'blocked':
-                return (
-                    <div
-                        key={index}
-                        className="pg-profile-page-verification__step pg-profile-page-verification__step--blocked">
-                        <div className="pg-profile-page-verification__step__info">
-                            <div className="pg-profile-page-verification__step__info__title">
-                                <span>{index + 1}.&nbsp;</span>
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-                            </div>
-                            <div className="pg-profile-page-verification__step__info__subtitle">
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
-                            </div>
-                        </div>
-                        <div className="pg-profile-page-verification__step__button pg-profile-page-verification__step__button--blocked">
-                            <Link to="/confirm">
-                                <FormattedMessage id="page.body.profile.verification.verify" />
-                            </Link>
-                        </div>
-                    </div>
-                );
-            default:
-                return (
-                    <div
-                        key={index}
-                        className="pg-profile-page-verification__step pg-profile-page-verification__step--active">
-                        <div className="pg-profile-page-verification__step__info">
-                            <div className="pg-profile-page-verification__step__info__title">
-                                <span>{index + 1}.&nbsp;</span>
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-                            </div>
-                            <div className="pg-profile-page-verification__step__info__subtitle">
-                                <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
-                            </div>
-                        </div>
-                        <div className="pg-profile-page-verification__step__button pg-profile-page-verification__step__button--active">
-                            <Link to="/confirm">
-                                <FormattedMessage id="page.body.profile.verification.verify" />
-                            </Link>
-                        </div>
-                    </div>
-                );
-        }
-    }
-
-    private renderProfileTwoFactor = () => {
+        private renderProfileTwoFactor = () => {
         return (
             <React.Fragment>
                 <div className="pg-profile-page__row">
@@ -381,29 +255,7 @@ class ProfileSecurityComponent extends React.Component<Props, State> {
         }
     };
 
-    private handleCheckLabel = (labels: Label[], labelToCheck: string) => {
-        const targetLabel =
-            labels.length && labels.find((label: Label) => label.key === labelToCheck && label.scope === 'private');
-        let targetLabelStatus = targetLabel ? targetLabel.value : '';
-        const indexOfPrevStep = kycSteps().indexOf(labelToCheck) - 1;
 
-        if (indexOfPrevStep !== -1) {
-            const prevStepPassed = Boolean(
-                labels.find(
-                    (label: Label) =>
-                        label.key === kycSteps()[indexOfPrevStep] &&
-                        label.value === 'verified' &&
-                        label.scope === 'private'
-                )
-            );
-
-            if (!prevStepPassed) {
-                targetLabelStatus = 'blocked';
-            }
-        }
-
-        return targetLabelStatus;
-    };
 }
 
 const mapStateToProps = (state: RootState): ReduxProps => ({

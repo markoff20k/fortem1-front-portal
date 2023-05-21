@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 20px;
   justify-content: space-around;
-  height: fit-content;
+  height: 100%;`;
 
 export const Password = styled.div`
   width: 100%;

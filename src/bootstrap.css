@@ -3241,7 +3241,9 @@ input[type=button].btn-block {
 .custom-control-label {
   position: relative;
   margin-bottom: 0;
-  vertical-align: top;
+  vertical-align: bottom;
+  margin-top: 50px;
+  margin-right: 20px;
 }
 .custom-control-label::before {
   position: absolute;
@@ -4780,9 +4782,10 @@ a.badge-pink:focus, a.badge-pink.focus {
 }
 
 .alert-danger {
-  color: #7f3737;
-  background-color: #fde1e1;
-  border-color: #fcd5d5;
+  color: #F5F5F5 !important;
+  background-color: #E53E3E !important;
+  border-color: #fcd5d5 !important;
+  border-radius: 8px !important;
 }
 .alert-danger hr {
   border-top-color: #fabdbd;

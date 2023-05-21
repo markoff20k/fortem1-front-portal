@@ -89,7 +89,7 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
     const renderArcBlock = useCallback((period, estimatedValue, limit) => {
         return (
             <div className="cr-withdrawal-limits__group">
-                <canvas style={{ maxWidth: "46px" }} className="cr-withdrawal-limits__group-arc"></canvas>
+                <canvas style={{ width: "42px", height: "42px" }} className="cr-withdrawal-limits__group-arc"></canvas>
                 <div className="cr-withdrawal-limits__group-info">
                     <div className="cr-withdrawal-limits__group-info-usdt">
                         <Decimal fixed={DEFAULT_FIAT_PRECISION} thousSep=",">{limit?.toString()}</Decimal>&nbsp;{platformCurrency()}

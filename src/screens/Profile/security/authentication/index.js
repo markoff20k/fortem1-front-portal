@@ -4,6 +4,8 @@ import { Container } from "./style";
 import imgQRCode from "../../../../assets/QR_Code.svg";
 import imgColour from "../../../../assets/Colour.svg";
 
+import { ProfileAuthDetails } from "src/containers";
+
 export function IsAuthentication(props) {
   return (
     <Container>

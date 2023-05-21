@@ -192,14 +192,12 @@
 
   .cr-withdraw {
     background: var(--body-background-color);
-    /* border: 1px solid var(--divider-color-level-1); */
     border-radius: 3px;
     box-shadow: 0 6px 12px var(--header-shadow-color-level-1);
     color: var(--table-text-color);
     display: flex;
-    justify-content: flex-start;
-    margin: 0 calc(var(--gap) * 3);
-    padding: 38px 36px 42px;
+    justify-content: left;
+    padding-top: 20px;
 
     .cr-modal {
       &__container {
@@ -208,7 +206,9 @@
     }
 
     &__group__limits {
-      margin-left: 42px;
+      
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     &-title {
@@ -360,6 +360,7 @@
 
         input {
           height: 48px !important;
+          font-size: 12px;
         }
 
         label {
@@ -377,11 +378,13 @@
 
       .cr-input-with-button_wrapper {
         background: inherit;
-        background: var(--input-background-color);
+        /* background: var(--input-background-color); */
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-top: 24px;
+        align-items: center;
+        margin-left: 6px;
       }
 
       .cr-input-with-button {
@@ -414,7 +417,7 @@
         label {
           font-size: 10px;
           left: 0;
-          margin-top: 2px;
+          margin-top: -10px;
           padding: 0;
           text-transform: uppercase;
         }
@@ -615,6 +618,7 @@
 
   .cr-wallet-item__balance {
     margin-right: 13px;
+    padding: 0 !important;
   }
 
   &__error {

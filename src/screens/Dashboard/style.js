@@ -5,9 +5,9 @@ export const Container = styled.div`
   background-color: #131313;
   // margin-right: 50%;
   // margin-left: 50%;
-  display: flex;
   justify-content: center;
   position: relative;
+  height: 100vh;
 
   .dimmer {
     margin-top: -160px;
@@ -82,6 +82,7 @@ export const CardsAnnoucement = styled.div`
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
+  
   
 `;
 
@@ -194,6 +195,8 @@ export const Deposit = styled.div`
       width: 100%;
       height: 50px;
       border-radius: 10px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
       outline: none;
       padding-left: 15px;
       // margin-bottom: 20px;
@@ -221,7 +224,8 @@ export const Deposit = styled.div`
       padding: 12px;
       color: var(--primary-text-color);
       // border: 1px solid #009991;
-      background: #555555 !important;
+      background-color: var(--button-primary-cta-background-color-disabled);
+      cursor: not-allowed;
     }
 
     .btn-ver {

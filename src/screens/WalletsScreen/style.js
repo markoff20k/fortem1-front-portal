@@ -120,7 +120,8 @@ export const Dashboard = styled.div`
         text-align: left !important;
         color: var(--primary-text-color);
         background: var(--input-background-color);
-        border: 1px solid var(--input-border-color) !important;
+        // border: 1px solid var(--input-border-color);
+        border: none !important;
       }
     }
 
@@ -244,6 +245,7 @@ export const Report = styled.div`
       text-align: left !important;
       // color: ${(props) => props.theme.white};
       // background-color: ${(props) => props.theme.lineDeposit};
+      border: 1px solid var(--input-border-color) !important;
     }
   }
 

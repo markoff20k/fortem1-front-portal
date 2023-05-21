@@ -449,8 +449,8 @@ export const pt: LangType = {
     'page.body.profile.tabs.referral': 'Indicações',
 
     'page.body.profile.header.account.username': 'Nome',
-    'page.body.profile.header.account.content.password': 'Senha',
-    'page.body.profile.header.account.content.password.button.change': 'Alterar',
+    'page.body.profile.header.account.content.password': 'Alterar senha',
+    'page.body.profile.header.account.content.password.button.change': 'Alterar senha',
     'page.body.profile.header.account.content.password.old': 'Senha atual',
     'page.body.profile.header.account.content.password.new': 'Nova senha',
     'page.body.profile.header.account.content.password.button.save': 'Alterar',

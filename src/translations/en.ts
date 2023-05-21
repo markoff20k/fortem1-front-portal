@@ -436,8 +436,8 @@ export const en = {
     'page.body.profile.tabs.referral': 'Referral',
 
     'page.body.profile.header.account.username': 'Enter your name',
-    'page.body.profile.header.account.content.password': 'Password',
-    'page.body.profile.header.account.content.password.button.change': 'Change',
+    'page.body.profile.header.account.content.password': 'Change password',
+    'page.body.profile.header.account.content.password.button.change': 'Change password',
     'page.body.profile.header.account.content.password.old': 'Old password',
     'page.body.profile.header.account.content.password.new': 'New password',
     'page.body.profile.header.account.content.password.button.save': 'Save',

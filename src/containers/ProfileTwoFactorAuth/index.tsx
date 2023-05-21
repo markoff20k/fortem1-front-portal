@@ -20,7 +20,10 @@ export const ProfileTwoFactorAuth = props => {
                 <div>
                     <FormattedMessage id="page.body.profile.header.account.content.twoFactorAuthentication" />
                 </div>
-                <span className={className}>
+                <div className='pg-profile-page__label' style={{fontSize: '15px', fontWeight: '400'}}>  Habilite a autenticação de dois fatores com o Google Authenticator e proteja ainda 
+                <br/>mais suas transações financeiras.</div>
+                
+                <span style={{fontSize: '12px', marginRight: '6px'}}>Status:</span> <span className={className}>
                 {is2faEnabled ? <FormattedMessage id="page.body.profile.header.account.content.twoFactorAuthentication.message.enable" />
                                 : <FormattedMessage id="page.body.profile.header.account.content.twoFactorAuthentication.message.disable" />}
                 </span>

@@ -81,7 +81,7 @@
   }
 
   &__box {
-    padding: calc(var(--gap) * 4) calc(var(--gap) * 3);
+    /* padding: calc(var(--gap) * 4) calc(var(--gap) * 3); */
     width: 100%;
 
     &-header {
@@ -108,8 +108,10 @@
   }
 
   &__label {
-    color: var(--secondary-contast-cta-color);
-    font-size: calc(var(--font-size) * 1.33);
+    /* color: var(--secondary-contast-cta-color); */
+    color: var(--primary-text-color);
+    font-size: 20px;
+    font-weight: 700;
     padding-bottom: var(--gap);
     padding-top: calc(var(--gap) * 2);
 
@@ -166,6 +168,8 @@
 
         .pg-profile-page__row {
           margin-top: 0;
+          margin-bottom: 40px;
+          
 
           h2 {
             font-size: 22px;
@@ -253,10 +257,14 @@
   }
 
   &__security {
-    background: var(--body-background-color);
-    border-radius: calc(var(--gap) * 0.66);
-    box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1);
-    height: 100%;
+    /* background: var(--body-background-color); */
+    /* border-radius: calc(var(--gap) * 0.66); */
+    /* box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1); */
+    /* height: 100%; */
+    background: transparent;
+    position: relative;
+    top: -300px;
+    display: contents;
   }
 
   &__verification-list {
@@ -271,7 +279,9 @@
     margin-top: 30px;
     /* border-radius: calc(var(--gap) * 0.66); */
     /* box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1); */
-    /* width: 100%; */
+    width: 100%;
+
+    font-size: 14px !important;
 
     .cr-table {
       thead {
@@ -293,7 +303,7 @@
         /* border-top: 1px solid var(--table-border-color); */
         font-family: 'Inter';
         color: var(--primary-text-color);
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 20px;
         /* width: 100%; */
