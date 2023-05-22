@@ -358,7 +358,7 @@ class ProfileApiKeysComponent extends React.Component<Props, ProfileApiKeysState
                         type="text"
                         placeholder="X"
                         inputMode="decimal"
-                        showPaste2FA={true}
+                        showPaste2FA={false}
                         isMobile={isMobile}
                     />
                 </div>

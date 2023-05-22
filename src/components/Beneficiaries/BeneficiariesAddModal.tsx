@@ -404,7 +404,7 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
                     type="text"
                     placeholder="X"
                     inputMode="decimal"
-                    showPaste2FA={true}
+                    showPaste2FA={false}
                     isMobile={isMobileDevice}
                     message={formatMessage({ id: 'page.body.wallets.beneficiaries.addAddressModal.body.otpCode' })}
                 />

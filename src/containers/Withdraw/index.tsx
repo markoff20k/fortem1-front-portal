@@ -211,7 +211,7 @@ class WithdrawComponent extends React.Component<Props, WithdrawState> {
                             <div className="cr-withdraw__deep">
                                 <Button
                                     variant="primary"
-                                    size="lg"
+                                    
                                     onClick={this.handleClick}
                                     disabled={this.handleCheckButtonDisabled(total, beneficiary, otpCode)}
                                 >

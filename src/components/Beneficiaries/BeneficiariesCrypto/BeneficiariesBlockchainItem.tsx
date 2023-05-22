@@ -52,7 +52,7 @@ export const BeneficiariesBlockchainItem: React.FunctionComponent<BeneficiariesB
             </div>
             <div className="cr-beneficiaries-blockchain-item-block">
                 <div className="cr-beneficiaries-blockchain-item__withdraw"><span>{formatMessage({ id: "page.body.wallets.beneficiaries.min.withdraw" })}</span> {minWithdraw} {id.toUpperCase()}</div>
-                <div>≈<Decimal fixed={DEFAULT_FIAT_PRECISION} thousSep=",">{estimatedFeeValue.toString()}</Decimal> {platformCurrency()}</div>
+                {/* <div>≈<Decimal fixed={DEFAULT_FIAT_PRECISION} thousSep=",">{estimatedFeeValue.toString()}</Decimal> {platformCurrency()}</div> */}
             </div>
         </div>
     );

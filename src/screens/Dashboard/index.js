@@ -62,6 +62,18 @@ import {
 
 import { useSelector } from 'react-redux';
 
+import { useDocumentTitle, useP2PWalletsFetch, useWalletsFetch } from 'src/hooks';
+import { selectAbilities, selectCurrencies, selectP2PWallets, selectWallets, selectMarkets, selectMarketTickers, Wallet } from 'src/modules';
+
+// import { estimateUnitValue, estimateValue } from 'helpers/estimateValue';
+import { estimateValue } from 'src/helpers/estimateValue';
+import { estimateUnitValue } from 'src/helpers/estimateValue';
+
+// import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
+import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from 'src/constants';
+import { formatWithSeparators } from 'src/components';
+
+
 var BlogListData = BlogClassicData.slice(0, 6);
 
 export function Dashboard() {
@@ -71,20 +83,43 @@ export function Dashboard() {
   
   const user = useSelector(selectUserInfo);
 
+  const wallets = useSelector(selectWallets) || [];
+    
+  const currencies = useSelector(selectCurrencies);
+
+  const markets = useSelector(selectMarkets);
+  const tickers = useSelector(selectMarketTickers);
+
+   
+   const estimatedValue = React.useMemo(() => {
+     return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
+ }, [currencies, wallets, markets, tickers]);
+
+ useWalletsFetch();
+  
+ const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
+
+ const estimatedFiatValue = React.useMemo(() => {
+   return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+}, [currencies, cryptoWallets, markets, tickers]);
+
+
+const estimatedTokenValue = estimatedValue - estimatedFiatValue;
+
   const patrimony = [
     {
       description: "Patrimônio Total",
-      value: "R$ 0,00",
-      type: "D",
+      value:  formatWithSeparators(estimatedValue, ','),
+      type: "V",
     },
     {
       description: "Disponível em Reais",
-      value: "R$ 0,00",
+      value: formatWithSeparators(estimatedFiatValue, ','),
       type: "D",
     },
     {
       description: "Disponível em Cripto",
-      value: "R$ 0,00",
+      value: formatWithSeparators(estimatedTokenValue, ','), 
       type: "V",
     },
     {
@@ -110,6 +145,8 @@ export function Dashboard() {
 
   const history = useHistory();
 
+
+
   const redirectLimits = () => {
 		history.push('/profile');
 	};
@@ -128,6 +165,8 @@ export function Dashboard() {
       img: img4,
     },
   ];
+
+
 
   return (
     
@@ -213,7 +252,7 @@ export function Dashboard() {
             
             
           </SlidTokens> 
-          <SaleListTablesUpcoming />
+          {/* <SaleListTablesUpcoming /> */}
         </Tokens>
         <Criptos>
           <Tables>

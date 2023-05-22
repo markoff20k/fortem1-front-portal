@@ -2,10 +2,12 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+  color: var(--primary-text-color) !important;
 
   &__disabled {
     .cr-beneficiaries-blockchain-item  {
-      color: var(--secondary-contrast-cta-color);
+
+      /* color: var(--secondary-contrast-cta-color); */
 
       &__protocol {
         color: var(--system-red) !important;
@@ -32,6 +34,7 @@
     font-weight: 600 !important;
     font-size: 16px !important;
     line-height: 24px !important;
+    color: var(--primary-text-color);
   }
 
   &-block {

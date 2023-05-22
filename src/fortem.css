@@ -20,6 +20,12 @@
     }
 }
 
+.pg-beneficiaries__error-text {
+    font-size: 12px;
+    position: absolute;
+    top: -20px;
+}
+
 .pg-beneficiaries__modal {
     close {
         width: 32px;
@@ -29,6 +35,18 @@
 
 
 }
+
+.cr-withdraw__deep {
+    margin-top: 10px;
+}
+
+#dropdown-basic {
+    border-radius: 12px;
+    height: 50px;
+    background-color: var(--sidebar-item-background-color-active) !important;
+
+}
+
 
 
 .select:active {
@@ -964,10 +982,6 @@ hr:not([size]) {
   }
 
 
-.dropdown {
-    background-color: var(--sidebar-item-background-color-active) !important;
-    
-}
 
 .dropdown-menu.show {
 

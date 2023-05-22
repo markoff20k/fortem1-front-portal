@@ -135,8 +135,8 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
                             block={true}
                             type="button"
                             onClick={handleGenerateAddress}
-                            size="lg"
-                            variant="primary"
+                            
+                            
                         >
                             {buttonLabel ? buttonLabel : 'Generate deposit address'}
                         </Button>

@@ -177,7 +177,7 @@ class ModalWithdraw extends React.Component<Props> {
                                 type="text"
                                 placeholder="X"
                                 inputMode="decimal"
-                                showPaste2FA={true}
+                                showPaste2FA={false}
                                 isMobile={isMobileDevice}
                                 message={this.translate('page.body.wallets.tabs.withdraw.modal.message')}
                             />

@@ -9,7 +9,7 @@ export function Patrimony(props) {
       {props.patrimony.map((result) => (
         <Content>
           <p> {result.description} </p>
-          <h2> R$ 0,00 </h2>
+          <h2> {result.value} </h2>
           <button>{result.type === "D" ? "Depositar" : "Ver alocação"}</button>
         </Content>
       ))}

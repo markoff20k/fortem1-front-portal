@@ -318,7 +318,7 @@ export const pt: LangType = {
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankSwiftCode': 'Intermediary Bank Swift Code (optional)',
 
     'page.body.wallets.beneficiaries.network.fee': 'Taxa de rede',
-    'page.body.wallets.beneficiaries.min.withdraw': 'Min. saque:',
+    'page.body.wallets.beneficiaries.min.withdraw': 'Saque mínimo:',
     'page.body.wallets.beneficiaries.fee': 'Taxa:',
     'page.body.wallets.beneficiaries.tab.panel.add.whitelisted': 'Cadastrar endereço',
     'page.body.wallets.beneficiaries.tab.panel.whitelisted': 'Endereços cadastrados',

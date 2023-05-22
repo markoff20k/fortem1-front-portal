@@ -192,7 +192,7 @@ class ProfileSecurityComponent extends React.Component<Props, State> {
                         type="text"
                         placeholder="X"
                         inputMode="decimal"
-                        showPaste2FA={true}
+                        showPaste2FA={false}
                         isMobile={this.props.isMobile}
                     />
                 </div>

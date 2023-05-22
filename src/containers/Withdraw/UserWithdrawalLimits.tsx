@@ -64,7 +64,8 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
                 ctx.arc(21, 24, 18, offset, end);
                 ctx.stroke();
                 ctx.beginPath();
-                ctx.strokeStyle = 'rgba(91, 100, 136, 0.24)';
+                // ctx.strokeStyle = 'rgba(91, 100, 136, 0.24)';
+                ctx.strokeStyle = 'rgba(22, 131, 124, 0.8)';
                 ctx.lineWidth = 4;
                 ctx.arc(21, 24, 18, offset, 100);
                 ctx.stroke();
@@ -78,9 +79,9 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
     const renderTime = useCallback((period) => {
         switch (period) {
             case 'D':
-                return 'em 24 horas';
+                return '24h';
             case 'M':
-                return 'em 1 mês';
+                return '30d';
             default:
                 return;
         }
@@ -92,7 +93,7 @@ export const UserWithdrawalLimits = React.memo((props: UserWithdrawalLimitsProps
                 <canvas style={{ width: "42px", height: "42px" }} className="cr-withdrawal-limits__group-arc"></canvas>
                 <div className="cr-withdrawal-limits__group-info">
                     <div className="cr-withdrawal-limits__group-info-usdt">
-                        <Decimal fixed={DEFAULT_FIAT_PRECISION} thousSep=",">{limit?.toString()}</Decimal>&nbsp;{platformCurrency()}
+                        <Decimal fixed={2} thousSep=",">{limit?.toString()}</Decimal>&nbsp;{platformCurrency()}
                         <span className="cr-withdrawal-limits__group-info-period">&nbsp;/{period}</span></div>
                     <div className="cr-withdrawal-limits__group-info-currency">
                         <Decimal fixed={fixed} thousSep=",">{estimatedValue?.toString()}</Decimal>&nbsp;{currencyId?.toUpperCase()}
