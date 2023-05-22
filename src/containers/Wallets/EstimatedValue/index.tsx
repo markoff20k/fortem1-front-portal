@@ -58,13 +58,13 @@ const EstimatedValue: React.FC<Props> = (props: Props): React.ReactElement => {
                     </span>
                     <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
                 </span>
-                <span className="value-container card">
+                {/* <span className="value-container card">
                     <span className="value">
                         {formatWithSeparators(estimatedValue, ',')}
                     </span>
                     <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
-                </span>
-                {VALUATION_SECONDARY_CURRENCY && renderSecondaryCurrencyValuation(estimatedValue)}
+                </span> */}
+                {/* {VALUATION_SECONDARY_CURRENCY && renderSecondaryCurrencyValuation(estimatedValue)} */}
             </div>
         </div>
     );

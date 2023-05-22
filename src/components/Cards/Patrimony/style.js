@@ -26,7 +26,7 @@ export const Content = styled.div`
   justify-content: center;
 
   color: var(--primary-text-color);
-  width: 400px;
+  width: 100%;
   // max-height: fit-content;
   height: 180px;
   display: flex;
@@ -37,15 +37,16 @@ export const Content = styled.div`
   background-color: var(--header-background-color);
   margin-right: 0px;
   justify-content: space-evenly;
+  flex-grow: 1;
   
   @media screen and (max-width: 1238px) {
     flex-wrap: wrap;
-    max-width: 340px;
+    max-width: 420px;
   }
 
   @media screen and (max-width: 1068px) {
     flex-wrap: wrap;
-    max-width: 300px;
+    max-width: 350px;
   }
 
 

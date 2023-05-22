@@ -36,12 +36,13 @@ import { QRCode } from "../../components/FastDeposit/QRCode";
 import { Sidebar, HomepageMarket, MarketsList } from '../../containers';
 import { UserWithdrawalLimits } from '../../containers/Withdraw/UserWithdrawalLimits';
 
+import { Link, useHistory } from 'react-router-dom';
 
 
 import BlogList from "../../components/blog/itemProp/BlogList";
 
 import BlogClassicData from '../../data/blog/BlogList.json';
-import { Link } from "react-router-dom";
+
 
 import { ReactDimmer } from 'react-dimmer';
 
@@ -101,12 +102,17 @@ export function Dashboard() {
       type: "D",
     },
     {
-      description: "Compre cirptomoedas em poucos cliques.",
+      description: "Compre criptomoedas em poucos cliques.",
       cta: "Confira as criptos disponíveis a partir de R$ 100,00",
       type: "D",
     },
   ];
 
+  const history = useHistory();
+
+  const redirectLimits = () => {
+		history.push('/profile');
+	};
 
   const images = [
     {
@@ -141,7 +147,7 @@ export function Dashboard() {
             </div>
              <div className="btn">
               <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
-                <Button> Habilitar  </Button>
+                <Button> Habilitar </Button>
               </Link>
             </div> 
           </Alert> )}
@@ -186,7 +192,7 @@ export function Dashboard() {
             </div>
             <div className="buttons">
               <button style={{borderRadius: '12px', padding: '10px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
-              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent'}} className="btn btn-primary-outline btn-block">Aumentar limites</button>
+              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent !important'}} onClick={() => redirectLimits()} className="btn-primary-outline btn-block">Aumentar limites </button>
             </div>
           </Deposit>
         </Carousel>
@@ -214,7 +220,7 @@ export function Dashboard() {
             <div className="div-cripto">
               <h4> Visão geral do mercado cripto </h4>
             </div>
-            {/* <HomepageMarket/> */}
+            <HomepageMarket/>
             {/* <MarketsList /> */}
           </Tables>
           <Negotiation>

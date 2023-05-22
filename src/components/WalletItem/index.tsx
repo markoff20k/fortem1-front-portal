@@ -65,10 +65,10 @@ export const WalletItem: React.FunctionComponent<Props> = (props: Props) => {
                 </div>
             </div>
             <span className="cr-wallet-item__balance">
-                <Decimal fixed={fixed} thousSep=",">{balance ? balance.toString() : '0'}</Decimal>
-                <div className="cr-wallet-item__balance-price">
+                <Decimal fixed={fixed} thousSep=".">{balance ? balance.toString() : '0'}</Decimal>
+                {/* <div className="cr-wallet-item__balance-price">
                     {`≈ R$ ${formatWithSeparators(estimatedValue, ',')}`}
-                </div>
+                </div> */}
             </span>
         </div>
     );

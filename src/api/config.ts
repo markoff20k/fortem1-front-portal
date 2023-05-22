@@ -25,7 +25,7 @@ export const defaultConfig: Config = {
     msAlertDisplayTime: '10000',
     msPricesUpdates: '500',
     sessionCheckInterval: '500000',
-    balancesFetchInterval: '5000',
+    balancesFetchInterval: '2000',
     passwordEntropyStep: '14',
     storage: {
         defaultStorageLimit: '50',

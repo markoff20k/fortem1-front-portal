@@ -6,7 +6,15 @@ import { ChangeIcon } from 'src/assets/images/ChangeIcon';
 import { TabPanel } from 'src/components';
 import { CanCan, EstimatedValue, WalletsOverview, WalletsP2P, WalletsSpot, WalletsTransfer } from 'src/containers';
 import { useDocumentTitle, useP2PWalletsFetch, useWalletsFetch } from 'src/hooks';
-import { selectAbilities, selectCurrencies, selectP2PWallets, selectWallets, Wallet } from 'src/modules';
+import { selectAbilities, selectCurrencies, selectP2PWallets, selectWallets, selectMarkets, selectMarketTickers, Wallet } from 'src/modules';
+
+// import { estimateUnitValue, estimateValue } from 'helpers/estimateValue';
+import { estimateValue } from 'src/helpers/estimateValue';
+import { estimateUnitValue } from 'src/helpers/estimateValue';
+
+// import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
+import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from 'src/constants';
+import { formatWithSeparators } from 'src/components';
 
 import { Container, Content, Dashboard, Report } from "./style";
 import imgBTC from "../../assets/BTC.svg";
@@ -40,6 +48,14 @@ export const WalletsScreen: FC = (): ReactElement => {
     const p2pWallets = useSelector(selectP2PWallets) || [];
     const currencies = useSelector(selectCurrencies);
     const abilities = useSelector(selectAbilities);
+
+    const markets = useSelector(selectMarkets);
+    const tickers = useSelector(selectMarketTickers);
+
+    
+    const estimatedValue = React.useMemo(() => {
+      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
+  }, [currencies, wallets, markets, tickers]);
 
     const donutChartDataCharts1 = [10.000, 5.840, 0];
 
@@ -185,6 +201,7 @@ export const WalletsScreen: FC = (): ReactElement => {
         if (wallets.length && currencies.length && p2pWallets.length) {
             const merged = currencies.map(cur => {
                 const spotWallet = wallets.find(i => i.currency === cur.id);
+                const reaisWallet = wallets.find(i => i.name === 'brl');
                 const p2pWallet = p2pWallets.find(i => i.currency === cur.id);
 
                 return {
@@ -216,6 +233,30 @@ export const WalletsScreen: FC = (): ReactElement => {
             history.push('/wallets/overview');
         }
     }, [routeTab, tabMapping]);
+
+
+
+    const fiatWallet = wallets.filter(wallet => wallet.currency.toLowerCase() === 'usd');
+    
+    const tokenWallet = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD');
+
+    const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
+
+
+    const estimatedFiatValue = React.useMemo(() => {
+      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+  }, [currencies, cryptoWallets, markets, tickers]);
+
+
+    // const estimatedFiatValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallet, markets, tickers);
+
+    let formattedWallet = wallets.map((wallet: Wallet) => ({
+      ...wallet,
+      name: wallet.currency.toUpperCase(),
+      value: Number(wallet.balance),
+      
+  }));
+    
 
     const translate = useCallback((id: string) => formatMessage({ id }), [formatMessage]);
     const onCurrentTabChange = useCallback((index: number) => {
@@ -277,8 +318,10 @@ export const WalletsScreen: FC = (): ReactElement => {
               <h4
                 style={{ color: "var(--primary-text-color)" }}
               >
-                R$ 15.840,00
+                USD {formatWithSeparators(estimatedValue, ',')}
               </h4>
+              {/* <EstimatedValue wallets={reais} /> */}
+              
               <span>+ 13,87%</span>
             </div>
             <div className="patrimony-available col-md-5">
@@ -290,7 +333,9 @@ export const WalletsScreen: FC = (): ReactElement => {
               <h4
                 style={{ color: "var(--primary-text-color)" }}
               >
-                R$ 5.000.000,00
+                R$ {formatWithSeparators(estimatedFiatValue, ',')}
+                {/* Careteira: {formattedWallet[0].name} */}
+                {/* {tokenWallet[0].name} */}
               </h4>
               <div className="btn-deposit">
                 <button>Depositar</button>

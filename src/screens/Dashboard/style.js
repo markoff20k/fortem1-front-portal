@@ -37,6 +37,7 @@ export const Alert = styled.div`
   padding: 10px 20px;
   border-radius: 10px;
   background-color: var(--header-background-color);
+  margin-bottom: 20px;
 
   .description {
     display: flex;
@@ -218,7 +219,7 @@ export const Deposit = styled.div`
     justify-content: space-around;
 
     .btn-ajuste {
-      width: 90%;
+      width: 100%;
       border: none !important;
       border-radius: 10px;
       padding: 12px;

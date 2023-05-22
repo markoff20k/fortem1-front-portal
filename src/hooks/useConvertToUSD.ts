@@ -23,7 +23,8 @@ export const useConvertToUSD = (value = 0, symbol?: string, precision = 6, defau
 					);
 					refLoading.current = false;
 					SetPrevSymbol(symbol);
-					setExchangeRate(data.price);
+					// setExchangeRate(data.price);
+					setExchangeRate(5);
 				}
 				// tslint:disable-next-line: no-empty
 			} catch (error) {

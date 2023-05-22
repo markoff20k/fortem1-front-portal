@@ -39,10 +39,10 @@ export const DEFAULT_WALLET: Wallet = {
     account_type: "",
 };
 
-export const DEFAULT_CCY_PRECISION = 4;
+export const DEFAULT_CCY_PRECISION = 2;
 export const DEFAULT_FIAT_PRECISION = 2;
 export const DEFAULT_TRADING_VIEW_INTERVAL = "15";
-export const VALUATION_PRIMARY_CURRENCY = "BRL";
+export const VALUATION_PRIMARY_CURRENCY = "USD";
 export const VALUATION_SECONDARY_CURRENCY = "BTC";
 
 export const PASSWORD_ENTROPY_STEP = 6;
