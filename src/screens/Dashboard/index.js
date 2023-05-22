@@ -213,7 +213,7 @@ export function Dashboard() {
             
             
           </SlidTokens> 
-          {/* <SaleListTablesUpcoming /> */}
+          <SaleListTablesUpcoming />
         </Tokens>
         <Criptos>
           <Tables>
