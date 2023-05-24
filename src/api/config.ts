@@ -22,7 +22,7 @@ export const defaultConfig: Config = {
     usernameEnabled: true,
     gaTrackerKey: '',
     minutesUntilAutoLogout: '15',
-    msAlertDisplayTime: '10000',
+    msAlertDisplayTime: '6000',
     msPricesUpdates: '500',
     sessionCheckInterval: '500000',
     balancesFetchInterval: '2000',
@@ -43,7 +43,7 @@ export const defaultConfig: Config = {
     barong_upload_size_min_range: '0.1',
     barong_upload_size_max_range: '20',
     themeSwitcher: 'visible',
-    peatio_platform_currency: 'brl',
+    peatio_platform_currency: 'usd',
     useSharedLayout: 'false',
     tvDefaultCandles: 30,
 };

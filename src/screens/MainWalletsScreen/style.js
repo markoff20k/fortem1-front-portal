@@ -103,8 +103,10 @@ export const Graphic = styled.div`
     .patrimony-graphic-bottom {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      padding: 20px;
+      justify-content: flex-start;
+      padding-top: 20px;
+      max-height: 240px;
+      position: relative;
 
       img {
         width: 245px;

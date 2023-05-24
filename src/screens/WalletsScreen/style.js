@@ -128,8 +128,9 @@ export const Dashboard = styled.div`
     .patrimony-graphic-bottom {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      padding: 20px;
+      justify-content: flex-start;
+      max-height: 420px;
+      padding-top: 20px;
 
       img {
         width: 245px;

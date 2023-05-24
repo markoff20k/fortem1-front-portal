@@ -21,7 +21,7 @@ export const Content = styled.div`
   left: 2%;
   right: 2%;
   border-radius: 20px;
-  height: fit-content;
+  // height: fit-content;
   background-color: var(--header-background-color);
   
   padding: 35px 10px;

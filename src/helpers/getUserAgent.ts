@@ -1,20 +1,24 @@
-import UAParser from 'ua-parser-js';
+import { UAParser } from 'ua-parser-js';
 
-interface AgentContext {
-    name: string;
-    version: string;
-    major?: string;
-}
-
-// tslint:disable-next-line
 export const getUserAgent = (userAgentData: string) => {
-    const parser = new UAParser();
-    parser.setUA(userAgentData);
-    const userBrowserData = parser.getResult().browser as AgentContext;
-    const userOSData = parser.getResult().os as AgentContext;
-    const userAgent = userBrowserData.name && userOSData.name ?
-        `${userBrowserData.name} ${userBrowserData.major ? userBrowserData.major : ''} ${userOSData.name} ${userOSData.version ? userOSData.version : ''}` :
-        parser.getResult().ua;
+	const parser = new UAParser();
+	parser.setUA(userAgentData);
+	const userBrowserData = parser.getResult().browser;
+	const userOSData = parser.getResult().os;
+	const userAgent =
+		userBrowserData.name && userOSData.name
+			? `${userBrowserData.name} ${userOSData.name} ${userOSData.version ? userOSData.version : ''}`
+			: parser.getResult().ua;
 
-    return userAgent;
+	return userAgent;
+};
+
+export const getUserAgentBrowserAndDevice = (userAgentData: string) => {
+	const parser = new UAParser();
+	parser.setUA(userAgentData);
+
+	return {
+		browserName: parser.getBrowser().name || 'Unknown',
+		deviceName: parser.getDevice().model || 'Unknown',
+	};
 };

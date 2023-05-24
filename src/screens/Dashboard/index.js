@@ -33,7 +33,7 @@ import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/FastDeposit/QRCode";
 
 
-import { Sidebar, HomepageMarket, MarketsList } from '../../containers';
+import { Sidebar, HomepageMarket, MarketsListExchange } from '../../containers';
 import { UserWithdrawalLimits } from '../../containers/Withdraw/UserWithdrawalLimits';
 
 import { Link, useHistory } from 'react-router-dom';
@@ -133,12 +133,12 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
   const announcement = [
     {
       description: "Aproveite a alta rentabilidade e liquidez dos tokens para aumentar seu patrimônio!",
-      cta: "Confira os tokens disponíveis",
+      cta: "Confira os tokens disponíveis.",
       type: "D",
     },
     {
       description: "Compre criptomoedas em poucos cliques.",
-      cta: "Confira as criptos disponíveis a partir de R$ 100,00",
+      cta: "Confira as criptos disponíveis a partir de R$ 100,00.",
       type: "D",
     },
   ];
@@ -260,7 +260,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
               <h4> Visão geral do mercado cripto </h4>
             </div>
             <HomepageMarket/>
-            {/* <MarketsList /> */}
+            {/* <MarketsListExchange /> */}
           </Tables>
           <Negotiation>
             <Deposit>

@@ -18,7 +18,7 @@ import {
     Wallet,
     selectUserIsMember,
 } from 'src/modules';
-import { estimatePlatformValue } from 'src/helpers/estimateValue';
+import { estimatePlatformValue, estimateValue } from 'src/helpers/estimateValue';
 import { WalletsHeader } from 'src/components/WalletsHeader';
 import { useHistory } from 'react-router';
 import { platformCurrency } from 'src/api';

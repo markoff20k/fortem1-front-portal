@@ -52,15 +52,29 @@ export const WalletsScreen: FC = (): ReactElement => {
     const markets = useSelector(selectMarkets);
     const tickers = useSelector(selectMarketTickers);
 
+
+    const fiatWallet = wallets.filter(wallet => wallet.currency.toLowerCase() === 'usd');
+    
+    const tokenWallet = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD');
+
+    const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
+
+
+    const estimatedFiatValue = React.useMemo(() => {
+      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+  }, [currencies, cryptoWallets, markets, tickers]);
     
     const estimatedValue = React.useMemo(() => {
       return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
   }, [currencies, wallets, markets, tickers]);
 
-    const donutChartDataCharts1 = [10.000, 5.840, 0];
+  
+  const estimatedCryptoValue = Number(estimatedValue) - Number(estimatedFiatValue);
+
+    // const donutChartDataCharts1 = [{estimatedFiatValue}, 0, {estimatedCryptoValue}];
 
     const donutChartOptionsCharts1 = {
-        series: [10.000, 5.840, 0],
+        series: [{estimatedFiatValue}, 0, {estimatedCryptoValue}],
         labels: ["Reais", "Tokens", "Criptomoedas"],
         colors: ["#11ECC7", "#F9A912", "#009991"],
         chart: {
@@ -124,10 +138,12 @@ export const WalletsScreen: FC = (): ReactElement => {
 
     // this one
     const dountchartData = {
-        series: [10.000, 5.840, 0],
+        // series: [{estimatedFiatValue}, 0, {estimatedCryptoValue}],
+        // series: [formatWithSeparators(estimatedFiatValue, '.'), 0, formatWithSeparators(estimatedCryptoValue, '.')],
+        series: [1000, 2000, 2000],
         options: {
           labels: ["Reais", "Tokens", "Criptomoedas"],
-          colors: ["#11ECC7", "#F9A912", "#009991"],
+          // colors: ["#11ECC7", "#F9A912", "#009991"],
         //   chart: {
         //     width: 680,
         //     type: 'donut',
@@ -141,8 +157,34 @@ export const WalletsScreen: FC = (): ReactElement => {
           },
           plotOptions: {
             pie: {
-              startAngle: -90,
-              endAngle: 270
+              donut: {
+                size: '75%',
+                labels: {
+                  show: true,
+                  name: {
+                    show: true,
+                  },
+                  value: {
+                    show: true,
+                  },
+                  total: {
+                    show: true,
+                    showAlways: true,
+                    label: "Patrimônio total",
+                    fontWeight: 600,
+                    fontSize: '15px',
+                    color: 'var(--input-text-color)',
+                    fontFamily: 'Inter, Arial, sans-serif',
+                    // color: '#373d3f',
+                    
+                  }
+                }
+              },
+              startAngle: 0,
+              endAngle: 360,
+              expandOnClick: true,
+
+              
             }
           },
           legend: {
@@ -151,12 +193,24 @@ export const WalletsScreen: FC = (): ReactElement => {
             // horizontalAlign: "center",
             // verticalAlign: 'middle',
             floating: false,
-            fontSize: "18px",
+            fontSize: "16px",
             offsetX: -40,
             offsetY: 30,
+            fontWeight: 600,
+            color: 'var(--input-text-color)',
+            fontFamily: 'Inter, Arial, sans-serif',
+            // formatter: function (val) {
+            //    return val + "R$ "
+            // },
           },
           dataLabels: {
-            enabled: true
+            enabled: true,
+            formatter: function (val) {
+              return val + "%"
+            },
+            dropShadow: {
+              ...
+            }
           },
           responsive: [
             {
@@ -236,16 +290,7 @@ export const WalletsScreen: FC = (): ReactElement => {
 
 
 
-    const fiatWallet = wallets.filter(wallet => wallet.currency.toLowerCase() === 'usd');
-    
-    const tokenWallet = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD');
 
-    const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
-
-
-    const estimatedFiatValue = React.useMemo(() => {
-      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
-  }, [currencies, cryptoWallets, markets, tickers]);
 
 
     // const estimatedFiatValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallet, markets, tickers);
@@ -313,7 +358,7 @@ export const WalletsScreen: FC = (): ReactElement => {
               <p
                 style={{ color: "var(--primary-text-color)" }}
               >
-                Patrimônio total
+                Patrimônio total estimado
               </p>
               <h4
                 style={{ color: "var(--primary-text-color)" }}
