@@ -151,6 +151,12 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
 		history.push('/profile');
 	};
 
+  const redirectMarketplace = () => {
+		history.push('/tokens');
+	};
+
+  
+
   const images = [
     {
       img: img1,
@@ -227,7 +233,9 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
                 Você ainda pode depositar: R$ 50.000,00 este mês
                 
               </span> */}
-              <UserWithdrawalLimits/>
+              <div style={{marginLeft: '-52px'}}>
+                <UserWithdrawalLimits/>
+              </div>
             </div>
             <div className="buttons">
               <button style={{borderRadius: '12px', padding: '10px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
@@ -242,6 +250,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             </h4>
             <button
               style={{ color: "var(--primary-text-color)" }}
+              onClick={() => redirectMarketplace()}
             >
               Ver todos
             </button>
@@ -252,7 +261,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             
             
           </SlidTokens> 
-          {/* <SaleListTablesUpcoming /> */}
+          <SaleListTablesUpcoming />
         </Tokens>
         <Criptos>
           <Tables>

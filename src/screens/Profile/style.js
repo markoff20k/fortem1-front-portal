@@ -48,7 +48,7 @@ export const Content = styled.div`
     
 
     .btn-gerencial {
-      width: 100%;
+      width: 92%;
       padding: 10px;
       display: flex;
       align-items: center;
