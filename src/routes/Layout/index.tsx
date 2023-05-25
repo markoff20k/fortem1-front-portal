@@ -66,7 +66,7 @@ import {
     DocumentationScreen,
     EmailVerificationScreen,
     ForgotPasswordScreen,
-    HistoryScreen,
+    
     InternalTransfer,
     LandingScreen,
     MagicLink,
@@ -89,6 +89,8 @@ import {
     LandingScreenMobile,
 } from '../../screens';
 
+import { HistoryScreen } from 'src/v2/src/screens';
+
 import Blog from '../../components/blog/BlogDetailsContent'
 
 import { MarketsList } from '../../containers/MarketsList';
@@ -106,6 +108,8 @@ import { SaleListScreen, SaleDetailScreen } from '../../plugins/Sale';
 // import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';
 
 import { ProfileScreen2 } from '../../screens/ProfileScreen2';
+
+import { HomeScreen } from 'src/v2/src/screens';
 
 
 
@@ -406,6 +410,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PublicRoute path="/markets" component={MarketsList} />
 
                     <PublicRoute path="/tokens" exact component={SaleListScreen} />
+
+                    <PublicRoute path="/new_home" exact component={HomeScreen} />
+                    
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
 
                     {/* <PublicRoute path="/ieo" exact component={IEOListingScreen} />

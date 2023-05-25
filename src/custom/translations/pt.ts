@@ -8,7 +8,7 @@ export const pt: LangType = {
     'page.header.navbar.trade': 'Cripto Exchange Pro',
     'page.header.navbar.wallets': 'Carteiras',
     'page.header.navbar.openOrders': 'Ordens abertas',
-    'page.header.navbar.history': 'Extrato',
+    'page.header.navbar.history': 'Extratos',
     'page.header.navbar.api': 'Documentação da API',
     'page.header.navbar.internal.transfer': 'Transferência interna',
     'page.header.navbar.p2p': 'P2P',
@@ -369,7 +369,7 @@ export const pt: LangType = {
     'page.body.openOrders.content.status.execution_reject': 'Rejeitada',
     'page.body.openOrders.header.button.cancelAll': 'Cancelar todas',
 
-    'page.body.history.deposit': 'Histórico de depósitos',
+    'page.body.history.deposit': 'Extrato de depósitos',
     'page.body.history.deposit.header.txid': 'txID',
     'page.body.history.deposit.header.date': 'Data',
     'page.body.history.deposit.header.blockchain': 'Rede',
@@ -386,7 +386,7 @@ export const pt: LangType = {
     'page.body.history.deposit.content.status.fee_processing': 'Em processamento',
     'page.body.history.deposit.content.status.errored': 'Erro',
   
-    'page.body.history.withdraw': 'Histórico de saques',
+    'page.body.history.withdraw': 'Extrato de saques',
     'page.body.history.withdraw.header.id': 'ID',
     'page.body.history.withdraw.header.blockchain': 'Rede / Blockchain',
     'page.body.history.withdraw.header.date': 'Data',
@@ -410,7 +410,7 @@ export const pt: LangType = {
     'page.body.history.withdraw.content.status.errored': 'Erro',
     'page.body.history.withdraw.content.status.under_review': 'Aguardando confirmação',
 
-    'page.body.history.transfer': 'Histórico de transferências',
+    'page.body.history.transfer': 'Extrato de transferências',
     'page.body.history.transfer.header.date': 'Data',
     'page.body.history.transfer.header.amount': 'Quantidade',
     'page.body.history.transfer.header.currency': 'Ativo',
@@ -419,7 +419,7 @@ export const pt: LangType = {
     'page.body.history.transfer.header.status': 'Status',
     'page.body.history.transfer.content.status.completed': 'Concluído',
 
-    'page.body.history.quick': 'Histórico de conversões',
+    'page.body.history.quick': 'Extrato de conversões',
     'page.body.history.quick.header.date': 'Data',
     'page.body.history.quick.header.amountGive': 'Amount you give',
     'page.body.history.quick.header.currencyGive': 'Currency you give',
@@ -427,7 +427,7 @@ export const pt: LangType = {
     'page.body.history.quick.header.currencyReceive': 'Currency you receive',
     'page.body.history.quick.header.status': 'Status',
 
-    'page.body.history.trade': 'Histórico de nogociações',
+    'page.body.history.trade': 'Extrato de nogociações',
     'page.body.history.trade.header.id': 'ID',
     'page.body.history.trade.header.date': 'Data',
     'page.body.history.trade.header.side': 'Operação',

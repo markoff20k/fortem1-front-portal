@@ -26,7 +26,7 @@ export const Search = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0px 0px 0px 10px;
-  border-radius: 15px;
+  border-radius: 12px;
   background-color: ${(props) => props.theme.backgroundTertiary};
 
   input {

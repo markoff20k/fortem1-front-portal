@@ -1,3 +1,100 @@
+.cr-tab-panel .cr-tab {
+    font-family: 'Inter';
+    box-shadow: none;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    
+    padding: 10px 16px !important;
+    
+    
+    /* text-transform: none; */
+    transition: 0.2s;
+
+    border: 1px solid var(--input-border-color) !important;
+    background-color: var(--input-background-color) !important;
+    border-radius: 12px !important;
+    margin-left: 20px;
+    
+}
+
+.cr-tab-panel .cr-tab__active {
+    color: #16837C;
+}
+
+.cr-tab-panel .cr-tab__pointer {
+    display: none;
+}
+
+.cr-table__head tr {
+    color: var(--primary-text-color) !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    position: relative;
+}
+
+.pagination-item {
+    font-family: Poppins !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0em;
+    text-align: left;
+
+    border-radius: 6px !important;
+    background: #16837C !important;
+    color: #F5F5F5 !important;
+
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #F5F5F5 !important;
+    background-color: #16837C !important;
+    border-radius: 6px !important;
+    border: none;
+  }
+
+.pg-container-inside {
+    align-items: center;
+    /* box-shadow: 1px 1px 5px var(--shadow-color-level-2); */
+    background: #131313;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    /* width: 95%; */
+    height: calc(100vh - 100px);
+    padding: 20px;
+
+}
+
+.pg-history-tab-title {
+    color: var(--primary-text-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margim-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
 .td-tabs-tab-btn {
     color: var(--primary-text-color);
     font-size: 20px;
@@ -19,7 +116,7 @@
   
   
   .td-pg-profile__activity-result-succeed {
-          color: var(--system-green); 
+    color: var(--bids);
       }
   
   

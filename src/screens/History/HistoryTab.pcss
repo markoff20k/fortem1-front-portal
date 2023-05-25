@@ -5,10 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 24px !important;
+  
   margin-top: calc(var(--gap) * 2) !important;
-  max-width: 1368px !important;
-  padding: 0 !important;
+  
+  /* padding-top: 20px; */
+  width: 100%;
+  height: 98%;
 
   .cr-pagination {
     text-align: center;
@@ -20,10 +22,10 @@
 
     .cr-tab-panel__navigation-container {
       background: var(--tab-panel-background-color);
-      border-bottom: 1px solid var(--tab-panel-border-line-color);
+      /* border-bottom: 1px solid var(--tab-panel-border-line-color); */
       border-top-left-radius: calc(var(--gap) * 0.66);
       border-top-right-radius: calc(var(--gap) * 0.66);
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
 
@@ -44,7 +46,8 @@
     padding-top: var(--gap);
 
     &__empty {
-      color: var(--secondary-contrast-cta-color);
+      color: var(--primary-text-color);
+      opacity: 0.84;
       text-align: center;
     }
 
@@ -77,18 +80,19 @@
       .cr-table {
         background: transparent;
         border-collapse: collapse;
+        font-family: 'Inter';
 
         &__head {
           margin: 10px;
 
           &-row {
-            border-bottom: 1px solid var(--table-border-color);
+            /* border-bottom: 1px solid var(--table-border-color); */
 
             th {
               background-color: var(--table-background-color);
               color: var(--table-text-color);
-              font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-              font-size: 12px !important;
+              font-family: "Inter", sans-serif;
+              font-size: 16px !important;
               font-weight: 500;
               padding: calc(var(--gap) * 2.7) 0 calc(var(--gap) * 2.7) !important;
               position: static;
@@ -112,12 +116,12 @@
 
           tr {
             background-color: var(--table-background-color);
-            border-bottom: 1px solid var(--table-border-color);
+            /* border-bottom: 1px solid var(--table-border-color); */
 
             td {
               background-color: var(--table-background-color);
               color: var(--table-text-color);
-              font-size: 13px !important;
+              font-size: 16px !important;
               font-weight: 400;
               margin-bottom: calc(var(--gap) * 1.66) !important;
               margin-top: calc(var(--gap) * 1.66) !important;

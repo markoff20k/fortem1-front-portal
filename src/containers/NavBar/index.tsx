@@ -79,6 +79,8 @@ class NavBarComponent extends React.Component<Props> {
     };
 
     public render() {
+
+        const { isLoggedIn } = this.props;
         const { colorTheme, lang } = this.props;
         const { isOpenLanguage } = this.state;
 
@@ -106,17 +108,53 @@ class NavBarComponent extends React.Component<Props> {
 
 
             )
+        }
 
-
-
-
+            if (isLoggedIn) {
+                return (
+                    <div className="pg-navbar">
+                    <div className="pg-navbar__header-settings">
+    
+                        
+                        <div className="btn-group pg-navbar__header-settings__account-dropdown-menu ">
+                            <Dropdown>
+                                <Dropdown.Toggle variant="primary" id={languageClassName}>
+                                    <img src={GlobeIcon} alt={lang} />
+                                    {/* <span className="dropdown-menu-language-selected">{languageName}</span> */}
+                                    {/* <HiLightBulb size={22} /> */}
+    
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>{this.getLanguageDropdownItems()}</Dropdown.Menu>
+                            </Dropdown>
+                        </div>
+    
+                        
+                        <div >
+                            {/* <div
+                                className="pg-navbar__header-settings__switcher__items"
+                                onClick={e => this.handleChangeCurrentStyleMode(colorTheme === 'light' ? 'dark' : 'light')}
+                            >
+                                {this.getLightDarkMode()}
+                            </div> */}
+    
+                            <Buttons>
+                                <Li to="" onClick={e => this.handleChangeCurrentStyleMode(colorTheme === 'light' ? 'dark' : 'light')}>
+                                    <HiLightBulb size={22} />
+                                </Li>
+                            </Buttons>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            );
 
 
         }
 
         return (
             <div className="pg-navbar">
-                <div className="pg-navbar__header-settings">
+                <div className="pg-navbar__header-settings pg-navbar__header-settings-public ">
 
                     
                     <div className="btn-group pg-navbar__header-settings__account-dropdown-menu ">
@@ -131,13 +169,14 @@ class NavBarComponent extends React.Component<Props> {
                         </Dropdown>
                     </div>
 
+{/*                     
                     <div >
-                        {/* <div
+                        <div
                             className="pg-navbar__header-settings__switcher__items"
                             onClick={e => this.handleChangeCurrentStyleMode(colorTheme === 'light' ? 'dark' : 'light')}
                         >
                             {this.getLightDarkMode()}
-                        </div> */}
+                        </div>
 
                         <Buttons>
                             <Li to="" onClick={e => this.handleChangeCurrentStyleMode(colorTheme === 'light' ? 'dark' : 'light')}>
@@ -145,7 +184,7 @@ class NavBarComponent extends React.Component<Props> {
                             </Li>
                         </Buttons>
 
-                    </div>
+                    </div> */}
                 </div>
                 
             </div>

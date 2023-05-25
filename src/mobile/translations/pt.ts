@@ -55,8 +55,8 @@ export const pt = {
     'page.mobile.reset.header': 'Reenviar email',
     'page.mobile.signin.kyc.header': '2FA Verification',
 
-    'page.mobile.wallets.deposit.history': 'Histórico de depósitos',
-    'page.mobile.wallets.withdraw.history': 'Histórico de saques',
+    'page.mobile.wallets.deposit.history': 'Extrato de depósitos',
+    'page.mobile.wallets.withdraw.history': 'Extrato de saques',
     'page.mobile.wallets.banner.total': 'Total',
     'page.mobile.wallets.banner.available': 'Disponível',
 

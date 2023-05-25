@@ -68,7 +68,7 @@ export const Content = styled.div`
         border: 1px solid var(--input-border-color);
         padding: 12px 20px;
         margin: 0 10px;
-        border-radius: 15px;
+        border-radius: 12px;
         background-color: var(--input-background-color);
 
         @media screen and (max-width: 1440px) {
@@ -108,7 +108,7 @@ export const Content = styled.div`
         border: none;
         padding: 12px 20px;
         margin: 0 10px;
-        border-radius: 15px;
+        border-radius: 12px;
         background-color: ${(props) => props.theme.primary};
       }
     }

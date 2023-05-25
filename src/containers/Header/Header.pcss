@@ -57,10 +57,18 @@ header {
       }
 
       &-text {
-        color: var(--header-toolbar-item-text-color);
-        font-size: calc(var(--font-size) * 0.85);
+        color: var(--primary-text-color);
+        font-size: calc(var(--font-size) * 1.2);
         margin: 5px 0 0;
         text-align: right;
+        opacity: 0.84;
+        font-weight: 400;
+
+        @media screen and (max-width: 1168px) {
+          font-size: calc(var(--font-size) * 1);
+        }
+
+        
       }
 
       &-value {

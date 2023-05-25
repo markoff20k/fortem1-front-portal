@@ -103,7 +103,7 @@ class SidebarContainer extends React.Component<Props, State> {
                     {/* <span className="pg-sidebar__toggler-item" />
                     <span className="pg-sidebar__toggler-item" />
                     <span className="pg-sidebar__toggler-item" /> */}
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" color="#fff" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" color="var(--primary-text-color)" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </div>
                 
                 {this.renderProfileLink()}

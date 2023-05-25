@@ -91,7 +91,8 @@ export const HomepageMarket = props => {
 							</div>
 						),
 						last: (
-							<span style={{ color: marketChangeColor }} className="d-flex flex-row align-items-center">
+							//can put the symbol change here
+							<span style={{ color: marketChangeColor }} className="">
 								{market.last}
 									{/*<p className="m-0 ml-3" style={{ color: 'rgb(115 127 146)' }}>
 										$ <ConvertUsd value={+market.last} symbol={marketName[1]} />

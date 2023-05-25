@@ -1,0 +1,42 @@
+.cr-mobile-slide{
+    width: 100vw;
+    margin-bottom: 5px;
+
+    &__placeholder{
+        height: 30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slick-slider{
+        width: 100%;
+        margin: 0;
+        .slick-list{
+            .slick-track{
+                width : 100%;
+                .slick-slide{
+                    width : 100%;
+                    padding: 0;
+                    & *{
+                        width : 100%;
+                    }
+                    a{
+                        display: block !important;
+                        img{
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        ul.slick-dots{
+            position: absolute;
+            bottom : 15px;
+        }
+    }
+
+
+    //overflow: hidden;
+}
