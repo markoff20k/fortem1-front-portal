@@ -110,7 +110,7 @@ export const SaleListScreen: React.FC = () => {
 			</div>
 
 
-			<div id="sale-list" className="container-fluid">
+			<div id="sale-list" className="">
 
 					<div className="mt-3">
 						{/*<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>*/}

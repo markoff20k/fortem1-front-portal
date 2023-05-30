@@ -2258,13 +2258,13 @@ hr:not([size]) {
             
             .desc {
                 font-family: 'IBM Plex Sans' !important;
-                font-size: 16px !important;
+                font-size: 14px !important;
                 color: var(--primary-text-color);
                 line-height: 19.5px !important;
 				font-weight: 500 !important;
 				margin-bottom: 20px !important;
-                padding-top: 10px !important;
-                opacity: 0.7;
+                padding-top: 5px !important;
+                opacity: 0.84;
 
             }
             .title {
@@ -2272,10 +2272,11 @@ hr:not([size]) {
                 line-height: 19.5px !important;
 				font-weight: 600 !important;
                 transition: all .5s;
-                margin-bottom: 5px !important;
+                margin-bottom: 0px !important;
                 margin-top: 15px !important;
                 flex-basis: 100%;
 				text-decoration: none !important;
+                color: var(--primary-text-color) !important;
                 
 
 

@@ -261,7 +261,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             
             
           </SlidTokens> 
-          <SaleListTablesUpcoming />
+          {/* <SaleListTablesUpcoming /> */}
         </Tokens>
         <Criptos>
           <Tables>
@@ -369,13 +369,17 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
                   themeDark={props.themeDark}
                   images={result.img}
                 /> */}
-                                            <div className="row row--15">
+
+
+
+                
+                                            {/* <div className="row row--15">
                                 {BlogListData.map((item) => (
                                     <div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
                                         <BlogList StyleVar="box-card-style-default" data={item} />
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
             
             
           </div>

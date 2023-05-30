@@ -1,7 +1,7 @@
 .token-screen {
 
 	background: #131313;
-	padding-top: 100px;
+	padding-top: 20px;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -14,9 +14,10 @@
 		align-items: center;
 		position: absolute;
 		width: 100%;
-		height: 500px;
+		height: 360px;
 		border: none;
 		background: #131313;
+		padding-top: 80px;
 
 
 		img {
@@ -102,10 +103,11 @@
 	#sale-list {
 		font-family: 'Inter';
 		background-color: #131313 !important;
-		margin-top: 600px;
+		margin-top: 470px;
 		margin-bottom: 10px;
 		padding-bottom: 30px;
 		position: absolute;
+		width: 100%;
 	}
 
 
@@ -116,9 +118,10 @@
 		font-size: 24px;
 		line-height: 29px;
 		font-weight: 700;
-		color: white;
+		color: var(--primary-text-color);
 		padding: 0;
 		margin: 0;
+		padding-left: 20px;
 		
 	}
 

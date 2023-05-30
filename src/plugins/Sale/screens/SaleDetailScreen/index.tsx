@@ -63,10 +63,10 @@ export const SaleDetailScreen: React.FC = () => {
 			buyHistoryView = (
 				<>
 					<div className="col-md-12 col-xl-6 mt-3">
-						{/* <BuyHistory uid={user.uid} ieoID={Number(ieoID)} /> */}
+						<BuyHistory uid={user.uid} ieoID={Number(ieoID)} />
 					</div>
 					<div className="col-md-12 col-xl-6 mt-3">
-						{/* <BuyersHistory ieoID={Number(ieoID)} /> */}
+						<BuyersHistory ieoID={Number(ieoID)} />
 					</div>
 				</>
 			);
@@ -74,25 +74,25 @@ export const SaleDetailScreen: React.FC = () => {
 			buyHistoryView = (
 				<>
 					<div className="col-12">
-						{/* <BuyersHistory ieoID={Number(ieoID)} /> */}
+						<BuyersHistory ieoID={Number(ieoID)} />
 					</div>
 				</>
 			);
 		}
 
 		const saleSocial = saleItem.payload.social;
-		// saleSocialView = (
-		// 	// <SaleSocial
-		// 	// 	website={saleSocial.website}
-		// 	// 	whitepaper={saleSocial.whitepaper}
-		// 	// 	ico={saleSocial.ico}
-		// 	// 	facebook={saleSocial.facebook}
-		// 	// 	telegram={saleSocial.telegram}
-		// 	// 	twitter={saleSocial.twitter}
-		// 	// 	linkedin={saleSocial.linkedin}
-		// 	// 	instagram={saleSocial.instagram}
-		// 	// />
-		// );
+		saleSocialView = (
+			<SaleSocial
+				website={saleSocial.website}
+				whitepaper={saleSocial.whitepaper}
+				ico={saleSocial.ico}
+				facebook={saleSocial.facebook}
+				telegram={saleSocial.telegram}
+				twitter={saleSocial.twitter}
+				linkedin={saleSocial.linkedin}
+				instagram={saleSocial.instagram}
+			/>
+		);
 	}
 
 	const getBadgeColor = type => {
@@ -192,7 +192,7 @@ export const SaleDetailScreen: React.FC = () => {
                                     <div className="inner">
                                         <div className="thumbnail">
 										<div id="sale-info" className="container-fluid">
-										{/* {saleSocialView}                              */}
+										{saleSocialView}                             
 										</div>
 										</div>
                                     </div>
@@ -225,7 +225,7 @@ export const SaleDetailScreen: React.FC = () => {
 
 					</div>
 					</div>
-				{/*
+				
 					<span id="sale-info-buy" className="container-fluid">
 						<div className="row">{buyHistoryView}</div>
 					</span>
@@ -240,7 +240,7 @@ export const SaleDetailScreen: React.FC = () => {
 							<div className="col-12">{saleDetailView}</div>
 						</div>
 					</span>
-		*/}
+		
 				</div>
 			);
 		}

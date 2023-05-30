@@ -5,7 +5,7 @@ import { nationalitiesNames } from '../../translations/nationalities';
 export const pt: LangType = {
     'page.header.navbar.signIn': 'Acessar',
     'page.header.navbar.quick.exchange': 'Quick exchange',
-    'page.header.navbar.trade': 'Cripto Exchange Pro',
+    'page.header.navbar.trade': 'Comprar cripto',
     'page.header.navbar.wallets': 'Carteiras',
     'page.header.navbar.openOrders': 'Ordens abertas',
     'page.header.navbar.history': 'Extratos',
@@ -1381,7 +1381,7 @@ export const pt: LangType = {
     'page.body.wallets.overview.action.transfer': 'Transferir',
     'page.body.wallets.overview.action.p2p': 'P2P',
     'page.body.wallets.overview.seach': 'Procurar',
-    'page.body.wallets.overview.nonZero': 'Ocultar pequenos saldos',
+    'page.body.wallets.overview.nonZero': 'Ocultar carteiras sem saldo',
     'page.body.wallets.transfers.transferType': 'Tipo de transferência',
     'page.body.wallets.transfers.from': 'De',
     'page.body.wallets.transfers.to': 'Para',
