@@ -2,10 +2,16 @@ import { Button, Col, message, Result, Row } from 'antd';
 import React, { useState }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
-import { findSalebyId, selectSaleItem } from 'src/modules/sale/sale-item';
-import { selectUserInfo } from 'src/modules';
 
-import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
+
+import { selectSaleItem, selectUserInfo } from 'src/v2/src/modules';
+
+import { findSalebyId } from 'src/v2/src/modules';
+
+import { BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from 'src/v2/src/plugins/Sale';
+
+import { BuyersHistory } from 'src/v2/src/plugins/Sale';
+
 //import './SaleDetailScreen.pcss';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import SectionTitle from "../../../../template_react/doob/src/elements/sectionTitle/SectionTitle";
@@ -83,14 +89,14 @@ export const SaleDetailScreen: React.FC = () => {
 		const saleSocial = saleItem.payload.social;
 		saleSocialView = (
 			<SaleSocial
-				website={saleSocial.website}
-				whitepaper={saleSocial.whitepaper}
-				ico={saleSocial.ico}
-				facebook={saleSocial.facebook}
-				telegram={saleSocial.telegram}
-				twitter={saleSocial.twitter}
-				linkedin={saleSocial.linkedin}
-				instagram={saleSocial.instagram}
+				website=''
+				whitepaper=''
+				ico=''
+				facebook=''
+				telegram=''
+				twitter=''
+				linkedin=''
+				instagram=''
 			/>
 		);
 	}
@@ -225,7 +231,7 @@ export const SaleDetailScreen: React.FC = () => {
 
 					</div>
 					</div>
-				
+				{/*
 					<span id="sale-info-buy" className="container-fluid">
 						<div className="row">{buyHistoryView}</div>
 					</span>
@@ -240,7 +246,7 @@ export const SaleDetailScreen: React.FC = () => {
 							<div className="col-12">{saleDetailView}</div>
 						</div>
 					</span>
-		
+		*/}
 				</div>
 			);
 		}

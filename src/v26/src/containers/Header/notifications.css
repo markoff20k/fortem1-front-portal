@@ -1,0 +1,18 @@
+.notifications .icon .count {
+    
+    width: 18px !important;
+    height: 18px !important;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: #009991 !important;
+    
+    
+}

@@ -2123,7 +2123,9 @@ hr:not([size]) {
 		.footerDesktop-screen .footer__news__take-email__input {
 			width: 150px;
 		}
-	}img {
+	}
+    
+    img {
 	margin-right: 5px;
 }
 
