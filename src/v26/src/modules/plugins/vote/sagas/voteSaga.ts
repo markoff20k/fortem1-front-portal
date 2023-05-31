@@ -1,6 +1,6 @@
 import { API, RequestOptions } from 'api';
 import { getCsrfToken } from 'helpers';
-import { alertPush } from 'modules/public/alert';
+import { alertPush } from 'src/v26/src/modules/public/alert';
 import { stringify } from 'querystring';
 import { call, put } from 'redux-saga/effects';
 import {

@@ -14163,6 +14163,11 @@
     "reactcss" "^1.2.0"
     "tinycolor2" "^1.4.1"
 
+"react-content-loader@^6.2.1":
+  "integrity" "sha512-6ONbFX+Hi3SHuP66JB8CPvJn372pj+qwltJV0J8z/8MFrq98I1cbFdZuhDWeQXu3CFxiiDTXJn7DFxx2ZvrO7g=="
+  "resolved" "https://registry.npmjs.org/react-content-loader/-/react-content-loader-6.2.1.tgz"
+  "version" "6.2.1"
+
 "react-countdown@^2.3.5":
   "integrity" "sha512-K26ENYEesMfPxhRRtm1r+Pf70SErrvW3g4CArLi/x6MPFjgfDFYePT4UghEj8p2nI0cqVV7/JjDgjyr//U60Og=="
   "resolved" "https://registry.npmjs.org/react-countdown/-/react-countdown-2.3.5.tgz"

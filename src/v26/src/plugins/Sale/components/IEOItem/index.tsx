@@ -148,13 +148,13 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 	const findIcon = (code: string): string => {
 		const currency = currencies.find(currencyParam => currencyParam.id === code);
 		try {
-			return require(`../../../../../node_modules/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
+			return require(`../../../../icons/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
 		} catch (err) {
 			if (currency) {
 				return currency.icon_url;
 			}
 
-			return require('../../../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+			return require('../../../../icons/cryptocurrency-icons/svg/color/generic.svg');
 		}
 	};
 	const handleDetailClick = () => {
