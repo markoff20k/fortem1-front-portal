@@ -1,5 +1,5 @@
 import { referralRanksData, ReferralRanksFetch } from './../actions';
-import { API, RequestOptions } from 'api';
+import { API, RequestOptions } from 'src/v26/src/api';
 import { call, put } from 'redux-saga/effects';
 
 const createOptions = (csrfToken?: string): RequestOptions => {

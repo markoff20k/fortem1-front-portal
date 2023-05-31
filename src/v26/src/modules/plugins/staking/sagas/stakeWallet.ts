@@ -1,4 +1,4 @@
-import { API, RequestOptions } from 'api';
+import { API, RequestOptions } from 'src/v26/src/api';
 import { stringify } from 'querystring';
 import { call, put } from 'redux-saga/effects';
 

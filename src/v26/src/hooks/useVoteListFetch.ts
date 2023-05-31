@@ -1,7 +1,7 @@
 import debounce from 'lodash/debounce';
 import identity from 'lodash/identity';
 import pickBy from 'lodash/pickBy';
-import { selectVoteListLoading, VoteFilter, voteListFetch } from 'modules';
+import { selectVoteListLoading, VoteFilter, voteListFetch } from 'src/v26/src/modules';
 import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useDispatch, useSelector } from 'react-redux';

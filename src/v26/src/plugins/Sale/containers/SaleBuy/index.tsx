@@ -178,13 +178,13 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const findIcon = (code: string): string => {
 		const currency = currencies.find(currencyParam => currencyParam.id === code);
 		try {
-			return require(`../../../../../node_modules/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.png`);
+			return require(`../../../../icons/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.png`);
 		} catch (err) {
 			if (currency) {
 				return currency.icon_url;
 			}
 
-			return require('../../../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+			return require('../../../../icons/cryptocurrency-icons/svg/color/generic.svg');
 
 		}
 	};

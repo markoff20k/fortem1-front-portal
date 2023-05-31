@@ -1,6 +1,6 @@
-import { API, RequestOptions } from 'api';
-import { getCsrfToken } from 'helpers';
-import { alertPush } from 'modules';
+import { API, RequestOptions } from 'src/v26/src/api';
+import { getCsrfToken } from 'src/v26/src/helpers';
+import { alertPush } from 'src/v26/src/modules';
 import { call, put } from 'redux-saga/effects';
 import {
 	airdropCoinClaimData,

@@ -1,6 +1,6 @@
-import { API, RequestOptions } from 'api';
+import { API, RequestOptions } from 'src/v26/src/api';
 import { put, call } from 'redux-saga/effects';
-import { getCsrfToken } from 'helpers';
+import { getCsrfToken } from 'src/v26/src/helpers';
 import { getKycStatus, getKycStatusData, VerifyAccountCreate, verifyAccountSuccess } from '../actions';
 const createOptions = (csrfToken?: string): RequestOptions => {
 	return { apiVersion: 'newKyc', headers: { 'X-CSRF-Token': csrfToken } };

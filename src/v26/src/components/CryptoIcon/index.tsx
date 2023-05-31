@@ -9,9 +9,9 @@ export interface CryptoIconProps {
 
 const findIcon = (code: string): string => {
 	try {
-		return require(`../../../node_modules/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.png`);
+		return require(`../../icons/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.png`);
 	} catch (err) {
-		return require('../../../node_modules/cryptocurrency-icons/svg/icon/generic.svg');
+		return require('../../icons/cryptocurrency-icons/svg/icon/generic.svg');
 	}
 };
 

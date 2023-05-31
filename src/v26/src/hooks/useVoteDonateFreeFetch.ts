@@ -1,4 +1,4 @@
-import { selectUserLoggedIn, selectVoteDonateData, selectVoteDonateFreeData, voteDonateFreeFetch } from 'modules';
+import { selectUserLoggedIn, selectVoteDonateData, selectVoteDonateFreeData, voteDonateFreeFetch } from 'src/v26/src/modules';
 import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useDispatch, useSelector } from 'react-redux';

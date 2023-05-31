@@ -1,4 +1,4 @@
-import { useConvertToUSD } from 'hooks';
+import { useConvertToUSD } from 'src/v26/src/hooks';
 import * as React from 'react';
 
 // tslint:disable-next-line: no-empty-interface

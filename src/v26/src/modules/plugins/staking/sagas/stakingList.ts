@@ -1,4 +1,4 @@
-import { API, RequestOptions } from 'api';
+import { API, RequestOptions } from 'src/v26/src/api';
 import { call, put } from 'redux-saga/effects';
 
 import { stakingListData, stakingListError, StakingListFetch } from '../actions';

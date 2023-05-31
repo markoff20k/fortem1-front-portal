@@ -1,6 +1,6 @@
 import { commisionHistoryData, CommisionHistoryFetch } from './../actions';
-import { API, RequestOptions } from 'api';
-import { alertPush } from 'modules/public/alert';
+import { API, RequestOptions } from 'src/v26/src/api';
+import { alertPush } from 'src/v26/src/modules/public/alert';
 import { call, put } from 'redux-saga/effects';
 
 const createOptions = (csrfToken?: string): RequestOptions => {

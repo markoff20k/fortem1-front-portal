@@ -1,4 +1,4 @@
-import { allChildCurrenciesFetch } from 'modules';
+import { allChildCurrenciesFetch } from 'src/v26/src/modules';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 

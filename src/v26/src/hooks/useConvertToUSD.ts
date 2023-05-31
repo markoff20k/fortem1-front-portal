@@ -1,5 +1,5 @@
-import { API, RequestOptions } from 'api';
-import { Decimal } from 'components';
+import { API, RequestOptions } from 'src/v26/src/api';
+import { Decimal } from 'src/v26/src/components';
 import isNaN from 'lodash/isNaN';
 import * as React from 'react';
 

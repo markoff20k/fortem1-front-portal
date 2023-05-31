@@ -1,6 +1,6 @@
 // tslint:disable-next-line
-import { API, RequestOptions } from 'api';
-import { getCsrfToken } from 'helpers';
+import { API, RequestOptions } from 'src/v26/src/api';
+import { getCsrfToken } from 'src/v26/src/helpers';
 import { call, put } from 'redux-saga/effects';
 import {
 	allChildCurrenciesData,

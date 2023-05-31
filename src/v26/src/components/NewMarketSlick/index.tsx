@@ -217,10 +217,10 @@ export const NewMarketSlick: React.FC<any> = () => {
 			const findIcon = (code: string): string => {
 				const market = markets.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
 				try {
-					return require(`../../../node_modules/cryptocurrency-icons/32/icon/${baseCurrency.toLowerCase()}.png`);
+					return require(`../../icons/cryptocurrency-icons/32/icon/${baseCurrency.toLowerCase()}.png`);
 				} catch (err) {
 		
-					return require('../../../node_modules/cryptocurrency-icons/svg/icon/generic.svg');
+					return require('../../icons/cryptocurrency-icons/svg/icon/generic.svg');
 				}
 			};
 			return ( 

@@ -1,7 +1,7 @@
 import { FetchListCompetition, listCompetitionData, listCompetitionError } from '../actions';
 import { put, call } from 'redux-saga/effects';
-import { API, RequestOptions } from 'api';
-import { getCsrfToken } from 'helpers';
+import { API, RequestOptions } from 'src/v26/src/api';
+import { getCsrfToken } from 'src/v26/src/helpers';
 const createOptions = (csrfToken?: string): RequestOptions => {
 	return { apiVersion: 'core', headers: { 'X-CSRF-Token': csrfToken } };
 };

@@ -124,13 +124,13 @@ export const MarketsHotOnlist2: React.FC<any> = () => {
 	const findIcon = (code: string): string => {
 		const currency = currencies.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
 		try {
-			return require(`../../../node_modules/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
+			return require(`../../icons/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
 		} catch (err) {
 			if (currency) {
 				return currency.icon_url;
 			}
 
-			return require('../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+			return require('../../icons/cryptocurrency-icons/svg/color/generic.svg');
 		}
 	};
 

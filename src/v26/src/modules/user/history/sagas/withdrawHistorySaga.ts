@@ -1,6 +1,6 @@
 import { toLower } from 'lodash';
-import { getCsrfToken } from 'helpers';
-import { withdrawHistoryData, WithdrawHistoryFetch } from 'modules';
+import { getCsrfToken } from 'src/v26/src/helpers';
+import { withdrawHistoryData, WithdrawHistoryFetch } from 'src/v26/src/modules';
 import { call, put } from 'redux-saga/effects';
 import { API, RequestOptions } from '../../../../api';
 
