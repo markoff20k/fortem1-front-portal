@@ -102,7 +102,7 @@ import { Profile } from '../../screens/Profile/index';
 
 import { ReactDimmer } from 'react-dimmer';
 
-import { SaleListScreen, SaleDetailScreen } from 'src/v26/src/plugins/Sale';
+import { SaleListScreen, SaleDetailScreen } from 'src/v2/src/plugins/Sale';
 
 // import { IEODetailScreen } from '../../plugins/IEO/screen/IEODetailScreen';
 // import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';

@@ -39,6 +39,8 @@
         "webpack",
         "./src/*.test.*",
         "./src/charting_library",
-        "./src/templates"
+        "./src/templates",
+        
+        
     ]
 }
