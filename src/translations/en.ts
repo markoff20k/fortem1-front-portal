@@ -50,7 +50,7 @@ export const en = {
     'page.body.trade.header.newOrder.locked.minLevel.text': 'Please verify your account to start trading',
     'page.body.trade.header.newOrder.locked.minLevel.buttonText': 'Verify Your Account',
     'page.body.trade.header.newOrder.locked.login.text': 'Please login to your account to start trading',
-    'page.body.trade.header.newOrder.locked.login.buttonText': 'Log in to Account',
+    'page.body.trade.header.newOrder.locked.login.buttonText': 'Log in',
 
     'error.order.create.minAmount': 'Amount is too low. Minimum amount is {amount} {currency}',
     'error.order.create.minPrice': 'Price is too low. Minimum price is {price} {currency}',
@@ -352,7 +352,7 @@ export const en = {
     'page.body.openOrders.header.status': 'Status',
     'page.body.openOrders.content.status.done': 'Executed',
     'page.body.openOrders.content.status.wait': 'Open',
-    'page.body.openOrders.content.status.cancel': 'Stopped',
+    'page.body.openOrders.content.status.cancel': 'Canceled',
     'page.body.openOrders.content.status.trigger_wait': 'Open Trigger',
     'page.body.openOrders.content.status.trigger_cancel': 'Canceled Trigger',
     'page.body.openOrders.content.status.execution_reject': 'Rejected Trigger',

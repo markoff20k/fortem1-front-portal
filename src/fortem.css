@@ -1,4 +1,68 @@
 
+
+.btn-default:hover {
+    border-color: #00d0b8;
+    border: 2px solid #00d0b8 !important;
+    color: var(--button-primary-cta-text-color-hover);
+    transition: 0.2s;
+}
+
+.btn-default:hover {
+    border: 2px solid #009991 !important;
+    color: var(--button-primary-cta-text-color-hover) !important;
+    transition: 0.3s !important;
+    text-decoration: none !important;
+    -filter: brightness(115%);
+    -webkit-filter: brightness(115%);
+}
+
+.btn-default, .btn-icon, .icon-btn-wrap {
+    display: flex;
+    cursor: pointer;
+    justify-content: center !important;
+    background: #009991;
+    border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    color: #F5F5F5;
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: var(--button-font-weight);
+    transition: 0.3s !important;
+    padding: 6px 15px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* TAB Buttons */
+.advance-tab-button-1 .tab-button-list .tab-button {
+    cursor: pointer;
+    padding: 47px 27px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.tab-button {
+
+    
+    .description {
+        color: var(--primary-text-color);
+        opacity: 0.84;
+    }
+}
+
+.advance-tab-button-1 .tab-button-list .react-tabs__tab--selected .tab-button {
+    border-color: #c0c0c0 !important;
+}
+.advance-tab-button-1 .tab-button-list .react-tabs__tab--selected {
+    border-color: #009991 !important;
+}
+.advance-tab-button-1 .tab-button-list {
+    list-style: none;
+    padding: 0;
+    margin: -10px 0;
+}
+
+
 #sale-info, #sale-social, #sale-history {
     background-color: transparent !important;
     padding: 20px !important;
@@ -19,6 +83,44 @@
     transition: all 0.3s;
     border: 2px solid #009991;
     border-radius: 6px;
+}
+
+.sale-buy__title {
+    font-size: 0.9em !important;
+    text-align: center;
+    font-weight: bold;
+}
+.sale-buy__subtitle {
+    font-size: 0.85em !important;
+    text-align: center;
+    bottom: 20px;
+}
+
+.buy-box div {
+    position: relative;
+    margin: 1.5rem 0 0 0;
+}
+
+.select-currency-box select {
+    top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px 28px 10px 10px;
+    font-size: 0.8em !important;
+    border: 1px solid #c0c0c0 !important;
+    border-radius: 4px;
+    opacity: 0.91;
+    z-index: 2;
+    color: #c0c0c0;
+    outline: none;
+}
+
+.ant-input[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: blue;
+    cursor: not-allowed;
+    opacity: 1;
 }
 
 

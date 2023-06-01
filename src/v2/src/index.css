@@ -5228,7 +5228,9 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-}.pg-change-password-form {
+}
+
+.pg-change-password-form {
   display: -webkit-box;
   display: flex;
 }.pg-change-password-form__group {

@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
 
 
-import { selectSaleItem, selectUserInfo } from 'src/v2/src/modules';
 
-import { findSalebyId } from 'src/v2/src/modules';
+import { selectSaleItem } from 'src/modules/sale/sale-item';
 
-import { BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from 'src/v2/src/plugins/Sale';
+import { selectUserInfo } from 'src/modules';
 
-import { BuyersHistory } from 'src/v2/src/plugins/Sale';
+
+import { findSalebyId } from 'src/modules/sale/sale-item';
+
+import { BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from 'src/plugins/Sale';
+
+import { BuyersHistory } from 'src/plugins/Sale';
 
 //import './SaleDetailScreen.pcss';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
