@@ -97,6 +97,12 @@ import { MarketsList } from '../../containers/MarketsList';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
 import { Dashboard } from '../../screens/Dashboard/index';
+
+import { TokenScreen } from '../../screens/TokenScreen';
+
+
+
+
 import { Wallet } from '../../screens/MainWalletsScreen/index';
 import { Profile } from '../../screens/Profile/index';
 
@@ -386,6 +392,11 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/:routeTab" component={ProfileScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile-old" component={ProfileScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={Profile} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/tokenizantion:ieoID" component={TokenScreen} />
+                    
+                    {/* <PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} /> */}
+
+                    
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/cadastro" component={ProfileScreen2} />
                     
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab/:currency/:action" component={WalletsScreen} />
@@ -413,7 +424,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
                     <PublicRoute path="/new_home" exact component={HomeScreen} />
                     
-					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+					<PublicRoute path="/ieo/detail/:ieoID" exact component={TokenScreen} />
 
                     {/* <PublicRoute path="/ieo" exact component={IEOListingScreen} />
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={IEODetailScreen} /> */}

@@ -134,7 +134,7 @@ export const SaleDetailScreen: React.FC = () => {
 			);
 		} else {
 			return (
-				<div id="sale-detail-screen" style={{marginTop: '80px', marginBottom: '80px'}}>
+				<div id="sale-detail-screen">
 
 <div className="rwt-advance-tab-area "  >
                     <div className="" >
