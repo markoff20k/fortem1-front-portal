@@ -93,7 +93,8 @@ const OrdersItemComponent = props => {
                     </div>
                 </div>
                 <div className="pg-mobile-orders-item__row__button__wrapper">
-                    {order.state === 'wait' || order.state === 'trigger_wait' ? (
+                    {/* {order.state === 'wait' || order.state === 'trigger_wait' ? ( */}
+                    {order.state === 'wait' ? (
                         <div className="pg-mobile-orders-item__row__button" onClick={props.handleCancel(order.id)}>
                             <span>{intl.formatMessage({ id: 'page.mobile.orders.header.cancel' })}</span>
                             <CloseIcon />

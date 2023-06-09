@@ -502,9 +502,9 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
                     placeholder={formatMessage({ id: 'page.body.wallets.beneficiaries.dropdown.fiat.networks' })}
                     clear={false}
                 />
-                {renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
+                {/* {renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
                 {renderAddAddressModalBodyItem('fiatIntermediaryBankName', true)}
-                {renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)}
+                {renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)} */}
                 {render2FACode}
                 <div className="cr-email-form__button-wrapper">
                     <Button

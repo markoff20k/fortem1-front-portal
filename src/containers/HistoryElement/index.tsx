@@ -147,24 +147,24 @@ class HistoryComponent extends React.Component<Props> {
                     this.props.intl.formatMessage({id: 'page.body.history.trade.header.amount'}),
                     this.props.intl.formatMessage({id: 'page.body.history.trade.header.total'}),
                 ];
-            case 'transfers':
-                return [
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.date'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.amount'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.currency'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.direction'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.toAccount'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.transfer.header.status'}),
-                ];
-            case 'quick_exchange':
-                return [
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.date'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.amountGive'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.currencyGive'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.amountReceive'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.currencyReceive'}),
-                    this.props.intl.formatMessage({id: 'page.body.history.quick.header.status'}),
-                ];
+            // case 'transfers':
+            //     return [
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.date'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.amount'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.currency'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.direction'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.toAccount'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.transfer.header.status'}),
+            //     ];
+            // case 'quick_exchange':
+            //     return [
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.date'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.amountGive'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.currencyGive'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.amountReceive'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.currencyReceive'}),
+            //         this.props.intl.formatMessage({id: 'page.body.history.quick.header.status'}),
+            //     ];
           default:
               return [];
         }

@@ -6,6 +6,8 @@ import {
     HISTORY_PUSH_EMIT,
     HISTORY_PUSH_FINISH,
     HISTORY_RESET,
+    HISTORY_ALL_DATA,
+	HISTORY_ALL_FETCH,
 } from './constants';
 import { PrivateTradeEvent, WalletHistoryList } from './types';
 
@@ -24,6 +26,10 @@ interface HistorySuccessPayload {
     list: WalletHistoryList;
     page: number;
     nextPageExists: boolean;
+}
+
+interface HistorySuccessAllPayload {
+	list: WalletHistoryList;
 }
 
 export interface HistoryFetch {
@@ -55,13 +61,26 @@ export interface HistoryPush {
     payload: PrivateTradeEvent;
 }
 
+export interface HistoryAllFetch {
+	type: typeof HISTORY_ALL_FETCH;
+	payload: HistoryFetchPayload;
+}
+
+export interface HistoryAllData {
+	type: typeof HISTORY_ALL_DATA;
+	payload: HistorySuccessAllPayload;
+}
+
+
 export type HistoryActions =
     HistoryFetch
     | HistoryData
     | HistoryError
     | HistoryReset
     | HistoryPush
-    | HistoryPushFinish;
+    | HistoryPushFinish
+    | HistoryAllFetch
+	| HistoryAllData;
 
 
 export const fetchHistory = (payload: HistoryFetchPayload): HistoryFetch => ({
@@ -91,4 +110,14 @@ export const pushHistoryEmit = (payload: PrivateTradeEvent): HistoryPush => ({
 export const pushHistoryFinish = (payload: WalletHistoryList): HistoryPushFinish => ({
     type: HISTORY_PUSH_FINISH,
     payload,
+});
+
+export const historyAllFetch = (payload: HistoryFetchPayload): HistoryAllFetch => ({
+	type: HISTORY_ALL_FETCH,
+	payload,
+});
+
+export const historyAllData = (payload: HistorySuccessAllPayload): HistoryAllData => ({
+	type: HISTORY_ALL_DATA,
+	payload,
 });

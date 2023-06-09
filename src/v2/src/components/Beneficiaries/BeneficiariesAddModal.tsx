@@ -272,9 +272,9 @@ class BeneficiariesAddModalComponent extends React.Component<Props, State> {
                 {this.renderAddAddressModalBodyItem('fiatFullName')}
                 {this.renderAddAddressModalBodyItem('fiatAccountNumber')}
                 {this.renderAddAddressModalBodyItem('fiatBankName')}
-                {this.renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
+                {/* {this.renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
                 {this.renderAddAddressModalBodyItem('fiatIntermediaryBankName', true)}
-                {this.renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)}
+                {this.renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)} */}
                 <div className="cr-email-form__button-wrapper">
                     <Button
                         disabled={isDisabled}

@@ -54,3 +54,4 @@ export * from './validateBeneficiaryTestnetAddress';
 export * from './is2faValid';
 export * from './stringToHTML';
 export * from './upperFirstCase';
+export * from './preciseNumber';

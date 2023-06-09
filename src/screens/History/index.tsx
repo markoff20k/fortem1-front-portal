@@ -46,12 +46,16 @@ class History extends React.Component<Props, State> {
         currentTabIndex: 0,
     };
 
-    public tabMapping = CanCan.checkAbilityByAction('read', 'QuickExchange', this.props.abilities)
-        ? ['deposits', 'withdraws', 'trades', 'transfers', 'quick_exchange']
-        : ['deposits', 'withdraws', 'trades', 'transfers'];
+    // public tabMapping = CanCan.checkAbilityByAction('read', 'QuickExchange', this.props.abilities)
+    //     ? ['deposits', 'withdraws', 'trades', 'transfers', 'quick_exchange']
+    //     : ['deposits', 'withdraws', 'trades', 'transfers'];
+
+    // public tabMapping = ['deposits', 'withdraws', 'trades', 'transfers'];
+    public tabMapping = ['deposits', 'withdraws', 'trades'];
+    
 
     public componentDidMount() {
-        setDocumentTitle('History');
+        setDocumentTitle('Extratos');
         this.props.fetchMarkets();
         this.props.fetchWallets();
     }
@@ -88,10 +92,10 @@ class History extends React.Component<Props, State> {
     private renderTabs = () => {
         const { tab } = this.state;
 
-        const quickExchange = {
-            content: tab === 'quick_exchange' ? <HistoryElement type="quick_exchange" /> : null,
-            label: this.props.intl.formatMessage({id: 'page.body.history.quick'}),
-        };
+        // const quickExchange = {
+        //     content: tab === 'quick_exchange' ? <HistoryElement type="quick_exchange" /> : null,
+        //     label: this.props.intl.formatMessage({id: 'page.body.history.quick'}),
+        // };
 
         const tabs = [
             {
@@ -106,15 +110,15 @@ class History extends React.Component<Props, State> {
                 content: tab === 'trades' ? <HistoryElement type="trades" /> : null,
                 label: this.props.intl.formatMessage({id: 'page.body.history.trade'}),
             },
-            {
-                content: tab === 'transfers' ? <HistoryElement type="transfers" /> : null,
-                label: this.props.intl.formatMessage({id: 'page.body.history.transfer'}),
-            },
+            // {
+            //     content: tab === 'transfers' ? <HistoryElement type="transfers" /> : null,
+            //     label: this.props.intl.formatMessage({id: 'page.body.history.transfer'}),
+            // },
         ];
 
-        if (CanCan.checkAbilityByAction('read', 'QuickExchange', this.props.abilities)) {
-            tabs.push(quickExchange);
-        }
+        // if (CanCan.checkAbilityByAction('read', 'QuickExchange', this.props.abilities)) {
+        //     tabs.push(quickExchange);
+        // }
 
         return tabs;
     };

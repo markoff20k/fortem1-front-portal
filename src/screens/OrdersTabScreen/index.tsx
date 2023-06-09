@@ -60,7 +60,9 @@ class Orders extends React.PureComponent<Props, State> {
         ) : null;
 
         return (
-            <div className="pg-orders-tab pg-container">
+            <div className="pg-container-inside">
+                <div className='pg-orders-tab '>
+                <div className='pg-history-tab-title'> Ordens enviadas </div>
                 <div className="pg-orders-tab__tabs-content">
                     <TabPanel
                         panels={this.renderTabs()}
@@ -69,6 +71,7 @@ class Orders extends React.PureComponent<Props, State> {
                         currentTabIndex={this.state.currentTabIndex}
                         onCurrentTabChange={this.onCurrentTabChange}
                     />
+                </div>
                 </div>
             </div>
         );

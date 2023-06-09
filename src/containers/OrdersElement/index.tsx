@@ -8,6 +8,7 @@ import { CloseIcon } from '../../assets/images/CloseIcon';
 import { History, Pagination } from '../../components';
 import { Decimal } from '../../components/Decimal';
 import { localeDate, setTradeColor } from '../../helpers';
+import { useSelector } from 'react-redux';
 import {
     Market,
     ordersHistoryCancelFetch,
@@ -22,9 +23,12 @@ import {
     selectOrdersLastElemIndex,
     selectOrdersNextPageExists,
     userOrdersHistoryFetch,
+    selectCurrencies
 } from '../../modules';
 import { OrderCommon } from '../../modules/types';
 import { getTriggerSign } from '../OpenOrders/helpers';
+
+
 
 interface OrdersProps {
     type: string;
@@ -66,6 +70,7 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
 
         if (type === 'open') {
             // updateList = list.filter(o => o.state === 'wait' || o.state === 'trigger_wait');
+            updateList = list.filter(o => o.state === 'wait');
         }
 
         const emptyMsg = this.props.intl.formatMessage({id: 'page.noDataToShow'});
@@ -112,12 +117,12 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.date' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.market' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.side' }),
-            this.props.intl.formatMessage({ id: 'page.body.openOrders.header.orderType' }),
+            // this.props.intl.formatMessage({ id: 'page.body.openOrders.header.orderType' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.avgPrice' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.price' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.amount' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.value' }),
-            this.props.intl.formatMessage({ id: 'page.body.openOrders.header.trigger' }),
+            // this.props.intl.formatMessage({ id: 'page.body.openOrders.header.trigger' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.filled' }),
             this.props.intl.formatMessage({ id: 'page.body.openOrders.header.status' }),
             '',
@@ -156,26 +161,62 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
         const executedVolume = Number(origin_volume) - Number(remaining_volume);
         const filled = ((executedVolume / Number(origin_volume)) * 100).toFixed(2);
 
+        const baseCurrency = marketName.split('/')[0];
+        const quoteCurrency = marketName.split('/')[1];
+        
+
+        
+        const findIcon = (code: string): string => {
+            //const currency = currencies.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
+            try {
+                return (`https://storage.googleapis.com/public_fortem/${baseCurrency.toLowerCase()}.png`);
+            } catch (err) {
+                    
+                return ('../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+            }
+        };
+
         return [
-            <span key={id} className="split-lines f-small"><span className="secondary">{localeDate(date, 'date')}</span>&nbsp;<span>{localeDate(date, 'time')}</span></span>,
-            <span key={id} className="bold">{marketName}</span>,
-            <span style={{ color: setTradeColor(side).color }} key={id}>{orderSide}</span>,
-            <span key={id}>{orderType}</span>,
+            <span key={id} className="split-lines f-small"><span className="secondary">{localeDate(date, 'date')}</span><span>{localeDate(date, 'time')}</span></span>,
+            <span key={id} className="split-lines-h f-small">
+            
+            <span>
+                									<img
+										style={{
+											position: 'absolute',
+											zIndex: 999,
+											width: '32px',
+											height: '32px',										
+											borderRadius: '50%',
+											
+											
+										}}
+										width="32px"
+										height="32px"
+										src={findIcon(baseCurrency)}
+
+									/>
+                
+                <span key={id} className="bold">{marketName}</span></span>
+            </span>,
+            <span style={{ color: setTradeColor(side).color }} key={id}>{orderSide} - {orderType}</span>,
+            // <span key={id}>{orderType}</span>,
             avg_price ? <Decimal key={id} fixed={currentMarket.price_precision} thousSep=",">{avg_price}</Decimal> : '-',
             price ? <Decimal key={id} fixed={currentMarket.price_precision} thousSep=",">{price}</Decimal> : '-',
             <Decimal key={id} fixed={currentMarket.amount_precision} thousSep=",">{origin_volume}</Decimal>,
-            <Decimal key={id} fixed={currentMarket.amount_precision} thousSep=",">{total}</Decimal>,
-            <span key={id} className="split-lines f-small justify-content-end">
-                {trigger_price ? (
-                    <React.Fragment>
-                        <span>{this.props.intl.formatMessage({ id: 'page.body.trade.header.openOrders.lastPrice' })}</span>&nbsp;{getTriggerSign(ord_type, side)}&nbsp;&nbsp;
-                        <span style={{ color: setTradeColor(side).color }}>{Decimal.format(trigger_price, currentMarket.price_precision, ',')}</span>
-                    </React.Fragment>
-                ) : '-'}
-            </span>,
+            <span><Decimal key={id} fixed={currentMarket.amount_precision} thousSep=",">{total}</Decimal><span style={{marginLeft: '6px'}}>{quoteCurrency}</span></span>,
+            // <span key={id} className="split-lines f-small justify-content-end">
+            //     {trigger_price ? (
+            //         <React.Fragment>
+            //             <span>{this.props.intl.formatMessage({ id: 'page.body.trade.header.openOrders.lastPrice' })}</span>&nbsp;{getTriggerSign(ord_type, side)}&nbsp;&nbsp;
+            //             <span style={{ color: setTradeColor(side).color }}>{Decimal.format(trigger_price, currentMarket.price_precision, ',')}</span>
+            //         </React.Fragment>
+            //     ) : '-'}
+            // </span>,
             <span style={{ color: setTradeColor(side).color }} className="f-small" key={id}><Decimal fixed={2} thousSep=",">{+filled}</Decimal>%</span>,
             <span key={id} className="f-small">{status}</span>,
-            (state === 'wait' || state === 'trigger_wait') && <CloseIcon key={id} onClick={this.handleCancel(id)} />,
+            // (state === 'wait' || state === 'trigger_wait') && <CloseIcon key={id} onClick={this.handleCancel(id)} />,
+            (state === 'wait') && <CloseIcon key={id} onClick={this.handleCancel(id)} />,
         ];
     };
 
@@ -198,8 +239,8 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
     private getPrice = (ord_type, status, avg_price, trigger_price, price) => {
         if (ord_type === 'market' || status === 'done') {
             return avg_price;
-        } else if (status === 'trigger_wait') {
-            return trigger_price;
+        // } else if (status === 'trigger_wait') {
+        //     return trigger_price;
         } else {
             return price;
         }
@@ -222,7 +263,7 @@ class OrdersComponent extends React.PureComponent<Props, OrdersState>  {
                     </span>
                 );
             case 'wait':
-            case 'trigger_wait':
+            // case 'trigger_wait':
                 return (
                     <span className="pg-history-elem-opened">
                         <FormattedMessage id={`page.body.openOrders.content.status.${status}`} />

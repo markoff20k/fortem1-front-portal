@@ -1,12 +1,48 @@
 @import './BeneficiariesCrypto/BeneficiariesBlockchainItem.pcss';
 
 .pg-beneficiaries {
+
+  cr-modal {
+    .close {
+
+      width: 40px;
+      height: 40px;
+      position: relative;
+      top: 40px;
+      z-index: 5;
+
+    }
+
+  }
+
   &__modal .cr-modal {
+
+    cr-tab-content cr-tab-content__active {
+      padding: 0 !important;
+      background: transparent !important;
+    }
+
+
+    .cr-tab-panel__navigation-container {
+      display: none !important;
+    }
+
+    .cr-tab-content {
+      
+      
+      
+      
+      padding: 0 !important;
+      background: transparent !important;
+    }
 
     close {
 
       width: 40px;
       height: 40px;
+      position: relative;
+      top: 40px;
+      z-index: 5;
 
     }
     background: var(--body-background-color);
@@ -214,6 +250,7 @@
       .cr-tab-content {
         padding: 0;
         margin-top: -60px;
+        padding: 0 !important;
       }
     }
 
@@ -221,9 +258,10 @@
     .beneficiaries-confirmation-modal {
       
       .cr-email-form {
-        background: none;
+        background-color: none;
         box-shadow: none;
         min-width: 456px !important;
+        min-height: 600px !important;
 
         &__form-content {
           padding: 0;
@@ -286,7 +324,8 @@
 
   .beneficiaries-add-address-modal--coin .cr-email-form {
 
-    margin-top: -100px;
+    /* margin-top: -100px; */
+
     .pg-beneficiaries {
       &__error-text {
         color: var(--system-red);

@@ -1,3 +1,8 @@
+.cr-modal {
+    .cr-tab-panel__navigation-container {
+        display: none !important;
+    }
+}
 
 .input:focus-within {
 
@@ -626,8 +631,11 @@ input:-webkit-autofill:focus {
 .close {
     width: 14px;
     height: 14px;
-    /* position: relative; */
-    top: 80px;
+    position: relative;
+    top: 20px;
+    right: -90px;
+    text-align: right;
+    z-index: 5;
 }
 
 .cr-modal  {
