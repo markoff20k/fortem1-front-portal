@@ -276,7 +276,7 @@ export const HeaderLanding: React.FC = () => {
 						<Logo />
 					</Link>
 				</div>
-					<div className="header__left-menu d-flex flex-row align-items-center">
+					<div className="header__left-menu d-flex flex-row align-items-center mt-3">
 						<div className="header__left-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('exchange')} onClick={() => setStateActiveNow('exchange')}>
 								<span className={classLinkActiveTitleDrop('exchange')}>

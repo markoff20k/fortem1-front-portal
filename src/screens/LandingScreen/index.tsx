@@ -151,15 +151,16 @@ class Landing extends React.Component<Props> {
   loop
   speed={0.6}
   src={Cubes}
-  style={{  background: 'transparent', position: 'relative', opacity: '0.6', }}
+  style={{  marginTop: '-200px', background: 'transparent', backgroundSize: 'cover', position: 'relative', opacity: '0.6', backgroundImage: 'radial-gradient(800px at center, #000, transparent )'}}
 >
   <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
 </Player>
 </div>
 
 				<img src={block} style={{filter: 'blur(1px)', backgroundSize: 'cover', opacity: '0', zIndex: '1', width: '100%', height: '90vh'}}/>
+                {/* <img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )',  backgroundSize: 'cover', opacity: '0', zIndex: '1', width: '100%', height: '90vh'}} className="theme-shape-center" /> */}
 
-                <div className='logo'>
+                <div className='logo' style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )'}}>
                     <img src={Logo} />
                     {/* <h2>Olá, Somos a Fortem ONE.</h2> */}
                     {/* <h4>FinTech provedora de serviços e software para: </h4> */}
@@ -168,6 +169,10 @@ class Landing extends React.Component<Props> {
                     <h6>-	Serviços financeiros, bancos e carteiras de ativos digitais</h6>
                     <h6>-	Plataformas de investimentos e tokenização de ativos</h6>
                     <h6>-	Soluções e meios de pagamento</h6>
+                    <div className='buttons'>
+                        <button className='btn-outline'>Conheça mais</button>
+                        <button className='btn-default'>Entre em contato</button>
+                    </div>
                 </div>
             </div>
 
@@ -256,7 +261,7 @@ class Landing extends React.Component<Props> {
                 <div className="pg-landing-screen__why-card-2">
                     <p>Redundância a falhas</p>
                     <div className="pg-landing-screen__why-card-info">
-                        <p className='title'>Monitoração ativa, constante</p>
+                        <p className='title'>Monitoramento ativo, constante</p>
                         <p className='description'>Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
                                     Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
                                     E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.</p>
