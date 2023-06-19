@@ -193,7 +193,7 @@ class Landing extends React.Component<Props> {
 										<span className="color-accent">.<br /></span>
                                     </p>
                                     <p style={{fontSize: '68px', fontWeight: '700', letterSpacing: '4px', lineHeight: '84px', fontFamily: 'Inter, sans-serif', transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-2">
-                                        para todas necessidades
+                                        para todas as necessidades
 									    <span className="color-accent">.</span>
 									</p>
 									<p style={{fontSize: '30px', fontFamily: 'Inter, sans-serif', color: '#acacac', lineHeight: '44.2px'}}>Da emissão primária à negociação no mercado secundário. Somos o único provedor de tecnologia a oferecer soluções para o ciclo completo .</p>
@@ -254,33 +254,34 @@ class Landing extends React.Component<Props> {
             </div>
             <div className="row-card">
                 <div className="pg-landing-screen__why-card-2">
-                    <p>Porque Fortem?</p>
+                    <p>Redundância a falhas</p>
                     <div className="pg-landing-screen__why-card-info">
-                        <p className='title'>Monitoração constante</p>
+                        <p className='title'>Monitoração ativa, constante</p>
                         <p className='description'>Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
                                     Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
                                     E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.</p>
                     </div>
                 </div>
                 <div className="pg-landing-screen__why-card">
-                    <p>Descrubra mais</p>
+                    <p>Painel de Controle e Administração</p>
                     <div className="pg-landing-screen__why-card-info">
                     </div>
                 </div>
             </div>
             <div className="row-card">
                 <div className="pg-landing-screen__why-card-2">
-                    <p>Porque Fortem?</p>
+                    <p>Altamente customizável</p>
                     <div className="pg-landing-screen__why-card-info">
                         <p className='title'>Missão crítica</p>
                         <p className='description'>Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.</p>
                     </div>
                 </div>
                 <div className="pg-landing-screen__why-card-1">
-                    <p>Descrubra mais</p>
+                    <p>Conheça na prática</p>
                     <div className="pg-landing-screen__why-card-info">
-                        <h1>Agende uma demonstração</h1>
+                        <h1>Agende uma demonstração
                         <button className='button-schedule'>Agendar </button>
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -754,7 +755,8 @@ class Landing extends React.Component<Props> {
 					<div className="card-wrapper">
 						{/*<InfoItem name={'Currencies'} value={statistics.currencies} color="#99FFE7" />*/}
 						<InfoItem name={'Microserviços'} value={'300+'} color="#F5F5F5" />
-                        <p>Tecnologias de ponta orientadas a micro serviços fazem parte do core da nossa arquitetura. Escalabilidade automática, desempenho e alta disponibilidade são os principais pilares que garantem a estabilidade das nossas soluções. Até mesmo soluções mais complexas podem ser simplificadas com o uso da nossa tecnologia.</p>
+                        <p>Tecnologias de ponta orientadas a microserviços fazem parte do core da nossa arquitetura. Escalabilidade automática, desempenho e alta disponibilidade são os principais pilares que garantem a estabilidade das nossas soluções.</p>
+                             {/* Até mesmo soluções mais complexas podem ser simplificadas com o uso da nossa tecnologia.</p> */}
 					</div>
 					<div className="card-wrapper">
 						<InfoItem name={'Ativos digitais'} value={'500+'} color="#F5F5F5" />
@@ -762,7 +764,7 @@ class Landing extends React.Component<Props> {
 					</div>
 					<div className="card-wrapper">
 						<InfoItem name={'Blockchains'} value={'20+'} color="#F5F5F5" />
-                        <p>Suporte nativo aos principais ativos digitais e integração com os maiores provedores de liquidez globais fornecem extrema eficiência ao seu negócio, melhores ofertas e menores custos com spreads.</p>
+                        <p>Integração nativa aos principais blockchains de mercado possibilita a criação e emissão de novas moedas, tokens e ativos digitais, que poderão ser controlados e gerenciados de acordo com sua necessidade.</p>
 					</div>
 				
 			</div>

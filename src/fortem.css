@@ -48,22 +48,28 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    /* left: 25%;
+    right: 25%; */
+    /* justify-content: center; */
 
     img {
-        position: relative;
+        position: absolute;
+        justify-content: center;
         top: -58vh;
         /* left: 33vw; */
         display: flex;
         justify-content: center;
         width: 35vw;
-        left: 33.333%;
+        left: 33%;
         opacity: 0.74;
+        margin-bottom: 20px;
     }
 
     h2 {
         position: relative;
+        justify-content: center;
         /* top: -620px; */
-        top: -50vh;
+        top: -80vh;
         left: 28vw;
         font-size: 32px !important;
         font-weight: 700 !important;
@@ -74,11 +80,12 @@
 
     h4 {
         position: relative;
+        justify-content: center;
         /* top: -600px; */
         display: flex;
         justify-content: center;
-
-        top: -56vh;
+        text-align: center !important;
+        margin-top: -44vh;
         font-size: 22px !important;
         font-weight: 600 !important;
         line-height: 36px;
@@ -89,8 +96,10 @@
 
     h6 {
         position: relative;
+        justify-content: center;
         /* top: -560px; */
-        top: -55vh;
+        text-align: center !important;
+        top: 20px;
         /* left: 27vw; */
         display: flex;
         justify-content: center;
@@ -143,6 +152,7 @@
     color: #F5F5F5;
     display: flex;
     font-size: 1.2em;
+
     justify-content: center;
     text-align: center;
     position: relative;
@@ -225,7 +235,7 @@
         font-weight: 400;
         line-height: 26px;
         opacity: 0.81;
-        letter-spacing: 0.1px;
+        letter-spacing: 0.5px;
         text-align: center;
 
         @media (max-width: 1024px) {
@@ -241,7 +251,8 @@
 
 
 .pg-landing-screen__why {
-    width: 100vw !important;
+    width: 90vw !important;
+    max-width: 1440px !important;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -258,7 +269,7 @@
 .pg-landing-screen__why-card {
 
     width: 47vw !important;
-    
+    max-width: 650px;
     border: none;
     border-radius: 8px;
     /* background: #1EDED0; */
@@ -269,8 +280,8 @@
         color: #fff;
         display: flex;
         text-align: right;
-        right: 1vw;
-        /* top: 4vw; */
+        right: 4vw;
+        top: 4vw;
         position: absolute;
         font-size: 26px;
         font-weight: 600;
@@ -283,6 +294,7 @@
 .pg-landing-screen__why-card-2 {
 
     width: 47vw;
+    max-width: 650px;
     height: 42vw;
     border: none;
     border-radius: 8px;
@@ -311,6 +323,7 @@
 .pg-landing-screen__why-card-1 {
 
     width: 47vw !important;
+    max-width: 650px;
     
     border: none;
     border-radius: 8px;
@@ -393,6 +406,7 @@
         justify-content: flex-start;
         text-align: left;
         width: 35vw;
+        max-width: 400px;
         text-transform: none !important;
         opacity: 0.74 !important;
     
@@ -406,7 +420,7 @@
     padding: 0.8em 1.8em;
     border: none;
     border-radius: 12px;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     background: transparent;
     text-align: center;
@@ -417,8 +431,12 @@
     z-index: 1;
     font-family: inherit;
     color: #17C3B2;
-    top: 20vh;
-    left: 90px;
+    
+    top: 20px;
+    left: 20px;
+
+    max-height: 60px;
+
 }
 
 .button-schedule::before {
