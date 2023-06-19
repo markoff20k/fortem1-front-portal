@@ -8,25 +8,27 @@ import { Area, AreaChart, ResponsiveContainer } from 'recharts';
 import styled from 'styled-components';
 import { currenciesFetch, Market, selectCurrencies, selectMarkets, selectMarketTickers, setCurrentMarket } from '../../modules';
 
-const ChartWrap = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-`;
+// const ChartWrap = styled.div`
+// 	width: 100%;
+// 	display: flex;
+// 	justify-content: space-between;
+// `;
 const MarketChartItem = styled.div`
 	margin-bottom: 40px;
 	margin-top: -20px;
-	width: 340px;
+	width: 100%;
+	min-width: 290px;
 	height: 160px;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 12px;
 	background-color: #dde1e7;
-	transition: transform 1s;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+	// transition: transform 1s;
 	cursor: pointer;
 	:hover {
-		opacity: 0.91;
-		transform: scale(1.1) ;
-		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+		// opacity: 0.91;
+		// transform: scale(1.05) ;
+		
 	}
 `;
 
@@ -95,7 +97,8 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 	const fetchMarketsKlines = async (marketId: string, from: number, to: number) => {
 		try {
 			const klines = await axios.get(
-				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=60&time_from=${from}&time_to=${to}`,
+				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=30&time_from=${from}&time_to=${to}`,
+
 			);
 
 			return klines.data.map((kline, index) => {
@@ -168,8 +171,8 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 			const marketChangeColor = +(change || 0) < 0 ? '#D92121' : '#00CC99';
 			return (
 				<MarketChartItem>
-					<div className="container2" onClick={() => handleRedirectToTrading(market.id)}>
-						<div className="row">
+					<div className="container" onClick={() => handleRedirectToTrading(market.id)}>
+						<div className="charts">
 							<div className="col-12 d-flex justify-content-between">
 								<div>
 								<img width="36px" height="36x" style={{borderRadius: '50%'}}src={findIcon(baseCurrency)} alt={baseCurrency} />
@@ -200,33 +203,34 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 								</div>
 							</div>
 						</div>
-						<div className="row position-absolute " style={{marginTop: '-115px', marginLeft: '40%', width: '200px', height: '160px', zIndex: 0, position: 'absolute' }}>
+						<div className="row position-absolute " style={{marginTop: '-115px', marginLeft: '6%', width: '200px', height: '160px', zIndex: 0, position: 'absolute' }}>
 							<div className="col-12">
 
 								<ResponsiveContainer ani width="100%" aspect={4 / 1}>
 
 									<AreaChart
-										width="90px"
-										height="60px"
+														width={90}
+														height={60}
 										data={data}
 										margin={{
 											right: 30,
 											left: 30,
 										}}
 									>
-										        <defs>
+										        {/* <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor={marketChangeColor} stopOpacity={0.4}/>
             <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0.4}/>
           </linearGradient>
-        </defs>
+        </defs> */}
 										<Area
 											type="monotone"
+											isAnimationActive={false}
 											dataKey="pv"
 											stroke={marketChangeColor}
-											strokeWidth={2}
-											fillOpacity={0.4}
-											fill="transparent"
+											strokeWidth={1}
+											fillOpacity={0.2}
+											fill={marketChangeColor}
 										/>
 									</AreaChart>
 								</ResponsiveContainer>
@@ -242,17 +246,17 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 
 	const renderChart = () => {
 		return (
-			<ChartWrap>
-				<div className="container" style={{ backgroundColor: 'transparent', paddingTop: '25px', borderRadius: '1rem' }}>
-					<div className="row">
+			// <ChartWrap>
+				<div className="charts" style={{ backgroundColor: 'transparent', paddingTop: '25px', borderRadius: '1rem' }}>
+					{/* <div className="row"> */}
 						{kLinesState.map((kline, i) => (
-							<div className="col-12 col-md-6 mb-2 position-relative" key={i}>
+							<div className="" key={i}>
 								{MarketChart(kline, marketNames[i])}
 							</div>
 						))}
-					</div>
+					{/* </div> */}
 				</div>
-			</ChartWrap>
+			// </ChartWrap>
 		);
 	};
 

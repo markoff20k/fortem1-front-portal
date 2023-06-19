@@ -746,7 +746,7 @@ export const pt: LangType = {
                                                    'несколько обязательных подтверждений для завершения этой транзакции.',
     'page.modal.withdraw.success.button': 'OK',
 
-    'page.modal.expired.title': 'Sua sessão foi encerrada',
+    'page.modal.expired.title': 'Sessão encerrada',
     'page.modal.expired.submit': 'Acessar novamente',
 
 

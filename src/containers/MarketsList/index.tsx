@@ -16,6 +16,7 @@ import { useIntl } from 'react-intl';
 
 import { selectUserLoggedIn} from '../../modules';
 
+import search from './icon/search.svg';
 
 
 const defaultTicker = {
@@ -135,7 +136,7 @@ export const MarketsList = props => {
 									<path
 										className={svgClass}
 										d="M10 14.3917L15.15 17.5L13.7834 11.6417L18.3334 7.69999L12.3417 7.19166L10 1.66666L7.65835 7.19166L1.66669 7.69999L6.21669 11.6417L4.85002 17.5L10 14.3917Z"
-										fill="#848E9C"
+										fill="gray"
 									/>
 								</svg>
 
@@ -174,15 +175,15 @@ export const MarketsList = props => {
 	};
 
 	const renderFIATMarketElement = (): void | any => {
-		if (nameMarketPair === 'FIAT') {
+		if (nameMarketPair === 'Tokens') {
 			const marketFIATs = [
 				{
-					name: 'BUSD',
-					fill: 'busd',
+					name: 'ARB',
+					fill: 'arb',
 				},
 				{
-					name: 'USDC',
-					fill: 'usdc',
+					name: 'LDO',
+					fill: 'ldo',
 				},
 				{
 					name: 'TUSD',
@@ -233,8 +234,8 @@ export const MarketsList = props => {
 				fill: 'bnb',
 			},
 			{
-				name: 'FIAT',
-				fill: 'busd',
+				name: 'Tokens',
+				fill: 'usd',
 			},
 		];
 
@@ -268,7 +269,7 @@ export const MarketsList = props => {
 							<div className="col-md-3">
 								<div className="search-coin">
 									<div className="search-coin__icon">
-										<img alt="search" src={require('./icon/search.svg')} />
+										<img alt="search" src={search} />
 									</div>
 									<input
 										className="search-coin__input"
@@ -336,9 +337,9 @@ export const MarketsList = props => {
 	return (
 		<div>
 			        			
-		{/* <div className='marketsHotBanner'>
+		<div className='marketsHotBanner'>
 		<div>{MarketsHotOnList()}</div>
-		</div> */}
+		</div>
 		
 
 		<div className='w-container marketList'>

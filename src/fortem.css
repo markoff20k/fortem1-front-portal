@@ -4,6 +4,25 @@
     }
 }
 
+.expired-session-modal {
+
+    .cr-modal {
+
+        .cr-email-form {
+            border-radius: 20px;
+        }
+    }
+}
+
+.cr-email-form__form-content-title {
+
+    font-size: 18px;
+    color: var(--primary-text-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 .input:focus-within {
 
     outline: none !important;
@@ -485,11 +504,97 @@ input:-webkit-autofill:focus {
 
 }
 
+#udon-market__pagination {
+	/* background: #172b4c; */
+	/* border-top: 1px solid var(--header-background-color); */
+	padding: 20px 0;
+	width: 100%;
+    justify-content: flex-end;
+    font-size: 16px;
+
+	.pagination {
+		display: flex;
+		margin-bottom: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+        margin-top: 0px !important;
+	}
+
+	.pagination li {
+		background-color: var(--header-background-color);
+		border: none;
+		border-radius: 6px;
+		color: #f5f5f5;
+		cursor: pointer;
+		display: flex;
+		/* font-size: 1rem; */
+        font-size: 16px;
+		height: 32px;
+		margin: 0 5px;
+		outline: none;
+		/* outline-style: initial; */
+		padding: 0.5rem;
+		text-align: center;
+		width: 32px;
+	}
+
+	.next,
+	.previous {
+		background-color: #16837C !important;
+		color: #f5f5f5 !important;
+		font-size: 1rem !important;
+        border-radius: 6px;
+        width: 8px;
+        height: 12px;
+
+        a {
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+            margin-top: -3px;
+            color: #f5f5f5 !important;
+        }
+
+        &:hover {
+            -webkit-filter: brightness(115%);
+        }
+	}
+
+	.active {
+		background-color: transparent !important;
+		color: #f5f5f5 !important;
+        border-color: #f5f5f5;
+        width: 64px;
+        a {
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+            margin-top: -5px;
+            color: #f5f5f5 !important;
+        }
+
+        &:hover {
+            -webkit-filter: brightness(115%);
+        }
+	}
+
+	.disabled {
+		cursor: default;
+	}
+}
+
 .pagination {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
     position: relative;
+
 }
 
 .pagination-item {
@@ -699,9 +804,9 @@ input:-webkit-autofill:focus {
 
 .pg-navbar__header-settings__account-dropdown-menu {
 
-    width: 62px;
-    height: 62px;
-    margin-right: 10px;
+    /* width: 62px;
+    height: 62px; */
+    margin-right: 5px;
 
 }
 
@@ -5593,6 +5698,13 @@ img,video {
     }
 }
 
+.charts {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .marketList {
 	background: transparent !important;
@@ -5602,7 +5714,9 @@ img,video {
 
 	.active_id {
 		color: rgb(249, 199, 79);
-		fill: rgb(249, 199, 79);
+		fill: #11ECC7;
+        /* fill: rgb(249, 199, 79); */
+
 	}
 
 	.cx-market-item {
@@ -5634,6 +5748,7 @@ img,video {
 							font-weight: 600;
 							height: 40px;
 							margin-right: 40px;
+                            color: #f5f5f5;
 
 							&:first-child {
 								margin-right: 0;
@@ -5641,8 +5756,8 @@ img,video {
 						}
 
 						.rc-tabs-tab-active {
-							border-bottom: 2px solid #009991;							;
-							color: #f5f5f5;
+							/* border-bottom: 2px solid #009991;							; */
+							color: #009991;
 							font-weight: bold;
 						}
 					}
@@ -5694,7 +5809,9 @@ img,video {
 								}
 
 								.search-coin {
-									border-bottom: solid 1px #009991;
+                                    border: solid 1px var(--input-border-color);
+									border-radius: 8px;
+									background: var(--input-background-color);
 									display: flex;
 									height: calc(var(--big-gap) * 0.6);
 									overflow: hidden;
@@ -5739,20 +5856,25 @@ img,video {
 }
 
 .cx-market__btn-trading {
-	background: transparent;
+	/* background: transparent;
 	border: 1px solid #009991;
 	border-radius: 5px;
 	color: #c0c0c0;
-	padding: 10px 15px !important;
+	padding: 10px 15px !important; */
+    padding: 8px 12px;
+    border-radius: 5px;
 
 	
 
 	&:hover {
-		background: transparent;
+		/* background: transparent;
 		border: 1px solid #009991;
 		border-radius: 5px;
-		transition: 0.4s;
+		transition: 0.4s; */
+        padding: 8px 12px;
+        border-radius: 5px;
 	}
+
 }
 
 
@@ -5761,22 +5883,52 @@ img,video {
     padding: 20px 15px;
 }
 
+.pt-3 {
+    padding-top: 6px !important;
+}
+
 .market-pair__fiat {
     color: var(--primary-text-color);
     cursor: pointer;
     outline: none;
-    width: 6rem;
-    padding: 0.5rem 2rem;
+    
+    /* padding: 0.5rem 2rem; */
+    padding: 10px 16px !important;
     margin: 5px;
+    border: 1px solid var(--input-border-color) !important;
     border-radius: 12px;
-    background: var(--input-background-color);
+    background-color: var(--sidebar-item-background-color-hover) !important;
+    width: 110px;
+    font-size: 16px;
+    font-weight: 500;
+    
+    line-height: 24px;
+
+    &__active {
+        color: #16837C !important;
+        color: var(--primary-text-color);
+        cursor: pointer;
+        outline: none;
+        border: none;
+        
+        padding: 0.5rem 2rem;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 5px;
+        border-radius: 12px;
+        background-color: var(--sidebar-item-background-color-hover) !important;
+        width: 110px;
+
+    }
 }
 
 .marketsHotBanner {
     display: flex !important;
     flex-direction: row !important;
     margin: 0 auto !important;
-    width: 1200px !important;
+    /* width: 1200px !important; */
+    justify-content: center;
     padding: 0 !important;
 }
 

@@ -99,7 +99,7 @@ export const UdonMarketTable: React.FC<MarketTableProps> = (props: MarketTablePr
 					</tbody>
 				</table>
 			</TableStyles>
-			<div id="udon-market__pagination" className="w-100 d-flex flex-row justify-content-center">
+			<div id="udon-market__pagination" className="w-100 d-flex flex-row">
 				<ReactPaginate
 					previousLabel={'<'}
 					nextLabel={'>'}

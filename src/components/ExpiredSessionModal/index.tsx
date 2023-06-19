@@ -18,7 +18,7 @@ export class ExpiredSessionModal extends React.Component<ExpiredSessionModalProp
             <div className="expired-session-modal">
                 <div className="cr-modal">
                     <div className="cr-email-form">
-                        <div className="cr-email-form__options-group">
+                        {/* <div className="cr-email-form__options-group">
                             <div className="cr-email-form__option">
                                 <div className="cr-email-form__option-inner">
                                     <ClockIcon className="clock-icon" />&nbsp;&nbsp;{title}
@@ -28,8 +28,11 @@ export class ExpiredSessionModal extends React.Component<ExpiredSessionModalProp
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="cr-email-form__form-content">
+                        {/* <div className="cr-email-form__form-content-icon">     <img src={} />  </div> */}
+                        <div className="cr-email-form__form-content-title">Por motivo de segurança, sua sessão foi encerrada</div>
+
                             <div className="cr-email-form__button-wrapper">
                                 <Button
                                     block={true}
