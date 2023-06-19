@@ -88,7 +88,7 @@ import { SaleListTables } from 'src/plugins/Sale';
 
 import {Player, Controls} from '@lottiefiles/react-lottie-player';
 
-import Cubes from './cubes.json';
+import Cubes from './Cubes.json';
 
 import Accordion from 'src/template_react/doob/src/elements/accordion/AccordionOne';
 
