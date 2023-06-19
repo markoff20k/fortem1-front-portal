@@ -7,7 +7,10 @@ import { Link, RouteProps, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 
 import { IntlProps } from '../../';
-import { Logo } from '../../components';
+// import { Logo } from '../../components';
+
+import Logo from 'src/assets/images/logo_branca_bandeira_verde.svg';
+
 import { MarketsTable, NavBar } from '../../containers';
 import { toggleColorTheme } from '../../helpers';
 import {
@@ -35,11 +38,22 @@ import CoinMarketIcon from 'src/assets/images/landing/social/CoinMarket.svg';
 
 import { useSelector } from 'react-redux';
 
+import ServiceA from "../../template_react/doob/src/elements/service/ServiceA";
+import ServiceB from "../../template_react/doob/src/elements/service/ServiceB";
+import ServiceC from "../../template_react/doob/src/elements/service/ServiceC";
+import ServiceD from "../../template_react/doob/src/elements/service/ServiceD";
+import ServiceE from "../../template_react/doob/src/elements/service/ServiceE";
+
+
+import serviceBorder from './Home/Telegram.svg' ;
+
+
 
 import { HomepageMarket, Footer } from '../../containers';
 // import { MarketOverviewList } from '../MarketOverviewList';
 
-
+import {TextDecrypt} from './TextDecrypt.js';
+import ScrollAnimation from "react-animate-on-scroll";
 import { Parallax } from 'react-scroll-parallax';
 // import mobile from './fortem-mobile.png';
 import mobile from './mobileFortem.png';
@@ -49,6 +63,8 @@ import Download1 from './Home/Screen4.png';
 import Download2 from './Home/Screen3.png';
 import devicePhone from './Home/fortemDevices-iPhone.png';
 import deviceLaptop from './Home/fortemDevices-Laptop.png';
+
+import block from './block.svg';
 
 import Flip from 'react-reveal/Flip';
 
@@ -69,6 +85,12 @@ import Typed from 'react-typed';
 
 import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
 import { SaleListTables } from 'src/plugins/Sale';
+
+import {Player, Controls} from '@lottiefiles/react-lottie-player';
+
+import Cubes from './cubes.json';
+
+import Accordion from 'src/template_react/doob/src/elements/accordion/AccordionOne';
 
 
 interface ReduxProps {
@@ -114,103 +136,161 @@ class Landing extends React.Component<Props> {
         
         return (
     <>
-        <div className='pg-header '> <HeaderLanding/> </div>
+        {/* <div className='pg-header '> <HeaderLanding/> </div> */}
+        <HeaderLanding/>
         <div className="pg-landing-screen" >
             
-        <div className="relative isolate">
-          <svg className="absolute opacity-30 inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-            <defs>
-              <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y="-1" className="overflow-visible fill-gray-50">
-              <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-            </svg>
-            <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
-          </svg>
-          <div className="absolute top-0 left-1/2 right-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48">
-            <svg viewBox="0 0 801 1036" aria-hidden="true" className="w-[50.0625rem]">
-              <path fill="url(#70656b7e-db44-4b9b-b7d2-1f06791bed52)" fill-opacity=".3" d="m282.279 843.371 32.285 192.609-313.61-25.32 281.325-167.289-58.145-346.888c94.5 92.652 277.002 213.246 251.009-45.597C442.651 127.331 248.072 10.369 449.268.891c160.956-7.583 301.235 116.434 351.256 179.39L507.001 307.557l270.983 241.04-495.705 294.774Z" />
-              <defs>
-                {/* <!-- <linearGradient id="70656b7e-db44-4b9b-b7d2-1f06791bed52" x1="508.179" x2="-28.677" y1="-116.221" y2="1091.63" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#1f932ae7" />
-                  <stop offset="1" stop-color="#34ec64" />
-                </linearGradient> --> */}
-              </defs>
-            </svg>
+        <div className="theme-shape-root-landing">
+   
+            {/* <div className="bg-overlay bg_image" style={{ width: '100vw', height: '80vh', }}> */}
+            <div className="bg_image" style={{ width: '100vw', height: '100vh', }}>
+            
+            <div className='bg_overlay cube'> 
+            <Player
+  autoplay
+  loop
+  speed={0.6}
+  src={Cubes}
+  style={{  background: 'transparent', position: 'relative', opacity: '0.6', }}
+>
+  <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+</Player>
+</div>
 
+				<img src={block} style={{filter: 'blur(1px)', backgroundSize: 'cover', opacity: '0', zIndex: '1', width: '100%', height: '90vh'}}/>
 
-          </div>
-          
-          <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-16 lg:px-8 lg:pt-24">
-              <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                <div className='w-hero-container-left'>
-                    <h1 className="text-3xl font-bold tracking-tight text-fortem1neutral-300 sm:text-5xl">FORTEM ONE É A PLATAFORMA ESPECIALIZADA EM...</h1>
-                        <h1>
-                        <Typed
-                                strings={[
-                                    "ativos digitais",
-                                    "melhores créditos",
-                                    "alta rentabilidade",
-                                    "diversificação",
-                                    "segurança",
-                                ]}
-                                typeSpeed={100}
-                                backSpeed={50}
-                                backDelay={1900}
-                                loop
-                        />
-                    </h1>
-                  <p className="relative mt-6 text-xl leading-8 text-fortem1neutral-300 sm:max-w-md lg:max-w-none">Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
-                  <div className="mt-10 flex items-center gap-x-6">
-                    <Link to="/signup" className="landing-button">
-                        {this.translate('page.body.landing.register.item.button')}
-                    </Link>
-                  </div>
-                </div>
-                <div className="w-hero-container-right">
-                <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                  <div className="ml-auto w-hero flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                    <div className="relative">
-                      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
-                  <div className="mr-auto w-hero flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                    <div className="relative">
-                      <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                    <div className="relative">
-                      <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
-                  <div className="w-hero flex-none space-y-8 pt-32 sm:pt-0">
-                    <div className="relative">
-                      <img src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                    <div className="relative">
-                      <img src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
+                <div className='logo'>
+                    <img src={Logo} />
+                    {/* <h2>Olá, Somos a Fortem ONE.</h2> */}
+                    {/* <h4>FinTech provedora de serviços e software para: </h4> */}
+                    <h4>SEUS PROJETOS. SUAS ESCOLHAS. NOSSA TECNOLOGIA. </h4>
+                    <h6>-	Corretoras e plataformas de negociação</h6>
+                    <h6>-	Serviços financeiros, bancos e carteiras de ativos digitais</h6>
+                    <h6>-	Plataformas de investimentos e tokenização de ativos</h6>
+                    <h6>-	Soluções e meios de pagamento</h6>
                 </div>
             </div>
-              </div>
-            </div>
-          </div>
+
           
+        </div>
+
+
+        <div className="landing-section-cards" >
+		<section className='section pd-top-300px wf-section'>
+			<div className='container-default w-container'>
+				<div className='mg-bottom-48px'> 
+					<div className="inner-container _912px center">
+						<div className="text-center">
+							<div className="position-relative">
+							{/*<GradientBorder borderRadius='15px' >*/}
+								<div className="position-relative z-index-1" >
+								
+								<Parallax rotateX={[-90, 0]} easing="easeInOutCirc">
+
+									<p style={{fontSize: '68px', fontWeight: '700', letterSpacing: '4px', lineHeight: '84px', fontFamily: 'Inter, sans-serif', transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-2">
+										Plataforma 
+                                        
+										<span className="color-accent">.<br /></span>
+                                    </p>
+                                    <p style={{fontSize: '68px', fontWeight: '700', letterSpacing: '4px', lineHeight: '84px', fontFamily: 'Inter, sans-serif', transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-2">
+                                        para todas necessidades
+									    <span className="color-accent">.</span>
+									</p>
+									<p style={{fontSize: '30px', fontFamily: 'Inter, sans-serif', color: '#acacac', lineHeight: '44.2px'}}>Da emissão primária à negociação no mercado secundário. Somos o único provedor de tecnologia a oferecer soluções para o ciclo completo .</p>
+								</Parallax>
+								
+								</div>
+								{/*</GradientBorder>*/}
+								
+								<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}></ScrollAnimation>
+								<div className="position-absolute top number-01">
+									<div className="text-big-outline" style={{opacity: 1}}>
+										01</div>
+								</div>
+								<ScrollAnimation />
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+
+
+                        {this.renderInfo()}
+
+
+
+
+
+
+        </section>
         </div>
 
 
 
 
                 <LandingBlock className="pg-landing-screen__top">
+                    
+                    
+        {/* <div className="pg-landing-screen__why bg-gradient-to-b from-fortem1neutral-700 via-fortem1typo-500 to-fortem1neutral-700"> */}
+        <div className="pg-landing-screen__why">
+            <div className="row-card">
+                <div className="pg-landing-screen__why-card-1">
+                    <p>Porquê a Fortem?</p>
+                    <h1>Segurança, escalabilidade e estabilidade</h1>
+                </div>
+                <div className="pg-landing-screen__why-card">
+                    <p>Arquitetura distribuída</p>
+                    <div className="pg-landing-screen__why-card-info">
+                        <div className="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
+                                <path fill="#009991" d="M118.8 43.3c-3.2.3-8.2.8-15.2 1.6-3.7.4-7.8.8-11.9 1.2l-2.1-2.4c-4-4.1-9-7.4-14.6-9.6-5.6-2.2-11.9-3.5-18.3-3.2-6.4.3-13 1.8-19.2 4.6C25.1 41.2 14.6 52.6 9.9 67c-2.4 7.1-3.3 15-2.6 22.8 0 2 .5 3.9.8 5.9.3 2 .8 4 1.4 5.9 1.2 3.9 2.7 7.7 4.7 11.3l-2 1.4c-3.2-4.6-5.8-9.6-7.7-15.1-11.8-33.3 5.6-69.9 38.9-81.8 28.7-10.2 59.7 1.3 75.4 25.9z" />
+                                <path fill="#009991" d="M45.7 74.6c-.8 8.5 4.4 16.2 12.7 18.6 5.2 1.4 10.2.5 15.5-2.9 8.2-5.3 48.9-29.8 51.7-31.5 1.3-.8 1.9-2.4 1.4-3.8-.4-1.1-1.3-2-2.5-2.2-.3-.1-.6-.1-.9-.1-2.7.2-56.9 6-61.9 6.4-8.6.7-15.1 7-16 15.5z" />
+                            </svg>
+                        </div>
+                        <p className='title'>Alta disponibilidade</p>
+                        <p className='description'>Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="row-card">
+                <div className="pg-landing-screen__why-card-2">
+                    <p>Porque Fortem?</p>
+                    <div className="pg-landing-screen__why-card-info">
+                        <p className='title'>Monitoração constante</p>
+                        <p className='description'>Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
+                                    Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
+                                    E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.</p>
+                    </div>
+                </div>
+                <div className="pg-landing-screen__why-card">
+                    <p>Descrubra mais</p>
+                    <div className="pg-landing-screen__why-card-info">
+                    </div>
+                </div>
+            </div>
+            <div className="row-card">
+                <div className="pg-landing-screen__why-card-2">
+                    <p>Porque Fortem?</p>
+                    <div className="pg-landing-screen__why-card-info">
+                        <p className='title'>Missão crítica</p>
+                        <p className='description'>Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.</p>
+                    </div>
+                </div>
+                <div className="pg-landing-screen__why-card-1">
+                    <p>Descrubra mais</p>
+                    <div className="pg-landing-screen__why-card-info">
+                        <h1>Agende uma demonstração</h1>
+                        <button className='button-schedule'>Agendar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
                     <div className="pg-landing-screen__market-info">
+
+
+
+
                         <div className="pg-landing-screen__market-info__wrap">
                             <div className="pg-landing-screen__market-info__wrap__title">
                                 <h1>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
@@ -550,6 +630,12 @@ class Landing extends React.Component<Props> {
                     <SaleListTablesUpcoming />     
                      <SaleListTables /> 
                 </LandingBlock>
+
+                <LandingBlock>
+                    <Accordion customStyle={'teste'} />
+                    
+                </LandingBlock>
+            
     
    
 
@@ -621,6 +707,67 @@ class Landing extends React.Component<Props> {
     </>
         );
     }
+
+
+    private renderCryptoTabs = () => (
+        <div className="counter-wrap">
+                
+                    
+                        {/* <div className="col-lg-12" >
+                            <SectionTitle
+                                textAlign = "text-center"
+                                radiusRounded = ""
+                                subtitle = ""
+                                title = "Conheça nosso portfólio diversificado de ativos digitais"
+                                description = ""
+                            />
+                            <p style={{fontSize: '26px'}} className="text-center"> Todo o universo cripto para você escolher </p>
+                        </div> */}
+                        {this.renderInfo()}
+                    
+                
+        </div>
+
+    );
+
+    private renderInfo = () => {
+		const InfoItem = ({ name, value, color = '' }) => {
+			return (
+				<div className=" bg_image servicesFortem-inner"  style={{  width: '199px', height: '194px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: `url(${serviceBorder})`, marginBottom: '20px'  }} >
+                <div className="homepage-info">
+					<div>
+						<h2 className="homepage-info__number" style={{ color: `${'#F5F5F5'}` }}>
+							{value}
+						</h2>
+					</div>
+					<div>
+						<h4 className="homepage-info__text">{name}</h4>
+					</div>
+				</div>
+                </div>
+			);
+		};
+
+		return (
+			<div className="counter-wrap">
+				
+					<div className="card-wrapper">
+						{/*<InfoItem name={'Currencies'} value={statistics.currencies} color="#99FFE7" />*/}
+						<InfoItem name={'Microserviços'} value={'300+'} color="#F5F5F5" />
+                        <p>Tecnologias de ponta orientadas a micro serviços fazem parte do core da nossa arquitetura. Escalabilidade automática, desempenho e alta disponibilidade são os principais pilares que garantem a estabilidade das nossas soluções. Até mesmo soluções mais complexas podem ser simplificadas com o uso da nossa tecnologia.</p>
+					</div>
+					<div className="card-wrapper">
+						<InfoItem name={'Ativos digitais'} value={'500+'} color="#F5F5F5" />
+                        <p>Suporte nativo aos principais ativos digitais e integração com os maiores provedores de liquidez globais fornecem extrema eficiência ao seu negócio, melhores ofertas e menores custos com spreads.</p>
+					</div>
+					<div className="card-wrapper">
+						<InfoItem name={'Blockchains'} value={'20+'} color="#F5F5F5" />
+                        <p>Suporte nativo aos principais ativos digitais e integração com os maiores provedores de liquidez globais fornecem extrema eficiência ao seu negócio, melhores ofertas e menores custos com spreads.</p>
+					</div>
+				
+			</div>
+		);
+	};
 
 private handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -67,20 +67,7 @@ const config = merge(commonConfig, {
                 exclude: /node_modules/,
             },
 
-            {
-                test: /\.svelte$/,
-				use: {
-					loader: 'svelte-loader',
-                    
-					options: {
-						compilerOptions: {
-							dev: true
-						},
-						emitCss: true,
-						hotReload: true
-					}
-				}              },
-
+         
             
 
                   {

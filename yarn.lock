@@ -2063,6 +2063,20 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@lottiefiles/lottie-interactivity@^1.6.2":
+  "integrity" "sha512-psmG/frpi4IIJjBa+Mj0ivKtfNRkasUnvU6sBrVfm7nSwBpEoyMop16uIEYg5PYdpboFbQQhibmwC006KGZhsA=="
+  "resolved" "https://registry.npmjs.org/@lottiefiles/lottie-interactivity/-/lottie-interactivity-1.6.2.tgz"
+  "version" "1.6.2"
+  dependencies:
+    "core-js" "3"
+
+"@lottiefiles/react-lottie-player@^3.5.3":
+  "integrity" "sha512-6pGbiTMjGnPddR1ur8M/TIDCiogZMc1aKIUbMEKXKAuNeYwZ2hvqwBJ+w5KRm88ccdcU88C2cGyLVsboFlSdVQ=="
+  "resolved" "https://registry.npmjs.org/@lottiefiles/react-lottie-player/-/react-lottie-player-3.5.3.tgz"
+  "version" "3.5.3"
+  dependencies:
+    "lottie-web" "^5.10.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   "integrity" "sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g=="
   "resolved" "https://registry.npmjs.org/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz"
@@ -5413,6 +5427,11 @@
   "integrity" "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
   "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
   "version" "2.6.12"
+
+"core-js@3":
+  "integrity" "sha512-NIp2TQSGfR6ba5aalZD+ZQ1fSxGhDo/s1w0nx3RYzf2pnJxt7YynxFlFScP6eV7+GZsKO95NSjGxyJsU3DZgeQ=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.31.0.tgz"
+  "version" "3.31.0"
 
 "core-util-is@~1.0.0":
   "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
@@ -10863,6 +10882,11 @@
   "version" "1.4.0"
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
+
+"lottie-web@^5.10.2":
+  "integrity" "sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg=="
+  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.12.2.tgz"
+  "version" "5.12.2"
 
 "lower-case@^2.0.2":
   "integrity" "sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg=="

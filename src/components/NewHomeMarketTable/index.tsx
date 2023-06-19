@@ -34,7 +34,7 @@ const TableStyles = styled.div`
 			transition: all 0.2s;
 		}
 		tr {
-			border-bottom: 1px solid #000;
+			// border-bottom: 1px solid #000;
 			cursor: pointer;
 			
 		}

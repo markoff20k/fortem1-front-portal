@@ -315,7 +315,7 @@ export const HeaderLanding: React.FC = () => {
 								className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								onClick={() => setModal((prevState) => !prevState)}
 							>
-								Meio de Pagamento
+								Soluções de Pagamento
 							</p>
 							{isModalOpen && <Modal closeModal={setModal } />}
 							</div>
