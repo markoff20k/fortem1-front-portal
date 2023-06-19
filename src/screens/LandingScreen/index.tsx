@@ -287,7 +287,7 @@ class Landing extends React.Component<Props> {
             </div>
         </div>
                     
-                    <div className="pg-landing-screen__market-info">
+                    {/* <div className="pg-landing-screen__market-info">
 
 
 
@@ -300,11 +300,11 @@ class Landing extends React.Component<Props> {
                                     {this.translate('page.body.landing.marketInfo.title.button')}
                                 </Link>
                             </div>
-                            {/* <MarketsTable /> */}
+                            
                             <HomepageMarket />
                         </div>
-                    </div>
-                    <div className="pg-landing-screen__platform-info">
+                    </div> */}
+                    {/* <div className="pg-landing-screen__platform-info">
                         <div className="pg-landing-screen__platform-info__wrap">
                             <div className="pg-landing-screen__platform-info__wrap__item">
                                 <span>{this.translate('page.body.landing.platformInfo.item.first.value')}</span>
@@ -319,7 +319,7 @@ class Landing extends React.Component<Props> {
                                 <span>{this.translate('page.body.landing.platformInfo.item.third.title')}</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </LandingBlock>
                 <LandingBlock
                     className="pg-landing-screen__register"
