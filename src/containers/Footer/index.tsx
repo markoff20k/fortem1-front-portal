@@ -200,7 +200,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 				<div className="fortem-line"></div>
 
 				<div className="footer-copyright flex flex-row flex-wrap align-center justify-center">
-					<img src={fortemIcon} style={{width: '14px'}}/>
+					{/* <img src={fortemIcon} style={{width: '14px'}}/> */}
 					<p>
 						Fortem1 Digital Assets Technology SA © 2023 Copyright :  <a href="https://www.fortem1.com.br"> www.fortem1.com.br </a> | | CNPJ: 50.093.874/0001-09 | | São Paulo, Brasil
 					</p>

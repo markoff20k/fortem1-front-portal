@@ -73,7 +73,7 @@
         display: flex;
         justify-content: center;
         text-align: center !important;
-        margin-top: -45vh;
+        margin-top: -48vh;
         font-size: 22px !important;
         font-weight: 600 !important;
         line-height: 36px;
@@ -84,20 +84,35 @@
 
     h6 {
         position: relative;
-        justify-content: center;
-        /* top: -560px; */
-        text-align: center !important;
-        top: 20px;
-        /* left: 27vw; */
         display: flex;
         justify-content: center;
+        /* justify-content: center; */
+        /* top: -560px; */
+        /* text-align: center !important; */
+        margin: 0 auto;
+        margin-top: 10px !important;
+        /* margin-bottom: 20px !important; */
+        /* left: 27vw; */
+
         font-size: 16px !important;
         font-weight: 600 !important;
         line-height: 32px;
-        color: #f5f5f5;
-        opacity: 0.61;
+        color: #11ECC7;
+        opacity: 0.81;
         font-family: 'Alliance1', 'Inter', sans-serif;
         letter-spacing: 1.2px;
+        padding: 10px 24px;
+        background: #272C35;
+        border: none;
+        border-radius: 12px;
+        width: fit-content;
+        text-transform: none;
+
+        svg {
+            top: 8px;
+            right: 8px;
+            position: relative;
+        }
     }
 
     .buttons {
@@ -107,7 +122,7 @@
         align-items: center;
         gap: 3rem;
         width: 100%;
-        margin-top: 30px;
+        margin-top: 40px;
 
         .btn-outline {
             background: transparent !important;
@@ -197,7 +212,7 @@
 
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.065) 0%, rgba(0, 0, 0, 0.5) 98.44%); */
 
-    background-image: radial-gradient(800px at center, #161D26, #161D26);
+    background-image: radial-gradient(800px at center, #161D26, #272C35);
     margin-top: -100px;
 }
 
