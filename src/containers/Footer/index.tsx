@@ -8,7 +8,8 @@ import {  FaPhoneAlt, FaEnvelope, FaFacebook, FaTelegram, FaTwitter, FaGlobe } f
 
 //const Logo = require('../../assets/images/logo2.svg');
 
-import logoTechno from '../../assets/images/svg/branco_techno_bandeira_verde.svg';
+// import logoTechno from '../../assets/images/svg/branco_techno_bandeira_verde.svg';
+import logoTechno from './footer-fortem.svg';
 
 
 
@@ -57,6 +58,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 							<p className="footer__info__title">POWERED BY:</p>
 				
 							<img src={logoTechno} onClick={handleScrollTop}  />
+
 						
 						</div>
 					</div>
@@ -115,7 +117,21 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 							</a>
 						</p>
 						< br/>
-						<p className="footer__info__title">TERMOS E POLÍTICAS</p>
+						{/* <p className="footer__info__title">TERMOS E POLÍTICAS</p>
+						<p className="footer__info__item">
+							<Link to="/fee">Termo de uso </Link>
+						</p>
+						<p className="footer__info__item">
+							<Link to="/announcement">Política de privacidade</Link>
+						</p>
+						<p className="footer__info__item">
+							<a href="https://ajuda.fortem.website" target="_blank" rel="noopener noreferrer">
+								Disclaimers
+							</a>
+						</p> */}
+					</div>
+					<div className="footer__info">
+					<p className="footer__info__title">TERMOS E POLÍTICAS</p>
 						<p className="footer__info__item">
 							<Link to="/fee">Termo de uso </Link>
 						</p>
@@ -127,9 +143,11 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 								Disclaimers
 							</a>
 						</p>
-					</div>
-					<div className="footer__info">
-						<p className="footer__info__title">CENTRAL DE SUPORTE</p>
+						
+						
+						
+						
+						{/* <p className="footer__info__title">CENTRAL DE SUPORTE</p>
 						<p className="footer__info__item">
 							<Link to="/fee">Nossas Taxas </Link>
 						</p>
@@ -150,7 +168,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress, handleScrollTo
 							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
 								Status dos serviços
 							</a>
-						</p>
+						</p> */}
 					</div>
 
 					<div className="footer__info">
