@@ -93,7 +93,8 @@ import Cubes from './Cubes.json';
 import Accordion from 'src/template_react/doob/src/elements/accordion/AccordionOne';
 
 import Tokenization from './tokenization.png';
-import Wallets from './wallets.png'
+import Wallets from './wallets.png';
+import Exchange from './exchange.png';
 
 
 interface ReduxProps {
@@ -252,20 +253,20 @@ class Landing extends React.Component<Props> {
                             <div className="flex flex-col w-10/12">
                                 <div className=" flex flex-row flex-wrap w-full mt-32 mb-8">
                                     <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-6/12 lg:pb-0 justify-center">
-                                        <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl ">
+                                        
                                             
-                                            <p className="text-xl leading-2 text-fortem1typo-cta mt-3" style={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                                <img src={Tokenization} />
-                                            </p>
-                                        </div>
+                                            
+                                                <img src={Exchange} style={{borderRadius: '18px'}}/>
+                                            
+                                        
                                     </div>        
                                     <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-6/12 lg:pb-0 justify-center">
-                                        <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl border-2 border-fortem1green-500">
+                                        
                                             
-                                            <p className="text-xl leading-2 text-fortem1typo-cta mt-3" style={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                                <img src={Tokenization} />
-                                            </p>
-                                        </div>
+                                        
+                                                <img src={Wallets} style={{borderRadius: '18px'}}/>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
