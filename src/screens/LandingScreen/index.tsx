@@ -432,7 +432,7 @@ class Landing extends React.Component<Props> {
                                     <path fill="#009991" d="m308.2 509.9 102.7 102.7 14.6 14.6c15.3 15.3 41.3 15.3 56.6 0l79.3-79.3 125.5-125.5 28.9-28.9c14.8-14.8 15.9-42 0-56.6-16-14.7-40.8-15.8-56.6 0l-79.3 79.3-125.5 125.5-28.9 28.9h56.6L379.4 467.9l-14.6-14.6c-14.8-14.8-42-15.9-56.6 0-14.7 16-15.8 40.7 0 56.6z"/>
                                 </svg>
                             </div>
-                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Missão crítica</h3>
+                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100 color-accent">Missão crítica</h3>
                             <p className="text-md leading-6 text-fortem1typo-100">
                                 Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
                                 Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
@@ -440,32 +440,22 @@ class Landing extends React.Component<Props> {
                             </p>
                         </div>
                     </div>
-                    <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">    
+                    <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">
                         <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl border-2 border-fortem1green-500">
-                            <div className="mb-5">
-                                <svg
-                                    className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500"
-                                    stroke="#38BCA4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1"
-                                        d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                                    ></path>
+                            <div className="mb-5 icon" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="inline-block icon text-indigo-500">
+                                    <path fill="#009991" d="M532.2 984c33.8-21.5 67.7-42.9 101.5-64.4 15.3-9.7 30.8-19.3 45.7-29.7 35.4-24.7 68.6-52.8 98.1-84.4 58.4-62.7 102.8-137 130.9-217.9 22.9-66.1 32.7-135.8 32.7-205.6V248.9c0-17.9-12.5-33.5-29.4-38.6-12.2-3.7-24.3-7.5-36-12.4 3.2 1.3 6.4 2.7 9.6 4-20.9-8.9-40.5-20.3-58.5-34.1l8.1 6.3c-17.8-13.8-33.8-29.7-47.6-47.5l6.3 8.1c-13.8-18-25.3-37.7-34.2-58.6 1.3 3.2 2.7 6.4 4 9.6-3-7.2-5.8-14.6-8.2-22-5.4-16.9-20.5-29.4-38.6-29.4H357.7c-16.5 0-33.1-.5-49.6 0h-.7c-18.2 0-33.2 12.5-38.6 29.4-2.4 7.5-5.1 14.8-8.2 22 1.3-3.2 2.7-6.4 4-9.6-8.9 20.9-20.4 40.5-34.2 58.6l6.3-8.1c-13.8 17.8-29.8 33.7-47.6 47.5l8.1-6.3c-18 13.8-37.7 25.2-58.5 34.1 3.2-1.3 6.4-2.7 9.6-4-11.8 4.9-23.8 8.7-36 12.4-16.9 5.1-29.4 20.7-29.4 38.6v120.6c0 21.2 0 42.4 1.5 63.6 3.2 43.1 10.5 86.1 22.6 127.6 24 82.4 65.6 158.3 120.8 223.8 42.9 50.9 94.6 92.1 150.6 127.6l110.7 70.2c.9.6 1.9 1.2 2.8 1.8 17.7 11.2 44.9 4.3 54.7-14.4 10.4-19.8 4.5-42.7-14.4-54.7-18-11.4-36-22.8-53.9-34.2-23-14.6-45.9-29.1-68.9-43.7-16.1-10.2-31.8-21.1-47-32.7l8.1 6.3c-37.8-29.3-71.8-63.3-101.1-101.1l6.3 8.1c-29.8-38.7-54.6-81.1-73.7-126.1 1.3 3.2 2.7 6.4 4 9.6-19.5-46.3-32.8-94.9-39.5-144.7.5 3.5 1 7.1 1.4 10.6-4.3-32.4-5-64.8-5-97.3V249.3c-9.8 12.9-19.6 25.7-29.4 38.6 34.5-10.4 67.9-24.2 97.2-45.3 34.7-25 64.3-55.8 86.3-92.6 12.1-20.2 21.8-42.2 29-64.6-12.9 9.8-25.7 19.6-38.6 29.4H666.3c16.5 0 33.1.4 49.6 0h.7c-12.9-9.8-25.7-19.6-38.6-29.4 25.1 78.3 82.1 146.4 156.9 181.6 18 8.5 36.5 15.1 55.6 20.9-9.8-12.9-19.6-25.7-29.4-38.6v141.8c0 25.4-1.7 50.8-5 76 .5-3.5 1-7.1 1.4-10.6-6.8 49.7-20.1 98.4-39.5 144.7 1.3-3.2 2.7-6.4 4-9.6-19.1 45-43.9 87.4-73.7 126.1l6.3-8.1c-29.3 37.8-63.3 71.8-101.1 101.1l8.1-6.3c-22.4 17.3-46.2 32.2-70 47.4-26.4 16.8-52.8 33.5-79.2 50.3-6.8 4.3-13.7 8.7-20.5 13-8.7 5.5-15.6 13.8-18.4 23.9-2.6 9.6-1.4 22.3 4 30.8 11.4 17.6 35.8 26.2 54.7 14.2z" />
+                                    <path fill="#009991" d="m308.2 509.9 102.7 102.7 14.6 14.6c15.3 15.3 41.3 15.3 56.6 0l79.3-79.3 125.5-125.5 28.9-28.9c14.8-14.8 15.9-42 0-56.6-16-14.7-40.8-15.8-56.6 0l-79.3 79.3-125.5 125.5-28.9 28.9h56.6L379.4 467.9l-14.6-14.6c-14.8-14.8-42-15.9-56.6 0-14.7 16-15.8 40.7 0 56.6z"/>
                                 </svg>
                             </div>
-                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Interfaces intuitivas</h3>
-                            <p className="text-sm leading-6 text-fortem1typo-100">
-                                    Metus potenti velit sollicitudin porttitor magnis elit lacinia tempor
-                                    varius, ut cras orci vitae parturient id nisi vulputate consectetur,
-                                    primis venenatis cursus tristique malesuada viverra congue risus.
+                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100 color-accent">Missão crítica</h3>
+                            <p className="text-md leading-6 text-fortem1typo-100">
+                                Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
+                                Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
+                                
                             </p>
                         </div>
-                    </div>    
+                    </div>   
                
                 </div>
                 {/* <div className=" flex flex-row flex-wrap w-full mb-32 mt-6 place-content-evenly">
@@ -507,42 +497,36 @@ class Landing extends React.Component<Props> {
                 <div className=" flex flex-row flex-wrap w-full mt-32 mb-8">
                     <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">
                         <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl border-2 border-fortem1green-500">
-                            <div className="mb-5">
-    
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
-                                    <path fill="#009991" d="M118.8 43.3c-3.2.3-8.2.8-15.2 1.6-3.7.4-7.8.8-11.9 1.2l-2.1-2.4c-4-4.1-9-7.4-14.6-9.6-5.6-2.2-11.9-3.5-18.3-3.2-6.4.3-13 1.8-19.2 4.6C25.1 41.2 14.6 52.6 9.9 67c-2.4 7.1-3.3 15-2.6 22.8 0 2 .5 3.9.8 5.9.3 2 .8 4 1.4 5.9 1.2 3.9 2.7 7.7 4.7 11.3l-2 1.4c-3.2-4.6-5.8-9.6-7.7-15.1-11.8-33.3 5.6-69.9 38.9-81.8 28.7-10.2 59.7 1.3 75.4 25.9z" />
-                                    <path fill="#009991" d="M45.7 74.6c-.8 8.5 4.4 16.2 12.7 18.6 5.2 1.4 10.2.5 15.5-2.9 8.2-5.3 48.9-29.8 51.7-31.5 1.3-.8 1.9-2.4 1.4-3.8-.4-1.1-1.3-2-2.5-2.2-.3-.1-.6-.1-.9-.1-2.7.2-56.9 6-61.9 6.4-8.6.7-15.1 7-16 15.5z" />
-                                </svg>
-                            </div>
-
-                            <h3 className="text-lg font-bold mb-2 color-accent  text-fortem1typo-100">Estabilidade, desempenho e capacidade</h3>
-                            {/* <span className="color-accent">.</span> */}
-
-                            <p className="text-md leading-6 text-fortem1typo-100">
-                                Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados.
-                            </p>
-                            <br/>
-                            <Link to={""}>
-                                <p className="color-accent"> Conheça nossa página de status dos serviços  <i className="icon"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></i></p>
-                            </Link>
-                        </div>
-                    </div>        
-                    <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">
-                        <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl border-2 border-fortem1green-500">
-                            <div className="mb-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500">
+                            <div className="mb-5 icon" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="inline-block icon text-indigo-500">
                                     <path fill="#009991" d="M532.2 984c33.8-21.5 67.7-42.9 101.5-64.4 15.3-9.7 30.8-19.3 45.7-29.7 35.4-24.7 68.6-52.8 98.1-84.4 58.4-62.7 102.8-137 130.9-217.9 22.9-66.1 32.7-135.8 32.7-205.6V248.9c0-17.9-12.5-33.5-29.4-38.6-12.2-3.7-24.3-7.5-36-12.4 3.2 1.3 6.4 2.7 9.6 4-20.9-8.9-40.5-20.3-58.5-34.1l8.1 6.3c-17.8-13.8-33.8-29.7-47.6-47.5l6.3 8.1c-13.8-18-25.3-37.7-34.2-58.6 1.3 3.2 2.7 6.4 4 9.6-3-7.2-5.8-14.6-8.2-22-5.4-16.9-20.5-29.4-38.6-29.4H357.7c-16.5 0-33.1-.5-49.6 0h-.7c-18.2 0-33.2 12.5-38.6 29.4-2.4 7.5-5.1 14.8-8.2 22 1.3-3.2 2.7-6.4 4-9.6-8.9 20.9-20.4 40.5-34.2 58.6l6.3-8.1c-13.8 17.8-29.8 33.7-47.6 47.5l8.1-6.3c-18 13.8-37.7 25.2-58.5 34.1 3.2-1.3 6.4-2.7 9.6-4-11.8 4.9-23.8 8.7-36 12.4-16.9 5.1-29.4 20.7-29.4 38.6v120.6c0 21.2 0 42.4 1.5 63.6 3.2 43.1 10.5 86.1 22.6 127.6 24 82.4 65.6 158.3 120.8 223.8 42.9 50.9 94.6 92.1 150.6 127.6l110.7 70.2c.9.6 1.9 1.2 2.8 1.8 17.7 11.2 44.9 4.3 54.7-14.4 10.4-19.8 4.5-42.7-14.4-54.7-18-11.4-36-22.8-53.9-34.2-23-14.6-45.9-29.1-68.9-43.7-16.1-10.2-31.8-21.1-47-32.7l8.1 6.3c-37.8-29.3-71.8-63.3-101.1-101.1l6.3 8.1c-29.8-38.7-54.6-81.1-73.7-126.1 1.3 3.2 2.7 6.4 4 9.6-19.5-46.3-32.8-94.9-39.5-144.7.5 3.5 1 7.1 1.4 10.6-4.3-32.4-5-64.8-5-97.3V249.3c-9.8 12.9-19.6 25.7-29.4 38.6 34.5-10.4 67.9-24.2 97.2-45.3 34.7-25 64.3-55.8 86.3-92.6 12.1-20.2 21.8-42.2 29-64.6-12.9 9.8-25.7 19.6-38.6 29.4H666.3c16.5 0 33.1.4 49.6 0h.7c-12.9-9.8-25.7-19.6-38.6-29.4 25.1 78.3 82.1 146.4 156.9 181.6 18 8.5 36.5 15.1 55.6 20.9-9.8-12.9-19.6-25.7-29.4-38.6v141.8c0 25.4-1.7 50.8-5 76 .5-3.5 1-7.1 1.4-10.6-6.8 49.7-20.1 98.4-39.5 144.7 1.3-3.2 2.7-6.4 4-9.6-19.1 45-43.9 87.4-73.7 126.1l6.3-8.1c-29.3 37.8-63.3 71.8-101.1 101.1l8.1-6.3c-22.4 17.3-46.2 32.2-70 47.4-26.4 16.8-52.8 33.5-79.2 50.3-6.8 4.3-13.7 8.7-20.5 13-8.7 5.5-15.6 13.8-18.4 23.9-2.6 9.6-1.4 22.3 4 30.8 11.4 17.6 35.8 26.2 54.7 14.2z" />
                                     <path fill="#009991" d="m308.2 509.9 102.7 102.7 14.6 14.6c15.3 15.3 41.3 15.3 56.6 0l79.3-79.3 125.5-125.5 28.9-28.9c14.8-14.8 15.9-42 0-56.6-16-14.7-40.8-15.8-56.6 0l-79.3 79.3-125.5 125.5-28.9 28.9h56.6L379.4 467.9l-14.6-14.6c-14.8-14.8-42-15.9-56.6 0-14.7 16-15.8 40.7 0 56.6z"/>
                                 </svg>
                             </div>
-                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100">Monitoração constante</h3>
+                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100 color-accent">Missão crítica</h3>
                             <p className="text-md leading-6 text-fortem1typo-100">
                                 Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
                                 Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
-                                E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.
+                                
                             </p>
                         </div>
-                    </div>
+                    </div>      
+                    <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">
+                        <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl border-2 border-fortem1green-500">
+                            <div className="mb-5 icon" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="inline-block icon text-indigo-500">
+                                    <path fill="#009991" d="M532.2 984c33.8-21.5 67.7-42.9 101.5-64.4 15.3-9.7 30.8-19.3 45.7-29.7 35.4-24.7 68.6-52.8 98.1-84.4 58.4-62.7 102.8-137 130.9-217.9 22.9-66.1 32.7-135.8 32.7-205.6V248.9c0-17.9-12.5-33.5-29.4-38.6-12.2-3.7-24.3-7.5-36-12.4 3.2 1.3 6.4 2.7 9.6 4-20.9-8.9-40.5-20.3-58.5-34.1l8.1 6.3c-17.8-13.8-33.8-29.7-47.6-47.5l6.3 8.1c-13.8-18-25.3-37.7-34.2-58.6 1.3 3.2 2.7 6.4 4 9.6-3-7.2-5.8-14.6-8.2-22-5.4-16.9-20.5-29.4-38.6-29.4H357.7c-16.5 0-33.1-.5-49.6 0h-.7c-18.2 0-33.2 12.5-38.6 29.4-2.4 7.5-5.1 14.8-8.2 22 1.3-3.2 2.7-6.4 4-9.6-8.9 20.9-20.4 40.5-34.2 58.6l6.3-8.1c-13.8 17.8-29.8 33.7-47.6 47.5l8.1-6.3c-18 13.8-37.7 25.2-58.5 34.1 3.2-1.3 6.4-2.7 9.6-4-11.8 4.9-23.8 8.7-36 12.4-16.9 5.1-29.4 20.7-29.4 38.6v120.6c0 21.2 0 42.4 1.5 63.6 3.2 43.1 10.5 86.1 22.6 127.6 24 82.4 65.6 158.3 120.8 223.8 42.9 50.9 94.6 92.1 150.6 127.6l110.7 70.2c.9.6 1.9 1.2 2.8 1.8 17.7 11.2 44.9 4.3 54.7-14.4 10.4-19.8 4.5-42.7-14.4-54.7-18-11.4-36-22.8-53.9-34.2-23-14.6-45.9-29.1-68.9-43.7-16.1-10.2-31.8-21.1-47-32.7l8.1 6.3c-37.8-29.3-71.8-63.3-101.1-101.1l6.3 8.1c-29.8-38.7-54.6-81.1-73.7-126.1 1.3 3.2 2.7 6.4 4 9.6-19.5-46.3-32.8-94.9-39.5-144.7.5 3.5 1 7.1 1.4 10.6-4.3-32.4-5-64.8-5-97.3V249.3c-9.8 12.9-19.6 25.7-29.4 38.6 34.5-10.4 67.9-24.2 97.2-45.3 34.7-25 64.3-55.8 86.3-92.6 12.1-20.2 21.8-42.2 29-64.6-12.9 9.8-25.7 19.6-38.6 29.4H666.3c16.5 0 33.1.4 49.6 0h.7c-12.9-9.8-25.7-19.6-38.6-29.4 25.1 78.3 82.1 146.4 156.9 181.6 18 8.5 36.5 15.1 55.6 20.9-9.8-12.9-19.6-25.7-29.4-38.6v141.8c0 25.4-1.7 50.8-5 76 .5-3.5 1-7.1 1.4-10.6-6.8 49.7-20.1 98.4-39.5 144.7 1.3-3.2 2.7-6.4 4-9.6-19.1 45-43.9 87.4-73.7 126.1l6.3-8.1c-29.3 37.8-63.3 71.8-101.1 101.1l8.1-6.3c-22.4 17.3-46.2 32.2-70 47.4-26.4 16.8-52.8 33.5-79.2 50.3-6.8 4.3-13.7 8.7-20.5 13-8.7 5.5-15.6 13.8-18.4 23.9-2.6 9.6-1.4 22.3 4 30.8 11.4 17.6 35.8 26.2 54.7 14.2z" />
+                                    <path fill="#009991" d="m308.2 509.9 102.7 102.7 14.6 14.6c15.3 15.3 41.3 15.3 56.6 0l79.3-79.3 125.5-125.5 28.9-28.9c14.8-14.8 15.9-42 0-56.6-16-14.7-40.8-15.8-56.6 0l-79.3 79.3-125.5 125.5-28.9 28.9h56.6L379.4 467.9l-14.6-14.6c-14.8-14.8-42-15.9-56.6 0-14.7 16-15.8 40.7 0 56.6z"/>
+                                </svg>
+                            </div>
+                            <h3 className="text-lg font-bold mb-2 text-fortem1typo-100 color-accent">Missão crítica</h3>
+                            <p className="text-md leading-6 text-fortem1typo-100">
+                                Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
+                                Tudo isso para garantir aos nossos clientes um ambiente profissional, seguro e estável.
+                                
+                            </p>
+                        </div>
+                    </div> 
                     <div className="flex w-12/12 pb-6 sm:w-6/12 sm:pb-6 md:w-6/12 md:pb-6 lg:w-4/12 lg:pb-0 justify-center">    
                         <div className="flex flex-col w-11/12 p-6 bg-fortem1neutral-700 rounded-2xl">
                         
@@ -555,8 +539,9 @@ class Landing extends React.Component<Props> {
                                     Agende um workshop com nosso time de especialistas e entenda melhor como podemos ajudar.
                             </p>
                             
-                            <div>
-                                <button className='button-schedule'>Agendar workshop</button>
+                            <div className='buttons'>
+                                <button className='button-schedule-b btn '>Agendar</button>
+                                <button className='button-schedule btn'>+ Detalhes</button>
                                 {/* <button className='btn-outline'>Conheça mais</button> */}
                             </div>
                             
