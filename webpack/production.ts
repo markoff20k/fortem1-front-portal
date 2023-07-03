@@ -51,34 +51,27 @@ const config = merge(commonConfig, {
     module: {
         rules: [
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                use: ['file-loader'],
+                test: /\.(css|sass|scss|pcss)$/,
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
             },
             {
-                test: /\.(css|sass|scss|pcss)$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: true,
-                            reloadAll: true,
-                        },
-                    },
-                    'cache-loader',
-                    'css-loader',
-                    'sass-loader',
-                    'postcss-loader',
-                ],
-            },
+                // Match js, jsx, ts & tsx files
+                test: /.(js|jsx)$/,
+                
+
+                
+                use: {
+                    loader: "babel-loader"
+                  }
+                
+             },
             {
                 test: /\.(tsx|ts)?$/,
                 use: [
-                    'cache-loader',
                     {
                         loader: 'thread-loader',
                         options: {
-                            poolTimeout: Infinity,
+                            poolTimeout: 2000,
                         },
                     },
                     {
@@ -88,26 +81,18 @@ const config = merge(commonConfig, {
                             happyPackMode: true,
                         },
                     },
-                    
                 ],
-                
                 exclude: /node_modules/,
             },
-
-         
-            
-
-                  {
-                    // Match js, jsx, ts & tsx files
-                    test: /.(js|jsx)$/,
-                    
-
-                    
-                    use: {
-                        loader: "babel-loader"
-                      }
-                    
-                 },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'fonts',
+                    },
+                }]
+            },
         ],
     },
     stats: {
