@@ -50,7 +50,7 @@ const config = merge(commonConfig, {
     plugins,
     module: {
         rules: [
-            rules: [
+            
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/i,
                     use: ['file-loader'],
@@ -111,7 +111,7 @@ const config = merge(commonConfig, {
                         
                      },
             ],
-        ],
+        
     },
     stats: {
         children: false,
