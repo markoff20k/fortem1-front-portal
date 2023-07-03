@@ -78,8 +78,7 @@ const config = merge(commonConfig, {
                     
                     use: {
                         loader: "babel-loader"
-                      },
-                      exclude: /node_modules/,
+                      }
                     
                  },
         ],
