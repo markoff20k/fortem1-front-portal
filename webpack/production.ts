@@ -51,27 +51,34 @@ const config = merge(commonConfig, {
     module: {
         rules: [
             {
-                test: /\.(css|sass|scss|pcss)$/,
-                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                use: ['file-loader'],
             },
             {
-                // Match js, jsx, ts & tsx files
-                test: /.(js|jsx)$/,
-                
-
-                
-                use: {
-                    loader: "babel-loader"
-                  }
-                
-             },
+                test: /\.(css|sass|scss|pcss)$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: true,
+                            reloadAll: true,
+                        },
+                    },
+                    'cache-loader',
+                    'css-loader',
+                    'sass-loader',
+                    'postcss-loader',
+                ],
+            },
             {
                 test: /\.(tsx|ts)?$/,
                 use: [
+                    'cache-loader',
                     {
                         loader: 'thread-loader',
                         options: {
-                            poolTimeout: 2000,
+                            poolTimeout: Infinity,
                         },
                     },
                     {
@@ -81,18 +88,26 @@ const config = merge(commonConfig, {
                             happyPackMode: true,
                         },
                     },
+                    
                 ],
+                
                 exclude: /node_modules/,
             },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        outputPath: 'fonts',
-                    },
-                }]
-            },
+
+         
+            
+
+                  {
+                    // Match js, jsx, ts & tsx files
+                    test: /.(js|jsx)$/,
+                    
+
+                    
+                    use: {
+                        loader: "babel-loader"
+                      }
+                    
+                 },
         ],
     },
     stats: {
