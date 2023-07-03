@@ -21,19 +21,21 @@
     }
 
     &__cancel {
-      color: var(--secondary-contrast-cta-color);
+      color: var(--system-red);
       cursor: pointer;
       float: right;
       transition: 0.2s;
 
       &:hover {
-        color: var(--primary-text-color);
+        color: var(--system-red);
         transition: 0.2s;
+        -filter: brightness(115%);
+        -webkit-filter: brightness(115%);
 
         .cr-table-header__close {
           &::before,
           &::after {
-            background: var(--primary-text-color);
+            background: var(--system-red);
             transition: 0.2s;
           }
         }

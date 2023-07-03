@@ -90,19 +90,19 @@ export const SaleDetailScreen: React.FC = () => {
 			);
 		}
 
-		const saleSocial = saleItem.payload.social;
-		saleSocialView = (
-			<SaleSocial
-				website=''
-				whitepaper=''
-				ico=''
-				facebook=''
-				telegram=''
-				twitter=''
-				linkedin=''
-				instagram=''
-			/>
-		);
+		// const saleSocial = saleItem.payload.social;
+		// saleSocialView = (
+		// 	<SaleSocial
+		// 		website=''
+		// 		whitepaper=''
+		// 		ico=''
+		// 		facebook=''
+		// 		telegram=''
+		// 		twitter=''
+		// 		linkedin=''
+		// 		instagram=''
+		// 	/>
+		// );
 	}
 
 	const getBadgeColor = type => {
@@ -139,118 +139,20 @@ export const SaleDetailScreen: React.FC = () => {
 <div className="rwt-advance-tab-area "  >
                     <div className="" >
 
-						<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+					
 						<div className="container" style={{display: 'flex', flexDirection: 'row', width: '100%'}} >
 						
-							                    <div >
-                        <div className="advance-tab-button advance-tab-button-1" style={{width: '250px', borderColor: '#009991', marginRight: '30px' }}>
-                            <TabList className="tab-button-list">
-                                <Tab>
-                                    <div className="tab-button"  style={{ borderColor: '#009991'}}>
-                                        <h4 className="title" style={{fontWeight: 'bold'}}>Informações</h4>
-                                        <p className="description">Veja as informações mais relevantes relacionadas a essa captação</p>
-                                    </div>   
-                                </Tab>
-                                <Tab>
-                                    <div className="tab-button">
-                                        <h4 className="title">Transações</h4>
-                                        <p className="description">Extrato de todas as transações de compra já efetivadas</p>
-                                    </div>   
-                                </Tab>
-                                <Tab>
-                                    <div className="tab-button">
-                                        <h4 className="title">Detalhes</h4>
-                                        <p className="description">Conheça todos os detalhes do projeto</p>
-                                    </div>   
-                                </Tab>
-                            </TabList>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="advance-tab-content advance-tab-content-1">
-                            <TabPanel>
-							<div className="tab-content">
-                                    <div className="inner">
-                                        <div className="thumbnail">
-										<div id="sale-info" className="container-fluid">
-						{saleInfoView}
-					</div>
-										
-
-					</div>
-					</div>
-											                                        
-		
-                                </div>
-
-                            </TabPanel>
-                            
-                            <TabPanel>
-                                <div className="tab-content">
-                                    <div className="inner">
-                                        <div className="thumbnail">
-										<div id="sale-info" className="container-fluid">
-										{buyHistoryView}                               
-										</div>
-										</div>
-                                    </div>
-                                </div>
-                            </TabPanel>
-
-                            <TabPanel>
-							<div className="tab-content">
-                                    <div className="inner">
-                                        <div className="thumbnail">
-										<div id="sale-info" className="container-fluid">
-										{saleSocialView}                             
-										</div>
-										</div>
-                                    </div>
-                                </div>
-							
 					
-                            </TabPanel>
-                        </div>
-						
-                    </div>					
+                    				
 				
 						{saleBuyView}
 					
 			    </div>
 				
-            </Tabs>               
-			
-
-
-
-
-
-	
-				
-					<div id="sale-info-buy" className="container-fluid">
-						<div className="row"></div>
-					</div>
-				
-
-
+            
 					</div>
 					</div>
-				{/*
-					<span id="sale-info-buy" className="container-fluid">
-						<div className="row">{buyHistoryView}</div>
-					</span>
 
-					<span id="sale-social" className="container-fluid">
-						<div className="row">
-							<div className="col-12">{saleSocialView}</div>
-						</div>
-					</span>
-					<span id="sale-detail" className="container-fluid">
-						<div className="row">
-							<div className="col-12">{saleDetailView}</div>
-						</div>
-					</span>
-		*/}
 				</div>
 			);
 		}

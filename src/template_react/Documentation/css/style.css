@@ -8353,14 +8353,6 @@ button.mfp-close {
   transform: translateY(-58%);
 }
 
-.post-header .category-menu .btn-secondary:not(:disabled):not(.disabled).active,
-.post-header .category-menu .btn-secondary:not(:disabled):not(.disabled):active,
-.post-header .category-menu .show>.btn-secondary.dropdown-toggle {
-  background-color: transparent;
-  border: none;
-  color: #6b707f;
-  box-shadow: none;
-}
 
 .post-header .category-menu .dropdown-menu {
   border: 1px solid #e6eeef;

@@ -261,7 +261,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             
             
           </SlidTokens> 
-          {/* <SaleListTablesUpcoming /> */}
+          <SaleListTablesUpcoming />
         </Tokens>
         <Criptos>
           <Tables>

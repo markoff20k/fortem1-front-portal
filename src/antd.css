@@ -385,13 +385,13 @@
           user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  height: 32px;
+  height: 42px;
   padding: 4px 15px;
-  font-size: 14px;
-  border-radius: 2px;
-  color: rgba(0, 0, 0, 0.85);
-  background: #fff;
-  border-color: #d9d9d9;
+  
+  
+  
+  
+  
 }
 .ant-btn > .anticon {
   line-height: 1;
@@ -419,13 +419,13 @@
   height: 40px;
   padding: 6.4px 15px;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 12px;
 }
 .ant-btn-sm {
   height: 24px;
   padding: 0px 7px;
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 .ant-btn > a:only-child {
   color: currentColor;
@@ -441,9 +441,6 @@
 }
 .ant-btn:hover,
 .ant-btn:focus {
-  color: #40a9ff;
-  background: #fff;
-  border-color: #40a9ff;
 }
 .ant-btn:hover > a:only-child,
 .ant-btn:focus > a:only-child {
@@ -460,9 +457,9 @@
   content: '';
 }
 .ant-btn:active {
-  color: #F5F5F5 !important;
-  background: #18988F !important;
-  border-color: #18988F !important;
+  
+  
+  
 }
 .ant-btn:active > a:only-child {
   color: currentColor;
@@ -480,9 +477,6 @@
 .ant-btn[disabled]:hover,
 .ant-btn[disabled]:focus,
 .ant-btn[disabled]:active {
-  color: rgba(0, 0, 0, 0.25);
-  background: #f5f5f5;
-  border-color: #d9d9d9;
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -516,8 +510,8 @@
 }
 .ant-btn-primary {
   color: #f5f5f5;
-  background: #009991 !important;
-  border-color: #009991 !important;
+  background: #009991;
+  border-color: #009991;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
@@ -536,9 +530,7 @@
 }
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
-  color: #fff;
-  background: #18988F !important;
-  border-color: #18988F !important;
+
 }
 .ant-btn-primary:hover > a:only-child,
 .ant-btn-primary:focus > a:only-child {
@@ -555,9 +547,7 @@
   content: '';
 }
 .ant-btn-primary:active {
-  color: #fff;
-  background: #18988F !important;
-  border-color: #18988F !important;
+
 }
 .ant-btn-primary:active > a:only-child {
   color: currentColor;
@@ -575,9 +565,7 @@
 .ant-btn-primary[disabled]:hover,
 .ant-btn-primary[disabled]:focus,
 .ant-btn-primary[disabled]:active {
-  color: rgba(0, 0, 0, 0.25);
-  background: #f5f5f5;
-  border-color: #d9d9d9;
+opacity: 0.4;
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3157,7 +3145,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   color: #555555 !important;
   font-size: 14px;
   line-height: 1 !important;
-  background-color: #dde1e7 !important;
+  background-color: var(--input-background-color) !important;
   background-image: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -3500,10 +3488,10 @@ textarea.ant-input-number {
   color: #555555 !important;
   font-size: 14px;
   
-  background-color: #dde1e7 !important;
+  background-color: var(--input-background-color);
   background-image: none;
-  border: 1px solid #c0c0c0 !important;
-  border-radius: 1px !important;
+  border: 1px solid #c0c0c0 ;
+  border-radius: 1px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3670,13 +3658,13 @@ textarea.ant-input {
 .ant-input-group-addon {
   position: relative;
   padding: 0 11px;
-  color: #555555 !important;
+  color: #555555;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-  background-color: #dde1e7 !important;
-  border: 1px solid #434343;
-  border-radius: 1px !important;
+  
+  
+  
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -4132,7 +4120,7 @@ textarea.ant-input {
 	background-color: #fff;
 	background-clip: padding-box;
 	border: 0;
-	border-radius: 5px !important;
+	border-radius: 16px;
 	-webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 			box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 	pointer-events: auto;
@@ -4167,18 +4155,18 @@ textarea.ant-input {
   }
   .ant-modal-close:focus,
   .ant-modal-close:hover {
-	color: #c0c0c0 !important;
+	color: #c0c0c0;
 	text-decoration: none;
   }
   .ant-modal-header {
 	padding: 16px 24px;
-	color: #c0c0c0 !important;
-	background: #1f1f1f !important;
+	color: #c0c0c0;
+	background: #1f1f1f;
 	border-bottom: 1px solid #f0f0f0;
 	border-radius: 2px 2px 0 0;
-  text-transform: uppercase !important;
-  display: flex !important;
-  justify-content: center !important;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
   }
   .ant-modal-body {
 	padding: 24px;
@@ -4189,7 +4177,7 @@ textarea.ant-input {
   .ant-modal-footer {
 	padding: 10px 16px;
 	text-align: right;
-	background: #1f1f1f !important;
+	background: #1f1f1f;
 	border-top: 1px solid #f0f0f0;
 	border-radius: 0 0 2px 2px;
   }
@@ -4392,19 +4380,22 @@ textarea.ant-input {
 .ant-message {
 	-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-	margin: 0;
+	margin: 90px;
 	padding: 0;
-	color: rgba(0, 0, 0, 0.85);
+	color: #000;
 	font-size: 14px;
 	font-variant: tabular-nums;
+  border-radius: 8px;
+  border: 1px none;
+  background: transparent;
 	line-height: 1.5715;
 	list-style: none;
 	-webkit-font-feature-settings: 'tnum';
 			font-feature-settings: 'tnum';
 	position: fixed;
-	top: 8px;
+	/* top: 8px; */
 	left: 0;
-	z-index: 1010;
+	z-index: 9999999999999999999999;
 	width: 100%;
 	pointer-events: none;
   }
@@ -4415,7 +4406,7 @@ textarea.ant-input {
   .ant-message-notice-content {
 	display: inline-block;
 	padding: 10px 16px;
-	background: #fff;
+	background: #22C55E;
 	border-radius: 2px;
 	-webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 			box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
@@ -4485,12 +4476,17 @@ textarea.ant-input {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+
 .ant-notification {
 	-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 	margin: 0;
+  margin-top: 100px;
 	padding: 0;
-	color: rgba(0, 0, 0, 0.85);
+	color: #000;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
 	font-size: 14px;
 	font-variant: tabular-nums;
 	line-height: 1.5715;
@@ -4498,7 +4494,7 @@ textarea.ant-input {
 	-webkit-font-feature-settings: 'tnum';
 			font-feature-settings: 'tnum';
 	position: fixed;
-	z-index: 1010;
+	z-index: 999999999999999999999999999999;
 	margin-right: 24px;
   }
   .ant-notification-topLeft,
@@ -4522,11 +4518,11 @@ textarea.ant-input {
 	position: relative;
 	width: 384px;
 	max-width: calc(100vw - 24px * 2);
-	margin-bottom: 16px;
+	/* margin-bottom: 16px; */
 	margin-left: auto;
 	overflow: hidden;
 	word-wrap: break-word;
-	background: #fff;
+	background: pink;
 	border-radius: 2px;
 	-webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 			box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);

@@ -1,4 +1,7 @@
 import React from "react";
+
+import { useParams } from 'react-router';
+
 import {
   InsideContainer,
   MyData,
@@ -13,7 +16,15 @@ import avatarIcon from "../../../assets/Icon.svg";
 import imgDownload from "../../../assets/download.svg";
 import { TextField } from "@mui/material";
 
-import garantia from './garantia.svg';
+import garantia from './Shield Done.svg';
+
+import { selectSaleItem } from 'src/modules/sale/sale-item';
+
+import { selectUserInfo } from 'src/modules';
+import { findSalebyId } from 'src/modules/sale/sale-item';
+
+
+import { SaleDetailScreen } from "src/plugins/Sale";
 
 export function Mydata() {
   return (
@@ -21,6 +32,7 @@ export function Mydata() {
 
       <div className="pg-token-project-info">
 
+        <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
         <div className="pg-token-project-info__general">
           <h4> Direitos e informações do token </h4>
           <p> Babitur non nibh id enim finibus finibus ac quis elit. Morbi semper massa laoreet elit finibus, in maximus odio commodo.</p>
@@ -31,16 +43,31 @@ export function Mydata() {
 
         </div>
 
-        <div className="pg-token-project-info__buy">
-          <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> Garantias </h4> </div>
+        <div className="pg-token-project-info__general">
+        <h4> Cronograma de recebimento </h4>
+          <p> O montante integral dos recebíveis será distribuído aos titulares dos tokens. O valor que você receberá será proporcional à quantidade de tokens que adquiriu, conforme estabelecido no calendário de pagamentos previsto. </p>
+          <br/>
+          <br/>
+          <br/>
+          <p> Vencimento do token e conclusão dos pagamentos: 16/04/2024 </p>
 
+        </div>
+        </div>
+
+        <div className="pg-token-project-info__buy">
+          
+          
+          <SaleDetailScreen/>
         </div>
 
         
-      </div>
 
         
-      <div className="pg-token-project-info">
+      </div>
+      
+
+        
+      <div className="pg-token-project-info2">
 
         <div className="pg-token-project-info__general">
           <h4> Cronograma de recebimento </h4>
@@ -50,16 +77,14 @@ export function Mydata() {
           <br/>
           <p> Vencimento do token e conclusão dos pagamentos: 16/04/2024 </p>
         </div>
-
+ 
         <div className="pg-token-project-info__buy">
-        <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> Garantias </h4> </div>
-          <br/>
-          <p> Babitur non nibh id enim finibus finibus ac quis elit. Morbi semper massa laoreet elit finibus, in maximus odio commodo. </p>
-          <p> Duis maximus dictum purus, convallis molestie lorem ullamcorper at. Nullam fringilla orci fermentum blandit tristique. </p>
+          <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> COMPRAR </h4> </div>
+            
         </div>
 
         
-      </div>
+        </div>
 
       <div className="pg-token-project-sim">
         <div className="pg-token-project-sim__calc">

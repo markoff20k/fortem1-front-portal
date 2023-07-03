@@ -41,7 +41,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 	};
 
 	//const bonusQuantity = NP.times(quantity, bonus);
-	const bonusQuantity = 1;
+	const bonusQuantity = 0;
 	//const totalQuanity = NP.plus(baseBalance, quantity, bonusQuantity);
 	const totalQuanity = baseBalance + quantity;
 
@@ -60,7 +60,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 
 	return (
 		<Modal
-			title="Confirme sua compra"
+			title="Confirmar compra"
 			centered
 			visible={props.visible}
 			onOk={() => props.onBuy()}

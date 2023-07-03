@@ -3,8 +3,8 @@ import axios from 'axios';
 const instance = axios.create({
 		
 	//baseURL: 'https://www.fortem1.com.br/api/',
-	baseURL: 'https://www.fortem1.com.br/api/v2/',
-	// baseURL: 'http://localhost:4000/',
+	// baseURL: 'https://www.fortem1.com.br/api/v2/',
+	baseURL: 'http://localhost:4000/',
 	headers: {
 		'Access-Control-Allow-Origin': '*',
 		'Content-Type': 'application/json',

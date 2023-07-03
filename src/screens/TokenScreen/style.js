@@ -16,7 +16,7 @@ export const Content = styled.div`
   // // max-width: calc(100vw - 350px);
   // width: 100%;
   display: flex;
-  height: 300px;
+  height: 320px;
   flex-direction: column;
   align-items: center;
   // position: absolute;

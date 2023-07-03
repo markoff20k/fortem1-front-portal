@@ -15,6 +15,8 @@ import { selectSaleItem } from 'src/modules/sale/sale-item';
 import { selectUserInfo } from 'src/modules';
 import { findSalebyId } from 'src/modules/sale/sale-item';
 
+import { SaleDetailScreen } from "src/plugins/Sale";
+
 export const TokenScreen: React.FC = () => {
 
 
@@ -79,11 +81,25 @@ export const TokenScreen: React.FC = () => {
                 <span style={{color: 'var(--input-text-color)', fontFamily: 'Inter', fontSize: '14px', fontWeight: '400', lineHeight: '16.94px', opacity: '0.84'}}> + 1.52% a.m | Receba em 1x até 16/04/2024   </span>
               </div>
             </div>
-
             <div style={{display: 'flex', flexDirection: 'column', marginRight: '60px'}} >
               <p className="pg-token-header-contract"> Contrato </p>
-              <p className="pg-token-header-contract-address"> 0x000000000000000000000000 </p>
-
+              <div className="pg-token-header-contract-wraper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" className="sc-dd938628-0 kHltGi">
+                    <path fill="#2F3030" d="M249.982 6.554 397.98 251.112l-147.45-63.02z"></path>
+                    <path fill="#828384" d="M102.39 251.112 249.982 6.554l.548 181.538z"></path>
+                    <path fill="#343535" d="M249.982 341.285 102.39 251.112l148.14-63.02z"></path>
+                    <path fill="#131313" d="m397.98 251.112-147.45-63.02-.548 153.193z"></path>
+                    <path fill="#2F3030" d="m249.982 372.329 147.998-87.732L249.982 493.13z"></path>
+                    <path fill="#828384" d="M249.982 372.329 102.39 284.597 249.982 493.13z"></path>
+                </svg>
+                {/* <p className="pg-token-header-contract-address"> </p> */}
+                {/* <a className="pg-token-header-contract-address" href="https://app.ens.domains/fortem-one.eth" target="_blank" rel="noopener noreferrer">
+                  [ fortem-one.eth ]
+							  </a> */}
+                <a className="pg-token-header-contract-address" href="https://app.ens.domains/fortem-one.eth" target="_blank" rel="noopener noreferrer">
+                  0xa470629a595D93004aC6510D3b914360C46D9c05 
+							  </a>
+              </div>
             </div>
 
           </div>
@@ -153,6 +169,7 @@ export const TokenScreen: React.FC = () => {
 
         {internalPage === 1 ? (
           <Mydata />
+          // <SaleDetailScreen/>
         ) : internalPage === 2 ? (
           <Preferences />
         ) : internalPage === 3 ? (

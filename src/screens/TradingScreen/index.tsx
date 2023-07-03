@@ -101,11 +101,11 @@ const TradingWrapper = props => {
             },
             {
                 i: 5,
-                render: () => <RecentTrades/>,
+                render: () => <MarketsComponent/>, 
             },
             {
                 i: 6,
-                render: () => <MarketsComponent/>,
+                render: () => <RecentTrades/>,
             },
         ];
 
@@ -140,7 +140,7 @@ class Trading extends React.Component<Props, StateProps> {
     };
 
     public componentDidMount() {
-        setDocumentTitle('Trading');
+        setDocumentTitle('Exchange Pro');
         const { markets, currentMarket } = this.props;
 
         if (markets.length < 1) {

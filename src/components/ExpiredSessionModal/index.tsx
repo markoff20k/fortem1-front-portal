@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button } from 'react-bootstrap';
 import { ClockIcon } from '../../assets/images/ClockIcon';
+import Lock from './Lock.svg';
 
 
 export interface ExpiredSessionModalProps {
@@ -18,19 +19,20 @@ export class ExpiredSessionModal extends React.Component<ExpiredSessionModalProp
             <div className="expired-session-modal">
                 <div className="cr-modal">
                     <div className="cr-email-form">
-                        {/* <div className="cr-email-form__options-group">
+                        <div className="cr-email-form__options-group">
                             <div className="cr-email-form__option">
                                 <div className="cr-email-form__option-inner">
-                                    <ClockIcon className="clock-icon" />&nbsp;&nbsp;{title}
+                                    {/* <ClockIcon className="clock-icon" />&nbsp;&nbsp; */}
+                                    {title}
                                     <span
                                         className="cr-email-form__close"
                                         onClick={this.props.handleChangeExpSessionModalState}
                                     />
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                         <div className="cr-email-form__form-content">
-                        {/* <div className="cr-email-form__form-content-icon">     <img src={} />  </div> */}
+                        <div className="cr-email-form__form-content-icon">     <img src={Lock} />  </div>
                         <div className="cr-email-form__form-content-title">Por motivo de segurança, sua sessão foi encerrada</div>
 
                             <div className="cr-email-form__button-wrapper">

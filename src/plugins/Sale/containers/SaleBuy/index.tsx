@@ -25,7 +25,7 @@ import { BuyConfirmModal } from '../BuyConfirmModal';
 
 import { FiLogIn } from "react-icons/fi";
 import { Decimal } from '../../../../components';
-
+import garantia from './Shield Done.svg';
 
 //import './SaleBuy.css';
 interface SaleBuyProps {
@@ -89,14 +89,14 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	// get Balance By Currency_ID
 	const handleGetBalance = React.useCallback(
 		currency => {
-			const foundedWallet = filteredWallets.find(wallet => wallet.currency === currency);
+			const foundedWallet = filteredWallets.find(wallet => wallet.currency === 'currency');
 			//console.log(Number(baseWallet.balance))
 			if (foundedWallet) {
 				return Number(foundedWallet.balance);
 			}
 
 			
-			return 0;
+			return 100;
 		},
 		[filteredWallets],
 	);
@@ -241,18 +241,18 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (buyResponse.payload) {
 			if (buyResponse.payload.success) {
 				notification.success({
-					message: `Parabéns! Compra ${currency_id.toUpperCase()} efetivada.`,
+					message: `Compra do token $ ${currency_id.toUpperCase()} efetivada.`,
 				});
 				dispatchResetBuyResponse();
 				dispatchGetTotalBuyers(props.sale.id); // update Total Buyers in Sale Info
 				setTimeout(() => {
 					dispatchFetchSaleItemByID(props.sale.id);
-				}, 5000);
+				}, 7000);
 			}
 		}
 
 		if (buyResponse.loading) {
-			const hide = message.loading('Efetivando a sua compra..', 0);
+			const hide = message.loading('Aguarde. Estamos processando a sua compra...', 0);
 			// dismiss manually and asynchronously
 			setTimeout(hide, 3500);
 		}
@@ -311,16 +311,17 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	let buyButton;
 	if (props.uid) {
 		buyButton = (
-			<Button
-				type="default"
-				size="large"
-				block
+			<button
+				
+				
+				
 				style={{ height: '2.5em', color: '#f5f5f5', background: '#009991', margin: '0 auto',  textTransform: 'uppercase', padding: '1em, 1.5em', borderRadius: '5px', width: '100%', fontSize: '1em' }}
 				disabled={handleBuyDisabled()}
 				onClick={showBuyConfirmModal}
+				className='btn buy-button'
 			>Comprar Tokens
 				
-			</Button>
+			</button>
 		);
 	} else {
 		buyButton = (
@@ -390,12 +391,12 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const showSelectCurrencyForm = () => {
 		return (
 			<div className="select-currency-box">
-				<label form="currency">Selecione a forma de pagamento:</label>
+				<label form="currency">Forma de pagamento:</label>
 				<select onChange={handleSelectCurrency} value={quoteCurrencyState} id='currency'   >
 					{currency_available.map(currency => {
 						let optiontring = currency.toUpperCase();
 						const balance = Decimal.format(handleGetBalance(currency), 4, '.', ',');
-						optiontring += ` | Saldo disponível: ${balance}`;
+						optiontring += ` | Disponível: ${balance}`;
 
 						return <option value={currency}>{optiontring}</option>;
 					})}
@@ -445,7 +446,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
-				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
+				<h2 className="sale-buy__title" style={{color: '#f5f5f5'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
+				{/* <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><p className="sale-buy__title"> COMPRAR <span style={{color: '#FDA736'}}>${currency_id.toUpperCase()}</span></p></div> */}
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >
 					{showSelectCurrencyForm()}

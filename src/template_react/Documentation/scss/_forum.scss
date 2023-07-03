@@ -167,28 +167,6 @@
       }
     }
 
-    .btn-secondary:not(:disabled):not(.disabled).active,
-    .btn-secondary:not(:disabled):not(.disabled):active,
-    .show > .btn-secondary.dropdown-toggle {
-      background-color: transparent;
-      border: none;
-      color: #6b707f;
-      box-shadow: none;
-    }
-
-    .dropdown-menu {
-      border: 1px solid #e6eeef;
-      background: #fff;
-      box-shadow: 0 30px 40px 0 rgba(4, 73, 89, 0.1);
-      padding: 0;
-      width: 260px;
-      animation: slideDown .12s cubic-bezier(0, .1, .1, 1) backwards;
-
-      @media(max-width: 576px) {
-        width: 210px;
-      }
-    }
-
     .title {
       font-size: 14px;
       font-weight: 500;

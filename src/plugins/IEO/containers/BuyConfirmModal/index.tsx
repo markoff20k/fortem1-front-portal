@@ -115,7 +115,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 						{bonusComponent()}
 					</div>
 					<div id="buy-confirm-modal-footer">
-						<button className="btn btn-secondary w-50" style={{ borderRadius: 0 }} onClick={onHiddenModal}>
+						<button className="btn btn-primary w-50" style={{ borderRadius: 0 }} onClick={onHiddenModal}>
 							Cancel
 						</button>
 						<button className="btn btn-primary w-50" style={{ borderRadius: 0 }} onClick={onBuy}>
