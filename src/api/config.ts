@@ -4,16 +4,16 @@ const protocolSSL = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `http://homolog.fortem1.com.br/api/v2/authz`,
-        tradeUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
-        applogicUrl: `http://homolog.fortem1.com.br/api/v2/applogic`,
+        authUrl: `https://homolog.fortem1.com.br/api/v2/authz`,
+        tradeUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
+        applogicUrl: `https://homolog.fortem1.com.br/api/v2/applogic`,
         rangerUrl: `ws://homolog.fortem1.com.br/api/v2/stream`,
-        finexUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
+        finexUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
     withCredentials: true,
-    incrementalOrderBook: false,
+    incrementalOrderBook: true,
     isResizable: true,
     isDraggable: false,
     showLanding: true,
