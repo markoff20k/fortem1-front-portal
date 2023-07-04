@@ -1,14 +1,14 @@
-const hostUrl = window.location.hostname === 'www.fortem1.com.br' ? 'http://www.fortem1.com.br' : window.location.origin;
+const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'http://homolog.fortem1.com.br' : window.location.origin;
 const protocolSSL = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 // const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'ws://www.fortem1.com.br' : `${protocolSSL}${window.location.hostname}`;
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `http://www.fortem1.com.br/api/v2/authz`,
-        tradeUrl: `http://www.fortem1.com.br/api/v2/trade`,
-        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://www.fortem1.com.br/api/v2/stream`,
-        finexUrl: `http://www.fortem1.com.br/api/v2/trade`,
+        authUrl: `http://homolog.fortem1.com.br/api/v2/authz`,
+        tradeUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
+        applogicUrl: `http://homolog.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `ws://homolog.fortem1.com.br/api/v2/stream`,
+        finexUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,

@@ -54,7 +54,7 @@ export const MarketsList = props => {
 		if (currentMarket) {
 			props.handleChangeCurrentMarket && props.handleChangeCurrentMarket(currentMarket);
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`https://www.fortem1.com.br/market/${currentMarket.id}`);
+			history.push(`https://homolog.fortem1.com.br/market/${currentMarket.id}`);
 		}
 	};
 

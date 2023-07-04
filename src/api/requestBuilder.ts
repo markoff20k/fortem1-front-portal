@@ -21,7 +21,7 @@ export interface Request {
 }
 
 const getAPI = () => {
-    const hostUrl = window.location.hostname === 'www.fortem1.com.br' ? 'http://www.fortem1.com.br' : '';
+    const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'http://homolog.fortem1.com.br' : '';
 
     return {
         barong: authUrl(),

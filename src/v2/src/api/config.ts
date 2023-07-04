@@ -7,10 +7,10 @@ import { Config2 } from './types';
 
 export const defaultConfig: Config2 = {
     api: {
-        authUrl: `http://www.fortem1.com.br/api/v2/authz`,
-        tradeUrl: `http://www.fortem1.com.br/api/v2/trade`,
-        applogicUrl: `http://www.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://www.fortem1.com.br/api/v2/stream`,
+        authUrl: `http://homolog.fortem1.com.br/api/v2/authz`,
+        tradeUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
+        applogicUrl: `http://homolog.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `ws://homolog.fortem1.com.br/api/v2/stream`,
         arkeUrl: '',
         finexUrl: '',
     },
