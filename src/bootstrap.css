@@ -199,7 +199,7 @@ button {
 
 button:focus {
   outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  
 }
 
 input,
@@ -6086,47 +6086,47 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #556ee6 !important;
+  
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #2948df !important;
+  
 }
 
 .bg-secondary {
-  background-color: #74788d !important;
+  
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #5d6071 !important;
+  
 }
 
 .bg-success {
-  background-color: #34c38f !important;
+  
 }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #299b71 !important;
+  
 }
 
 .bg-info {
-  background-color: #50a5f1 !important;
+  
 }
 
 a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: #218ded !important;
+  
 }
 
 .bg-warning {
-  background-color: #f1b44c !important;
+  
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
@@ -6162,21 +6162,21 @@ button.bg-light:focus {
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #1d2124 !important;
+  
 }
 
 .bg-pink {
-  background-color: #e83e8c !important;
+  
 }
 
 a.bg-pink:hover, a.bg-pink:focus,
 button.bg-pink:hover,
 button.bg-pink:focus {
-  background-color: #d91a72 !important;
+  
 }
 
 .bg-white {
-  background-color: #fff !important;
+  
 }
 
 .bg-transparent {
@@ -9569,15 +9569,15 @@ button.bg-pink:focus {
 }
 
 .text-primary {
-  color: #556ee6 !important;
+  color: #16837C !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #1f3dd0 !important;
+  color: #16837C !important;
 }
 
 .text-secondary {
-  color: #74788d !important;
+  color: #16837C !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {

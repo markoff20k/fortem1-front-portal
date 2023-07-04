@@ -7,7 +7,7 @@ export const defaultConfig: Config = {
         authUrl: `https://homolog.fortem1.com.br/api/v2/authz`,
         tradeUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
         applogicUrl: `https://homolog.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `ws://homolog.fortem1.com.br/api/v2/stream`,
+        rangerUrl: `wss://homolog.fortem1.com.br/api/v2/stream`,
         finexUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
