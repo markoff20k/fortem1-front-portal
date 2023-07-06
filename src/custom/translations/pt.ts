@@ -358,14 +358,14 @@ export const pt: LangType = {
     'page.body.openOrders.header.price': 'Preço unitário',
     'page.body.openOrders.header.amount': 'Quantidade',
     'page.body.openOrders.header.value': 'Valor financeiro',
-    'page.body.openOrders.header.trigger': 'Gatilho',
+    'page.body.openOrders.header.trigger': 'Disparo',
     'page.body.openOrders.header.filled': 'Executada',
     'page.body.openOrders.header.status': 'Status',
     'page.body.openOrders.content.status.done': 'Executada',
     'page.body.openOrders.content.status.wait': 'Aguardando execução',
     'page.body.openOrders.content.status.cancel': 'Cancelada',
-    'page.body.openOrders.content.status.trigger_wait': 'Aguardando gatilho',
-    'page.body.openOrders.content.status.trigger_cancel': 'Gatilho - cancelar',
+    'page.body.openOrders.content.status.trigger_wait': 'Aguardando disparo',
+    'page.body.openOrders.content.status.trigger_cancel': 'Disparo - cancelar',
     'page.body.openOrders.content.status.execution_reject': 'Rejeitada',
     'page.body.openOrders.header.button.cancelAll': 'Cancelar todas',
 
@@ -606,8 +606,8 @@ export const pt: LangType = {
     /* KYC */
     'page.confirm.title.email': 'Valide seu email',
     'page.confirm.title.phone': 'valide seu número de telefone',
-    'page.confirm.title.profile': 'Valide sua identificação',
-    'page.confirm.title.document': 'Valide sua identificação',
+    'page.confirm.title.profile': 'Informações pessoais',
+    'page.confirm.title.document': 'Informações pessoais',
     'page.confirm.title.address': 'Residence verification',
     'page.confirm.title.warning': 'Por favor, insira as informações exatamente como constam em seu documento de identificação',
 
@@ -677,7 +677,7 @@ export const pt: LangType = {
     'page.body.kyc.documents.select.driverLicense': 'CNH',
     'page.body.kyc.documents.select.utilityBill': 'Conta de consumo',
 
-    'page.body.kyc.next': 'Дальше',
+    'page.body.kyc.next': 'Enviar',
     'page.body.kyc.submit': 'Enviar',
     'page.body.kyc.head.phone': 'Верификация телефона',
     'page.body.kyc.head.identity': 'Верификация личности',

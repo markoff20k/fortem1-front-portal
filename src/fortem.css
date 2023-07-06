@@ -1000,6 +1000,11 @@
     
 }
 
+.input:-internal-autofill-selected {
+    //background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important; 
+    background-color: var(--input-background-color) !important; 
+}
+
 .pg-token-header-contract-wraper {
     display: flex;
     flex-direction: row;
@@ -1013,7 +1018,7 @@
     padding: 8px 18px;
 
     width: fit-content;
-    
+
 
     svg {
         width: 30px;

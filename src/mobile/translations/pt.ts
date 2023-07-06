@@ -39,7 +39,7 @@ export const pt = {
     'page.mobile.orders.header.price': 'Preço',
     'page.mobile.orders.header.filled': 'Executada',
     'page.mobile.orders.header.cancel': 'Cancelar',
-    'page.mobile.orders.header.trigger': 'Gatilho',
+    'page.mobile.orders.header.trigger': 'Disparo',
     'page.mobile.orders.header.volume': 'Total',
 
     'page.mobile.currentMarketInfo.search.placeholder': 'Procurar',

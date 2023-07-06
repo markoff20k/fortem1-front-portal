@@ -109,7 +109,7 @@ class EmailVerificationComponent extends React.Component<Props> {
                                                 type="button"
                                                 onClick={this.handleClick}
                                                 size="lg"
-                                                variant="primary-visible"
+                                                variant="primary"
                                                 disabled={this.disableButton()}>{button}
                                             </Button>
                                                         
