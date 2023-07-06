@@ -69,8 +69,8 @@ export const Button = styled.button`
   color: var(--button-primary-cta-text-color);
   background: var(--button-primary-cta-background-color);
   cursor: pointer;
-  padding: 12px 22px;
-  border: none;
+  padding: 12px 22px !important;
+  border: none !important;
 `;
 
 export const CardsPatrimony = styled.div`
@@ -89,7 +89,7 @@ export const CardsAnnoucement = styled.div`
 
 export const Carousel = styled.div`
   width: 100%;
-  height: 420px;
+  height: 480px;
   display: flex;
   margin-top: 30px;
 `;

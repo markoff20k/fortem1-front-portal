@@ -11,7 +11,7 @@ export const Container = styled.div`
   flex-wrap: nowrap;
 
   @media screen and (max-width: 1238px) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
 `;
 
@@ -29,6 +29,10 @@ export const Content = styled.div`
   margin-right: 0px;
   height: 88px;
 
+  @media screen and (max-width: 1238px) {
+    padding; 15px;
+  }
+
 
   
   p {
@@ -39,9 +43,10 @@ export const Content = styled.div`
     
     color: var(--primary-text-color);
 
-    // @media screen and (max-width: 1238px) {
-    //   font-size: 16px;
-    // }
+    @media screen and (max-width: 1238px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
 
     // @media screen and (max-width: 1128px) {
     //   padding: 10px;
@@ -57,14 +62,11 @@ export const Content = styled.div`
     // margin-bottom: 25px;
     color: #11ECC7;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1238px) {
       font-size: 16px;
+      line-height: 22px;
     }
 
-    @media screen and (max-width: 1128px) {
-      padding: 10px;
-      font-size: 15px;
-    }
   }
 
   h2 {

@@ -239,7 +239,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             </div>
             <div className="buttons">
               <button style={{borderRadius: '12px', padding: '10px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
-              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent !important'}} onClick={() => redirectLimits()} className="btn-primary-outline btn-block">Aumentar limites </button>
+              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent !important', position: 'relative', top: '-10px'}} onClick={() => redirectLimits()} className="btn-primary-outline btn-block">Aumentar limites </button>
             </div>
           </Deposit>
         </Carousel>

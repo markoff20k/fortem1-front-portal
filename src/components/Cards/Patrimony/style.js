@@ -27,7 +27,6 @@ export const Content = styled.div`
 
   color: var(--primary-text-color);
   width: 100%;
-  // max-height: fit-content;
   height: 180px;
   display: flex;
   flex-direction: column;
@@ -37,17 +36,19 @@ export const Content = styled.div`
   background-color: var(--header-background-color);
   margin-right: 0px;
   justify-content: space-evenly;
-  flex-grow: 1;
+  display: flex;
   
   @media screen and (max-width: 1238px) {
-    flex-wrap: wrap;
-    max-width: 420px;
+    max-width: 48%;
   }
 
-  @media screen and (max-width: 1068px) {
-    flex-wrap: wrap;
-    max-width: 350px;
-  }
+  // @media screen and (max-width: 1068px) {
+  //    max-width: 48%;
+  // }
+
+//   @media screen and (max-width: 868px) {
+//     max-width: 36.5vw;
+//  }
 
 
   
@@ -78,11 +79,10 @@ export const Content = styled.div`
 
   button {
     margin-bottom: 20px;
-    padding: 10px 15px;
-    border: none;
+    padding: 10px 15px !important;
+    border: none !important;
     border-radius: 10px;
     color: var(--primary-text-color);
-    background-color: ${(props) => props.theme.primary};
     cursor: pointer;
 
     @media screen and (max-width: 1440px) {
