@@ -38,6 +38,7 @@ export const Alert = styled.div`
   border-radius: 10px;
   background-color: var(--header-background-color);
   margin-bottom: 20px;
+  gap: 5px;
 
   .description {
     display: flex;
@@ -62,16 +63,21 @@ export const Alert = styled.div`
 `;
 
 export const Button = styled.button`
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
   font-size: 16px;
   font-weight: 500;
-  color: var(--button-primary-cta-text-color);
-  background: #16837C;
+  color: #f5f5f5;
+  background: #16837C !important;
   cursor: pointer;
-  padding: 12px 22px !important;
+  padding: 12px !important;
   border: none !important;
   width: fit-content !important;
+
+  @media screen and (max-width: 1260px) {
+    font-size: 14px;
+    }
+
 `;
 
 export const CardsPatrimony = styled.div`
@@ -266,8 +272,12 @@ export const Tokens = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    h4 {
-      margin-left: 20px;
+    p {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: var(--primary-text-color);
+      margin-left: 20px; 
     }
 
     button {
@@ -325,20 +335,22 @@ export const Knowledge = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  background-color: var(--header-background-color);
+  margin-top: 40px;
+  margin-bottom: 30px;
+  // background-color: var(--header-background-color);
+  background: transparent;
   border-radius: 10px;
 
   .header-knowledge {
     width: 100%;
-    height: 80px;
+    // height: 80px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     vertical-align: middle;
-    border-bottom: 1px solid var(--sidebar-border-color);
+    // border-bottom: 1px solid var(--sidebar-border-color);
     padding-left: 20px;
     padding-right: 20px;
 
@@ -356,6 +368,7 @@ export const Knowledge = styled.div`
       border: none !important;
       border-radius: 10px;
       outline: none;
+      background: var(--sidebar-item-background-color-hover) !important;
       
     }
   }

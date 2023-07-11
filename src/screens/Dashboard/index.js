@@ -73,6 +73,9 @@ import { estimateUnitValue } from 'src/helpers/estimateValue';
 import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from 'src/constants';
 import { formatWithSeparators } from 'src/components';
 
+import imgLock from './Lock.svg';
+import imgShield from './Shield.svg';
+
 
 var BlogListData = BlogClassicData.slice(0, 6);
 
@@ -109,17 +112,17 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
   const patrimony = [
     {
       description: "Patrimônio Total",
-      value:  formatWithSeparators(estimatedValue, ','),
+      value: "$" + formatWithSeparators(estimatedValue, ','),
       type: "V",
     },
     {
       description: "Disponível em Reais",
-      value: formatWithSeparators(estimatedFiatValue, ','),
+      value: "$" + formatWithSeparators(estimatedFiatValue, ','),
       type: "D",
     },
     {
       description: "Disponível em Cripto",
-      value: formatWithSeparators(estimatedTokenValue, ','), 
+      value: "$" + formatWithSeparators(estimatedTokenValue, ','), 
       type: "V",
     },
     {
@@ -180,21 +183,55 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
       
       <Content>
         {/* {!props.user.validation && ( */}
-        { !user.otp && ( <Alert>
+        {/* KYC Steps */}
+        <Alert>
             <div className="description">
-              <img src={imgBell} alt="" />
+              <img src={imgShield} alt="" />
               {/* <p
                 style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
               > */}
-              <p>
+              {/* <p>
                 A Fortem One preza pela sua segurança, para utilizar todos os recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu cadastro, é rápido e simples.
+              </p> */}
+              <p style={{fontWeight: '700'}}>
+                Não perca nenhuma oportunidade de investimento!
+                <br />
+                <span style={{fontWeight: '400', opacity: '0.74'}}>
+                Complete seu cadastro agora e tenha acesso a todas as funcionalidades da nossa plataforma.
+                </span>
               </p>
+              
             </div>
-             <div className="btn">
+             
               <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
-                <Button> Habilitar </Button>
+                <Button>Completar cadastro</Button>
               </Link>
-            </div> 
+            
+          </Alert>
+
+        { !user.otp && ( 
+          <Alert>
+            <div className="description">
+              <img src={imgLock} alt="" />
+              {/* <p
+                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+              > */}
+              {/* <p>
+                A Fortem One preza pela sua segurança, para utilizar todos os recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu cadastro, é rápido e simples.
+              </p> */}
+              <p style={{fontWeight: '700'}}>
+                Sua segurança é nossa prioridade!
+                <br />
+                <span style={{fontWeight: '400', opacity: '0.74'}}>
+                  Habilite a autenticação de dois fatores e proteja ainda mais suas transações financeiras.
+              </span>
+              </p>
+              
+            </div>
+             
+             <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
+                <Button>Habilitar agora</Button>
+              </Link>
           </Alert> )}
         {/* )} */}
 
@@ -245,9 +282,9 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
         </Carousel>
         <Tokens>
           <div className="highlights">
-            <h4 style={{ color: "var(--primary-text-color)" }}>
+            <p style={{ color: "var(--primary-text-color)" }}>
               Tokens em destaque
-            </h4>
+            </p>
             <button
               style={{ color: "var(--primary-text-color)" }}
               onClick={() => redirectMarketplace()}
@@ -257,16 +294,16 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
           </div>
           <SlidTokens>
             {/* <TokensSlid  /> */}
-            {/* <SaleListTablesUpcoming /> */}
+            <SaleListTablesUpcoming />
             
             
           </SlidTokens> 
-          <SaleListTablesUpcoming />
+          {/* <SaleListTablesUpcoming /> */}
         </Tokens>
         <Criptos>
           <Tables>
             <div className="div-cripto">
-              <h4> Visão geral do mercado cripto </h4>
+              <p> Visão geral do mercado cripto </p>
             </div>
             <HomepageMarket/>
             {/* <MarketsListExchange /> */}
@@ -354,34 +391,16 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
         <Knowledge>
           <div className="header-knowledge">
             <p> Arena do conhecimento </p>
-            <button
-              style={
-                 { color: "var(--primary-text-color)" }
-              }
-            >
-              Ver mais
-            </button>
+            <button style={{ color: "var(--primary-text-color)" }}>Ver todos</button>
           </div>
           <div className="cards-knowledge">
-            
-            
-                {/* <KnowledgeCards
-                  themeDark={props.themeDark}
-                  images={result.img}
-                /> */}
-
-
-
-                
-                                            <div className="row row--15">
-                                {BlogListData.map((item) => (
-                                    <div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
-                                        <BlogList StyleVar="box-card-style-default" data={item} />
-                                    </div>
-                                ))}
-                            </div>
-            
-            
+            <div className="row row--15">
+              {BlogListData.map((item) => (
+                <div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
+                  <BlogList StyleVar="box-card-style-default" data={item} />
+                </div>
+              ))}
+            </div>
           </div>
         </Knowledge>
       </Content>

@@ -84,9 +84,9 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	}, [saleList.loading]);
 
 	return (
-		<div className="container2" style={{display: 'flex'}}>
-		<div style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
+		
+		<div style={{gap: '20px', top: '30px',  display: 'flex', justifyContent: 'space-between', position: 'relative'}}>{saleItems}</div>
 
-			</div>
+		
 	);
 };
