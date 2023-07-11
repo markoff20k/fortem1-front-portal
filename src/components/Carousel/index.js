@@ -12,12 +12,12 @@ export function CarouselSlide() {
           <h1 style={{ color: "var(--input-text-color)" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "var(--input-text-color)", marginTop: "10px" }}>
+          <p className="caption-description" style={{ color: "var(--input-text-color)" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
-            da blockchain.
+            da blockchain. (1)
           </p>
-          <button className="btn-caption">Conheça as opções</button>
+          <button className="btn-caption">Ver alocação</button>
         </Carousel.Caption>
         <img
           // style={!props.isOpened ? {} : { marginLeft: 490 }}
@@ -31,7 +31,7 @@ export function CarouselSlide() {
           <h1 style={{ color: "var(--input-text-color)" }} >
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "var(--input-text-color)", marginTop: '10px' }}>
+          <p className="caption-description" style={{ color: "var(--input-text-color)" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain. (2)
@@ -50,13 +50,14 @@ export function CarouselSlide() {
           <h1 style={{ color: "var(--input-text-color)" }}>
             Utilize seus tokens para realizar transações e pagamentos
           </h1>
-          <p style={{ color: "var(--input-text-color)", marginTop: '10px' }}>
+          <p className="caption-description" style={{ color: "var(--input-text-color)" }}>
             São várias opções de rentabilidade, prazos para resgate e
             investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança
             da blockchain. (3)
           </p>
           <button className="btn-caption">Conheça as opções</button>
         </Carousel.Caption>
+        
         <img
           // style={!props.isOpened ? {} : { marginLeft: 490 }}
           // className="d-block w-100"

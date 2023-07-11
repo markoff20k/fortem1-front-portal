@@ -42,13 +42,9 @@ export const Content = styled.div`
     max-width: 48%;
   }
 
-  // @media screen and (max-width: 1068px) {
-  //    max-width: 48%;
-  // }
-
-//   @media screen and (max-width: 868px) {
-//     max-width: 36.5vw;
-//  }
+  @media screen and (max-width: 868px) {
+    max-width: 47%;
+  }
 
 
   

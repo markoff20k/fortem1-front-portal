@@ -67,10 +67,11 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 500;
   color: var(--button-primary-cta-text-color);
-  background: var(--button-primary-cta-background-color);
+  background: #16837C;
   cursor: pointer;
   padding: 12px 22px !important;
   border: none !important;
+  width: fit-content !important;
 `;
 
 export const CardsPatrimony = styled.div`
