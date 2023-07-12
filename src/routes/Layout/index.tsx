@@ -425,7 +425,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
                     <PublicRoute path="/new_home" exact component={HomeScreen} />
                     
-					<PublicRoute path="/ieo/detail/:ieoID" exact component={TokenScreen} />
+					{/* <PublicRoute path="/ieo/detail/:ieoID" exact component={TokenScreen} /> */}
+
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/ieo/detail/:ieoID" exact component={TokenScreen} />
 
                     {/* <PublicRoute path="/ieo" exact component={IEOListingScreen} />
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={IEODetailScreen} /> */}
