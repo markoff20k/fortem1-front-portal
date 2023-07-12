@@ -7,7 +7,7 @@ export const PG_TITLE_PREFIX = "Fortem One";
 export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isLight?: boolean): string[][] => {
     const routes = [
         ["page.header.navbar.main", "/dashboard", `dashboard${isLight ? "Light" : ""}`],
-        ["page.header.navbar.trade", "/trading/", `trade${isLight ? "Light" : ""}`],
+        ["Exchange Pro", "/trading/", `trade${isLight ? "Light" : ""}`],
         ["page.header.navbar.trade", "/markets", `trade${isLight ? "Light" : ""}`],
         // ["page.header.navbar.quick.exchange", "/quick-exchange", `quick_exchange${isLight ? "Light" : ""}`],
         ["page.header.navbar.tokens", "/tokens", `tokens${isLight ? "Light" : ""}`],

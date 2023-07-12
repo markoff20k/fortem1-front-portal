@@ -78,8 +78,8 @@ export function Mydata() {
           <p> Vencimento do token e conclusão dos pagamentos: 16/04/2024 </p>
         </div>
  
-        <div className="pg-token-project-info__buy">
-          <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> COMPRAR </h4> </div>
+        <div className="pg-token-project-info__colateral">
+          <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> Garantias </h4> </div>
             
         </div>
 

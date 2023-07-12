@@ -1147,6 +1147,34 @@
 
     }
 
+    &__colateral {
+        width: 480px;
+        height: 300px;
+        border-radius: 16px;
+        background: #161D26;
+        padding: 20px 10px;
+
+        h4 {
+            color: var(--primary-text-color);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 56px;
+            font-family: 'Inter';
+            margin-left: 10px;
+            
+        }
+
+        p {
+            color: var(--primary-text-color);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: 'Inter';
+            opacity: 0.84;
+        }
+
+    }
+
 }
 
 

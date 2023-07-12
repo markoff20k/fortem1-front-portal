@@ -184,6 +184,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
       <Content>
         {/* {!props.user.validation && ( */}
         {/* KYC Steps */}
+        {user.level === 1 || user.level === 2 || user.level === 3 && (
         <Alert>
             <div className="description">
               <img src={imgShield} alt="" />
@@ -203,11 +204,13 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
               
             </div>
              
-              <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
+              <Link to={{pathname: "/profile", state: {setInternalPage: 3} }}>
                 <Button>Completar cadastro</Button>
               </Link>
             
           </Alert>
+
+        )}
 
         { !user.otp && ( 
           <Alert>
