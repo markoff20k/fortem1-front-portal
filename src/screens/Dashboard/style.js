@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container2 = styled.div`
   // width: calc(100vw - 300px);
   background-color: #131313;
   // margin-right: 50%;
@@ -151,7 +151,7 @@ export const Deposit = styled.div`
   }
 
   .header {
-    width: 100%;
+    width: 310px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -300,10 +300,11 @@ export const Criptos = styled.div`
 `;
 
 export const Tables = styled.div`
-  flex: 1;
+  height: 730px;
   margin-right: 20px;
   border-radius: 10px;
   background-color: var(--header-background-color);
+  width: 100%;
   
   h4 {
     color: var(--primary-text-color);
@@ -316,13 +317,13 @@ export const Tables = styled.div`
   }
 
   @media screen and (max-width: 1440px) {
-    width: 70%;
+    // width: 70%;
   }
 `;
 
 export const Negotiation = styled.div`
   width: 348px;
-  height: 610px;
+  height: 730px;
   border-radius: 10px;
   background-color: var(--header-background-color);
 
@@ -344,7 +345,7 @@ export const Knowledge = styled.div`
   .header-knowledge {
     width: 100%;
     // height: 80px;
-    height: 40px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -376,6 +377,7 @@ export const Knowledge = styled.div`
   .cards-knowledge{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
   }
 `;

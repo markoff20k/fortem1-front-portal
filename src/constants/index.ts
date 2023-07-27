@@ -8,7 +8,7 @@ export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isL
     const routes = [
         ["page.header.navbar.main", "/dashboard", `dashboard${isLight ? "Light" : ""}`],
         ["Exchange Pro", "/trading/", `trade${isLight ? "Light" : ""}`],
-        ["page.header.navbar.trade", "/markets", `trade${isLight ? "Light" : ""}`],
+        // ["page.header.navbar.trade", "/markets", `trade${isLight ? "Light" : ""}`],
         // ["page.header.navbar.quick.exchange", "/quick-exchange", `quick_exchange${isLight ? "Light" : ""}`],
         ["page.header.navbar.tokens", "/tokens", `tokens${isLight ? "Light" : ""}`],
         ["page.header.navbar.wallets", "/wallets", `wallets${isLight ? "Light" : ""}`],

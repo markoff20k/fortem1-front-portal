@@ -23,3 +23,4 @@ export const SearchDropdown: React.FC<OwnProps> = ({ className, onSelect, option
         placeholder={placeholder}
     />
 );
+

@@ -27,19 +27,24 @@ const TableStyles = styled.div`
 		}
 		tr {
 			border-top: 0.5px solid var(--header-background-color);
+
+			&:hover {
+				background-color: var(--sidebar-item-background-color-hover) !important;
+			}
 		}
 		th {
-			font-weight: 500;
-			font-size: 15px;
-			line-height: 20px;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 150%;
 			color: var(--primary-text-color);
 			background-color: var(--header-background-color);
+			letter-spacing: 0.2px;
 		}
 		th:not(:first-child) {
 			text-align: center;
 		}
 		th:first-child {
-			padding-left: 50px;
+			padding-left: 35px;
 		}
 		tr td:not(:first-child) {
 			text-align: center;
@@ -68,11 +73,12 @@ export const FortemMarketTable: React.FC<MarketTableProps> = (props: MarketTable
 					<thead>
 						<tr>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.pair' })}</th>
+							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.lastPrice' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.change' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.volume' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.trade' })}</th>
+							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
+							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th> */}
+							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.volume' })}</th> */}
+							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.trade' })}</th> */}
 						</tr>
 					</thead>
 					<tbody>
@@ -87,9 +93,9 @@ export const FortemMarketTable: React.FC<MarketTableProps> = (props: MarketTable
 										<td>{item.pair}</td>
 										<td>{item.last}</td>
 										<td>{item.price_change_percent}</td> {/*change here*/}
-										<td>{item.high}</td>
-										<td>{item.low}</td>
-										<td>{item.volume}</td>
+										{/* <td>{item.high}</td>
+										<td>{item.low}</td> */}
+										{/* <td>{item.volume}</td> */}
 										<td>{item.trade}</td>
 									</tr>
 								);

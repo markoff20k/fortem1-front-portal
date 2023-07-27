@@ -19,6 +19,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './_remixicon.scss';
 import './bootstrap.css';
 
+import { MantineProvider } from '@mantine/core';
 
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
@@ -138,7 +139,9 @@ export const App = () => {
                 <ErrorWrapper>
                     <React.Suspense fallback={null}>
                         <WebSocketProvider>
+                        <MantineProvider  withNormalizeCSS>
                             {useSharedLayout() ? <Layout /> : <RenderDeviceContainers />}
+                        </MantineProvider>    
                         </WebSocketProvider>
                     </React.Suspense>
                 </ErrorWrapper>

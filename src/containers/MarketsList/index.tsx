@@ -18,6 +18,9 @@ import { selectUserLoggedIn} from '../../modules';
 
 import search from './icon/search.svg';
 
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
 
 const defaultTicker = {
 	amount: '0.0',
@@ -57,6 +60,8 @@ export const MarketsList = props => {
 			history.push(`https://homolog.fortem1.com.br/market/${currentMarket.id}`);
 		}
 	};
+
+
 
 	const currentBidUnitMarkets = (props.markets || markets) as typeof markets;
 
@@ -218,24 +223,12 @@ export const MarketsList = props => {
 				fill: '',
 			},
 			{
-				name: 'USDT',
-				fill: 'usdt',
-			},
-			{
-				name: 'BTC',
-				fill: 'btc',
-			},
-			{
-				name: 'ETH',
-				fill: 'eth',
-			},
-			{
-				name: 'BNB',
-				fill: 'bnb',
-			},
-			{
 				name: 'Tokens',
-				fill: 'usd',
+				fill: 'Tokens',
+			},
+			{
+				name: 'Criptos',
+				fill: 'Criptos',
 			},
 		];
 
@@ -265,6 +258,7 @@ export const MarketsList = props => {
 				<Tabs defaultActiveKey="Spot Markets">
 					<div className="market__pair">
 						<div className="row d-flex align-item-center">
+
 							<div className="col-md-9 ">{renderALTSmarkets()}</div>
 							<div className="col-md-3">
 								<div className="search-coin">
@@ -282,7 +276,19 @@ export const MarketsList = props => {
 						</div>
 						<div className="market__pair__fiat">{renderFIATMarketElement()}</div>
 					</div>
-					<TabPane tab={intl.formatMessage({ id: 'page.marketsLists.tab.favorites' })} key="Favorites">
+					<TabPane tab={						<svg
+									// onClick={() => clickFavoritesMarket(market.id)}
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										// className={svgClass}
+										d="M10 14.3917L15.15 17.5L13.7834 11.6417L18.3334 7.69999L12.3417 7.19166L10 1.66666L7.65835 7.19166L1.66669 7.69999L6.21669 11.6417L4.85002 17.5L10 14.3917Z"
+										fill="gray"
+									/>
+								</svg>} key="Favorites">
 						<FortemMarketTable columns={columns} data={FavoriteMarkets} />
 					</TabPane>
 					<TabPane tab={intl.formatMessage({ id: 'page.marketsLists.tab.spotMarkets' })} key="Spot Markets">
@@ -337,9 +343,9 @@ export const MarketsList = props => {
 	return (
 		<div>
 			        			
-		<div className='marketsHotBanner'>
+		{/* <div className='marketsHotBanner'>
 		<div>{MarketsHotOnList()}</div>
-		</div>
+		</div> */}
 		
 
 		<div className='w-container marketList'>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import {
-  Container,
+  Container2,
   Alert,
   Content,
   Button,
@@ -33,8 +33,13 @@ import { TabelCripto } from "../../components/Table";
 import { QRCode } from "../../components/FastDeposit/QRCode";
 
 
-import { Sidebar, HomepageMarket, MarketsListExchange } from '../../containers';
+import { Sidebar, HomepageMarket } from '../../containers';
+
+// import { Marketsl } from "src/containers/MarketsListExchange";
 import { UserWithdrawalLimits } from '../../containers/Withdraw/UserWithdrawalLimits';
+
+import { MarketsList } from '../../containers/MarketsList';
+
 
 import { Link, useHistory } from 'react-router-dom';
 
@@ -76,8 +81,70 @@ import { formatWithSeparators } from 'src/components';
 import imgLock from './Lock.svg';
 import imgShield from './Shield.svg';
 
+// import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
+import { createStyles, SimpleGrid, Card, Image, Text, AspectRatio, Container } from '@mantine/core';
+
 
 var BlogListData = BlogClassicData.slice(0, 6);
+
+const mockdata = [
+  {
+    title: 'B3 faz nova investida no mercado de criptoativos e testa debênture tokenizada',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/bfninmdcetdt/ce51226dbcd5c0c47a33f0d267e5c053/bfninmdcetdt.png',
+    date: 'August 18, 2022',
+  },
+  {
+    title: 'Investidores do bitcoin estão se preparando para nova alta, aponta relatório',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/idbesppnaar/cf5fc36a6b9a2b007441752f0ea77fc6/idbesppnaar.png',
+    date: 'August 27, 2022',
+  },
+  {
+    title: 'Real Digital: Banco Central divulga para o público código-fonte do projeto',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/rdbcdpopcdp/8a316dbc706960cabe15c25ea1e388b4/rdbcdpopcdp.png',
+    date: 'September 9, 2022',
+  },
+  {
+    title: 'Bank of America: tokenização deve "transformar" infraestrutura do mercado financeiro',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/boatdidmf/576b3755d5e2d8e5cb02d39c43ab04e3/boatdidmf.png',
+    date: 'September 12, 2022',
+  },
+  {
+    title: 'Bradesco e Santander destacam potencial da tokenização e primeiros projetos na área',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/besdpdteppn/38c6c5d715f410a1980ea10afa64738d/besdpdteppn.png',
+    date: 'September 12, 2022',
+  },
+  {
+    title: 'Visa quer fim do cartão de crédito físico e prevê "tokenização de tudo", diz presidente',
+    image:
+      'https://images.ctfassets.net/bfjfs7jy18xi/maipeptb/6596c68e380bccd4771a04c73192f646/maipeptb.png',
+    date: 'September 12, 2022',
+  },
+];
+
+
+const useStyles = createStyles((theme) => ({
+  card: {
+    transition: 'transform 150ms ease, box-shadow 150ms ease',
+    
+    background: '#161D26',
+    borderRadius: '16px',
+
+    '&:hover': {
+      transform: 'scale(1.01)',
+      boxShadow: theme.shadows.md,
+    },
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 600,
+  },
+}));
 
 export function Dashboard() {
   
@@ -176,10 +243,26 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
   ];
 
 
+  const { classes } = useStyles();
+
+  const cards = mockdata.map((article) => (
+    <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
+      <AspectRatio ratio={1920 / 1080}>
+        <Image src={article.image} />
+      </AspectRatio>
+      <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
+        {article.date}
+      </Text>
+      <Text className={classes.title} mt={5}>
+        {article.title}
+      </Text>
+    </Card>
+  ));
+
 
   return (
     
-    <Container>
+    <Container2>
       
       <Content>
         {/* {!props.user.validation && ( */}
@@ -205,7 +288,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             </div>
              
               <Link to={{pathname: "/profile", state: {setInternalPage: 3} }}>
-                <Button>Completar cadastro</Button>
+                <Button style={{background: "var(--button-primary-cta-background-color) !important"}}>Completar cadastro</Button>
               </Link>
             
           </Alert>
@@ -233,7 +316,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             </div>
              
              <Link to={{pathname: "/security/2fa", state: {enable2fa: true} }}>
-                <Button>Habilitar agora</Button>
+                <Button style={{backgroundColor: "var(--button-primary-cta-background-color)"}}>Habilitar agora</Button>
               </Link>
           </Alert> )}
         {/* )} */}
@@ -306,10 +389,11 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
         <Criptos>
           <Tables>
             <div className="div-cripto">
-              <p> Visão geral do mercado cripto </p>
+              {/* <p> Visão geral do mercado cripto </p> */}
+              <p> Acompanhe o mercado </p>
             </div>
-            <HomepageMarket/>
-            {/* <MarketsListExchange /> */}
+            {/* <HomepageMarket/> */}
+            <MarketsList />
           </Tables>
           <Negotiation>
             <Deposit>
@@ -326,7 +410,8 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
                     placeholder="R$ 3.045,00"
                   />
                   <select className="select">
-                    <option className="option">USDT</option>
+                    <option className="option">BRL</option>
+                    <option className="option">USD</option>
                   </select>
                 </div>
                 <span
@@ -337,7 +422,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
               </div>
               <div className="btn-percent">
                 <button
-                  style={{ color: "var(--primary-text-color)" }}
+                  style={{ color: "var(--primary-text-color)", border: 'none' }}
                 >
                   25%
                 </button>
@@ -397,13 +482,20 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
             <button style={{ color: "var(--primary-text-color)" }}>Ver todos</button>
           </div>
           <div className="cards-knowledge">
-            <div className="row row--15">
+            {/* <div className="row row--15">
               {BlogListData.map((item) => (
                 <div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
                   <BlogList StyleVar="box-card-style-default" data={item} />
+                
                 </div>
               ))}
-            </div>
+            </div> */}
+               <Container py="xxl">
+      <SimpleGrid cols={3} >
+        {cards}
+      </SimpleGrid>
+      </Container>
+    
           </div>
         </Knowledge>
       </Content>
@@ -415,7 +507,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
         				blur={10}
 						transition={0.5}
       				/>
-    </Container>
+    </Container2>
   );
 }
 

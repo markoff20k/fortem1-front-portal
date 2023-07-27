@@ -278,31 +278,31 @@ export const MarketsListExchange = props => {
 	const columns = React.useMemo(() => {
 		return [
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.pair' }),
+				Header: 'Negociar',
 				accessor: 'pair',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.last' }),
+				Header: 'Negociar',
 				accessor: 'last',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.change' }),
+				Header: 'Negociar',
 				accessor: 'price_change_percent',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.high' }),
+				Header: 'Negociar',
 				accessor: 'high',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.low' }),
+				Header: 'Negociar',
 				accessor: 'low',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.volume' }),
+				Header: 'Negociar',
 				accessor: 'volume',
 			},
 			{
-				Header: intl.formatMessage({ id: 'page.marketsLists.table.header.trade' }),
+				Header: 'Negociar',
 				accessor: 'trade',
 			},
 		];
@@ -311,7 +311,7 @@ export const MarketsListExchange = props => {
 	return (
 		<div id="marketList">
 			{/* <div>{MarketsHotOnList()}</div> */}
-			{/* <div>{MarketsTabs()}</div> */}
+			<div>{MarketsTabs()}</div>
 		</div>
 	);
 };

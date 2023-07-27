@@ -7,7 +7,7 @@ export const pt: LangType = {
     'page.header.navbar.quick.exchange': 'Quick exchange',
     'page.header.navbar.trade': 'Comprar cripto',
     'page.header.navbar.wallets': 'Carteiras',
-    'page.header.navbar.openOrders': 'Ordens enviadas',
+    'page.header.navbar.openOrders': 'Lista de ordens',
     'page.header.navbar.history': 'Extratos',
     'page.header.navbar.api': 'Documentação da API',
     'page.header.navbar.internal.transfer': 'Transferência interna',
@@ -1381,7 +1381,7 @@ export const pt: LangType = {
     'page.body.wallets.overview.action.transfer': 'Transferir',
     'page.body.wallets.overview.action.p2p': 'P2P',
     'page.body.wallets.overview.seach': 'Procurar',
-    'page.body.wallets.overview.nonZero': 'Ocultar carteiras sem saldo',
+    'page.body.wallets.overview.nonZero': 'Apenas carteiras com saldo',
     'page.body.wallets.transfers.transferType': 'Tipo de transferência',
     'page.body.wallets.transfers.from': 'De',
     'page.body.wallets.transfers.to': 'Para',
@@ -1421,12 +1421,12 @@ export const pt: LangType = {
     'page.body.marketsTable.header.trade': 'Negociar',
 
     'page.marketsLists.tab.favorites': 'Favoritos',
-	'page.marketsLists.tab.spotMarkets': 'Mercados Spot',
+	'page.marketsLists.tab.spotMarkets': 'Mercados à vista',
 	'FIAT': 'Fiat',
 	'USD': 'USD',
 	'BTC': 'BTC',
 	'page.marketsLists.markets.all': 'Todos',
-	'page.marketsLists.input.search.placeholder': 'Procurar',
+	'page.marketsLists.input.search.placeholder': 'Buscar cripto',
 
     'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 
