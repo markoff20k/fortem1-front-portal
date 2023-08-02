@@ -78,7 +78,7 @@ export const TokenScreen: React.FC = () => {
               <img className="pg-token-header-logo" src={saleItem.payload.sale_logo} ></img> 
               <div style={{display: 'flex', flexDirection: 'column', marginLeft: '20px', justifyContent: 'space-evenly'}} >
                 <span style={{color: 'var(--input-text-color)', fontFamily: 'Inter', fontSize: '24px', fontWeight: '600', lineHeight: '29px'}}> {saleItem.payload.host_uid} </span>
-                <span style={{color: 'var(--input-text-color)', fontFamily: 'Inter', fontSize: '14px', fontWeight: '400', lineHeight: '16.94px', opacity: '0.84'}}> + 1.52% a.m | Receba em 1x até 16/04/2024   </span>
+                <span style={{color: '#11ECC7', fontFamily: 'Inter', fontSize: '14px', fontWeight: '400', lineHeight: '16.94px', opacity: '0.84'}}> + 1.52% a.m <span style={{color: 'var(--input-text-color)'}}> | Receba em 1x até 16/04/2024   </span> </span>
               </div>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', marginRight: '60px'}} >

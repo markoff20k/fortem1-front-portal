@@ -80,6 +80,8 @@ export function Mydata() {
  
         <div className="pg-token-project-info__colateral">
           <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><h4> Garantias </h4> </div>
+          Babitur non nibh id enim finibus finibus ac quis elit. Morbi semper massa laoreet elit finibus, in maximus odio commodo.<br/><br/>
+          Duis maximus dictum purus, convallis molestie lorem ullamcorper at. Nullam fringilla orci fermentum blandit tristique.
             
         </div>
 

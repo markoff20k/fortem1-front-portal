@@ -11,7 +11,7 @@ export const en = {
     'page.marketsLists.table.body.trade': 'Invest',
     
 	'page.marketsLists.tab.favorites': 'Favoritos',
-	'page.marketsLists.tab.spotMarkets': 'Spot Market',
+	'page.marketsLists.tab.spotMarkets': 'All',
 	'FIAT': 'Fiat',
 	'USD': 'USD',
 	'BTC': 'BTC',

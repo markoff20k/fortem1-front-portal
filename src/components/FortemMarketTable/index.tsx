@@ -3,6 +3,9 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import ReactPaginate from 'react-paginate';
 
+import { CryptoIcon } from 'src/components/CryptoIcon';
+
+
 interface MarketTableProps {
 	columns: any;
 	data: any;
@@ -16,7 +19,7 @@ const TableStyles = styled.div`
 			margin: 0;
 			cursor: pointer;
 			font-size: 14px;
-			color: #fff;
+			color: #f5f5f5;
 			text-align: justify;
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -75,8 +78,8 @@ export const FortemMarketTable: React.FC<MarketTableProps> = (props: MarketTable
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.pair' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.lastPrice' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.change' })}</th>
-							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th> */}
+							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
+							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th>
 							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.volume' })}</th> */}
 							{/* <th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.trade' })}</th> */}
 						</tr>
@@ -88,13 +91,17 @@ export const FortemMarketTable: React.FC<MarketTableProps> = (props: MarketTable
 								paginationState * NUMBER_ITEM_DISPLAY + NUMBER_ITEM_DISPLAY,
 							)
 							.map(item => {
+
+								const code = (item.pair).toLowerCase;
+								// const marketName = item.name.split('/');
 								return (
 									<tr>
 										<td>{item.pair}</td>
 										<td>{item.last}</td>
+										
 										<td>{item.price_change_percent}</td> {/*change here*/}
-										{/* <td>{item.high}</td>
-										<td>{item.low}</td> */}
+										<td>{item.high}</td>
+										<td>{item.low}</td>
 										{/* <td>{item.volume}</td> */}
 										<td>{item.trade}</td>
 									</tr>

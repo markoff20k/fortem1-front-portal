@@ -300,7 +300,7 @@ export const Criptos = styled.div`
 `;
 
 export const Tables = styled.div`
-  height: 730px;
+  height: 630px;
   margin-right: 20px;
   border-radius: 10px;
   background-color: var(--header-background-color);
@@ -323,7 +323,7 @@ export const Tables = styled.div`
 
 export const Negotiation = styled.div`
   width: 348px;
-  height: 730px;
+  height: 630px;
   border-radius: 10px;
   background-color: var(--header-background-color);
 

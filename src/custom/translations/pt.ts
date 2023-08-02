@@ -1421,12 +1421,12 @@ export const pt: LangType = {
     'page.body.marketsTable.header.trade': 'Negociar',
 
     'page.marketsLists.tab.favorites': 'Favoritos',
-	'page.marketsLists.tab.spotMarkets': 'Mercados à vista',
+	'page.marketsLists.tab.spotMarkets': 'Todos',
 	'FIAT': 'Fiat',
 	'USD': 'USD',
 	'BTC': 'BTC',
 	'page.marketsLists.markets.all': 'Todos',
-	'page.marketsLists.input.search.placeholder': 'Buscar cripto',
+	'page.marketsLists.input.search.placeholder': 'Buscar',
 
     'resource.profile.doesnt_exist_or_not_editable' : 'Perfil não editável',
 

@@ -21,6 +21,9 @@ import search from './icon/search.svg';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
+import { CryptoIcon } from 'src/components/CryptoIcon';
+
+
 
 const defaultTicker = {
 	amount: '0.0',
@@ -144,20 +147,25 @@ export const MarketsList = props => {
 										fill="gray"
 									/>
 								</svg>
-
+								<CryptoIcon className="cr-wallets-table__wallet--icon-exchange" code={marketName[0]} />
 								<span style={{ color: '#fff', marginLeft: 8 }}>{marketName[0]}</span>
 								<span style={{ color: '#494949' }}>/</span>
 								<span style={{ color: '#494949' }}>{marketName[1]}</span>
 							</div>
 						),
+						code: (
+
+								<CryptoIcon className="cr-wallets-table__wallet--icon" code={marketName[0]} />
+
+						),
 						last: (
 							<span style={{ color: marketChangeColor }}>
 								{market.last}
-								{/*
-								<p className="m-0" style={{ color: 'rgb(115 127 146)' }}>
+								
+								{/* <p className="m-0" style={{ color: 'rgb(115 127 146)' }}>
 									$ <ConvertUsd value={+market.last} symbol={marketName[1]} />
-								</p>
-								*/}
+								</p> */}
+								
 							</span>
 						),
 						open: <span style={{ color: marketChangeColor }}>{market.open}</span>,
@@ -177,22 +185,23 @@ export const MarketsList = props => {
 
 	const handldeSearchInputChange = (e: any) => {
 		setSearchMarketInputState(e.target.value);
+
 	};
 
 	const renderFIATMarketElement = (): void | any => {
-		if (nameMarketPair === 'Tokens') {
+		if (nameMarketPair === 'Criptos') {
 			const marketFIATs = [
 				{
 					name: 'ARB',
 					fill: 'arb',
 				},
 				{
-					name: 'LDO',
-					fill: 'ldo',
+					name: 'BRL',
+					fill: 'brl',
 				},
 				{
-					name: 'TUSD',
-					fill: 'tusd',
+					name: 'USD',
+					fill: 'BRL',
 				},
 			];
 
@@ -218,18 +227,18 @@ export const MarketsList = props => {
 	};
 	const renderALTSmarkets = () => {
 		const marketFIATs = [
-			{
-				name: intl.formatMessage({ id: 'page.marketsLists.markets.all' }),
-				fill: '',
-			},
-			{
-				name: 'Tokens',
-				fill: 'Tokens',
-			},
-			{
-				name: 'Criptos',
-				fill: 'Criptos',
-			},
+			// {
+			// 	name: intl.formatMessage({ id: 'page.marketsLists.markets.all' }),
+			// 	fill: '',
+			// },
+			// {
+			// 	name: 'Tokens',
+			// 	fill: 'Tokens',
+			// },
+			// {
+			// 	name: 'Criptos',
+			// 	fill: 'Criptos',
+			// },
 		];
 
 		return (
@@ -257,10 +266,10 @@ export const MarketsList = props => {
 			<div className="cx-market-item">
 				<Tabs defaultActiveKey="Spot Markets">
 					<div className="market__pair">
-						<div className="row d-flex align-item-center">
+						<div className="d-flex" style={{justifyContent: 'flex-end'}}>
 
-							<div className="col-md-9 ">{renderALTSmarkets()}</div>
-							<div className="col-md-3">
+							{/* <div className="col-md-9 ">{renderALTSmarkets()}</div> */}
+							<div className="col-md-6">
 								<div className="search-coin">
 									<div className="search-coin__icon">
 										<img alt="search" src={search} />
@@ -274,7 +283,7 @@ export const MarketsList = props => {
 								</div>
 							</div>
 						</div>
-						<div className="market__pair__fiat">{renderFIATMarketElement()}</div>
+						{/* <div className="market__pair__fiat">{renderFIATMarketElement()}</div> */}
 					</div>
 					<TabPane tab={						<svg
 									// onClick={() => clickFavoritesMarket(market.id)}
@@ -288,7 +297,7 @@ export const MarketsList = props => {
 										d="M10 14.3917L15.15 17.5L13.7834 11.6417L18.3334 7.69999L12.3417 7.19166L10 1.66666L7.65835 7.19166L1.66669 7.69999L6.21669 11.6417L4.85002 17.5L10 14.3917Z"
 										fill="gray"
 									/>
-								</svg>} key="Favorites">
+								</svg> } key="Favorites" >Favoritos
 						<FortemMarketTable columns={columns} data={FavoriteMarkets} />
 					</TabPane>
 					<TabPane tab={intl.formatMessage({ id: 'page.marketsLists.tab.spotMarkets' })} key="Spot Markets">
