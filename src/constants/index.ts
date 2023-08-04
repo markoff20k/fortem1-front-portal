@@ -1,4 +1,4 @@
-import { CanCan } from "src/containers";
+//import { CanCan } from "src/containers";
 import { AbilitiesInterface, Wallet } from "src/modules";
 import { DropdownElem } from "../components/Order";
 
@@ -42,13 +42,14 @@ export const DEFAULT_WALLET: Wallet = {
 
 export const DEFAULT_CCY_PRECISION = 2;
 export const DEFAULT_FIAT_PRECISION = 2;
-export const DEFAULT_TRADING_VIEW_INTERVAL = "15";
+export const DEFAULT_TRADING_VIEW_INTERVAL = "30";
 export const VALUATION_PRIMARY_CURRENCY = "USD";
-export const VALUATION_SECONDARY_CURRENCY = "BTC";
+export const VALUATION_SECONDARY_CURRENCY = "BRL";
 
 export const PASSWORD_ENTROPY_STEP = 6;
 
-export const DEFAULT_KYC_STEPS = ["email", "phone", "profile", "document", "address"];
+//export const DEFAULT_KYC_STEPS = ["email", "profile", "document", "address"];
+export const DEFAULT_KYC_STEPS = ["email", "profile", "document"];
 
 export const DEFAULT_MARKET_HEADERS = ["Pair", "Price", "24h Change"];
 

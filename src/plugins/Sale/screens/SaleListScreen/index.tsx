@@ -94,7 +94,7 @@ export const SaleListScreen: React.FC = () => {
 				{/* <div  style={{ backgroundImage: `url(${bgF})` }} /> */}
 
 
-					<img src={bgF} style={{ height: 'auto', maxWidth: '100%' }} className='img-fluid'/>
+					<img src={bgF} className='img-fluid'/>
 					<div className='sale-list-slider-content'>
 						<div className="sale-list-title">Título do artigo sobre tokens</div>
 						<div className="sale-list-subtitle">Texto sobre a notícia principal com uma chamada para o usuário clicar no banner com até 256 caracteres.</div>
@@ -118,7 +118,7 @@ export const SaleListScreen: React.FC = () => {
 					</div>
 
 						<div className="mt-3">
-							<SaleListTablesUpcoming />
+							<SaleListTables />
 						</div>
 			</div>
 		</div>

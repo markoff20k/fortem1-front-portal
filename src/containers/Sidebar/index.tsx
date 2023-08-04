@@ -149,7 +149,12 @@ class SidebarContainer extends React.Component<Props, State> {
             'pg-sidebar-wrapper-nav-item-img--active': isActive,
         });
 
+        const data = this.props.user.data && JSON.parse(this.props.user.data);
+        //const data = user.data && JSON.parse(user.data);
+        console.log(data.username);
+
         return (
+            
             isLoggedIn && (
                 <div className="pg-sidebar-wrapper-profile">
                     {/* <Link to="/profile" onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}> */}
@@ -166,7 +171,8 @@ class SidebarContainer extends React.Component<Props, State> {
                             </svg>
                             <p className="pg-sidebar-wrapper-profile-area-text-name">
                                 {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}
-                                {this.props.user.username}
+                                {data.username}
+                                
                                 {/* {this.props.user.email} */}
                                 {/* Jeferson Martin */}
                             </p>

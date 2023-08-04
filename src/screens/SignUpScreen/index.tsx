@@ -260,7 +260,7 @@ class SignUp extends React.Component<Props> {
 
     private handleChangeUsername = (value: string) => {
         this.setState({
-            username: value.replace(/[^A-Za-z0-9]+/g, '').toUpperCase(),
+            username: value.replace(/[^A-Za-z0-9\s\.]+/g, '').toUpperCase(),
         });
     };
 
@@ -375,8 +375,9 @@ class SignUp extends React.Component<Props> {
             password,
             data: JSON.stringify({
                 language: i18n,
+                username: username,
             }),
-            ...(isUsernameEnabled() && { username }),
+            // ...(isUsernameEnabled() && { username }),
             ...(refId && { refid: refId }),
             ...(captchaType() !== 'none' && { captcha_response }),
         };

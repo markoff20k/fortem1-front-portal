@@ -11,7 +11,7 @@ import avatar from "../../../assets/avatar.svg";
 import avatarCamera from "../../../assets/Avatar-camera.svg";
 import avatarIcon from "../../../assets/Icon.svg";
 import imgDownload from "../../../assets/download.svg";
-import { TextField } from "@mui/material";
+import TextField from '@mui/material/TextField';
 
 export function Mydata() {
   return (
@@ -39,7 +39,7 @@ export function Mydata() {
           Dados pessoais
         </h3>
         <div>
-          <TextField
+          {/* <TextField
             className="input-profile"
             // size="small"
             id="outlined-basic"
@@ -57,27 +57,37 @@ export function Mydata() {
             id="outlined-basic"
             label="Telefone"
             variant="outlined"
-          />
+          /> */}
         </div>
         <div>
-          <TextField
+          {/* <TextField
             // size="small"
             id="outlined-basic"
             label="Data de nascimento"
             variant="outlined"
-          />
-          <TextField
+          /> */}
+
+{/* <TextField
+          id="outlined-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+        /> */}
+
+          {/* <TextField
             // size="small"
             id="outlined-basic"
             label="Documento"
             variant="outlined"
-          />
-          <TextField
+          /> */}
+          {/* <TextField
             // size="small"
             id="outlined-basic"
             label="Nacionalidade"
             variant="outlined"
-          />
+          /> */}
         </div>
       </PersonalData>
       <Address>
@@ -85,7 +95,7 @@ export function Mydata() {
           Endereço
         </h3>
         <div>
-          <TextField
+          {/* <TextField
             className="input-postal"
             // size="small"
             id="outlined-basic"
@@ -97,10 +107,10 @@ export function Mydata() {
             id="outlined-basic"
             label="Rua e número"
             variant="outlined"
-          />
+          /> */}
         </div>
         <div>
-          <TextField
+          {/* <TextField
             // size="small"
             id="outlined-basic"
             label="Bairro"
@@ -117,7 +127,7 @@ export function Mydata() {
             id="outlined-basic"
             label="País"
             variant="outlined"
-          />
+          /> */}
         </div>
       </Address>
       <Buttons>

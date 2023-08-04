@@ -22,6 +22,7 @@ import { estimatePlatformValue, estimateValue } from 'src/helpers/estimateValue'
 import { WalletsHeader } from 'src/components/WalletsHeader';
 import { useHistory } from 'react-router';
 import { platformCurrency } from 'src/api';
+import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from 'src/constants';
 
 interface Props {
     isP2PEnabled: boolean;
@@ -125,6 +126,7 @@ const WalletsOverview: FC<Props> = (props: Props): ReactElement => {
             } = item;
             const totalBalance = Number(spotBalance || 0) + Number(spotLocked || 0) + Number(p2pBalance || 0) + Number(p2pLocked || 0);
             const estimatedValue = estimatePlatformValue(currency, currencies, totalBalance);
+            const estimateMarketValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
 
             return [
                 <div key={index} className="cr-wallets-table__wallet">
@@ -140,8 +142,10 @@ const WalletsOverview: FC<Props> = (props: Props): ReactElement => {
                     </div>
                 </div>,
                 <Decimal key={index} fixed={fixed} thousSep=",">{totalBalance ? totalBalance.toString() : '0'}</Decimal>,
-                formatWithSeparators(estimatedValue, ','),
-                <Decimal key={index} fixed={fixed} thousSep=",">{spotBalance ? (+spotBalance + +spotLocked).toString() : '0'}</Decimal>,
+                //formatWithSeparators(estimatedValue, ','),
+                //estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers),
+                estimatePlatformValue(currency, currencies, totalBalance),
+                <Decimal key={index} fixed={fixed} thousSep=",">{spotBalance ? (+spotBalance).toString() : '0'}</Decimal>,
                 isP2PEnabled ? <Decimal key={index} fixed={fixed} thousSep=",">{p2pBalance ? (+p2pBalance + +p2pLocked).toString() : '0'}</Decimal> : null,
                 <div className="cr-wallets-table__button-wrapper" key={index}>
                     <Button onClick={() => handleClickDeposit(currency)} variant="secondary">

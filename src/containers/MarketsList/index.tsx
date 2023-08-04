@@ -285,10 +285,11 @@ export const MarketsList = props => {
 						</div>
 						{/* <div className="market__pair__fiat">{renderFIATMarketElement()}</div> */}
 					</div>
-					<TabPane tab={						<svg
+					<TabPane tab={						<span style={{display: 'flex', flexDirection: 'row'}}><svg
 									// onClick={() => clickFavoritesMarket(market.id)}
 									width="20"
 									height="20"
+									
 									viewBox="0 0 20 20"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -297,7 +298,7 @@ export const MarketsList = props => {
 										d="M10 14.3917L15.15 17.5L13.7834 11.6417L18.3334 7.69999L12.3417 7.19166L10 1.66666L7.65835 7.19166L1.66669 7.69999L6.21669 11.6417L4.85002 17.5L10 14.3917Z"
 										fill="gray"
 									/>
-								</svg> } key="Favorites" >Favoritos
+								</svg> Favoritos </span>} key="Favorites" >
 						<FortemMarketTable columns={columns} data={FavoriteMarkets} />
 					</TabPane>
 					<TabPane tab={intl.formatMessage({ id: 'page.marketsLists.tab.spotMarkets' })} key="Spot Markets">

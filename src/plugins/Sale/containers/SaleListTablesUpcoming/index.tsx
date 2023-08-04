@@ -85,7 +85,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 
 	return (
 		
-		<div style={{gap: '20px', marginTop: '35px',  display: 'flex', justifyContent: 'space-between', position: 'relative'}}>{saleItems}</div>
+		<div style={{gap: '20px', marginTop: '35px',  display: 'flex', justifyContent: 'space-evenly', position: 'relative'}}>{saleItems}</div>
 
 		
 	);

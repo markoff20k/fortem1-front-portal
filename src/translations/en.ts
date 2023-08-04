@@ -1360,7 +1360,7 @@ export const en = {
     'page.body.wallets.overview.header.wallet': 'Asset',
     'page.body.wallets.overview.header.total': 'Quantity',
     'page.body.wallets.overview.header.estimated': 'Estimated value',
-    'page.body.wallets.overview.header.spot': 'Spot balance',
+    'page.body.wallets.overview.header.spot': 'Available',
     'page.body.wallets.overview.header.p2p': 'P2P balance',
     'page.body.wallets.p2p.header.wallet': 'Wallet',
     'page.body.wallets.p2p.header.p2p': 'P2P balance',

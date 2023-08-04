@@ -53,28 +53,40 @@ export const WalletsScreen: FC = (): ReactElement => {
     const tickers = useSelector(selectMarketTickers);
 
 
-    const fiatWallet = wallets.filter(wallet => wallet.currency.toLowerCase() === 'usd');
+    const fiatWallets = wallets.filter(wallet => wallet.type === 'fiat' );
     
-    const tokenWallet = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD');
+    const tokenWallets = wallets.filter(wallet => wallet.currency === 'arb');
 
-    const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
+    const cryptoWallets = wallets.filter(wallet => wallet.currency === 'eth' );
 
 
     const estimatedFiatValue = React.useMemo(() => {
-      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
-  }, [currencies, cryptoWallets, markets, tickers]);
+      return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, fiatWallets, markets, tickers);
+  }, [currencies, fiatWallets, markets, tickers]);
     
     const estimatedValue = React.useMemo(() => {
       return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
   }, [currencies, wallets, markets, tickers]);
 
+  const estimatedTokenValue = React.useMemo(() => {
+    return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, tokenWallets, markets, tickers);
+}, [currencies, tokenWallets, markets, tickers]);
+
+  const valorestimado = Number(estimatedFiatValue);
+
+  const estimatedCryptoValue = React.useMemo(() => {
+    return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+}, [currencies, cryptoWallets, markets, tickers]);
+
   
-  const estimatedCryptoValue = Number(estimatedValue) - Number(estimatedFiatValue);
+
+  
+  //const estimatedCryptoValue = Number(estimatedValue) - Number(estimatedFiatValue);
 
     // const donutChartDataCharts1 = [{estimatedFiatValue}, 0, {estimatedCryptoValue}];
 
     const donutChartOptionsCharts1 = {
-        series: [{estimatedFiatValue}, 0, {estimatedCryptoValue}],
+        series: [{valorestimado}, 0, {estimatedCryptoValue}],
         labels: ["Reais", "Tokens", "Criptomoedas"],
         colors: ["#11ECC7", "#F9A912", "#009991"],
         chart: {
@@ -140,10 +152,10 @@ export const WalletsScreen: FC = (): ReactElement => {
     const dountchartData = {
         // series: [{estimatedFiatValue}, 0, {estimatedCryptoValue}],
         // series: [formatWithSeparators(estimatedFiatValue, '.'), 0, formatWithSeparators(estimatedCryptoValue, '.')],
-        series: [1000, 2000, 2000],
+        series: [valorestimado, 2000, 2000],
         options: {
           labels: ["Reais", "Tokens", "Criptomoedas"],
-          // colors: ["#11ECC7", "#F9A912", "#009991"],
+          // colors: ["#44F5C9", "#F9A912", "#4542F7"],
         //   chart: {
         //     width: 680,
         //     type: 'donut',
@@ -154,6 +166,7 @@ export const WalletsScreen: FC = (): ReactElement => {
           },
           stroke: {
             show: false,
+            
           },
           plotOptions: {
             pie: {
@@ -180,8 +193,8 @@ export const WalletsScreen: FC = (): ReactElement => {
                   }
                 }
               },
-              startAngle: 0,
-              endAngle: 360,
+              startAngle: -90,
+              endAngle: 270,
               expandOnClick: true,
 
               
@@ -204,7 +217,7 @@ export const WalletsScreen: FC = (): ReactElement => {
             // },
           },
           dataLabels: {
-            enabled: true,
+            enabled: false,
             formatter: function (val) {
               return val + "%"
             },
@@ -231,6 +244,10 @@ export const WalletsScreen: FC = (): ReactElement => {
       
       
       const dountchart = () => {
+        console.log(estimatedCryptoValue)
+        console.log(estimatedFiatValue)
+        console.log(estimatedTokenValue)
+        
         return(
           <React.Fragment>
               <ReactApexChart
@@ -378,7 +395,8 @@ export const WalletsScreen: FC = (): ReactElement => {
               <h4
                 style={{ color: "var(--primary-text-color)" }}
               >
-                R$ {formatWithSeparators(estimatedFiatValue, ',')}
+                {/* R$ {formatWithSeparators(estimatedFiatValue, ',')} */}
+                R$ {estimatedFiatValue}
                 {/* Careteira: {formattedWallet[0].name} */}
                 {/* {tokenWallet[0].name} */}
               </h4>
@@ -596,6 +614,7 @@ export const WalletsScreen: FC = (): ReactElement => {
 
 
         </React.Fragment>
+        
 
     );
 };
