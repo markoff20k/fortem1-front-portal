@@ -83,6 +83,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 
 	const baseWallet = wallets.find(wallet => wallet.currency === currency_id);
 	//console.log(wallet.currency);
+	console.log(currency_id);
 	const baseBalance = baseWallet ? Number(baseWallet.balance) : 0;
 	//console.log(baseBalance);
 	const defaultSelectedCurrency = props.sale.currency_available[0];
@@ -398,7 +399,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						const balance = Decimal.format(handleGetBalance(currency), 4, '.', ',');
 						optiontring += ` | Disponível: ${balance}`;
 
-						return <option value={currency}>{optiontring}</option>;
+						return <option value={currency} style={{background: 'var(--input-background-color) !important'}}>{optiontring}</option>;
 					})}
 				</select>
 			</div>

@@ -20,7 +20,7 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 	const [tabKeyActiveState, setTabkeyActiveState] = React.useState<string>('Activity');
 
 	React.useEffect(() => {
-		dispatch(getUserActivity({ page: 0, limit: 4 }));
+		dispatch(getUserActivity({ page: 0, limit: 5 }));
 	}, []);
 
 	const renderResult = (result: string) => {

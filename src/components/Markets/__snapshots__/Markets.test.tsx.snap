@@ -200,7 +200,7 @@ exports[`Markets should render empty data 1`] = `
         "account.withdraw.non_integer_otp": "Otp value could not be parsed into Integer type",
         "account.withdraw.non_positive_amount": "Amount value must be positive",
         "account.withdraw.non_positive_page": "Page value must be positive",
-        "account.withdraw.not_permitted": "Please, pass the corresponding verification steps to withdraw funds",
+        "account.withdraw.not_permitted": "Por favor, conclua seu cadastro para habilitar transações financeiras",
         "address.blank": "Address is missing or empty",
         "address.invalid": "Address is invalid",
         "authz.apikey_not_active": "API Key state is 'inactive",

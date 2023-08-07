@@ -17,6 +17,8 @@ import './SaleListScreen.css';
 
 import bgF from './bfF-tokens.svg';
 
+import { CarouselToken } from "./carousel";
+
 const settingEvents = {
 	dots: false,
 	infinite: true,
@@ -89,25 +91,27 @@ export const SaleListScreen: React.FC = () => {
 		<div className="token-screen" >
 			{/* {renderEvent()}	 */}
 
-			<div className="sale-list-banner">
+			<div className="sale-list-banner" style={{backgroundImage: `url(${bgF})`, backgroundSize: 'cover', width: '97%' }}>
 			
-				{/* <div  style={{ backgroundImage: `url(${bgF})` }} /> */}
+			
 
 
-					<img src={bgF} className='img-fluid'/>
+					{/* <img src={bgF} className='img-fluid'/> */}
 					<div className='sale-list-slider-content'>
 						<div className="sale-list-title">Título do artigo sobre tokens</div>
 						<div className="sale-list-subtitle">Texto sobre a notícia principal com uma chamada para o usuário clicar no banner com até 256 caracteres.</div>
 						<button className="landing-button btn-token" > Comprar tokens</button>
 					</div>
+
+				<div  />
 			
-				
-				{/* <img src={bgF} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )',objectFit: 'contain', }} className="theme-shape-center" /> */}
-	
-				
-				
 			
 			</div>
+
+			{/* <CarouselToken /> */}
+		
+			
+
 
 
 			<div id="sale-list" className="">

@@ -55,8 +55,8 @@
 				margin: 0;
 				flex-wrap: wrap;
 				position: relative;
-				top: 50px;
-				left: -300px;
+				/* top: 50px; */
+				left: -60%;
 				width: 100%;
 				
 
@@ -77,20 +77,20 @@
 				margin: 0;
 				flex-wrap: wrap;
 				position: relative;
-				top: 60px;
-				left: -300px;
+				/* top: 60px; */
+				left: -60%;
 				width: 80%;
 			
 			}
 
 			.btn-token {
 				position: relative;
-				bottom: -100px;
+				bottom: -40px;
 				position: relative;
 				padding: 10px 50px;
 				border: none;
 				border-radius: 10px;
-				left: -300px;
+				left: -60%;
 				width: 40%
 
 			}

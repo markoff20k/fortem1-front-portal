@@ -4,8 +4,10 @@ export const Container = styled.div`
 display: flex;
 justify-content: center;
 position: relative;
-height: 100vh;
+height: 100%;
+min-height: 120vh;
 background-color: #131313;
+
 `;
 
 export const Content = styled.div`
@@ -53,14 +55,25 @@ export const Content = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-weight: 700;
 
       p {
-        font-size: 25px;
+        font-size: 24px;
         margin: 0;
 
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1228px) {
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: 1128px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 1028px) {
           font-size: 18px;
         }
+
+
       }
 
       button {

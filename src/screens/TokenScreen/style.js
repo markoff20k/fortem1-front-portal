@@ -7,7 +7,7 @@ justify-content: flex-start;
 position: absolute;
 min-height: 100vh;
 background-color: #131313;
-width: 92%;
+width: 100%;
 
 padding: 20px;
 `;

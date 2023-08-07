@@ -33,6 +33,9 @@ export const MyData = styled.div`
       align-items: flex-start;
       justify-content: flex-start;
       margin-left: 30px;
+      font-family: 'Inter' !important;
+      font-size: 16px;
+      font-weight: 700;
 
       @media screen and (max-width: 1440px) {
         margin-left: 20px;
@@ -40,10 +43,6 @@ export const MyData = styled.div`
 
       p {
         margin: 0 15px;
-
-        @media screen and (max-width: 1440px) {
-          font-size: 15px;
-        }
       }
     }
 
@@ -109,7 +108,8 @@ export const PersonalData = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5px 10px;
+    margin: 20px 10px;
+    gap: 30px;
 
     &:nth-child(1) {
       margin-left: -10px;

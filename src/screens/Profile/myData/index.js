@@ -3,7 +3,6 @@ import {
   Container,
   MyData,
   PersonalData,
-  Address,
   Buttons,
   Terms,
 } from "./style";
@@ -11,9 +10,25 @@ import avatar from "../../../assets/avatar.svg";
 import avatarCamera from "../../../assets/Avatar-camera.svg";
 import avatarIcon from "../../../assets/Icon.svg";
 import imgDownload from "../../../assets/download.svg";
-import TextField from '@mui/material/TextField';
+//import TextField from '@mui/material/TextField';
+
+import { useSelector } from 'react-redux';
+
+import { UserOutlined } from '@ant-design/icons';
+
+import { Input } from 'antd';
+// import { User } from "@openware/react-opendax";
+
+import { selectUserInfo } from "src/modules";
+
+
 
 export function Mydata() {
+
+  const user = useSelector(selectUserInfo);
+  const data = user.data && JSON.parse(user.data);
+  
+
   return (
     <Container>
       <MyData>
@@ -25,10 +40,10 @@ export function Mydata() {
           </button>
           <div className="my-data-description">
             <p style={{color: "var(--primary-text-color)"}} >
-              Rodrigo Fontoura
+              {data.username}
             </p>
             <p style={{color: "var(--primary-text-color)"}} >
-              digo.fontoura@gmail.com
+              {user.email}
             </p>
           </div>
         </div>
@@ -39,97 +54,102 @@ export function Mydata() {
           Dados pessoais
         </h3>
         <div>
-          {/* <TextField
-            className="input-profile"
-            // size="small"
-            id="outlined-basic"
-            label="Nome completo"
-            variant="outlined"
-          />
-          <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Email"
-            variant="outlined"
-          />
-          <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Telefone"
-            variant="outlined"
-          /> */}
-        </div>
-        <div>
-          {/* <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Data de nascimento"
-            variant="outlined"
-          /> */}
 
-<TextField
-          id="outlined-read-only-input"
-          label="Read Only"
-          defaultValue="Hello World"
-          InputProps={{
-            readOnly: true,
-          }}
+        <Input 
+          placeholder="default size"
+          value={data.username}
+          disabled='true'
+          
+        />
+        
+
+        <Input 
+          placeholder="default size"
+
+          value={user.email}
+          label='Teste'
+          disabled='true'
+          
+        />
+    </div>
+    <div>
+      <Input 
+          placeholder="default size"
+
+          value="Telefone"
+          disabled='true'
+          
         />
 
-          {/* <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Documento"
-            variant="outlined"
-          /> */}
-          {/* <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Nacionalidade"
-            variant="outlined"
-          /> */}
-        </div>
-      </PersonalData>
-      <Address>
+      <Input 
+          placeholder="default size"
+
+          value="Data de nascimento"
+          disabled='true'
+          
+        />
+    </div>
+    <div>
+      <Input 
+          placeholder="default size"
+
+          value="Documento"
+          disabled='true'
+          
+        />
+
+      <Input 
+          placeholder="default size"
+
+          value="Nacionalidade"
+          disabled='true'
+          
+        />
+
+    </div>
+  </PersonalData>
+  <PersonalData>
         <h3 style={{color: "var(--primary-text-color)"}} >
           Endereço
         </h3>
         <div>
-          {/* <TextField
-            className="input-postal"
-            // size="small"
-            id="outlined-basic"
-            label="Código Postal"
-            variant="outlined"
-          />
-          <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Rua e número"
-            variant="outlined"
-          /> */}
+        
+          <Input 
+          placeholder="default size"
+
+          value="Rua e número"
+          disabled='true'
+          
+        />
+                  <Input 
+          placeholder="default size"
+
+          value="Bairro"
+          disabled='true'
+          
+        />
+
         </div>
         <div>
-          {/* <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Bairro"
-            variant="outlined"
-          />
-          <TextField
-            // size="small"
-            id="outlined-basic"
-            label="Cidade / Estado"
-            variant="outlined"
-          />
-          <TextField
-            // size="small"
-            id="outlined-basic"
-            label="País"
-            variant="outlined"
-          /> */}
+
+        <Input 
+          placeholder="default size"
+
+          value="Cidade / Estado"
+          disabled='true'
+          
+        />
+          <Input 
+          placeholder="default size"
+
+          value="País"
+          disabled='true'
+          
+          
+        />
+
         </div>
-      </Address>
+      </PersonalData>
       <Buttons>
         <button>Atualizar cadastro</button>
       </Buttons>

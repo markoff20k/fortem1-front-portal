@@ -1,3 +1,39 @@
+/* ANTD PERSONAL DATA - PROFILE PAGE */
+#cep {
+    width: calc(50% - 15px) !important;
+}
+
+.sale-list-banner {
+    border-radius: 12px;
+    background-size: cover;
+    border-radius: 12px;
+    margin: 20px;
+    
+
+}
+.ant-input-affix-wrapper {
+    background-color: var(--input-background-color) !important;
+    color: var(--input-text-color) !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    border-radius: 12px !important;
+    border: 2px solid var(--input-border-color) !important;
+    border-color: var(--input-border-color) !important;
+}
+
+.ant-input, .ant-input:focus, .ant-input-focused {
+
+    background-color: var(--input-background-color) !important;
+    color: var(--input-text-color) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    border-radius: 12px !important;
+    border: 2px solid var(--input-border-color) !important;
+    border-color: var(--input-border-color) !important;
+
+}
+
+
 /* Mantine */
 .mantine-Container-root {
     max-width: unset !important;
@@ -1429,20 +1465,40 @@ input:-webkit-autofill:focus {
     margin: 1.5rem 0 0 0;
 }
 
-.select-currency-box select {
-    top: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 10px 28px 10px 10px;
-    font-size: 0.8em !important;
+
+.currency {
+               background: var(--input-background-color) !important;
+            border: 1px solid var(--input-border-color) !important;
+}
+
+.select-items {
     background-color: var(--input-background-color) !important;
-    border: 1px solid var(--input-border-color) !important;
-    border-radius: 10px !important;
-    opacity: 0.91;
-    z-index: 2;
-    color: var(--primary-text-color) !important;
-    outline: none;
+}
+
+.select-currency-box {
+
+    select {
+        top: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 10px 28px 10px 10px;
+        font-size: 0.8em !important;
+        background-color: var(--input-background-color) !important;
+        border: 1px solid var(--input-border-color) !important;
+        border-radius: 10px !important;
+        opacity: 0.91;
+        z-index: 2;
+        color: var(--primary-text-color) !important;
+        outline: none;
+
+        option {
+            background: var(--input-background-color) !important;
+            border: 1px solid var(--input-border-color) !important;
+        }
+    }
+
+
 }
 
 .ant-input { 
@@ -1749,7 +1805,7 @@ input:-webkit-autofill:focus {
 }
 
 .td-pg-profile__activity {
-    width: 80vw;
+    width: 100%;
     
   }
   
@@ -1864,8 +1920,9 @@ input:-webkit-autofill:focus {
 
 
 
-.select:active {
+.select:active, option {
     border: 1px solid var(--input-border-color) !important;
+    background: var(--input-background-color) !important;
 }
 
 .btn-change {
@@ -3347,7 +3404,7 @@ hr:not([size]) {
 
       &::-webkit-input-placeholder {
         color: var(--input-text-color);
-        background-color: transparent;
+        background-color: var(--input-background-color) !important;
         font-family: "Inter", sans-serif;
       }
   }
@@ -3368,6 +3425,10 @@ hr:not([size]) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--input-background-color) !important;
+  
+  
+
   }
 
   .h3-card{
@@ -7900,25 +7961,11 @@ img,video {
         color: #999;
       }
       
-      .w-commerce-commercecheckoutshippingcountryselector:-ms-input-placeholder {
-        color: #999;
-      }
+    
       
-      .w-commerce-commercecheckoutshippingcountryselector::-ms-input-placeholder {
-        color: #999;
-      }
       
-      .w-commerce-commercecheckoutshippingcountryselector::placeholder {
-        color: #999;
-      }
       
-      .w-commerce-commercecheckoutshippingcountryselector:focus {
-        border-top-color: #3898ec;
-        border-right-color: #3898ec;
-        border-bottom-color: #3898ec;
-        border-left-color: #3898ec;
-        outline-style: none;
-      }
+      
       
       .w-commerce-commercecheckoutshippingmethodswrapper {
         margin-bottom: 20px;
@@ -11612,11 +11659,11 @@ img,video {
       }
       
       .input.button-inside.password-protected::-ms-input-placeholder {
-        color: #fff;
+        color: #f5f5f5;
       }
       
       .input.button-inside.password-protected::placeholder {
-        color: #fff;
+        color: #f5f5f5;
       }
       
       .input.quantity {
@@ -11660,7 +11707,8 @@ img,video {
       }
       
       .input.select:focus {
-        color: #fff;
+        color: #f5f5f5;
+        background-color: var(--input-background-color) !important;
       }
       
       .position-relative {

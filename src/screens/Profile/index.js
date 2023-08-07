@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Container, Content } from "./style";
 
 import { Mydata } from "./myData";
-// import { Preferences } from "./preferences";
-// import { Limits } from "./limits";
-// import { Security } from "./security";
+import { Preferences } from "./preferences";
+import { Limits } from "./limits";
+import { Security } from "./security";
 
 export function Profile() {
   const [internalPage, setInternalPage] = useState(1);
@@ -21,9 +21,9 @@ export function Profile() {
             <p style={{color: 'var(--primary-text-color)'}}>
               Gerenciar perfil
             </p>
-            <div>
+            <div style={{display: 'flex'}}>
               <button
-                onClick={() => setInternalPage(2)}
+                onClick={() => setInternalPage(1)}
                 className={internalPage === 1 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
               >
@@ -54,12 +54,12 @@ export function Profile() {
         </div>
         {internalPage === 1 ? (
           <Mydata />
-        // ) : internalPage === 2 ? (
-        //   <Preferences />
-        // ) : internalPage === 3 ? (
-        //   <Limits />
-        // ) : internalPage === 4 ? (
-        //   <Security />
+         ) : internalPage === 2 ? (
+           <Preferences />
+         ) : internalPage === 3 ? (
+           <Limits />
+         ) : internalPage === 4 ? (
+           <Security />
         ) : (
           {}
         )}

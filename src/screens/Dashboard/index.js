@@ -68,7 +68,7 @@ import {
 import { useSelector } from 'react-redux';
 
 import { useDocumentTitle, useP2PWalletsFetch, useWalletsFetch } from 'src/hooks';
-import { selectAbilities, selectCurrencies, selectP2PWallets, selectWallets, selectMarkets, selectMarketTickers, Wallet } from 'src/modules';
+import { selectCurrencies, selectP2PWallets, selectWallets, selectMarkets, selectMarketTickers, Wallet } from 'src/modules';
 
 // import { estimateUnitValue, estimateValue } from 'helpers/estimateValue';
 import { estimateValue } from 'src/helpers/estimateValue';
@@ -83,9 +83,6 @@ import imgShield from './Shield.svg';
 
 // import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
 import { createStyles, SimpleGrid, Card, Image, Text, AspectRatio, Container } from '@mantine/core';
-
-
-var BlogListData = BlogClassicData.slice(0, 6);
 
 const mockdata = [
   {
@@ -141,8 +138,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 600,
+    fontFamily: `Inter, sans`,
+    fontWeight: 700,
   },
 }));
 
@@ -167,34 +164,39 @@ export function Dashboard() {
 
  useWalletsFetch();
   
- const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'USD' );
+ const cryptoWallets = wallets.filter(wallet => wallet.currency.toUpperCase() === 'ETH' );
+
+  const fiatWallets = wallets.filter(wallet => wallet.type === 'fiat' );
 
  const estimatedFiatValue = React.useMemo(() => {
-   return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+   return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, fiatWallets, markets, tickers);
+}, [currencies, fiatWallets, markets, tickers]);
+
+const estimatedCryptoValue = React.useMemo(() => {
+  return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
 }, [currencies, cryptoWallets, markets, tickers]);
 
-
-const estimatedTokenValue = estimatedValue - estimatedFiatValue;
+const estimatedTokenValue = estimatedValue - estimatedFiatValue - estimatedCryptoValue;
 
   const patrimony = [
     {
-      description: "Patrimônio Total",
-      value: "$" + formatWithSeparators(estimatedValue, ','),
+      description: "Patrimônio Total Estimado",
+      value: "R$" + formatWithSeparators(estimatedValue, ','),
       type: "V",
     },
     {
       description: "Disponível em Reais",
-      value: "$" + formatWithSeparators(estimatedFiatValue, ','),
+      value: "R$" + formatWithSeparators(estimatedFiatValue, ','),
       type: "D",
     },
     {
       description: "Disponível em Cripto",
-      value: "$" + formatWithSeparators(estimatedTokenValue, ','), 
+      value: "R$" + formatWithSeparators(estimatedCryptoValue, ','), 
       type: "V",
     },
     {
       description: "Disponível em Token",
-      value: "R$ 0,00",
+      value: "R$" + formatWithSeparators(estimatedTokenValue, ','), 
       type: "V",
     },
   ];
@@ -361,7 +363,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue;
               </div>
             </div>
             <div className="buttons">
-              <button style={{borderRadius: '12px', padding: '10px 18px'}} onClick={() => setFastDeposit(true)} className="btn btn-primary btn-block">Ver dados para depósito</button>
+              <button style={{borderRadius: '12px', padding: '10px 18px', backgroundColor: 'var(--button-primary-cta-background-color) !important;'}} onClick={() => setFastDeposit(true)} className="btn btn-block">Ver dados para depósito</button>
               <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent !important', position: 'relative', top: '-10px'}} onClick={() => redirectLimits()} className="btn-primary-outline btn-block">Aumentar limites </button>
             </div>
           </Deposit>

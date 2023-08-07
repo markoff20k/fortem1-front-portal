@@ -6,8 +6,8 @@ export const Container = styled.div`
   margin-top: 30px;
 
   @media screen and (max-width: 1440px) {
-    height: calc(100vh - 20px);
-    margin-bottom: 10px;
+    // height: calc(100vh - 20px);
+    // margin-bottom: 10px;
   }
 
   h4 {

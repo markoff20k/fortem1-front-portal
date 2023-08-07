@@ -1353,8 +1353,8 @@ export const en = {
 
     // Wallets screen
 
-    'page.body.wallets.tab.overview': 'Overview',
-    'page.body.wallets.tab.spot': 'Main account',
+    'page.body.wallets.tab.overview': 'Wallets Overview',
+    'page.body.wallets.tab.spot': 'Deposits & Withdrawals',
     'page.body.wallets.tab.p2p': 'P2P',
     'page.body.wallets.tab.transfer': 'Transfer',
     'page.body.wallets.overview.header.wallet': 'Asset',

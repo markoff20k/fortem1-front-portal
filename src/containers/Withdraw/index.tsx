@@ -207,6 +207,15 @@ class WithdrawComponent extends React.Component<Props, WithdrawState> {
                                     message={withdrawTotalLabel ? withdrawTotalLabel : 'Total Withdraw Amount'}
                                     content={this.renderTotal()}
                                 />
+                                                    <div className="cr-withdraw__group__limits">
+                                <br />
+                                
+                                <UserWithdrawalLimits
+                                    currencyId={currency}
+                                    fixed={fixed}
+                                    price={price}
+                                />
+                    </div>
                             </div>
                             <div className="cr-withdraw__deep">
                                 <Button
@@ -220,13 +229,13 @@ class WithdrawComponent extends React.Component<Props, WithdrawState> {
                             </div>
                         </div>
                     </div>
-                    <div className="cr-withdraw__group__limits">
+                    {/* <div className="cr-withdraw__group__limits">
                         <UserWithdrawalLimits
                             currencyId={currency}
                             fixed={fixed}
                             price={price}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </React.Fragment>
         );

@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 89%;
-  height: calc(100vh - 280px);
+  //height: calc(100vh - 280px);
+  height: 100%;
   margin-top: 30px;
 
   @media screen and (max-width: 1440px) {
-    height: calc(100vh - 20px);
+    // height: calc(100vh - 20px);
     margin-bottom: 10px;
   }
 

@@ -43,8 +43,8 @@ export const DEFAULT_WALLET: Wallet = {
 export const DEFAULT_CCY_PRECISION = 2;
 export const DEFAULT_FIAT_PRECISION = 2;
 export const DEFAULT_TRADING_VIEW_INTERVAL = "30";
-export const VALUATION_PRIMARY_CURRENCY = "USD";
-export const VALUATION_SECONDARY_CURRENCY = "BRL";
+export const VALUATION_PRIMARY_CURRENCY = "BRL";
+export const VALUATION_SECONDARY_CURRENCY = "USD";
 
 export const PASSWORD_ENTROPY_STEP = 6;
 

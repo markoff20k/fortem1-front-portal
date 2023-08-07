@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin-top: 50px;
 
   @media screen and (max-width: 1440px) {
-    height: calc(100vh - 20px);
+    // height: calc(100vh - 20px);
   }
 
   .div-header-limits {

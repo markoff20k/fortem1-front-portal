@@ -10,25 +10,7 @@
   .table-responsive {
     border: none !important;
   }
-  .btn-group{
-    .btn-default {
-      background-color: $light;
-      color: $dark;
-      border: 1px solid darken($light, 2%);
-      &.btn-primary {
-          background-color: $primary;
-          border-color: $primary;
-          color: $white;
-      }
-  }
-    &.pull-right {
-      float: right;
-      .dropdown-menu {
-        right: 0;
-        transform: none !important;
-        top: 100% !important;
-      }
-    }
+
   }
   tbody {
     th {
