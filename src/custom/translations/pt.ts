@@ -269,7 +269,7 @@ export const pt: LangType = {
 	'page.body.wallets.tabs.withdraw.content.enable2fa': 'Para sacar, você precisa habilitar autenticação de dois fatores.',
 	'page.body.wallets.tabs.withdraw.content.enable2faButton': 'Habilitar 2FA',
 
-    'page.body.wallets.tabs.withdraw.content.withdrawal.limit': 'Limites de saque',
+    'page.body.wallets.tabs.withdraw.content.withdrawal.limit': 'Limites de saque:',
     'page.body.wallets.tabs.withdraw.content.withdrawal.limit.tip': 'Os limites de saque diários e mensais variam de acordo com seu nível de cadastro e renovam a cada 24h. Ao ultrapassar seus limites, suas solicitações de saque serão processadas manualmente.',
 
     'success.beneficiaries.created': 'Beneficiaries: criado com sucesso',

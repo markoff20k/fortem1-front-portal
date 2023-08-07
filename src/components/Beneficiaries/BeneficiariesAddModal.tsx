@@ -505,6 +505,7 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
                 {/* {renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
                 {renderAddAddressModalBodyItem('fiatIntermediaryBankName', true)}
                 {renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)} */}
+                <br />
                 {render2FACode}
                 <div className="cr-email-form__button-wrapper">
                     <Button
