@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: fixed;
+  position: relative;
   
   max-width: 380px;
   width: 60%;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   margin-top: 380px;
   // background-color: rgba(204, 204, 204, 0.4);
   
-  z-index: 9999;
+  z-index: 1000000;
 
   .dimmer-auth {
     top: 0 !important;
