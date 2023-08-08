@@ -37,7 +37,10 @@ export const Dashboard = styled.div`
     padding: 0;
     padding-right: 20px;
     flex: 1;
-    height: 100%;
+    height: 378px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 
     .patrimony-total,
@@ -48,6 +51,7 @@ export const Dashboard = styled.div`
       background-color: var(--header-background-color);
       // width: 100%;
       max-width: 100%;
+      min-height: 175px;
 
       p {
         margin-bottom: 20px;

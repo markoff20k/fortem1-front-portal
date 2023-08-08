@@ -380,11 +380,11 @@ export const WalletsScreen: FC = (): ReactElement => {
               <h4
                 style={{ color: "var(--primary-text-color)" }}
               >
-                USD {formatWithSeparators(estimatedValue, ',')}
+                R$ {formatWithSeparators(estimatedValue, ',')}
               </h4>
               {/* <EstimatedValue wallets={reais} /> */}
               
-              <span>+ 13,87%</span>
+              {/* <span>+ 13,87%</span> */}
             </div>
             <div className="patrimony-available col-md-5">
               <p
@@ -413,11 +413,11 @@ export const WalletsScreen: FC = (): ReactElement => {
               >
                 Total em ativos
               </p>
-              <select
+              {/* <select
                 style={{ color: "var(--primary-text-color)" }}
               >
                 <option>Visão geral</option>
-              </select>
+              </select> */}
             </div>
             <div className="patrimony-graphic-bottom">
               {/* <img src={imgGrafic} alt="" /> */}

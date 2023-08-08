@@ -7,14 +7,15 @@ export const PG_TITLE_PREFIX = "Fortem One";
 export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isLight?: boolean): string[][] => {
     const routes = [
         ["page.header.navbar.main", "/dashboard", `dashboard${isLight ? "Light" : ""}`],
-        ["Exchange Pro", "/trading/", `trade${isLight ? "Light" : ""}`],
+        
         // ["page.header.navbar.trade", "/markets", `trade${isLight ? "Light" : ""}`],
         // ["page.header.navbar.quick.exchange", "/quick-exchange", `quick_exchange${isLight ? "Light" : ""}`],
         ["page.header.navbar.tokens", "/tokens", `tokens${isLight ? "Light" : ""}`],
         ["page.header.navbar.wallets", "/wallets", `wallets${isLight ? "Light" : ""}`],
         ["page.header.navbar.history", "/history", `history${isLight ? "Light" : ""}`],
         ["page.header.navbar.openOrders", "/orders", `orders${isLight ? "Light" : ""}`],
-        ["page.header.navbar.deposit", "/deposit", `deposit${isLight ? "Light" : ""}`],
+        ["Exchange Pro", "/trading/", `trade${isLight ? "Light" : ""}`],
+        // ["page.header.navbar.deposit", "/deposit", `deposit${isLight ? "Light" : ""}`],
         // ["page.header.navbar.p2p", "/p2p",`p2p${isLight ? "Light" : ""}`],
         // ["page.header.navbar.internal.transfer", "/internal-transfer", `internal_transfer${isLight ? "Light" : ""}`],
         // ["page.header.navbar.api", "/api", `api${isLight ? "Light" : ""}`],

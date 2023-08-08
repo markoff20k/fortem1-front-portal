@@ -4,6 +4,12 @@
     }
 }
 
+.currency-icon-token {
+    width: 26px !important;
+    border-radius: 50% !important;
+
+}
+
 /* ANTD PERSONAL DATA - PROFILE PAGE */
 #cep {
     width: calc(50% - 15px) !important;
@@ -1205,7 +1211,7 @@
     }
 
     &__colateral {
-        width: 480px;
+        width: 520px;
         height: 300px;
         border-radius: 16px;
         background: #161D26;
@@ -1443,7 +1449,7 @@ input:-webkit-autofill:focus {
     width: 348px;
 
     @media screen and (max-width: 1440px) {
-        width: 310px;
+        /* width: 310px; */
     }
 
 }
@@ -1509,8 +1515,18 @@ input:-webkit-autofill:focus {
 
 .ant-input { 
     background-color: var(--input-background-color) !important;
-    border: 1px solid var(--input-border-color) !important;
-    border-radius: 10px !important;
+    border: none !important;
+    //border-radius: 10px !important;
+    opacity: 0.91;
+    color: var(--primary-text-color) !important;
+    border-radius: 0 !important
+
+}
+
+.ant-input-group { 
+    background-color: var(--input-background-color) !important;
+    border: var(--input-border-color) !important;
+    //border-radius: 10px !important;
     opacity: 0.91;
     color: var(--primary-text-color) !important;
 
@@ -1532,11 +1548,20 @@ input:-webkit-autofill:focus {
     font-size: 14px;
     text-align: center;
     background-color: var(--input-background-color) !important;
-    border: 1px solid var(--input-border-color) !important;
-    border-radius: 10px !important;
+    border: none !important;
+    
+    
+    
+    
     
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+
+    img {
+        width: 26px !important;
+        border-radius: 50% !important;
+    }
+
   }
 
 .ant-modal-content {
@@ -4467,8 +4492,8 @@ img,svg,video,canvas,audio,iframe,embed,object {
     vertical-align: middle
 }
 
-img,video {
-    max-width: 100%;
+video {
+    /* max-width: 100%; */
     height: auto
 }
 
@@ -9701,7 +9726,7 @@ img,video {
       
       img {
         display: inline-block;
-        max-width: 100%;
+        /* max-width: 100%; */
       }
       
       label {

@@ -14,6 +14,7 @@ import { findSalebyId } from 'src/modules/sale/sale-item';
 
 import { BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from 'src/plugins/Sale';
 
+
 import { BuyersHistory } from 'src/plugins/Sale';
 
 //import './SaleDetailScreen.pcss';

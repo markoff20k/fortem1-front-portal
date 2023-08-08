@@ -269,7 +269,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue - estimatedCrypt
       <Content>
         {/* {!props.user.validation && ( */}
         {/* KYC Steps */}
-        {user.level === 1 || user.level === 2 || user.level === 3 && (
+        {user.level  === 0  && (
         <Alert>
             <div className="description">
               <img src={imgShield} alt="" />
@@ -284,6 +284,34 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue - estimatedCrypt
                 <br />
                 <span style={{fontWeight: '400', opacity: '0.74'}}>
                 Complete seu cadastro agora e tenha acesso a todas as funcionalidades da nossa plataforma.
+                </span>
+              </p>
+              
+            </div>
+             
+              <Link to={{pathname: "/profile", state: {setInternalPage: 3} }}>
+                <Button style={{background: "var(--button-primary-cta-background-color) !important"}}>Completar cadastro</Button>
+              </Link>
+            
+          </Alert>
+
+        )}
+
+{user.level  === 1  && (
+        <Alert>
+            <div className="description">
+              <img src={imgShield} alt="" />
+              {/* <p
+                style={props.themeDark ? { color: "#fff" } : { color: "#000" }}
+              > */}
+              {/* <p>
+                A Fortem One preza pela sua segurança, para utilizar todos os recursos da plataforma, você precisa habilitar o duplo fator de autenticação e concluir o seu cadastro, é rápido e simples.
+              </p> */}
+              <p style={{fontWeight: '700'}}>
+                Não perca nenhuma oportunidade de investimento!
+                <br />
+                <span style={{fontWeight: '400', opacity: '0.74'}}>
+                Conclua seu cadastro agora e tenha acesso a maiores limites transacionais.
                 </span>
               </p>
               

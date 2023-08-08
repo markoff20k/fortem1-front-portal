@@ -18,6 +18,7 @@ import { currenciesFetch } from 'src/modules';
 import { findSalebyId, SaleItem } from 'src/modules/sale/sale-item';
 import { getPrice } from 'src/modules/sale/price';
 import { selectCurrencies, selectWallets, walletsFetch } from 'src/modules';
+import { useDocumentTitle, useP2PWalletsFetch, useWalletsFetch } from 'src/hooks';
 import { selectPrice } from 'src/modules/sale/price';
 
 
@@ -37,8 +38,11 @@ interface SaleBuyProps {
 
 
 export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
+
+	useWalletsFetch();
+
 	const { id, currency_id, currency_available, type } = props.sale;
-	const iconLogin = require ('./login.svg');
+	// const iconLogin = require ('./login.svg');
 	const priceSelector = useSelector(selectPrice);
 	const buyResponse = useSelector(selectBuy, shallowEqual);
 
@@ -78,26 +82,49 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 
 	const currencies = useSelector(selectCurrencies);
 	// filter Wallets that have currency in currency_available Of Sale Item
-	const wallets = useSelector(selectWallets);
+	const wallets = useSelector(selectWallets)  || [];
+	const wallets2 = useSelector(selectWallets) || [];
 	const filteredWallets = wallets.filter(wallet => currency_available.includes(wallet.currency));
 
-	const baseWallet = wallets.find(wallet => wallet.currency === currency_id);
+	//const filteredWallets = wallets2.filter(wallet2 => props.sale.currency_available.includes(wallet2.currency));
+
+	const baseWallet = wallets2.find(wallet2 => wallet2.currency === currency_id);
 	//console.log(wallet.currency);
 	console.log(currency_id);
 	const baseBalance = baseWallet ? Number(baseWallet.balance) : 0;
-	//console.log(baseBalance);
+	console.log(baseBalance);
 	const defaultSelectedCurrency = props.sale.currency_available[0];
+	
+    
+
+
 	// get Balance By Currency_ID
-	const handleGetBalance = React.useCallback(
-		currency => {
-			const foundedWallet = filteredWallets.find(wallet => wallet.currency === 'currency');
-			//console.log(Number(baseWallet.balance))
-			if (foundedWallet) {
-				return Number(foundedWallet.balance);
-			}
+	// const handleGetBalance = React.useCallback(
+	// 	currency => {
+	// 		const foundedWallet = filteredWallets.find(wallet => wallet.currency === currency);
+	// 		//console.log(Number(baseWallet.balance))
+	// 		if (foundedWallet) {
+	// 			return Number(foundedWallet.balance);
+	// 		}
 
 			
-			return 100;
+	// 		return 100;
+	// 	},
+	// 	[filteredWallets],
+	// );
+
+	const handleGetBalance = React.useCallback(
+		currency => {
+			const foundedWallet = filteredWallets.find(wallet => wallet.currency === currency);
+			// console.log(filteredWallets[0].name);
+			//console.log(foundedWallet.balance);
+			if (foundedWallet) {
+				// if (filteredWallets[0].name) return Number(filteredWallets[0].balance);
+				if (foundedWallet) return Number(foundedWallet.balance);
+				return 2;
+			}
+
+			return 1;
 		},
 		[filteredWallets],
 	);
@@ -206,8 +233,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			// updateBonusState,
 			// setQuoteBalanceState,
 			// handleGetBalance,
-			// props.sale,
-			// quantityInputState,
+			props.sale,
+			quantityInputState,
 		],
 	);
 
@@ -363,8 +390,9 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 							disabled
 							value={priceState}
 							type="number"
-							addonBefore={<img className="currency-icon" src={findIcon(quoteCurrencyState)} alt="price_icon" />}
+							addonBefore={<img className="currency-icon-token" src={findIcon(quoteCurrencyState)} alt="price_icon" style={{width: '26px', borderRadius: '50%'}}/>}
 							addonAfter={quoteCurrencyState.toUpperCase()}
+							bordered={false}
 						/>
 					</div>
 					<div className="">
