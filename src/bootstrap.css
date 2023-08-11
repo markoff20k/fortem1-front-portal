@@ -27,7 +27,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: "Inter", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -5561,7 +5561,8 @@ a.close.disabled {
   opacity: 0;
 }
 .tooltip.show {
-  opacity: 0.9;
+  opacity: 0.96 !important;
+  
 }
 .tooltip .arrow {
   position: absolute;
@@ -5631,10 +5632,13 @@ a.close.disabled {
 .tooltip-inner {
   max-width: 200px;
   padding: 0.4rem 0.7rem;
-  color: #fff;
+  color: var(--input-text-color) !important;
   text-align: center;
-  background-color: #000;
-  border-radius: 0.25rem;
+  opacity: 1 !important;
+  /* background-color: var(--input-background-color) !important; */
+  border-radius: 40px;
+  background: #414855 !important;
+  border-radius: 12px !important;
 }
 
 .popover {

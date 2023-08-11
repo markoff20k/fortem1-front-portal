@@ -739,7 +739,7 @@ export const pt: LangType = {
     'page.password2fa.message': 'Digite seu token de 6 dígitos',
     'page.forgotPassword.email': 'Email',
     'page.forgotPassword.send': 'Redefinir senha',
-    'page.noDataToShow': 'Sem dados a exibir',
+    'page.noDataToShow': 'Nenhum elemento a exibir',
 
     'page.modal.withdraw.success': 'Saque solicitado com sucesso!',
     'page.modal.withdraw.success.message.content': 'Ваш вывод был успешно подтвержден. Пожалуйста, подождите, чтобы получить ' +

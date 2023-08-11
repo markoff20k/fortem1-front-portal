@@ -8,6 +8,7 @@ export const Container2 = styled.div`
   justify-content: center;
   position: relative;
   height: 100vh;
+  display: flex;
 
   .dimmer {
     margin-top: -160px;
@@ -22,6 +23,8 @@ export const Content = styled.div`
   padding: 35px 10px;
   background-color: #131313;
   margin-top: 20px;
+  z-index: 1;
+  position: absolute;
 
   @media screen and (max-width: 1440px) {
   

@@ -1,8 +1,25 @@
+#tooltip {
+    background: transparent !important;
+}
+
 .custom-input {
     input {
         background: var(--input-background-color) !important;
     }
 }
+
+
+.ant-empty-description {
+    img {
+        width: 120px;
+
+    }
+
+    span, p {
+        color: var(--input-text-color);
+    }
+}
+
 
 .currency-icon-token {
     width: 26px !important;
@@ -1133,18 +1150,7 @@
 
 
 .pg-token-project-info2 {
-    color: var(--primary-text-color);
-    display: flex;
-    gap: 2rem;
-    flex-direction: row;
-    justify-content: flex-start;
     
-    margin-top: 20px;
-
-
-}
-.pg-token-project-info {
-
     color: var(--primary-text-color);
     display: flex;
     gap: 2rem;
@@ -1153,12 +1159,26 @@
     width: 100%;
     margin-top: 20px;
 
+
+}
+.pg-token-project-info {
+
+    color: var(--primary-text-color);
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    
+
     &__general {
         width: 100%;
         height: 300px;
         border-radius: 16px;
         background: #161D26;
         padding: 30px 20px;
+        min-width: 280px;
         
 
         h4 {
@@ -1169,21 +1189,53 @@
             font-family: 'Inter';
             margin-bottom: 20px;
             text-transform: none !important;
+
+            @media screen and (max-width: 1080px) {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            @media screen and (max-width: 980px) {
+                font-size: 14px;
+                line-height: 14px;
+            }
         }
 
         p {
             color: var(--primary-text-color);
             font-size: 16px;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 22px;
             font-family: 'Inter';
             opacity: 0.84;
+
+            @media screen and (max-width: 1340px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            @media screen and (max-width: 1140px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            @media screen and (max-width: 1040px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            @media screen and (max-width: 980px) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            
         }
 
     }
 
     &__buy {
-        width: 480px;
+        max-width: 480px !important;
+        min-width: 200px !important;
         height: 630px;
         border-radius: 16px;
         background: #161D26;
@@ -1196,6 +1248,8 @@
             line-height: 56px;
             font-family: 'Inter';
             margin-left: 10px;
+            text-transform: none !important;
+
             
         }
 
@@ -1206,16 +1260,24 @@
             line-height: 24px;
             font-family: 'Inter';
             opacity: 0.84;
+
+            @media screen and (max-width: 1340px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
         }
 
     }
 
     &__colateral {
-        width: 520px;
+        max-width: 480px !important;
+        min-width: 200px !important;
+        width: 100%;
         height: 300px;
         border-radius: 16px;
-        background: #161D26;
-        padding: 20px 10px;
+        background-color: var(--header-background-color);
+        padding: 20px;
 
         h4 {
             color: var(--primary-text-color);
@@ -1224,6 +1286,18 @@
             line-height: 56px;
             font-family: 'Inter';
             margin-left: 10px;
+            text-transform: none !important;
+
+
+            @media screen and (max-width: 1080px) {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            @media screen and (max-width: 980px) {
+                font-size: 14px;
+                line-height: 14px;
+            }
             
         }
 
@@ -1234,6 +1308,27 @@
             line-height: 24px;
             font-family: 'Inter';
             opacity: 0.84;
+
+            @media screen and (max-width: 1340px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            @media screen and (max-width: 1140px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            @media screen and (max-width: 1040px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            @media screen and (max-width: 980px) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
         }
 
     }
@@ -1446,7 +1541,7 @@ input:-webkit-autofill:focus {
     background-color: transparent;
     /* margin: 80px 0px; */
     height: 100%;
-    width: 348px;
+    /* width: 348px; */
 
     @media screen and (max-width: 1440px) {
         /* width: 310px; */
@@ -1526,7 +1621,7 @@ input:-webkit-autofill:focus {
 .ant-input-group { 
     background-color: var(--input-background-color) !important;
     border: var(--input-border-color) !important;
-    //border-radius: 10px !important;
+    border-radius: 12px !important;
     opacity: 0.91;
     color: var(--primary-text-color) !important;
 

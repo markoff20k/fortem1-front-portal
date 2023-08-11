@@ -391,7 +391,7 @@ const estimatedTokenValue = estimatedValue - estimatedFiatValue - estimatedCrypt
               </div>
             </div>
             <div className="buttons">
-              <button style={{borderRadius: '12px', padding: '10px 18px', backgroundColor: 'var(--button-primary-cta-background-color) !important;'}} onClick={() => setFastDeposit(true)} className="btn btn-block">Ver dados para depósito</button>
+              <button style={{borderRadius: '12px', padding: '10px 18px', color: '#f5f5f5 !important',  backgroundColor: 'var(--button-primary-cta-background-color) !important;'}} onClick={() => setFastDeposit(true)} className="btn-block">Ver dados para depósito</button>
               <button style={{borderRadius: '12px', padding: '10px 18px', color: '#11ECC7', background: 'transparent !important', position: 'relative', top: '-10px'}} onClick={() => redirectLimits()} className="btn-primary-outline btn-block">Aumentar limites </button>
             </div>
           </Deposit>

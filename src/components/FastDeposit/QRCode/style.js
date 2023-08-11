@@ -30,12 +30,12 @@ export const Content = styled.div`
   justify-content: space-around;
   border-radius: 20px;
   background-color: var(--header-background-color);
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 180px;
 
   .header-deposit{
     width: 100%;
-    height: 75px;
+    height: 58px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +44,10 @@ export const Content = styled.div`
 
     p{
       margin: 0;
+      font-family: 'Inter';
+      font-size: 20px;
+      font-weight: 700;
+      line-height: normal;
     }
 
     span{

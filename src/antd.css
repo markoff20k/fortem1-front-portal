@@ -3607,6 +3607,7 @@ textarea.ant-input {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  border-radius: 12px;
 }
 .ant-input-group[class*='col-'] {
   float: none;
