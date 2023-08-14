@@ -69,7 +69,7 @@ export function Preferences(props) {
           Iniciar sempre com o tema escuro (dark theme)
           <Toggle />
         </span>
-        <div className="language">
+        {/* <div className="language">
           <span style={{color: "var(--primary-text-color)"}} >
             Idioma de preferência
           </span>
@@ -77,7 +77,7 @@ export function Preferences(props) {
             <option>Português BR</option>
             <option>Inglês</option>
           </select>
-        </div>
+        </div> */}
       </div>
     </Container>
   );

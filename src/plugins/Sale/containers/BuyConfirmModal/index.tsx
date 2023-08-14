@@ -37,13 +37,14 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 			}
 
 			return require('../../../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+			
 		}
 	};
 
 	//const bonusQuantity = NP.times(quantity, bonus);
 	const bonusQuantity = 0;
-	//const totalQuanity = NP.plus(baseBalance, quantity, bonusQuantity);
-	const totalQuanity = baseBalance + quantity;
+	const totalQuantity = NP.plus(quantity, bonusQuantity);
+	//const totalQuanity = baseBalance + quantity;
 
 	const baseTitle = (
 		<>
@@ -71,7 +72,8 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 					<Card>
 						<div>			
 							<img style={{ width: '30px', height: '30px' }} src={findIcon(baseCurrency)} alt="" />
-							<span style={{ fontSize: '15px', marginLeft: '5px' }}>Você está comprando {Decimal.format((totalQuanity), 2, '.', ',')} tokens {baseCurrency} </span>
+							<span style={{ fontSize: '15px', marginLeft: '5px' }}>Você está comprando {Decimal.format((totalQuantity), 2, '.', ',')} tokens {baseCurrency} </span>
+							{console.log(totalQuantity)}
 						</div>
 						{/*<Statistic
 							title={baseTitle}
@@ -86,7 +88,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 					<Card>
 					<div>			
 						<img style={{ width: '30px', height: '30px' }} src={findIcon(baseCurrency)} alt="" />
-						<span style={{ fontSize: '15px', marginLeft: '5px' }}>Seu novo saldo em {quoteCurrency} será de {Decimal.format((NP.minus(quoteBalance, Number(quoteTotal))), 4, '.', ',')}</span>
+						<span style={{ fontSize: '15px', marginLeft: '5px' }}>Seu novo saldo em {quoteCurrency} será de {Decimal.format((NP.minus(quoteBalance, Number(quoteTotal))), 2, '.', ',')}</span>
 					</div>
 
 						{/*<Statistic

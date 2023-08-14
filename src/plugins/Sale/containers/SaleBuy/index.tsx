@@ -151,7 +151,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				case 'FTK':
 					return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
 				default:
-					return NP.divide(quotePrice, NP.divide(1, basePrice));
+					//return NP.divide(quotePrice, NP.divide(1, basePrice));
+					return 5;
 			}
 		},
 		[quoteCurrencyState],
@@ -247,7 +248,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			const convertedPrice = calculatePrice(props.sale.price, priceSelector.payload[quoteCurrencyState.toUpperCase()]);
 			setPriceState(convertedPrice);
 			//A LINHA ABAIXO ESTAVA COMENTADA 
-			//setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
+			setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
 		}
 	}, [quoteCurrencyState, priceSelector.loading, calculatePrice, priceSelector.payload, props.sale.price, quantityInputState]);
 
@@ -275,14 +276,14 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				dispatchGetTotalBuyers(props.sale.id); // update Total Buyers in Sale Info
 				setTimeout(() => {
 					dispatchFetchSaleItemByID(props.sale.id);
-				}, 7000);
+				}, 8000);
 			}
 		}
 
 		if (buyResponse.loading) {
 			const hide = message.loading('Aguarde. Estamos processando a sua compra...', 0);
 			// dismiss manually and asynchronously
-			setTimeout(hide, 3500);
+			setTimeout(hide, 3000);
 		}
 	}, [
 		buyResponse.error,
@@ -301,16 +302,19 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		const quantity = quantityInputState;
 		const totalPurchase = quoteTotalState;
 		const quoteCurrency = quoteCurrencyState;
-		if (priceState && priceState > 0 && quantity > 0 && totalPurchase && totalPurchase > 0 && quoteCurrency) {
+		if (priceState && priceState > 0 && quantity > 0  && totalPurchase > 0 && quoteCurrency) {
 			const buyInfo: Buy = {
 				ieo_id: id,
 				uid: uid,
 				quantity: quantity,
-				total_purchase: totalPurchase,
+				total_purchase: 5,
 				quote_currency: quoteCurrency,
 			};
 			dispatchBuy(buyInfo);
 			setIsBuyConfirmModalVisibleState(false);
+			console.log(totalPurchase);
+			console.log(quantity);
+			console.log(quoteCurrency);
 		} else {
 			notification.error({
 				message: 'Não foi possível realizar sua compra no momento. Por favor, tente novamente em instantes ou entre em contato com nossa equipe de suporte.',

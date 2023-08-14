@@ -25,6 +25,9 @@ export const Content = styled.div`
   margin-top: 20px;
   z-index: 1;
   position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (max-width: 1440px) {
   

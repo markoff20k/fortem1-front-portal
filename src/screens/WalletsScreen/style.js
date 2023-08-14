@@ -56,8 +56,8 @@ export const Dashboard = styled.div`
       p {
         margin-bottom: 20px;
         font-family: : 'Inter';
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 22px;
+        font-weight: 700;
         line-height: 24px;
       }
 

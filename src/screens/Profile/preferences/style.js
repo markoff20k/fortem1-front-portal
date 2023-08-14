@@ -12,10 +12,12 @@ export const Container = styled.div`
   }
 
   h4 {
-    @media screen and (max-width: 1440px) {
-      font-size: 18px;
-      margin-top: 20px;
-    }
+
+    font-size: 20px;
+    font-wight: 700;
+    text-transform: none !important;
+
+    
   }
 
   .notifications,

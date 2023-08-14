@@ -97,10 +97,11 @@ export const PersonalData = styled.div`
   margin-top: 20px;
 
   h3 {
-    font-size: 1.5em;
-    @media screen and (max-width: 1440px) {
-      font-size: 1.2em;
-    }
+    font-size: 20px;
+    font-wight: 700;
+    text-transform: none !important;
+
+
   }
 
   div {

@@ -55,7 +55,7 @@ export const WalletsScreen: FC = (): ReactElement => {
 
     const fiatWallets = wallets.filter(wallet => wallet.type === 'fiat' );
     
-    const tokenWallets = wallets.filter(wallet => wallet.currency === 'arb');
+    const tokenWallets = wallets.filter(wallet => wallet.currency === 'kart');
 
     const cryptoWallets = wallets.filter(wallet => wallet.currency === 'eth' );
 
@@ -72,11 +72,19 @@ export const WalletsScreen: FC = (): ReactElement => {
     return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, tokenWallets, markets, tickers);
 }, [currencies, tokenWallets, markets, tickers]);
 
+
+const estimatedCryptoValue = React.useMemo(() => {
+  return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
+}, [currencies, cryptoWallets, markets, tickers]);
+
+
   const valorestimado = Number(estimatedFiatValue);
 
-  const estimatedCryptoValue = React.useMemo(() => {
-    return estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallets, markets, tickers);
-}, [currencies, cryptoWallets, markets, tickers]);
+  const valorestimadoToken = Number(estimatedTokenValue);
+
+  const valorestimadoCrypto = Number(estimatedCryptoValue);
+
+  
 
   
 
@@ -152,7 +160,7 @@ export const WalletsScreen: FC = (): ReactElement => {
     const dountchartData = {
         // series: [{estimatedFiatValue}, 0, {estimatedCryptoValue}],
         // series: [formatWithSeparators(estimatedFiatValue, '.'), 0, formatWithSeparators(estimatedCryptoValue, '.')],
-        series: [valorestimado, 2000, 2000],
+        series: [valorestimado, valorestimadoToken, valorestimadoCrypto],
         options: {
           labels: ["Reais", "Tokens", "Criptomoedas"],
           // colors: ["#44F5C9", "#F9A912", "#4542F7"],
@@ -373,7 +381,7 @@ export const WalletsScreen: FC = (): ReactElement => {
           <div className="patrimony">
             <div className="patrimony-total col-md-5">
               <p
-                style={{ color: "var(--primary-text-color)" }}
+                style={{ color: "var(--primary-text-color)", fontWeight: '700' }}
               >
                 Patrimônio total estimado
               </p>
@@ -409,7 +417,7 @@ export const WalletsScreen: FC = (): ReactElement => {
           <div className="patrimony-graphic col-md-7">
             <div className="patrimony-graphic-top">
               <p
-                style={{ color: "var(--primary-text-color)" }}
+                style={{ color: "var(--primary-text-color)", fontWeight: '700' }}
               >
                 Total em ativos
               </p>

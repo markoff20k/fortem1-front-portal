@@ -49,7 +49,7 @@ export function Wallet(props) {
           <div className="patrimony-graphic">
             <div className="patrimony-graphic-top">
               <p
-                style={{ color: "var(--primary-text-color)" }}
+                style={{ color: "var(--primary-text-color)", fontWeight: '700' }}
               >
                 Total em ativos
               </p>
