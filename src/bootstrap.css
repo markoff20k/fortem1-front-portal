@@ -3242,7 +3242,7 @@ input[type=button].btn-block {
   position: relative;
   margin-bottom: 0;
   vertical-align: bottom;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-right: 20px;
 }
 .custom-control-label::before {

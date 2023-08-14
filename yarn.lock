@@ -2639,6 +2639,19 @@
     "remark" "^13.0.0"
     "unist-util-find-all-after" "^3.0.2"
 
+"@tabler/icons-react@^2.30.0":
+  "integrity" "sha512-aYggXusHW133L4KujJkVf4GIIrjg7tIRHgNf/n37mnoHqMjwNP+PjmVdrBM1Z8Ywx9PKFRlrwM0eUMDcG+I4HA=="
+  "resolved" "https://registry.npmjs.org/@tabler/icons-react/-/icons-react-2.30.0.tgz"
+  "version" "2.30.0"
+  dependencies:
+    "@tabler/icons" "2.30.0"
+    "prop-types" "^15.7.2"
+
+"@tabler/icons@2.30.0":
+  "integrity" "sha512-tvtmkI4ALjKThVVORh++sB9JnkFY7eGInKxNy+Df7WVQiF7T85tlvGADzlgX4Ic+CK5MIUzZ0jhOlQ/RRlgXpg=="
+  "resolved" "https://registry.npmjs.org/@tabler/icons/-/icons-2.30.0.tgz"
+  "version" "2.30.0"
+
 "@tailwindcss/jit@^0.1.18":
   "integrity" "sha512-WNSEiwbggtO9n6+ok2fFdYmhqY20oqLmB82H23nY8P5WzijZbIshojoY3s/OvPD7cmvzkweZ6LLKGWuDS1/vLA=="
   "resolved" "https://registry.npmjs.org/@tailwindcss/jit/-/jit-0.1.18.tgz"

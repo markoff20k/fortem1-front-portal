@@ -14,7 +14,7 @@ const panels = [
         label: 'PRIVACY POLICY',
         content: (
             <div id="privacy-policy" className="tabs-content">
-                PRIVACY POLICY
+                Política de Privacidade
             </div>
         ),
     },
@@ -22,7 +22,7 @@ const panels = [
         label: 'TERM OF SERVICE',
         content: (
             <div className={'tabs-content'}>
-                TERM OF SERVICE
+                Termos de Uso
             </div>
         ),
     },
@@ -46,7 +46,7 @@ class LegalDocuments extends React.Component<LegalDocumentsProps, State> {
       return(
           <Modal
               className={'pg-legal-docs-modal'}
-              show={this.props.isOpen}
+              show
               header={<h3>Title</h3>}
               content={this.renderModalBody()}
               footer={this.props.footer}

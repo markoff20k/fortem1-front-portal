@@ -150,6 +150,7 @@ class SidebarContainer extends React.Component<Props, State> {
         });
 
         const data = this.props.user.data && JSON.parse(this.props.user.data);
+        const user = this.props.user;
         //const data = user.data && JSON.parse(user.data);
         console.log(data.username);
 
@@ -178,7 +179,10 @@ class SidebarContainer extends React.Component<Props, State> {
                             </p>
                             <p className="pg-sidebar-wrapper-profile-area-text-verified">
                                 {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}
-                                Verificado 
+                                {user.level==0 && ('Não Verificado') }
+                                {user.level==1 && ('Verificado - Nível 1') }
+                                {user.level==2 && ('Verificado - Nível 2') }
+                                
                                 <span>
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_152_16557)">

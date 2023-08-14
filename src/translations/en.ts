@@ -596,7 +596,7 @@ export const en = {
     'page.confirm.title.profile': 'Get Verified your Profile',
     'page.confirm.title.document': 'Get Verified your Government Issued ID ',
     'page.confirm.title.address': 'Residence verification',
-    'page.confirm.title.warning': 'Please, provide all the information in English language',
+    'page.confirm.title.warning': 'Please, provide all the information according to your ID',
 
     'page.body.kyc.phone.phoneNumber': 'Phone number',
     'page.body.kyc.phone.code': 'Enter code that you received',
@@ -649,6 +649,8 @@ export const en = {
     'page.body.kyc.identity.lastName': 'Your last name',
     'page.body.kyc.identity.dateOfBirth': 'Date of birth',
     'page.body.kyc.identity.dateOfBirth.placeholder': 'DD/MM/YYYY',
+    'page.body.kyc.identity.cpf': 'CPF',
+    'page.body.kyc.identity.cep.placeholder': '000.000.000-00',
     'page.body.kyc.identity.CoR': 'Select country',
     'page.body.kyc.identity.residentialAddress': 'Your address',
     'page.body.kyc.identity.city': 'Your city',

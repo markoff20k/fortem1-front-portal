@@ -63,7 +63,7 @@ class SignIn extends React.Component<Props, SignInState> {
     };
 
     public componentDidMount() {
-        setDocumentTitle('Sign In');
+        setDocumentTitle('Login');
         this.props.signInError({ code: 0, message: [''] });
         this.props.signUpRequireVerification({requireVerification: false});
     }

@@ -32,6 +32,7 @@ export interface SignUpFormProps {
     image?: string;
     labelSignIn?: string;
     labelSignUp?: string;
+    fullnameLabel?: string;
     usernameLabel?: string;
     emailLabel?: string;
     passwordLabel?: string;
@@ -41,9 +42,11 @@ export interface SignUpFormProps {
     refId: string;
     password: string;
     username: string;
+    fullname: string;
     email: string;
     confirmPassword: string;
     handleChangeUsername: (value: string) => void;
+    handleChangeFullname: (value: string) => void;
     handleChangeEmail: (value: string) => void;
     handleChangePassword: (value: string) => void;
     handleChangeConfirmPassword: (value: string) => void;
@@ -55,6 +58,7 @@ export interface SignUpFormProps {
     passwordError: string;
     confirmationError: string;
     handleFocusUsername: () => void;
+    handleFocusFullname: () => void;
     handleFocusEmail: () => void;
     handleFocusPassword: () => void;
     handleFocusConfirmPassword: () => void;
@@ -62,6 +66,7 @@ export interface SignUpFormProps {
     confirmPasswordFocused: boolean;
     refIdFocused: boolean;
     usernameFocused: boolean;
+    fullnameFocused: boolean;
     emailFocused: boolean;
     passwordFocused: boolean;
     renderCaptcha: JSX.Element | null;
@@ -80,6 +85,7 @@ export interface SignUpFormProps {
 
 const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     username,
+    fullname,
     email,
     confirmPassword,
     refId,
@@ -88,6 +94,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     isLoading,
     labelSignIn,
     labelSignUp,
+    fullnameLabel,
     usernameLabel,
     emailLabel,
     confirmPasswordLabel,
@@ -115,6 +122,8 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     refIdFocused,
     validateForm,
     onSignUp,
+    handleChangeFullname,
+    handleFocusFullname,
     handleChangeUsername,
     handleFocusUsername,
     handleChangeEmail,
@@ -152,6 +161,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         captchaType,
         confirmPassword,
         username,
+        fullname,
         email,
         geetestCaptchaSuccess,
         hasConfirmed,
@@ -326,6 +336,35 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             ) : null}
                         </div>
                     ) : null}
+
+<div
+                            className={cr('cr-sign-up-form__group', {
+                                'cr-sign-up-form__group--focused': usernameFocused,
+                                'cr-sign-up-form__group--errored': username.length &&
+                                !usernameFocused && !username.match(USERNAME_REGEX),
+                            })}>
+                            <CustomInput
+                                type="text"
+                                label={fullnameLabel || 'Username'}
+                                placeholder={fullnameLabel || 'Username'}
+                                defaultLabel="Fullname"
+                                handleChangeInput={handleChangeFullname}
+                                inputValue={fullname}
+                                handleFocusInput={handleFocusFullname}
+                                classNameLabel="cr-sign-up-form__label"
+                                classNameInput="cr-sign-up-form__input"
+                                autoFocus={!isMobileDevice}
+                                pre={<MdOutlinePersonOutline />}
+                            />
+                            {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
+                                <div className="cr-sign-up-form__error">
+                                    {renderUsernameError(username)}
+                                </div>
+                            ) : null}
+                        </div>
+
+
+
                     <div
                         className={cr('cr-sign-up-form__group', {
                             'cr-sign-up-form__group--focused': emailFocused,
@@ -394,6 +433,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             id="agreeWithTerms"
                             checked={hasConfirmed}
                             label={termsMessage ? termsMessage : 'I  agree all statements in terms of service'}
+                            
                         />
                     </Form>
                     {/* {renderLegal} */}

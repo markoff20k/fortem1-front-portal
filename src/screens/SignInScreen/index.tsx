@@ -47,7 +47,7 @@ export const SignInScreen: React.FC = () => {
     const isMobileDevice = useReduxSelector(selectMobileDeviceState);
 
     useEffect(() => {
-        setDocumentTitle('Sign In');
+        setDocumentTitle('Login');
         dispatch(signInError({ code: 0, message: [''] }));
         dispatch(signUpRequireVerification({ requireVerification: false }));
 

@@ -34,7 +34,7 @@ type Props = ReduxProps & DispatchProps & RouterProps & IntlProps;
 class ConfirmComponent extends React.Component<Props> {
     public componentDidMount() {
         const { labels, isSidebarOpen } = this.props;
-        setDocumentTitle('Confirm');
+        setDocumentTitle('Cadastro');
         this.props.labelFetch();
 
         if (labels.length) {
@@ -68,16 +68,17 @@ class ConfirmComponent extends React.Component<Props> {
         const step = this.handleGetVerificationStep();
 
         return (
-            <div className="pg-container pg-confirm">
+            <div className="pg-confirm">
                 <div className="pg-confirm__logo">
                     <Logo />
-                </div>
-                <h3 className="pg-confirm__title">
-                    <FormattedMessage id={`page.confirm.title.${step}`} />
                     <CrossIcon
                         className="pg-confirm__title__icon"
                         onClick={e => history.push('/profile')}
                     />
+                </div>
+                <h3 className="pg-confirm__title">
+                    <p>Continue seu cadastro - <FormattedMessage id={`page.confirm.title.${step}`} /></p>
+   
                 </h3>
                 {['profile', 'address'].includes(step) && <Info variant="warning" text={this.translate('page.confirm.title.warning')} />}
                 <div className="pg-confirm__content">

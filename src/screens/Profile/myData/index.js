@@ -40,7 +40,7 @@ export function Mydata() {
           </button>
           <div className="my-data-description">
             <p style={{color: "var(--primary-text-color)"}} >
-              {data.username}
+              {data.fullname}
             </p>
             <p style={{color: "var(--primary-text-color)"}} >
               {user.email}
@@ -57,7 +57,7 @@ export function Mydata() {
 
         <Input 
           placeholder="default size"
-          value={data.username}
+          value={data.fullname}
           disabled='true'
           
         />

@@ -5,6 +5,7 @@ export const en = {
     'page.header.signUp.title': 'Start your investment journey',
 
     'page.header.signUp.username': 'How should we greet you?',
+	'page.header.signUp.fullname': 'What is your full name?',
 
     
 	'page.body.marketsTable.header.trade': 'Invest',

@@ -80,6 +80,7 @@ class SignUp extends React.Component<Props> {
     public readonly state = {
         showModal: false,
         username: '',
+        fullname: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -89,6 +90,7 @@ class SignUp extends React.Component<Props> {
         passwordError: '',
         confirmationError: '',
         usernameFocused: false,
+        fullnameFocused: false,
         emailFocused: false,
         passwordFocused: false,
         confirmPasswordFocused: false,
@@ -104,7 +106,7 @@ class SignUp extends React.Component<Props> {
     private passwordWrapper = React.createRef<HTMLDivElement>();
 
     public componentDidMount() {
-        setDocumentTitle('Sign Up');
+        setDocumentTitle('Cadastro');
         const localReferralCode = localStorage.getItem('referralCode');
         const refId = this.extractRefID(this.props.location.search);
         const referralCode = refId || localReferralCode || '';
@@ -149,6 +151,7 @@ class SignUp extends React.Component<Props> {
         } = this.props;
         const {
             username,
+            fullname,
             email,
             password,
             confirmPassword,
@@ -158,6 +161,7 @@ class SignUp extends React.Component<Props> {
             passwordError,
             confirmationError,
             usernameFocused,
+            fullnameFocused,
             emailFocused,
             passwordFocused,
             confirmPasswordFocused,
@@ -181,14 +185,17 @@ class SignUp extends React.Component<Props> {
                         confirmPasswordLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.confirmPassword'})}
                         referalCodeLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.referalCode.insert'})}
                         usernameLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.username'})}
+                        fullnameLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.fullname'})}
                         termsMessage={this.props.intl.formatMessage({ id: 'page.header.signUp.terms'})}
                         refId={refId}
                         handleChangeRefId={this.handleChangeRefId}
                         isLoading={loading}
                         onSignIn={this.handleSignIn}
                         onSignUp={this.handleSignUp}
+                        fullname={fullname}
                         username={username}
                         handleChangeUsername={this.handleChangeUsername}
+                        handleChangeFullname={this.handleChangeFullname}
                         email={email}
                         handleChangeEmail={this.handleChangeEmail}
                         password={password}
@@ -204,9 +211,11 @@ class SignUp extends React.Component<Props> {
                         confirmPasswordFocused={confirmPasswordFocused}
                         refIdFocused={refIdFocused}
                         usernameFocused={usernameFocused}
+                        fullnameFocused={fullnameFocused}
                         emailFocused={emailFocused}
                         passwordFocused={passwordFocused}
                         handleFocusUsername={this.handleFocusUsername}
+                        handleFocusFullname={this.handleFocusFullname
                         handleFocusEmail={this.handleFocusEmail}
                         handleFocusPassword={this.handleFocusPassword}
                         handleFocusConfirmPassword={this.handleFocusConfirmPassword}
@@ -261,6 +270,12 @@ class SignUp extends React.Component<Props> {
     private handleChangeUsername = (value: string) => {
         this.setState({
             username: value.replace(/[^A-Za-z0-9\s\.]+/g, '').toUpperCase(),
+        });
+    };
+
+    private handleChangeFullname = (value: string) => {
+        this.setState({
+            fullname: value,
         });
     };
 
@@ -333,6 +348,14 @@ class SignUp extends React.Component<Props> {
         });
     };
 
+
+    private handleFocusFullname = () => {
+        this.setState({
+            fullnameFocused: !this.state.fullnameFocused,
+        });
+    };
+
+
     private handleFocusEmail = () => {
         this.setState({
             emailFocused: !this.state.emailFocused,
@@ -365,6 +388,7 @@ class SignUp extends React.Component<Props> {
     private handleSignUp = () => {
         const { i18n, captcha_response } = this.props;
         const {
+            fullname,
             username,
             email,
             password,
@@ -376,6 +400,7 @@ class SignUp extends React.Component<Props> {
             data: JSON.stringify({
                 language: i18n,
                 username: username,
+                fullname: fullname,
             }),
             // ...(isUsernameEnabled() && { username }),
             ...(refId && { refid: refId }),

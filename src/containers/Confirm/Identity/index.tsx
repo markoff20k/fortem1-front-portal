@@ -58,9 +58,11 @@ interface IdentityState {
     firstName: string;
     lastName: string;
     postcode: string;
+    cpf: string;
     residentialAddress: string;
     cityFocused: boolean;
     dateOfBirthFocused: boolean;
+    cpfFocused: boolean;
     firstNameFocused: boolean;
     lastNameFocused: boolean;
     postcodeFocused: boolean;
@@ -77,9 +79,11 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         firstName: '',
         lastName: '',
         postcode: '',
+        cpf: '',
         residentialAddress: '',
         cityFocused: false,
         dateOfBirthFocused: false,
+        cpfFocused: false,
         firstNameFocused: false,
         lastNameFocused: false,
         postcodeFocused: false,
@@ -107,9 +111,11 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             firstName,
             lastName,
             postcode,
+            cpf,
             residentialAddress,
             cityFocused,
             dateOfBirthFocused,
+            cpfFocused,
             firstNameFocused,
             lastNameFocused,
             postcodeFocused,
@@ -132,6 +138,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': dateOfBirthFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 dateOfBirth && !this.handleValidateInput('dateOfBirth', dateOfBirth),
+        });
+
+        const cpfGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
+            'pg-confirm__content-identity__forms__row__content--focused': cpfFocused,
+            'pg-confirm__content-identity__forms__row__content--wrong':
+                cpf && !this.handleValidateInput('cpf', cpf),
         });
 
         const residentialAddressGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -213,6 +225,30 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             </div>
                         </fieldset>
                     </div>
+
+                    <div className="pg-confirm__content-identity__forms__row">
+                        <fieldset className={cpfGroupClass}>
+                            <div className="custom-input">
+                                {cpf ? (
+                                    <label>{this.translate('page.body.kyc.identity.cpf')}</label>
+                                ) : null}
+                                <div className="input-group input-group-lg">
+                                    <MaskInput
+                                        className="pg-confirm__content-identity__forms__row__content-number"
+                                        maskString="000.000.000-00"
+                                        mask="000.000.000-00"
+                                        onChange={this.handleChangeCPF}
+                                        onFocus={this.handleFieldFocus('cpf')}
+                                        onBlur={this.handleFieldFocus('cpf')}
+                                        value={cpf}
+                                        placeholder={this.translate('page.body.kyc.identity.cep.placeholder')}
+                                    />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+
                     <div className="pg-confirm__content-identity__forms__row">
                         <div className="pg-confirm__content-identity__forms__row__content">
                             <SearchDropdown
@@ -307,7 +343,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     this.setState({
                         cityFocused: !this.state.cityFocused,
                     });
-                    this.scrollToElement(6);
+                    this.scrollToElement(7);
                     break;
                 case 'dateOfBirth':
                     this.setState({
@@ -315,6 +351,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     });
                     this.scrollToElement(2);
                     break;
+                case 'cpf':
+                    this.setState({
+                            cpfFocused: !this.state.cpfFocused,
+                        });
+                        this.scrollToElement(3);
+                        break;                    
                 case 'firstName':
                     this.setState({
                         firstNameFocused: !this.state.firstNameFocused,
@@ -331,13 +373,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     this.setState({
                         postcodeFocused: !this.state.postcodeFocused,
                     });
-                    this.scrollToElement(7);
+                    this.scrollToElement(8);
                     break;
                 case 'residentialAddress':
                     this.setState({
                         residentialAddressFocused: !this.state.residentialAddressFocused,
                     });
-                    this.scrollToElement(4);
+                    this.scrollToElement(5);
                     break;
                 default:
                     break;
@@ -365,6 +407,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         });
     };
 
+    private handleChangeCPF = (e: OnChangeEvent) => {
+        this.setState({
+            cpf: e.target.value,
+        });
+    };
+
     private selectCountry = (option) => {
         this.setState({
             countryOfBirth: countries.getAlpha2Code(option.value, this.props.lang),
@@ -386,7 +434,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                 return Boolean(value.match(residentialAddressRegex));
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z]{1,255}$`);
+                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s]{1,255}$`);
 
                 return Boolean(value.match(cityRegex));
             case 'postcode':
@@ -435,9 +483,14 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             dob,
             address: this.state.residentialAddress,
             postcode: this.state.postcode,
+            
             city: this.state.city,
             country: this.state.countryOfBirth,
             confirm: true,
+
+            metadata: JSON.stringify({
+                cpf: this.state.cpf,
+            }),
         };
         const isIdentity =
             labels.length && labels.find((w) => w.key === 'profile' && w.value === 'verified' && w.scope === 'private');

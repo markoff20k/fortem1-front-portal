@@ -111,6 +111,9 @@ import { ReactDimmer } from 'react-dimmer';
 
 import { SaleListScreen, SaleDetailScreen } from 'src/plugins/Sale';
 
+
+import { LegalDocuments } from '../../containers';
+
 // import { IEODetailScreen } from '../../plugins/IEO/screen/IEODetailScreen';
 // import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';
 
@@ -405,7 +408,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/:routeTab" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
-                    {/* <PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} /> */}
+                    <PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/internal-transfer" component={InternalTransfer} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/create-offer" component={CreateP2POfferScreen} />
@@ -433,6 +436,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={IEODetailScreen} /> */}
 
                     <PublicRoute exact={true} path="/api" component={DocumentationScreen} />
+
+                    <PublicRoute exact={true} path="/legal" component={LegalDocuments} />
 
                     <Route path="**"><Redirect to="/" /></Route>
                     

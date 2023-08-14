@@ -84,6 +84,7 @@ import imgShield from './Shield.svg';
 // import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
 import { createStyles, SimpleGrid, Card, Image, Text, AspectRatio, Container } from '@mantine/core';
 
+
 const mockdata = [
   {
     title: 'B3 faz nova investida no mercado de criptoativos e testa debênture tokenizada',
