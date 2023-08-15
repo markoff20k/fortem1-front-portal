@@ -2330,6 +2330,43 @@ input:-webkit-autofill:focus {
 
 }
 
+
+.sale-buy-frame {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+    p {
+        color: #fff !important;
+    }
+
+    .priceDescription {
+        font-size: 14px;
+        color: #fff !important;
+    }
+
+    .priceValue {
+        font-size: 24px;
+        color: #fff !important;
+    }
+
+    .yield-badge {
+        background: #22C55E;
+        border-radius: 8px;
+        width: 112px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        padding: 4px 10px;
+        font-size: 14px;
+        margin-top: 20px;
+
+
+
+    }
+}
 /* Layouts Variation */
 $smlg-device: 'only screen and (max-width: 1199px)';
 $extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';

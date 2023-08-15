@@ -479,6 +479,13 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
+				<div className='sale-buy-frame'>
+					<div>
+						<p className='priceDescription'>Preço unitário</p>
+						<p className='priceValue'>R$ 5,00</p>
+					</div>
+					<p className='yield-badge'>1.52% ao mês</p>
+				</div>
 				<h2 className="sale-buy__title" style={{color: '#f5f5f5'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
 				{/* <div style={{display: 'flex', flexDirection: 'row', lineHeight:'56px', color: 'var(--primary-text-color)'}}> <img src={garantia} /><p className="sale-buy__title"> COMPRAR <span style={{color: '#FDA736'}}>${currency_id.toUpperCase()}</span></p></div> */}
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>

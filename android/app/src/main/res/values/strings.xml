@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">@fortem/frontend</string>
+    <string name="title_activity_main">@fortem/frontend</string>
+    <string name="package_name">br.com.fortem1.app</string>
+    <string name="custom_url_scheme">br.com.fortem1.app</string>
+</resources>
