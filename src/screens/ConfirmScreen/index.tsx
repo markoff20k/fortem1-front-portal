@@ -69,6 +69,7 @@ class ConfirmComponent extends React.Component<Props> {
 
         return (
             <div className="pg-confirm">
+                <div className="pg-confirm__insider">
                 <div className="pg-confirm__logo">
                     <Logo />
                     <CrossIcon
@@ -77,12 +78,14 @@ class ConfirmComponent extends React.Component<Props> {
                     />
                 </div>
                 <h3 className="pg-confirm__title">
-                    <p>Continue seu cadastro - <FormattedMessage id={`page.confirm.title.${step}`} /></p>
+                    <p><FormattedMessage id={`page.confirm.title.${step}`} /></p>
    
                 </h3>
-                {['profile', 'address'].includes(step) && <Info variant="warning" text={this.translate('page.confirm.title.warning')} />}
+                {/* {['profile', 'address'].includes(step) && <Info variant="warning" text={this.translate('page.confirm.title.warning')} />} */}
                 <div className="pg-confirm__content">
+                {['profile', 'address'].includes(step) && <Info variant="warning" text={this.translate('page.confirm.title.warning')} />}
                     {this.renderVerificationStep(step)}
+                </div>
                 </div>
             </div>
         );

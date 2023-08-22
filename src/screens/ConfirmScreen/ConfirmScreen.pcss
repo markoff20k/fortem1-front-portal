@@ -1,6 +1,8 @@
 .pg-confirm {
   align-items: center;
-  background: var(--body-background-color);
+  background: #000;
+  
+  
   display: flex;
   flex-direction: column;
   height: max-content;
@@ -11,12 +13,24 @@
   padding: 0 10px;
   width: 100% !important;
 
+  &__insider {
+    background: var(--body-background-color);  
+    border: 1px solid var(--input-border-color);
+    border-radius: 12px;
+    max-width: 800px;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+  }
+
   &__logo {
-    margin-bottom: 47px;
-    margin-top: 47px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    
 
 
     img {
@@ -67,7 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 
     &-phone,
     &-identity,
@@ -212,13 +226,13 @@
             margin-top: -18px;
             padding: 0;
             position: absolute;
-            text-transform: uppercase;
+            text-transform: none;
           }
         }
 
         button {
           border: none;
-          border-radius: 4px !important;
+          border-radius: 12px !important;
           font-size: 12px;
           font-weight: 500;
           height: 34px;
@@ -304,6 +318,27 @@
 
   .info {
     margin-top: 18px;
+    margin-bottom: 18px;
     max-width: 360px;
+    display: flex;
+    color: var(--input-text-color) !important;
+    opacity: 0.84;
+    font-size: 12px !important;
+
+
+    svg {
+      width: 42px;
+      position: relative;
+      top: 5px;
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      font-size: 12px !important;
+      line-height: 18px;
+      position: relative;
+      left: 12px;
+    }
   }
 }

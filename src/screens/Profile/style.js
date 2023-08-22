@@ -30,8 +30,11 @@ export const Content = styled.div`
   
   margin-top: 30px;
   // margin-bottom: 130px;
-  // height: calc(100vh - 230px);
+  height: 110vh;
 
+  @media screen and (max-width: 1140px) {
+    height: 120vh;
+  }
 
   @media screen and (max-width: 1440px) {
     // max-width: calc(100vw - 321px);

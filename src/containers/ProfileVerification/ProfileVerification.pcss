@@ -22,7 +22,9 @@
 
     &__step {
       align-items: center;
-      border-radius: 1px;
+      border-radius: 0px;
+      border-top-right-radius: 12px !important;
+      border-top-left-radius: 12px !important;
       cursor: default;
       display: flex;
       font-size: 16px;
@@ -35,10 +37,27 @@
       width: 100%;
       width: 319px;
 
+      @media screen and (max-width: 1440px) {
+        width: 299px;
+      }
+      @media screen and (max-width: 1340px) {
+        width: 279px;
+      }
+      @media screen and (max-width: 1240px) {
+        width: 259px;
+      }
+      @media screen and (max-width: 1140px) {
+        width: 239px;
+      }
       svg {
         margin-left: 5px;
-        max-height: 9px;
-        max-width: 9px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        padding: 2px;
+        background: #11ECC7;
+        
+        
       }
 
       &:first-child {

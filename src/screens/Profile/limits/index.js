@@ -12,9 +12,9 @@ export function Limits() {
     <Container>
       
       <div className="div-header-limits">
-        <h4 style={{color: "var(--primary-text-color)"}}>
+        <h3 style={{color: "var(--primary-text-color)"}}>
           Limites de operações
-        </h4>
+        </h3>
         <p style={{color: "var(--primary-text-color)"}}>
           Valide seus dados pessoais e documentos para liberar novas
           funcionalidades. Análise em até 24 horas.

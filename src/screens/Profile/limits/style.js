@@ -13,6 +13,13 @@ export const Container = styled.div`
   .div-header-limits {
     display: flex;
     flex-direction: column;
+
+    h3 {
+      text-transform: none !important;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
   }
 
   .div-cards-limits {
