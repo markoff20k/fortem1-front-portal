@@ -2369,7 +2369,9 @@ input:-webkit-autofill:focus {
     @media screen and (max-width: 1240px) {
         width: 260px;
     }
-
+    @media screen and (max-width: 1140px) {
+        width: 240px;
+    }
 
 }
 

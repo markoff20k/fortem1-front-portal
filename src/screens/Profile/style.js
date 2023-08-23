@@ -33,7 +33,7 @@ export const Content = styled.div`
   height: 110vh;
 
   @media screen and (max-width: 1140px) {
-    height: 120vh;
+    height: 110vh;
   }
 
   @media screen and (max-width: 1440px) {
