@@ -106,9 +106,9 @@ const RenderDeviceContainers = () => {
     return (
         <div className="pg-mobile-app">
             <MobileHeader />
-            <AlertsContainer/>
+            <AlertsContainer/>0
             <LayoutContainer/>
-            {/* <MobileFooter /> */}
+1            <MobileFooter />
             
         </div>
     );

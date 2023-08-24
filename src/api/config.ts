@@ -1,14 +1,14 @@
-const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'https://homolog.fortem1.com.br' : window.location.origin;
+const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'http://homolog.fortem1.com.br' : window.location.origin;
 const protocolSSL = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 // const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'ws://www.fortem1.com.br' : `${protocolSSL}${window.location.hostname}`;
 
 export const defaultConfig: Config = {
     api: {
-        authUrl: `https://homolog.fortem1.com.br/api/v2/authz`,
-        tradeUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
-        applogicUrl: `https://homolog.fortem1.com.br/api/v2/applogic`,
-        rangerUrl: `wss://homolog.fortem1.com.br/api/v2/stream`,
-        finexUrl: `https://homolog.fortem1.com.br/api/v2/trade`,
+        authUrl: `http://homolog.fortem1.com.br/api/v2/authz`,
+        tradeUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
+        applogicUrl: `http://homolog.fortem1.com.br/api/v2/applogic`,
+        rangerUrl: `ws://homolog.fortem1.com.br/api/v2/stream`,
+        finexUrl: `http://homolog.fortem1.com.br/api/v2/trade`,
         p2pUrl: `${hostUrl}/api/v2/p2p`,
     },
     finex: false,
@@ -31,6 +31,7 @@ export const defaultConfig: Config = {
         defaultStorageLimit: '100',
         orderBookSideLimit: '50'
     },
+    
     languages: ['pt', 'en'],
     kycSteps: [
         'email',
@@ -40,10 +41,10 @@ export const defaultConfig: Config = {
     captcha_type: 'geetest',
     password_min_entropy: 8,
     wizard_step: 'false',
-    barong_upload_size_min_range: '0.1',
+    barong_upload_size_min_range: '0.01',
     barong_upload_size_max_range: '20',
     themeSwitcher: 'visible',
-    peatio_platform_currency: 'usd',
+    peatio_platform_currency: 'brl',
     useSharedLayout: 'false',
     tvDefaultCandles: 30,
 };
