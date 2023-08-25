@@ -321,7 +321,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
             
         });
-        const mobileCls = classnames('container-fluid pg-layout--mobile', {
+        const mobileCls = classnames('pg-layout--mobile', {
             'pg-layout--mobile-setup': location.pathname.includes('/setup'),
         });
         toggleColorTheme(colorTheme);
