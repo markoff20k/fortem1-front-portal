@@ -20,7 +20,7 @@ export const BottomNavbar: React.FC = () => {
 				<Link to="/main" className={handleGetActiveItemClass(pathname, '/main', true)}>
 					<HomeIcon
 						className="bottom-nav__item__icon"
-						active={handleGetActiveItemClass(pathname, '/main', true) !== DEFAULT_CLASSNAME}
+						active={handleGetActiveItemClass(pathname, '/', true) !== DEFAULT_CLASSNAME}
 					/>
 					<span className="bottom-nav__item__text">Home</span>
 				</Link>
