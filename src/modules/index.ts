@@ -65,6 +65,12 @@ import { PriceState, rootPriceSaga } from './sale/price';
 import { rootSaleItemSaga, SaleItemState } from './sale/sale-item';
 import { rootSaleListSaga, SaleListState } from './sale/sale-list';
 
+import { AnnouncementState, rootAnnouncementSaga } from './info/announcement';
+import { EventsState, rootEventSaga } from './info/events';
+
+import { infoReducer } from './app';
+
+
 
 export * from './admin/config';
 export * from './admin/markets';
@@ -109,6 +115,9 @@ export * from './user/p2pOffers';
 export * from './user/p2pOrders';
 export * from './user/p2pTransfers';
 export * from './user/p2pDispute';
+
+export * from './info/announcement';
+export * from './info/events';
 
 export interface RootState {
     public: {
@@ -187,6 +196,12 @@ export interface RootState {
 		totalBuyers: TotalBuyersState;
 	};
 
+    info: {
+		events: EventsState;
+		announcement: AnnouncementState;
+		// statistic: StatisticState;
+	};
+
 }
 
 export const rootReducer = combineReducers({
@@ -195,7 +210,11 @@ export const rootReducer = combineReducers({
     admin: adminReducer,
     sale: saleReducer,
 	IEO: IEOReducer,
+    info: infoReducer,
+	
 });
+
+
 
 export function* rootSaga() {
     yield all([
@@ -252,5 +271,8 @@ export function* rootSaga() {
 		call(rootIEOCautionSaga),
 		call(rootBuySaga),
 		call(rootPriceSaga),
+        call(rootAnnouncementSaga),
+        call(rootEventSaga),
+
     ]);
 }

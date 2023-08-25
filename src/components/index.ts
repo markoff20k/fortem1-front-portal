@@ -66,3 +66,4 @@ export * from './ConvertUsd';
 
 export * from './MarketsHotOnList';
 export * from './NewTabPanel';
+export * from './NewPagination';

@@ -1,5 +1,5 @@
 import { CrownOutlined, ExperimentOutlined, GiftOutlined } from '@ant-design/icons';
-import { VoteIcon } from 'mobile/assets/icons/NewHomePage/Vote';
+import { VoteIcon } from 'src/mobile/assets/icons/NewHomePage/Vote';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
@@ -18,7 +18,7 @@ const FortemIOHomePage = () => {
 
 	const renderDirectionals = () => {
 		const settings = {
-			dots: true,
+			dots: false,
 			infinite: false,
 			speed: 500,
 			slidesToShow: 4,
@@ -31,28 +31,28 @@ const FortemIOHomePage = () => {
 					<div>
 						<Link to="/ieo" className="td-mobile-screen-home__direction__list-item__item">
 							<ExperimentOutlined />
-							<span>IEO</span>
+							<span>Corretora</span>
 						</Link>
 					</div>
 
 					<div>
 						<Link to="/airdrops" className="td-mobile-screen-home__direction__list-item__item">
 							<GiftOutlined />
-							<span>Airdrop</span>
+							<span>Tokenizadora</span>
 						</Link>
 					</div>
 
 					<div>
 						<Link to="/trading-competition" className="td-mobile-screen-home__direction__list-item__item">
 							<CrownOutlined />
-							<span>Competition</span>
+							<span>Pagamentos</span>
 						</Link>
 					</div>
 
 					<div>
 						<Link to="/vote" className="td-mobile-screen-home__direction__list-item__item">
 							<VoteIcon />
-							<span>Vote</span>
+							<span>Tech</span>
 						</Link>
 					</div>
 				</Slider>

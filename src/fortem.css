@@ -20713,3 +20713,110 @@ video {
         font-style: normal;
         font-display: swap;
       }
+
+
+      /* Mobile  */
+
+.td-mobile-screen-home__box-img {
+  height: 55vw;
+  max-height: 27.5em;
+        padding-bottom: var(--mobile-main-padding-size);
+    padding-top: var(--mobile-main-padding-size);
+    position: relative;
+    top: 60px;
+    width: 100vw;
+    }
+
+      .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        transform: translate3d(0, 0, 0);
+    }
+
+    
+.slick-prev {
+    /* left: -25px; */
+    
+}
+
+.slick-prev, .slick-next {
+    display: none !important;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev {
+    /* font-size: 40px !important;
+    margin-left: -20px;
+    left: -25px; */
+}
+
+.slick-arrow, .slick-next, .slick-prev {
+    
+    /* width: 80px !important;
+    height: 80px !important; */
+}
+
+.td-mobile-screen-home__announcment {
+    align-items: stretch;
+    border-bottom: 1px solid var(--muted-background-color);
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    margin: var(--mobile-main-margin-lr-size);
+    padding: 0.6em 0;
+}
+
+
+.td-mobile-screen-home__market-top {
+    padding: var(--mobile-main-padding-size);
+}
+
+.td-mobile-cpn-all-market__body .td-tabs-nav-wrap {
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.td-tabs .td-tabs-nav-wrap {
+    display: inline-block;
+    display: flex;
+    flex: auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    white-space: nowrap;
+
+    .td-tabs-nav-list {
+        display: flex;
+    }
+}

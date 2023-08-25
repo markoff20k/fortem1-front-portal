@@ -68,6 +68,10 @@ import {
 
 import { IEOCautionReducer } from './plugins/ieo/caution';
 
+import { announcementReducer } from './info/announcement';
+import { eventReducer } from './info/events';
+
+
 
 
 export const publicReducer = combineReducers({
@@ -149,3 +153,7 @@ export const IEOReducer = combineReducers({
 	ieoCaution: IEOCautionReducer,
 });
 
+export const infoReducer = combineReducers({
+	events: eventReducer,
+	announcement: announcementReducer,
+});

@@ -20,3 +20,6 @@ export * from './WalletsButtons';
 export * from './WalletWithdrawBody';
 
 export * from './FooterWebMobile';
+
+export * from './NewAllMarketList';
+export * from './NewMarketsList';

@@ -1,5 +1,6 @@
-import { useAnnouncementFetch } from 'hooks';
-import { ListIcon, SpeakIcon } from 'mobile/assets/icons';
+import { useAnnouncementFetch } from 'src/hooks';
+
+import { ListIcon, SpeakIcon } from 'src/mobile/assets/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Slider, { Settings } from 'react-slick';
@@ -7,8 +8,10 @@ import Slider, { Settings } from 'react-slick';
 // tslint:disable-next-line: no-empty-interface
 interface AnnouncmentProps {}
 
+
+
 const settings: Settings = {
-	dots: false,
+	dots: true,
 	infinite: true,
 	speed: 2500,
 	slidesToShow: 1,

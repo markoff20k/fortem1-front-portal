@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 import Slider, { Settings } from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
+//import 'slick-carousel/slick/slick-theme.css';
+//import 'slick-carousel/slick/slick.css';
 import { EventItem, selectEvents } from '../../../modules';
 
 const settings: Settings = {
@@ -13,6 +13,7 @@ const settings: Settings = {
 	slidesToScroll: 1,
 	autoplay: true,
 	autoplaySpeed: 2500,
+	
 };
 
 const SlideImg: React.FC = () => {

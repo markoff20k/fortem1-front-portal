@@ -114,6 +114,8 @@ import { SaleListScreen, SaleDetailScreen } from 'src/plugins/Sale';
 
 import { LegalDocuments } from '../../containers';
 
+import { HomePageScreenMobile } from '../../mobile/screens';
+
 // import { IEODetailScreen } from '../../plugins/IEO/screen/IEODetailScreen';
 // import { IEOListingScreen } from '../../plugins/IEO/screen/IEOListingScreen';
 
@@ -319,7 +321,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
             
         });
-        const mobileCls = classnames('container-fluid pg-layout pg-layout--mobile', {
+        const mobileCls = classnames('container-fluid pg-layout--mobile', {
             'pg-layout--mobile-setup': location.pathname.includes('/setup'),
         });
         toggleColorTheme(colorTheme);
@@ -363,8 +365,10 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/theme" component={ProfileThemeMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileMobileScreen} />
                         <Route exact={true} path="/trading/:market?" component={TradingScreenMobile} />
-                        {showLanding() && <Route exact={true} path="/" component={LandingScreenMobile} />}
+                        {showLanding() && <Route exact={true} path="/" component={HomePageScreenMobile} />}
                         <Route path="**"><Redirect to="/" /></Route>
+                        {/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" component={Dashboard} /> */}
+                        <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" component={WalletsMobileScreen} />
                     </Switch>
                     {isLoggedIn && <WalletsFetch />}
                     {isShownExpSessionModal && this.handleRenderExpiredSessionModal()}
