@@ -434,7 +434,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
                         {(!confirmPasswordFocused && confirmPassword.length && confirmPassword != password && !confirmationError) ? (
                                 <div className="cr-sign-up-form__error">
-                                    "As senhas não são iguais2"
+                                    {formatMessage({ id: 'page.header.signUp.confirmPassword.message.error'})}
                                 </div>
                             ) : null}
                         {/* {(confirmPassword != password) && <div className={'cr-sign-up-form__error'}>"Senhas diferentes"</div>} */}

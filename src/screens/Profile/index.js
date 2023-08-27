@@ -30,18 +30,11 @@ export function Profile() {
                 Meus dados
               </button>
               <button
-                onClick={() => setInternalPage(2)}
-                className={internalPage === 2 && "active-menu-header"}
-                style={{color: 'var(--primary-text-color)'}}
-              >
-                Preferências
-              </button>
-              <button
                 onClick={() => setInternalPage(3)}
                 className={internalPage === 3 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
               >
-                Limites de operações
+                Cadastro
               </button>
               <button
                 onClick={() => setInternalPage(4)}
@@ -49,6 +42,14 @@ export function Profile() {
               >
                 Segurança
               </button>
+              <button
+                onClick={() => setInternalPage(2)}
+                className={internalPage === 2 && "active-menu-header"}
+                style={{color: 'var(--primary-text-color)'}}
+              >
+                Preferências
+              </button>
+
             </div>
           </div>
         </div>

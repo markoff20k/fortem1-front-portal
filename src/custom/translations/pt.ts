@@ -976,17 +976,17 @@ export const pt: LangType = {
 
     // validation errors
     // identity module
-    'identity.user.missing_email': 'Почта отсутствует',
-    'identity.user.empty_email': 'Почта отсутствует',
-    'identity.user.missing_password': 'Пароль отсутствует',
-    'identity.user.empty_password': 'Пароль отсутствует',
-    'identity.user.missing_token': 'Токен отсутствует',
-    'identity.user.empty_token': 'Токен отсутствует',
-    'identity.user.missing_reset_password_token': 'Токен пароля отсутствует',
-    'identity.user.empty_reset_password_token': 'Токен пароля отсутствует',
-    'identity.user.missing_confirm_password': 'Подтверджение пароля отсутствует',
-    'identity.user.empty_confirm_password': 'Подтверджение пароля отсутствует',
-    'identity.session.rack_attack_limit': 'Превышен лимит запросов на вход, пожалуйста, повторите попытку через 60 секунд',
+    'identity.user.missing_email': 'Email inválido',
+    'identity.user.empty_email': 'Email inválido',
+    'identity.user.missing_password': 'Password inválida',
+    'identity.user.empty_password': 'Password inválida',
+    'identity.user.missing_token': 'Token inválido',
+    'identity.user.empty_token': 'Token inválido',
+    'identity.user.missing_reset_password_token': 'Token inválido',
+    'identity.user.empty_reset_password_token': 'Token inválido',
+    'identity.user.missing_confirm_password': 'Senha inválida',
+    'identity.user.empty_confirm_password': 'Senha inválida',
+    'identity.session.rack_attack_limit': 'Bloqueio de segurança - Limite de tentativas',
 
     'identity.session.missing_emai': 'Digite seu email',
     'identity.session.missing_password': 'Digite sua senha',

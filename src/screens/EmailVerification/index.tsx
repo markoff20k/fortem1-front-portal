@@ -31,6 +31,9 @@ import { CommonError } from '../../modules/types';
 
 import logo from '../../assets/images/logo-icon-dark.svg';
 
+import { Redirect } from 'react-router';
+
+
 
 interface OwnProps {
     history: History;
@@ -61,7 +64,8 @@ type Props = DispatchProps & ReduxProps & OwnProps & IntlProps;
 
 class EmailVerificationComponent extends React.Component<Props> {
     public componentDidMount() {
-        setDocumentTitle('Email verification');
+        setDocumentTitle('Confirmação');
+
 
         if (!this.props.location.state) {
             this.props.history.push('/signin');
@@ -69,6 +73,9 @@ class EmailVerificationComponent extends React.Component<Props> {
     }
 
     public translate = (id: string) => this.props.intl.formatMessage({ id });
+
+    
+
 
     public renderCaptcha = () => {
         const { error, success } = this.props;
@@ -88,6 +95,7 @@ class EmailVerificationComponent extends React.Component<Props> {
         const text = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body' });
         const text2 = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body2' });
         const button = this.props.intl.formatMessage({ id: 'page.resendConfirmation' });
+        const button2 = this.props.intl.formatMessage({ id: 'page.header.signIn' });
 
 
         return (
@@ -112,7 +120,15 @@ class EmailVerificationComponent extends React.Component<Props> {
                                                 variant="primary"
                                                 disabled={this.disableButton()}>{button}
                                             </Button>
-                                                        
+                                            <br/>
+                                            <Button
+                                                block={true}
+                                                type="button"
+                                                onClick={this.handleRedirect}
+                                                size="lg"
+                                                variant="primary"
+                                                disabled={false}>{button2}
+                                            </Button>   
                                             
                                                 
                                             
@@ -160,6 +176,18 @@ class EmailVerificationComponent extends React.Component<Props> {
 
         this.props.resetCaptchaState();
     };
+
+    private handleRedirect = () => {
+        return (
+            
+            this.props.history.push('/signin');        
+            
+            );        
+            
+        
+    };
+
+    
 
     private disableButton = (): boolean => {
         const {

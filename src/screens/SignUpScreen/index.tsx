@@ -276,7 +276,7 @@ class SignUp extends React.Component<Props> {
 
     private handleChangeFullname = (value: string) => {
         this.setState({
-            fullname: value.replace(/(f)/, '').toUpperCase(),
+            fullname: value.replace(/w/, '').toUpperCase(),
         });
     };
 
