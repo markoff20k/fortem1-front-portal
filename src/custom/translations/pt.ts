@@ -709,8 +709,10 @@ export const pt: LangType = {
     'page.header.signIn.resetPassword.error': 'Поля пустые или не совпадают',
 
     'page.header.signUp': 'Abrir conta',
-    'page.header.signUp.username.minLength.error': 'Digite uma quantidade maior do que 3 caracteres',
-    'page.header.signUp.username.maxLength.error': 'Digite uma quantidade menor do que 12 caracteres',
+    'page.header.signUp.username.minLength.error': 'Digite uma quantidade maior do que 2 caracteres',
+    'page.header.signUp.username.maxLength.error': 'Digite uma quantidade menor do que 30 caracteres',
+    'page.header.signUp.fullname.minLength.error': 'Digite uma quantidade maior do que 2 caracteres',
+    'page.header.signUp.fullname.maxLength.error': 'Digite uma quantidade menor do que 30 caracteres',
     'page.header.signUp.username.uniqueness.error': 'Nome de usuário já utilizado',
     'page.header.signUp.email': 'Email',
     'page.header.signUp.email.message.error': 'Email inválido',

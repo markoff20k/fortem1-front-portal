@@ -205,6 +205,7 @@ class SignUp extends React.Component<Props> {
                         hasConfirmed={hasConfirmed}
                         clickCheckBox={this.handleCheckboxClick}
                         validateForm={this.handleValidateForm}
+                        validatePass={this.handleValidatePass}
                         emailError={emailError}
                         passwordError={passwordError}
                         confirmationError={confirmationError}
@@ -215,7 +216,7 @@ class SignUp extends React.Component<Props> {
                         emailFocused={emailFocused}
                         passwordFocused={passwordFocused}
                         handleFocusUsername={this.handleFocusUsername}
-                        handleFocusFullname={this.handleFocusFullname
+                        handleFocusFullname={this.handleFocusFullname}
                         handleFocusEmail={this.handleFocusEmail}
                         handleFocusPassword={this.handleFocusPassword}
                         handleFocusConfirmPassword={this.handleFocusConfirmPassword}
@@ -269,19 +270,19 @@ class SignUp extends React.Component<Props> {
 
     private handleChangeUsername = (value: string) => {
         this.setState({
-            username: value.replace(/[^A-Za-z0-9\s\.]+/g, '').toUpperCase(),
+            username: value,
         });
     };
 
     private handleChangeFullname = (value: string) => {
         this.setState({
-            fullname: value,
+            fullname: value.replace(/(f)/, '').toUpperCase(),
         });
     };
 
     private handleChangeEmail = (value: string) => {
         this.setState({
-            email: value,
+            email: value.replace(/[^A-Za-z0-9\s\.\@\(.*\)]+/g, '').toLowerCase(),
         });
     };
 
@@ -334,6 +335,7 @@ class SignUp extends React.Component<Props> {
         this.setState({
             confirmPassword: value,
         });
+        this.handleValidatePass;
     };
 
     private handleChangeRefId = (value: string) => {
@@ -444,6 +446,7 @@ class SignUp extends React.Component<Props> {
         );
     };
 
+
     private closeModal = () => {
         this.setState({showModal: false});
         this.props.history.push('/signin');
@@ -491,6 +494,34 @@ class SignUp extends React.Component<Props> {
         }
 
         if (!isConfirmPasswordValid) {
+            this.setState({
+                confirmationError: this.props.intl.formatMessage({ id: ERROR_PASSWORD_CONFIRMATION }),
+                emailError: '',
+                passwordError: '',
+                hasConfirmed: false,
+            });
+
+            return;
+        }
+    };
+
+    private handleValidatePass = () => {
+        const {password, confirmPassword} = this.state;
+        const isPasswordValid = password.match(PASSWORD_REGEX);
+        const isConfirmPasswordValid = password === confirmPassword;
+
+        if (!isPasswordValid) {
+            this.setState({
+                confirmationError: '',
+                emailError: '',
+                passwordError: this.props.intl.formatMessage({ id: ERROR_INVALID_PASSWORD }),
+                hasConfirmed: false,
+            });
+
+            return;
+        }
+
+        if (password != confirmPassword) {
             this.setState({
                 confirmationError: this.props.intl.formatMessage({ id: ERROR_PASSWORD_CONFIRMATION }),
                 emailError: '',

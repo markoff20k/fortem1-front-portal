@@ -11,8 +11,12 @@ import {
     EMAIL_REGEX,
     ERROR_LONG_USERNAME,
     ERROR_SHORT_USERNAME,
+    ERROR_LONG_FULLNAME,
+    ERROR_SHORT_FULLNAME,
+    ERROR_EMAIL,
     PASSWORD_REGEX,
     USERNAME_REGEX,
+    FULLNAME_REGEX,
 } from '../../helpers';
 import { GeetestCaptchaResponse } from '../../modules';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
@@ -54,6 +58,7 @@ export interface SignUpFormProps {
     hasConfirmed: boolean;
     clickCheckBox: (e: any) => void;
     validateForm: () => void;
+    validatePass: () => void;
     emailError: string;
     passwordError: string;
     confirmationError: string;
@@ -112,6 +117,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     translate,
     confirmationError,
     usernameFocused,
+    fullnameFocused,
     emailFocused,
     passwordErrorFirstSolved,
     passwordErrorSecondSolved,
@@ -121,6 +127,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     handleFocusPassword,
     refIdFocused,
     validateForm,
+    validatePass,
     onSignUp,
     handleChangeFullname,
     handleFocusFullname,
@@ -142,7 +149,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     const disableButton = React.useMemo((): boolean => {
         const captchaTypeValue = captchaType();
 
-        if (!hasConfirmed || isLoading || !email.match(EMAIL_REGEX) || !password || !confirmPassword ||
+        if (!hasConfirmed || isLoading || !email.match(EMAIL_REGEX) || !password || !confirmPassword || confirmationError ||
             (isUsernameEnabled() && !username.match(USERNAME_REGEX))) {
 
             return true;
@@ -241,6 +248,13 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         return email && isEmailValid && password && isPasswordValid && confirmPassword && isConfirmPasswordValid;
     }, [confirmPassword, email, password]);
 
+    const isValidPass = React.useCallback(() => {
+        const isPasswordValid = password.match(PASSWORD_REGEX);
+        const isConfirmPasswordValid = password === confirmPassword;
+
+        return password && isPasswordValid && confirmPassword && isConfirmPasswordValid;
+    }, [confirmPassword, password]);
+
     const handleClick = React.useCallback(
         (e?: React.FormEvent<HTMLInputElement>) => {
             if (e) {
@@ -268,7 +282,15 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     );
 
     const renderUsernameError = (nick: string) => {
-        return nick.length < 4 ? translate(ERROR_SHORT_USERNAME) : translate(ERROR_LONG_USERNAME);
+        return nick.length < 2 ? translate(ERROR_SHORT_USERNAME) : translate(ERROR_LONG_USERNAME);
+    };
+
+    const renderFullnameError = (name: string) => {
+        return name.length < 2 ? translate(ERROR_SHORT_FULLNAME) : translate(ERROR_LONG_FULLNAME);
+    };
+
+    const renderEmailError = (mail: string) => {
+        return translate(ERROR_EMAIL);
     };
 
     const renderLogIn = React.useCallback(() => {
@@ -309,7 +331,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             <p> {formatMessage({ id: 'page.header.signUp.title' })} </p>
                         </div>
                     ) : null}
-                    {isUsernameEnabled() ? (
+                    {/* {isUsernameEnabled() ? ( */}
                         <div
                             className={cr('cr-sign-up-form__group', {
                                 'cr-sign-up-form__group--focused': usernameFocused,
@@ -326,7 +348,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 handleFocusInput={handleFocusUsername}
                                 classNameLabel="cr-sign-up-form__label"
                                 classNameInput="cr-sign-up-form__input"
-                                autoFocus={!isMobileDevice}
+                                autoFocus={true}
                                 pre={<MdOutlinePersonOutline />}
                             />
                             {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
@@ -335,30 +357,30 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 </div>
                             ) : null}
                         </div>
-                    ) : null}
+                    {/* ) : null} */}
 
 <div
                             className={cr('cr-sign-up-form__group', {
-                                'cr-sign-up-form__group--focused': usernameFocused,
-                                'cr-sign-up-form__group--errored': username.length &&
-                                !usernameFocused && !username.match(USERNAME_REGEX),
+                                'cr-sign-up-form__group--focused': fullnameFocused,
+                                'cr-sign-up-form__group--errored': fullname.length &&
+                                !fullnameFocused && !fullname.match(FULLNAME_REGEX),
                             })}>
                             <CustomInput
                                 type="text"
-                                label={fullnameLabel || 'Username'}
-                                placeholder={fullnameLabel || 'Username'}
+                                label={fullnameLabel || 'Fullname'}
+                                placeholder={fullnameLabel || 'Fullname'}
                                 defaultLabel="Fullname"
                                 handleChangeInput={handleChangeFullname}
                                 inputValue={fullname}
                                 handleFocusInput={handleFocusFullname}
                                 classNameLabel="cr-sign-up-form__label"
                                 classNameInput="cr-sign-up-form__input"
-                                autoFocus={!isMobileDevice}
+                                autoFocus={false}
                                 pre={<MdOutlinePersonOutline />}
                             />
-                            {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
+                            {!fullname.match(FULLNAME_REGEX) && !fullnameFocused && fullname.length ? (
                                 <div className="cr-sign-up-form__error">
-                                    {renderUsernameError(username)}
+                                    {renderFullnameError(fullname)}
                                 </div>
                             ) : null}
                         </div>
@@ -379,15 +401,21 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             handleFocusInput={handleFocusEmail}
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
-                            autoFocus={!isUsernameEnabled() && !isMobileDevice}
+                            autoFocus={false}
                             pre={<MdMailOutline />}
                         />
-                        {emailError && <div className="cr-sign-up-form__error">{emailError}</div>}
+                        {/* {emailError && <div className="cr-sign-up-form__error">{emailError}</div>} */}
+                        {!email.match(EMAIL_REGEX) && !emailFocused && email.length ? (
+                                <div className="cr-sign-up-form__error">
+                                    {renderEmailError(email)}
+                                </div>
+                            ) : null}
                     </div>
                     {renderPasswordInput()}
                     <div
                         className={cr('cr-sign-up-form__group', {
                             'cr-sign-up-form__group--focused': confirmPasswordFocused,
+                            'cr-sign-up-form__group--errored':  confirmPassword != password
                         })}>
                         <CustomInput
                             type="password"
@@ -402,7 +430,15 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             autoFocus={false}
                             pre={<MdLockOutline />}
                         />
+                        
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
+                        {(!confirmPasswordFocused && confirmPassword.length && confirmPassword != password && !confirmationError) ? (
+                                <div className="cr-sign-up-form__error">
+                                    "As senhas não são iguais2"
+                                </div>
+                            ) : null}
+                        {/* {(confirmPassword != password) && <div className={'cr-sign-up-form__error'}>"Senhas diferentes"</div>} */}
+                        
                     </div>
                     
                     {/* <details>
