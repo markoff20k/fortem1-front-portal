@@ -144,6 +144,7 @@
     background: transparent;
     margin-bottom: 20px;
     position: relative;
+    height: 48px;
 
     .custom-input {
 
@@ -157,9 +158,21 @@
 
   &__error {
     background: transparent;
+    position: relative;
     color: var(--system-red);
     font-size: 13px;
-    margin-top: 5px;
+    margin-top: -30px;
+    margin-left: 10px;
+    opacity: 1;
+    -webkit-filter: brightness(120%);
+  }
+
+  &__error2 {
+    background: transparent;
+    position: relative;
+    color: var(--system-red);
+    font-size: 13px;
+    margin-top: -2px;
     margin-left: 10px;
     opacity: 1;
     -webkit-filter: brightness(120%);

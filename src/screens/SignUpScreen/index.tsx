@@ -370,6 +370,7 @@ class SignUp extends React.Component<Props> {
             passwordPopUp: !this.state.passwordPopUp,
         });
     };
+    
 
     private handleFocusConfirmPassword = () => {
         this.setState({

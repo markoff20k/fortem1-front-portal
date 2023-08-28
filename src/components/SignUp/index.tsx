@@ -1,5 +1,5 @@
 import cr from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
@@ -26,6 +26,7 @@ import { LegalDocuments } from '../../containers';
 import logo from '../../assets/images/logo-icon-dark.svg';
 
 import { MdOutlinePersonOutline, MdLockOutline, MdMailOutline } from "react-icons/md";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export interface SignUpFormProps {
     isLoading?: boolean;
@@ -177,6 +178,24 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         reCaptchaSuccess,
     ]);
 
+    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword2, setShowPassword2] = useState(false);
+
+    function click() {
+        setShowPassword(!showPassword);
+        // renderPasswordInput;
+        handleFocusPassword();
+       
+    }
+
+    function click2() {
+        setShowPassword2(!showPassword2);
+        // renderPasswordInput;
+        handleFocusConfirmPassword();
+        
+        
+    }
+
     const renderPasswordInput = React.useCallback(() => {
         const passwordGroupClass = cr('cr-sign-up-form__group', {
             'cr-sign-up-form__group--focused': passwordFocused,
@@ -184,8 +203,9 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
 
         return (
             <div className={passwordGroupClass}>
+                
                 <CustomInput
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     label={passwordLabel || 'Password'}
                     placeholder={passwordLabel || 'Password'}
                     defaultLabel="Password"
@@ -196,7 +216,15 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                     classNameInput="cr-sign-up-form__input"
                     autoFocus={false}
                     pre={<MdLockOutline />}
+                    
+                    
                 />
+                <Button 
+                    onClick={click} 
+                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71}}
+                    >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </Button>
                 {password ? (
                     <PasswordStrengthMeter
                         minPasswordEntropy={passwordMinEntropy()}
@@ -352,7 +380,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 pre={<MdOutlinePersonOutline />}
                             />
                             {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
-                                <div className="cr-sign-up-form__error">
+                                <div className="cr-sign-up-form__error2">
                                     {renderUsernameError(username)}
                                 </div>
                             ) : null}
@@ -379,7 +407,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 pre={<MdOutlinePersonOutline />}
                             />
                             {!fullname.match(FULLNAME_REGEX) && !fullnameFocused && fullname.length ? (
-                                <div className="cr-sign-up-form__error">
+                                <div className="cr-sign-up-form__error2">
                                     {renderFullnameError(fullname)}
                                 </div>
                             ) : null}
@@ -406,7 +434,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         />
                         {/* {emailError && <div className="cr-sign-up-form__error">{emailError}</div>} */}
                         {!email.match(EMAIL_REGEX) && !emailFocused && email.length ? (
-                                <div className="cr-sign-up-form__error">
+                                <div className="cr-sign-up-form__error2">
                                     {renderEmailError(email)}
                                 </div>
                             ) : null}
@@ -418,7 +446,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             'cr-sign-up-form__group--errored':  confirmPassword != password
                         })}>
                         <CustomInput
-                            type="password"
+                            type={showPassword2 ? "text" : "password"}
                             label={confirmPasswordLabel || 'Confirm Password'}
                             placeholder={confirmPasswordLabel || 'Confirm Password'}
                             defaultLabel="Confirm Password"
@@ -430,6 +458,12 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             autoFocus={false}
                             pre={<MdLockOutline />}
                         />
+                             <Button 
+                    onClick={click2} 
+                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71}}
+                    >
+                    {showPassword2 ? <FaEyeSlash /> : <FaEye />}
+                </Button>
                         
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
                         {(!confirmPasswordFocused && confirmPassword.length && confirmPassword != password && !confirmationError) ? (
