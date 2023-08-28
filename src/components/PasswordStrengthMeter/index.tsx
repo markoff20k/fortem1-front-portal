@@ -24,7 +24,7 @@ const renderPasswordStrengthMeter = (passwordStrengthMeterLength: number) => (
 
 const renderPasswordStrengthTip = (props: PasswordStrengthMeterProps, passwordStrengthMeterLength: number) =>
     props.passwordPopUp ? (
-        <div className="pg-password-pop-up">
+        <div className="pg-password-pop-up" id='pg-password-pop-up'>
             <div className="pg-password-pop-up__strength">
                 {/* <div className="pg-password-pop-up__strength-title">
                     {props.translate('page.header.signUp.strength.password')}

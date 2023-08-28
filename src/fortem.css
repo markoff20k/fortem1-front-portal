@@ -1,4 +1,26 @@
+.cr-sign-up-form__group--focused-password {
+ .pg-password-pop-up {
+        display: block;
+    }
+}
 
+#inputPass:not(:focus) {
+    .pg-password-pop-up, .pg-password-strength-tip {
+        display: none !important;
+    }
+
+    #pg-password-pop-up {
+        display: none !important;
+    }
+
+}
+
+.inputPass:focus {
+    .pg-password-pop-up {
+        
+    }
+
+}
 
 #rc-tabs-4-tab-null {
         display: none;

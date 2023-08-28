@@ -183,8 +183,11 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
 
     function click() {
         setShowPassword(!showPassword);
-        // renderPasswordInput;
+        // renderPasswordInput();
         handleFocusPassword();
+        
+        
+        
        
     }
 
@@ -199,6 +202,9 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     const renderPasswordInput = React.useCallback(() => {
         const passwordGroupClass = cr('cr-sign-up-form__group', {
             'cr-sign-up-form__group--focused': passwordFocused,
+            'cr-sign-up-form__group--focused-password': passwordFocused,
+            
+
         });
 
         return (
@@ -216,12 +222,13 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                     classNameInput="cr-sign-up-form__input"
                     autoFocus={false}
                     pre={<MdLockOutline />}
+                    id='inputPass'
                     
                     
                 />
                 <Button 
                     onClick={click} 
-                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71}}
+                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71, background: 'transparent'}}
                     >
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </Button>
