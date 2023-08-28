@@ -59,10 +59,12 @@ interface IdentityState {
     lastName: string;
     postcode: string;
     cpf: string;
+    tel: string;
     residentialAddress: string;
     cityFocused: boolean;
     dateOfBirthFocused: boolean;
     cpfFocused: boolean;
+    telFocused: boolean;
     firstNameFocused: boolean;
     lastNameFocused: boolean;
     postcodeFocused: boolean;
@@ -80,10 +82,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         lastName: '',
         postcode: '',
         cpf: '',
+        tel: '',
         residentialAddress: '',
         cityFocused: false,
         dateOfBirthFocused: false,
         cpfFocused: false,
+        telFocused: false,
         firstNameFocused: false,
         lastNameFocused: false,
         postcodeFocused: false,
@@ -112,10 +116,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             lastName,
             postcode,
             cpf,
+            tel,
             residentialAddress,
             cityFocused,
             dateOfBirthFocused,
             cpfFocused,
+            telFocused,
             firstNameFocused,
             lastNameFocused,
             postcodeFocused,
@@ -144,6 +150,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': cpfFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 cpf && !this.handleValidateInput('cpf', cpf),
+        });
+
+        const telGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
+            'pg-confirm__content-identity__forms__row__content--focused': telFocused,
+            'pg-confirm__content-identity__forms__row__content--wrong':
+                tel && !this.handleValidateInput('tel', tel),
         });
 
         const residentialAddressGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -247,6 +259,30 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             </div>
                         </fieldset>
                     </div>
+
+
+                    <div className="pg-confirm__content-identity__forms__row">
+                        <fieldset className={telGroupClass}>
+                            <div className="custom-input">
+                                {tel ? (
+                                    <label>{this.translate('page.body.kyc.phone.phoneNumber')}</label>
+                                ) : null}
+                                <div className="input-group input-group-lg">
+                                    <MaskInput
+                                        className="pg-confirm__content-identity__forms__row__content-number"
+                                        maskString="00-0000-0000"
+                                        mask="00-0000-0000"
+                                        onChange={this.handleChangeTel}
+                                        onFocus={this.handleFieldFocus('tel')}
+                                        onBlur={this.handleFieldFocus('tel')}
+                                        value={tel}
+                                        placeholder={this.translate('page.body.kyc.phone.phoneNumber')}
+                                    />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
 
 
                     <div className="pg-confirm__content-identity__forms__row">
@@ -413,6 +449,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         });
     };
 
+    private handleChangeTel = (e: OnChangeEvent) => {
+        this.setState({
+            tel: e.target.value,
+        });
+    };
+
     private selectCountry = (option) => {
         this.setState({
             countryOfBirth: countries.getAlpha2Code(option.value, this.props.lang),
@@ -434,7 +476,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                 return Boolean(value.match(residentialAddressRegex));
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s]{1,255}$`);
+                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w\D]{1,255}$`);
 
                 return Boolean(value.match(cityRegex));
             case 'postcode':
@@ -453,7 +495,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     };
 
     private handleCheckButtonDisabled = () => {
-        const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, countryOfBirth } = this.state;
+        const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, countryOfBirth, cpf, tel } = this.state;
 
         const firstNameValid = this.handleValidateInput('firstName', firstName);
         const lastNameValid = this.handleValidateInput('lastName', lastName);
@@ -461,6 +503,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         const cityValid = this.handleValidateInput('city', city);
         const postcodeValid = this.handleValidateInput('postcode', postcode);
         const dateOfBirthValid = this.handleValidateInput('dateOfBirth', dateOfBirth);
+        const cpfValid = this.handleValidateInput('cpf', cpf);
+        const telValid = this.handleValidateInput('tel', tel);
 
         return (
             !firstNameValid ||
@@ -469,6 +513,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             !countryOfBirth ||
             !cityValid ||
             !postcodeValid ||
+            !cpfValid ||
+            !telValid ||
             !dateOfBirthValid
         );
     };
@@ -490,6 +536,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
             metadata: JSON.stringify({
                 cpf: this.state.cpf,
+                tel: this.state.tel,
             }),
         };
         const isIdentity =

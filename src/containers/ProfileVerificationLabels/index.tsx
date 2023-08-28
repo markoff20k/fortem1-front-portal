@@ -63,7 +63,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							</div>
 							
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-								<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+								<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>
@@ -101,7 +101,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>
@@ -136,7 +136,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>
@@ -180,7 +180,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>
@@ -216,7 +216,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>

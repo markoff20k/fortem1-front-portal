@@ -93,7 +93,7 @@ export function Mydata() {
         />
 
       <Input 
-          placeholder="Data de Nascimento"
+          placeholder="Data de Nascimento [Complete seu cadastro]"
 
           // value="Data de nascimento"
           // { user.profiles.length > 0 value=user.profiles[0].dob : value="Data de nascimento"} 
@@ -156,15 +156,15 @@ export function Mydata() {
           placeholder="Cidade"
 
           // value="Cidade / Estado"
-          value={lastVerifiedProfile.city ? lastVerifiedProfile.city + lastVerifiedProfile.state : "Cidade / Estado [Complete seu cadastro]"}
+          value={lastVerifiedProfile.city ? lastVerifiedProfile.city  : "Cidade / Estado [Complete seu cadastro]"}
           disabled='true'
           
         />
           <Input 
-          placeholder="CEP / País"
+          placeholder="CEP"
 
           // value="País"
-          value={lastVerifiedProfile.postcode ? lastVerifiedProfile.postcode + lastVerifiedProfile.country : "CEP / País [Complete seu cadastro]"}
+          value={lastVerifiedProfile.postcode ? lastVerifiedProfile.postcode : "CEP [Complete seu cadastro]"}
           disabled='true'
           
           

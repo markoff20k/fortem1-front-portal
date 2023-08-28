@@ -611,7 +611,7 @@ export const pt: LangType = {
     'page.confirm.title.address': 'Residence verification',
     'page.confirm.title.warning': 'Por favor, insira as informações exatamente como constam em seu documento de identificação',
 
-    'page.body.kyc.phone.phoneNumber': 'Phone number',
+    'page.body.kyc.phone.phoneNumber': 'Telefone',
     'page.body.kyc.phone.code': 'Enter code that you received',
     'page.body.kyc.phone.send': 'Send code',
     'page.body.kyc.phone.resend': 'Resend code',
