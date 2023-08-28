@@ -467,7 +467,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         />
                              <Button 
                     onClick={click2} 
-                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71}}
+                    style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71, background: 'transparent'}}
                     >
                     {showPassword2 ? <FaEyeSlash /> : <FaEye />}
                 </Button>
