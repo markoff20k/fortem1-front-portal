@@ -27,6 +27,11 @@ export function Mydata() {
 
   const user = useSelector(selectUserInfo);
   const data = user.data && JSON.parse(user.data);
+
+  const verifiedProfiles = user.profiles.length ? user.profiles.filter(i => i.state === 'verified') : [];
+  const lastVerifiedProfile = verifiedProfiles.length && verifiedProfiles[verifiedProfiles.length - 1];
+  const metadata = lastVerifiedProfile && JSON.parse(lastVerifiedProfile.metadata)
+  
   
 
   return (
@@ -45,6 +50,9 @@ export function Mydata() {
             <p style={{color: "var(--primary-text-color)"}} >
               {user.email}
             </p>
+            {/* <p style={{color: "var(--primary-text-color)", opacity: 0.61}} >
+              Último login: {time}
+            </p> */}
           </div>
         </div>
         <button className="sair">Sair da conta</button>
@@ -56,52 +64,63 @@ export function Mydata() {
         <div>
 
         <Input 
-          placeholder="default size"
+          placeholder="Nome completo"
           value={data.fullname}
           disabled='true'
+          //value={lastVerifiedProfile.fullname ? lastVerifiedProfile.fullname : "Nome completo - Complete seu cadastro"}
           
         />
         
 
         <Input 
-          placeholder="default size"
+          placeholder="Email"
 
           value={user.email}
           label='Teste'
           disabled='true'
           
-        />
-    </div>
-    <div>
-      <Input 
-          placeholder="default size"
-
-          value="Telefone"
-          disabled='true'
-          
-        />
-
-      <Input 
-          placeholder="default size"
-
-          value="Data de nascimento"
-          disabled='true'
           
         />
     </div>
     <div>
       <Input 
-          placeholder="default size"
+          placeholder="Telefone"
 
-          value="Documento"
+          // value="Telefone"
+          value={metadata.telefone ? metadata.telefone : "Telefone [Complete seu cadastro]"}
           disabled='true'
           
         />
 
       <Input 
-          placeholder="default size"
+          placeholder="Data de Nascimento"
 
-          value="Nacionalidade"
+          // value="Data de nascimento"
+          // { user.profiles.length > 0 value=user.profiles[0].dob : value="Data de nascimento"} 
+          disabled='true'
+          // value={user.profiles[0].dob}
+          // {initialStateProfile}
+          value={lastVerifiedProfile.dob ? lastVerifiedProfile.dob : "Data de Nascimento [Complete seu cadastro]"}
+          
+          
+          
+        />
+    </div>
+    <div>
+      <Input 
+          placeholder="CPF"
+
+          value={metadata.cpf ? metadata.cpf : "CPF [Complete seu cadastro]"}
+          
+          disabled='true'
+          
+        />
+
+      <Input 
+          placeholder="Nacionalidade"
+
+          // value="Nacionalidade"
+          value={lastVerifiedProfile.country ? lastVerifiedProfile.country : "Nacionalidade [Complete seu cadastro]"}
           disabled='true'
           
         />
@@ -115,14 +134,15 @@ export function Mydata() {
         <div>
         
           <Input 
-          placeholder="default size"
+          placeholder="Endereço"
 
-          value="Rua e número"
+          // value="Rua e número"
+          value={lastVerifiedProfile.address ? lastVerifiedProfile.address : "Endereço [Complete seu cadastro]"}
           disabled='true'
           
         />
                   <Input 
-          placeholder="default size"
+          placeholder="Bairro"
 
           value="Bairro"
           disabled='true'
@@ -133,16 +153,18 @@ export function Mydata() {
         <div>
 
         <Input 
-          placeholder="default size"
+          placeholder="Cidade"
 
-          value="Cidade / Estado"
+          // value="Cidade / Estado"
+          value={lastVerifiedProfile.city ? lastVerifiedProfile.city + lastVerifiedProfile.state : "Cidade / Estado [Complete seu cadastro]"}
           disabled='true'
           
         />
           <Input 
-          placeholder="default size"
+          placeholder="CEP / País"
 
-          value="País"
+          // value="País"
+          value={lastVerifiedProfile.postcode ? lastVerifiedProfile.postcode + lastVerifiedProfile.country : "CEP / País [Complete seu cadastro]"}
           disabled='true'
           
           
@@ -151,7 +173,7 @@ export function Mydata() {
         </div>
       </PersonalData>
       <Buttons>
-        <button>Atualizar cadastro</button>
+        <button>Completar cadastro</button>
       </Buttons>
       <Terms>
         <button style={{color: "var(--primary-text-color)"}} >

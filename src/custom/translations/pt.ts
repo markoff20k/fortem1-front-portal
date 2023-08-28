@@ -575,7 +575,7 @@ export const pt: LangType = {
     'page.body.profile.verification.profile.title': 'Informações pessoais',
     'page.body.profile.verification.profile.subtitle': 'Depósitos, saques e transações liberados',
     'page.body.profile.verification.profile.rejected.tooltip': 'Informações pessoais não aprovadas no cadastro',
-    'page.body.profile.verification.document.title': 'Validar sua identificação',
+    'page.body.profile.verification.document.title': 'Documentos',
     'page.body.profile.verification.document.subtitle': 'Limite mensal de saques e depósitos: R$ 50.000',
     'page.body.profile.verification.document.rejected.tooltip': 'ID não aprovada',
     'page.body.profile.verification.address.title': 'Verify Proof of residence',

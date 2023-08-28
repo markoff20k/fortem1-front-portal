@@ -440,7 +440,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     {/* <PublicRoute path="/ieo" exact component={IEOListingScreen} />
 					<PublicRoute path="/ieo/detail/:ieoID" exact component={IEODetailScreen} /> */}
 
-                    <PublicRoute exact={true} path="/api" component={DocumentationScreen} />
+                    <PublicRoute exact={true} path="/api-docs" component={DocumentationScreen} />
 
                     <PublicRoute exact={true} path="/legal" component={LegalDocuments} />
 
