@@ -38,7 +38,7 @@ export const defaultConfig: Config = {
         'profile',
         'document'
     ],
-    captcha_type: 'geetest',
+    captcha_type: 'none',
     password_min_entropy: 8,
     wizard_step: 'false',
     barong_upload_size_min_range: '0.01',

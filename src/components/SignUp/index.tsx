@@ -185,6 +185,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         setShowPassword(!showPassword);
         // renderPasswordInput();
         handleFocusPassword();
+        // passwordPopUp = !passwordPopUp;
         
         
         
@@ -229,10 +230,12 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                 <Button 
                     onClick={click} 
                     style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71, background: 'transparent'}}
+                    tabIndex={-1}
                     >
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </Button>
-                {password ? (
+                {!showPassword ? (
+                password ? (
                     <PasswordStrengthMeter
                         minPasswordEntropy={passwordMinEntropy()}
                         currentPasswordEntropy={currentPasswordEntropy}
@@ -243,6 +246,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         passwordPopUp={passwordPopUp}
                         translate={translate}
                     />
+                ) : null
                 ) : null}
             </div>
         );
@@ -464,12 +468,15 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={false}
                             pre={<MdLockOutline />}
+                            
                         />
                              <Button 
                     onClick={click2} 
                     style={{position: 'relative', top: '-36px', left: '90%', zIndex: 10, opacity: 0.71, background: 'transparent'}}
+                    tabIndex={-1}
                     >
                     {showPassword2 ? <FaEyeSlash /> : <FaEye />}
+                    
                 </Button>
                         
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
