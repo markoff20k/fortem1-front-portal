@@ -88,6 +88,8 @@ class EmailVerificationComponent extends React.Component<Props> {
         );
     };
 
+   
+
     public render() {
         const { emailVerificationLoading, isMobileDevice } = this.props;
 
@@ -96,6 +98,13 @@ class EmailVerificationComponent extends React.Component<Props> {
         const text2 = this.props.intl.formatMessage({ id: 'page.header.signUp.modal.body2' });
         const button = this.props.intl.formatMessage({ id: 'page.resendConfirmation' });
         const button2 = this.props.intl.formatMessage({ id: 'page.header.signIn' });
+
+        
+        // const renderLogIn = () => {
+        //     return (
+
+        //     );
+        // };
 
 
         return (
@@ -120,15 +129,25 @@ class EmailVerificationComponent extends React.Component<Props> {
                                                 variant="primary"
                                                 disabled={this.disableButton()}>{button}
                                             </Button>
-                                            <br/>
-                                            <Button
+                                            {/* <hr style={{color: 'beige', backgroundColor: '#555555', borderRadius: '15px', marginTop: '20px', marginBottom: '20px', height: '2px'}} /> */}
+                                            
+                                            {/* {renderLogIn()} */}
+                                            <div className="redirect-login">
+                    
+                        {this.props.intl.formatMessage({ id: 'page.header.signUp.alreadyConfirmed' })}
+                        <span onClick={() => this.props.history.push('/signin')} className="pg-sign-up-screen__login-button">
+                            {this.props.intl.formatMessage({ id: 'page.mobile.header.signIn' })}
+                        </span>
+                    
+                </div>
+                                            {/* <Button
                                                 block={true}
                                                 type="button"
                                                 onClick={this.handleRedirect}
                                                 size="lg"
                                                 variant="primary"
                                                 disabled={false}>{button2}
-                                            </Button>   
+                                            </Button>    */}
                                             
                                                 
                                             
@@ -137,6 +156,9 @@ class EmailVerificationComponent extends React.Component<Props> {
                                         </div>}
                                 </div>)
                         }
+                        
+
+                        
                         {isMobileDevice &&
                             (<div className="pg-emailverification-body-container">
                               <Button

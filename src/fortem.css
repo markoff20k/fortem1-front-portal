@@ -1,3 +1,23 @@
+.redirect-login {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    font-size: 14px;
+    opacity: 0.71;
+
+    span {
+        position: relative;
+        left: 10px;
+        color: var(--button-primary-cta-background-color);
+        cursor: pointer;
+        opacity: 1;
+    }
+
+}
+
 .cr-sign-up-form__group--focused-password {
  .pg-password-pop-up {
         display: block;

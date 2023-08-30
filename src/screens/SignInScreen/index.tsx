@@ -148,7 +148,8 @@ export const SignInScreen: React.FC = () => {
     }, [email, password, formatMessage]);
 
     const handleChangeEmailValue = useCallback((value: string) => {
-        setEmail(value);
+        
+        setEmail(value.replace(/w/, '').toLowerCase());
     }, []);
 
     const handleChangePasswordValue = useCallback((value: string) => {

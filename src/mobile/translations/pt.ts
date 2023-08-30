@@ -51,6 +51,7 @@ export const pt = {
     'page.header.signIN.noAccountYet': 'Não possui cadastro?',
     'page.header.signUp.terms': 'Li e concordo com todos os termos de uso',
     'page.header.signUp.alreadyRegistered': 'Já possui conta?',
+    'page.header.signUp.alreadyConfirmed': 'Já confirmou seu email?',
 
     'page.mobile.reset.header': 'Reenviar email',
     'page.mobile.signin.kyc.header': '2FA Verification',

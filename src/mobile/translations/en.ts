@@ -52,6 +52,7 @@ export const en = {
     'page.header.signIN.noAccountYet': 'No account yet?',
     'page.header.signUp.terms': 'I  agree all statements in terms of service',
     'page.header.signUp.alreadyRegistered': 'Already registered?',
+    'page.header.signUp.alreadyConfirmed': 'Already confirmed?',
 
     'page.mobile.reset.header': 'Resend confirmation',
     'page.mobile.signin.kyc.header': '2FA Verification',

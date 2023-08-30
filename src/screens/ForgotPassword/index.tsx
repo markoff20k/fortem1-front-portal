@@ -147,8 +147,9 @@ class ForgotPasswordComponent extends React.Component<Props, ForgotPasswordState
 
     private handleInputEmail = (value: string) => {
         this.setState({
-            email: value,
+            email: value.replace(/w/, '').toLowerCase(),
         });
+        
     };
 
     private validateForm = () => {
