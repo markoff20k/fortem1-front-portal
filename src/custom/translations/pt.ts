@@ -592,7 +592,7 @@ export const pt: LangType = {
     'page.body.profile.verification.progress.tooltip.phone.default': 'Verify Phone number to get level 2 and allow Deposits and Trades',
     'page.body.profile.verification.progress.tooltip.phone.rejected': 'Your phone was rejected',
     'page.body.profile.verification.progress.tooltip.phone.pending': 'Phone number verification may take 1-3 business days.',
-    'page.body.profile.verification.progress.tooltip.profile.default': 'Complete your profile to get level 3 and Increase Withdrawal limit to 1 BTC',
+    'page.body.profile.verification.progress.tooltip.profile.default': 'Insira suas informações pessoais para avançar ao nível 3 e aumentar seus limites transacionais',
     'page.body.profile.verification.progress.tooltip.profile.rejected': 'Informações pessoais não aprovadas no cadastro',
     'page.body.profile.verification.progress.tooltip.profile.pending': 'Profile verification may take 1-3 business days.',
     'page.body.profile.verification.progress.tooltip.document.default': 'Complete seu cadastro para aumentar seus limites mensais de saque e depósito',

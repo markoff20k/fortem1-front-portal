@@ -96,6 +96,8 @@ import Tokenization from './tokenization.png';
 import Wallets from './wallets.png';
 import Exchange from './exchange.png';
 
+import { NewMarketSlick } from '../../components';
+
 
 interface ReduxProps {
     isLoggedIn: boolean;
@@ -131,11 +133,14 @@ class Landing extends React.Component<Props> {
     }
 
    
-
+    
 
     public render() {
 
+        
+
         // const [deactive, setClass] = useState('');
+        const renderMarketSlick = () => <NewMarketSlick />;
 
         
         return (
@@ -180,7 +185,9 @@ class Landing extends React.Component<Props> {
                 </div>
             </div>
 
-          
+            <div style={{bottom: '0px !important'}} >
+                {/* <div style={{bottom: '0px !important'}} >{renderMarketSlick()}	</div> */}
+        	</div>
         </div>
 
 

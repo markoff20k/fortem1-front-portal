@@ -1,6 +1,7 @@
 import cr from 'classnames';
 import moment from 'moment';
-import * as React from 'react';
+//import * as React from 'react';
+import  React, {useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { injectIntl } from 'react-intl';
 import MaskInput from 'react-maskinput';
@@ -29,6 +30,9 @@ import {
 import { IdentityData } from '../../../modules/user/kyc/identity/types';
 
 import * as countries from 'i18n-iso-countries';
+
+// import AutoComplete from './Autocomplete';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 interface ReduxProps {
     editSuccess?: string;
@@ -105,9 +109,127 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             this.props.labelFetch();
             history.push('/profile');
         }
+
+  
     }
 
+    
+    // const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+    
+
     public render() {
+
+               
+
+
+
+        // const autocomplete = new google.maps.places.Autocomplete();
+
+        const input = document.getElementById('autocomplete') as HTMLInputElement | null;
+        const value = input?.value;
+
+        input?.addEventListener('input', function (event) {
+            const target = event.target as HTMLInputElement;
+            //console.log(target.value);
+            //residentialAddress = target.value;
+
+
+ 
+
+
+
+          });
+
+
+        function fillInAddress() {
+            // Get the place details from the autocomplete object.
+            const place = autocomplete.getPlace();
+            let address1 = "";
+            let postcode = "";
+          
+            // Get each component of the address from the place details,
+            // and then fill-in the corresponding field on the form.
+            // place.address_components are google.maps.GeocoderAddressComponent objects
+            // which are documented at http://goo.gle/3l5i5Mr
+            for (const component of place.address_components as google.maps.GeocoderAddressComponent[]) {
+              // @ts-ignore remove once typings fixed
+              const componentType = component.types[0];
+          
+              switch (componentType) {
+                case "street_number": {
+                  address1 = `${component.long_name} ${address1}`;
+                  break;
+                }
+          
+                case "route": {
+                  address1 += component.short_name;
+                  break;
+                }
+          
+                case "postal_code": {
+                  postcode = `${component.long_name}${postcode}`;
+                  break;
+                }
+          
+                case "postal_code_suffix": {
+                  postcode = `${postcode}-${component.long_name}`;
+                  break;
+                }
+          
+                case "locality":
+                  (document.querySelector("#locality") as HTMLInputElement).value =
+                    component.long_name;
+                  break;
+          
+                case "administrative_area_level_1": {
+                  (document.querySelector("#state") as HTMLInputElement).value =
+                    component.short_name;
+                  break;
+                }
+          
+                case "country":
+                  (document.querySelector("#country") as HTMLInputElement).value =
+                    component.long_name;
+                  break;
+              }
+            }
+          
+            // address1Field.value = address1;
+            this.state.residentialAddress = address1;
+            
+            // postalField.value = postcode;
+            this.state.cep = postcode;
+          
+            // After filling the form with address components from the Autocomplete
+            // prediction, set cursor focus on the second address line to encourage
+            // entry of subpremise information such as apartment, unit, or floor number.
+            
+            
+            //address2Field.focus();
+
+
+          }
+
+        // const [value, setValue ] = React.useState(null);
+
+        //       useEffect(() => {
+        //     autoCompleteRef.current = new window.google.maps.places.Autocomplete(
+        //      inputRef.current,
+        //      options
+        //     );
+        //    }, []);
+
+            //const autoCompleteRef = useRef();
+            //const inputRef = useRef();
+            
+            const options = {
+                // componentRestrictions: { country: "ng" },
+                fields: ["address_components", "geometry", "icon", "name"],
+                types: ["address"]
+               }
+       
+                   
         const { editSuccess, sendSuccess, lang, loading } = this.props;
         const {
             city,
@@ -126,7 +248,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             lastNameFocused,
             postcodeFocused,
             residentialAddressFocused,
+            
+            
+            
         } = this.state;
+
+        // let [value, setValue] = "321";
+
 
         const firstNameGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': firstNameFocused,
@@ -184,6 +312,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             return { label: item, value: item };
         });
 
+        
         return (
             <form className="pg-confirm__content-identity" autoComplete="on">
                 <div className="pg-confirm__content-identity__forms">
@@ -300,18 +429,166 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             <CustomInput
                                 type="string"
                                 name="ship-address"
-                                autoComplete="shipping street-address"
+                                autoComplete={new google.maps.places.Autocomplete(document.getElementById("autocomplete"), options)}
                                 inputValue={residentialAddress}
                                 placeholder={this.translate('page.body.kyc.identity.residentialAddress')}
                                 label={this.translate('page.body.kyc.identity.residentialAddress')}
                                 defaultLabel={''}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress')}
                                 handleFocusInput={this.handleFieldFocus('residentialAddress')}
+                                id="autocomplete"
+                            />
+                        
+                        </fieldset>
+                    </div>
+     
+
+                    {/* <div className="pg-confirm__content-identity__forms__row" style={{marginTop: '20px'}}>
+                        <div className="pg-confirm__content-identity__forms__row__content">
+                        <GooglePlacesAutocomplete
+                                apiOptions={{ language: 'pt-BR' }}
+                                autocompletionRequest={{
+                                    componentRestrictions: {
+                                    country: ['br'],
+                                    },
+                                    types: ['address'],
+                                  }}
+                                  
+
+                                  selectProps={{
+                                    
+                                    onChange: this.handleFieldFocusGoogle(value2),
+                                    
+
+                                    styles: {
+                                      input: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'transparent',
+                                        border: 'none !important' ,
+                                        borderRadius: '12px',
+                                        height: '42px'
+                                      }),
+                                      control: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                        border: 'none !important' ,
+                                        borderRadius: '12px',
+                                      }),
+                                      container: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                        border: 'none !important' ,
+                                      }),
+                                      valueContainer: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'transparent',
+                                        border: 'none !important' ,
+                                        borderRadius: '12px',
+                                      }),
+                                      menuList: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                        
+                                      }),
+                                      menu: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: '#414855',
+                                        
+                                      }),
+
+                                      option: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                      }),
+                                      singleValue: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                        
+                                      }),
+                                      multiValue: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        backgroundColor: 'var(--input-background-color)',
+                                        
+                                      }),
+                                      indicatorsContainer: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        opacity: 0.5,
+                                        
+                                      }),
+                                      indicatorSeparator: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        opacity: 0.5,
+                                        
+                                      }),
+                                      dropdownIndicator: (provided) => ({
+                                        ...provided,
+                                        color: 'var(--input-text-color)',
+                                        opacity: 0.5,
+                                      }),
+
+                                      
+                              
+                                    },
+                                  }}
+
+
+
+                                // selectProps={{
+                                //     value, onChange: setValue
+                                // }}
+
+                                
+                            />
+                        </div>
+                    </div> */}
+
+
+                    <div className="pg-confirm__content-identity__forms__row input-group">
+                        <fieldset className={cityGroupClass}>
+                            <CustomInput
+                                type="string"
+                                name="ship-city"
+                                autoComplete="shipping locality"
+                                inputValue={city}
+                                handleChangeInput={(e) => this.handleChange(e, 'city')}
+                                // placeholder={this.translate('page.body.kyc.identity.city')}
+                                placeholder="Número"
+                                // label={this.translate('page.body.kyc.identity.city')}
+                                label="Número"
+                                defaultLabel={''}
+                                handleFocusInput={this.handleFieldFocus('city')}
+                            />
+                        </fieldset>
+                        <fieldset className={postcodeGroupClass}>
+                            <CustomInput
+                                label={this.translate('page.body.kyc.identity.postcode')}
+                                defaultLabel={this.translate('page.body.kyc.identity.postcode')}
+                                type="string"
+                                name="ship-zip"
+                                autoComplete="shipping postal-code"
+                                inputValue={postcode}
+                                handleChangeInput={(e) => this.handleChange(e, 'postcode')}
+                                onKeyPress={this.handleConfirmEnterPress}
+                                // placeholder={this.translate('page.body.kyc.identity.postcode')}
+                                placeholder="Complemento"
+                                handleFocusInput={this.handleFieldFocus('postcode')}
                             />
                         </fieldset>
                     </div>
+
                     <div className="pg-confirm__content-identity__forms__row input-group">
-                        <fieldset className={cityGroupClass}>
+                        {/* <fieldset className={cityGroupClass}>
                             <CustomInput
                                 type="string"
                                 name="ship-city"
@@ -323,7 +600,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('city')}
                             />
-                        </fieldset>
+                        </fieldset> */}
                         <fieldset className={postcodeGroupClass}>
                             <CustomInput
                                 label={this.translate('page.body.kyc.identity.postcode')}
@@ -372,6 +649,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         element && element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     };
 
+    private autoGoogle = () => {
+
+        return {
+            
+        }
+    }
+
     private handleFieldFocus = (field: string) => {
         return () => {
             switch (field) {
@@ -414,6 +698,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                 case 'residentialAddress':
                     this.setState({
                         residentialAddressFocused: !this.state.residentialAddressFocused,
+                        //residentialAddress: (document.getElementById('autocomplete')).value,
+                        residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value,
+                        //residentialAddress: target.value,
                     });
                     this.scrollToElement(5);
                     break;
@@ -422,6 +709,19 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             }
         };
     };
+
+
+    private handleFieldFocusGoogle = (option) => {
+
+        return () => {
+
+            this.setState({
+                residentialAddress: option.value,
+            });
+        }
+        
+
+    }
 
     private handleChange = (value: string, key: string) => {
         // @ts-ignore

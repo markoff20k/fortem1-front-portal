@@ -6,8 +6,9 @@ import styled from 'styled-components';
 import { Decimal } from '../../components';
 import Slider from 'react-slick';
 import { currenciesFetch, selectMarkets, selectMarketTickers, Market, setCurrentMarket } from '../../modules';
-import Down from './icon/down2.svg';
-import Up from './icon/up2.svg';
+import Down from "./up2.svg";
+// import Up from './icon/up2.svg';
+import Up from './down2.svg';
 
 import ContentLoader from "react-content-loader";
 import Ticker from 'react-ticker';
@@ -68,7 +69,7 @@ const MarketChartItem = styled.div`
 	}
 `;
 
-const BASE_MARKET_URL = 'https://homolog.fortem1.com.br/api/v2/peatio/public/markets';
+const BASE_MARKET_URL = 'https://www.fortem1.com.br/api/v2/peatio/public/markets';
 
 export const NewMarketSlick: React.FC<any> = () => {
 	const defaultTicker = {
