@@ -65,6 +65,8 @@ interface IdentityState {
     cpf: string;
     tel: string;
     residentialAddress: string;
+    residentialAddress2: string;
+    residentialAddress3: string;
     cityFocused: boolean;
     dateOfBirthFocused: boolean;
     cpfFocused: boolean;
@@ -73,6 +75,8 @@ interface IdentityState {
     lastNameFocused: boolean;
     postcodeFocused: boolean;
     residentialAddressFocused: boolean;
+    residentialAddress2Focused: boolean;
+    residentialAddress3Focused: boolean;
 }
 
 type Props = ReduxProps & DispatchProps & RouterProps & IntlProps;
@@ -88,6 +92,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         cpf: '',
         tel: '',
         residentialAddress: '',
+        residentialAddress2: '',
+        residentialAddress3: '',
         cityFocused: false,
         dateOfBirthFocused: false,
         cpfFocused: false,
@@ -96,6 +102,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         lastNameFocused: false,
         postcodeFocused: false,
         residentialAddressFocused: false,
+        residentialAddress2Focused: false,
+        residentialAddress3Focused: false,
     };
 
     public translate = (e: string) => {
@@ -240,6 +248,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             cpf,
             tel,
             residentialAddress,
+            residentialAddress2,
+            residentialAddress3,
             cityFocused,
             dateOfBirthFocused,
             cpfFocused,
@@ -248,6 +258,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             lastNameFocused,
             postcodeFocused,
             residentialAddressFocused,
+            residentialAddress2Focused,
+            residentialAddress3Focused,
             
             
             
@@ -291,6 +303,20 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--wrong':
                 residentialAddress && !this.handleValidateInput('residentialAddress', residentialAddress),
         });
+
+        const residentialAddress2GroupClass = cr('pg-confirm__content-identity__forms__row__content', {
+            'pg-confirm__content-identity__forms__row__content--focused': residentialAddress2Focused,
+            'pg-confirm__content-identity__forms__row__content--wrong':
+                residentialAddress2 && !this.handleValidateInput('residentialAddress2', residentialAddress2),
+        });
+
+        const residentialAddress3GroupClass = cr('pg-confirm__content-identity__forms__row__content', {
+            'pg-confirm__content-identity__forms__row__content--focused': residentialAddress3Focused,
+            'pg-confirm__content-identity__forms__row__content--wrong':
+                residentialAddress3 && !this.handleValidateInput('residentialAddress3', residentialAddress3),
+        });
+
+
 
         const cityGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': cityFocused,
@@ -555,34 +581,34 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 
                     <div className="pg-confirm__content-identity__forms__row input-group">
-                        <fieldset className={cityGroupClass}>
+                        <fieldset className={residentialAddress2GroupClass}>
                             <CustomInput
                                 type="string"
                                 name="ship-city"
                                 autoComplete="shipping locality"
-                                inputValue={city}
-                                handleChangeInput={(e) => this.handleChange(e, 'city')}
+                                inputValue={residentialAddress2}
+                                handleChangeInput={(e) => this.handleChange(e, 'residentialAddress2')}
                                 // placeholder={this.translate('page.body.kyc.identity.city')}
                                 placeholder="Número"
                                 // label={this.translate('page.body.kyc.identity.city')}
                                 label="Número"
                                 defaultLabel={''}
-                                handleFocusInput={this.handleFieldFocus('city')}
+                                handleFocusInput={this.handleFieldFocus('residentialAddress2')}
                             />
                         </fieldset>
-                        <fieldset className={postcodeGroupClass}>
+                        <fieldset className={residentialAddress3GroupClass}>
                             <CustomInput
                                 label={this.translate('page.body.kyc.identity.postcode')}
                                 defaultLabel={this.translate('page.body.kyc.identity.postcode')}
                                 type="string"
                                 name="ship-zip"
                                 autoComplete="shipping postal-code"
-                                inputValue={postcode}
-                                handleChangeInput={(e) => this.handleChange(e, 'postcode')}
+                                inputValue={residentialAddress3}
+                                handleChangeInput={(e) => this.handleChange(e, 'residentialAddress3')}
                                 onKeyPress={this.handleConfirmEnterPress}
                                 // placeholder={this.translate('page.body.kyc.identity.postcode')}
                                 placeholder="Complemento"
-                                handleFocusInput={this.handleFieldFocus('postcode')}
+                                handleFocusInput={this.handleFieldFocus('residentialAddress3')}
                             />
                         </fieldset>
                     </div>
@@ -649,12 +675,6 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         element && element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     };
 
-    private autoGoogle = () => {
-
-        return {
-            
-        }
-    }
 
     private handleFieldFocus = (field: string) => {
         return () => {
@@ -700,28 +720,31 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         residentialAddressFocused: !this.state.residentialAddressFocused,
                         //residentialAddress: (document.getElementById('autocomplete')).value,
                         residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value,
-                        //residentialAddress: target.value,
+                        //postcode: (document.getElementById('autocomplete') as HTMLInputElement).value.split("-")[length-1],
                     });
                     this.scrollToElement(5);
                     break;
+                case 'residentialAddress2':
+                    this.setState({
+                        residentialAddress2Focused: !this.state.residentialAddress2Focused,
+
+                    });
+                    this.scrollToElement(6);
+                    break;
+
+                case 'residentialAddress3':
+                        this.setState({
+                            residentialAddress3Focused: !this.state.residentialAddress3Focused,
+    
+                        });
+                        this.scrollToElement(7);
+                        break;
                 default:
                     break;
             }
         };
     };
 
-
-    private handleFieldFocusGoogle = (option) => {
-
-        return () => {
-
-            this.setState({
-                residentialAddress: option.value,
-            });
-        }
-        
-
-    }
 
     private handleChange = (value: string, key: string) => {
         // @ts-ignore
@@ -772,9 +795,17 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                 return Boolean(value.match(lastNameRegex));
             case 'residentialAddress':
-                const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s]{1,255}$`);
+                // const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w]{1,255}$`);
 
-                return Boolean(value.match(residentialAddressRegex));
+                return true;
+            case 'residentialAddress2':
+                // const residentialAddres3Regex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w]{1,255}$`);
+    
+                    return true;
+            case 'residentialAddress3':
+                // const residentialAddress3Regex = new RegExp(`^[\w\D]{1,255}$`);
+            
+                    return true;
             case 'city':
                 const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w\D]{1,255}$`);
 
@@ -795,12 +826,16 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     };
 
     private handleCheckButtonDisabled = () => {
-        const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, countryOfBirth, cpf, tel } = this.state;
+        const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, residentialAddress2, residentialAddress3, countryOfBirth, cpf, tel } = this.state;
 
         const firstNameValid = this.handleValidateInput('firstName', firstName);
         const lastNameValid = this.handleValidateInput('lastName', lastName);
-        const residentialAddressValid = this.handleValidateInput('residentialAddress', residentialAddress);
-        const cityValid = this.handleValidateInput('city', city);
+        //const residentialAddressValid = this.handleValidateInput('residentialAddress', residentialAddress);
+        const residentialAddressValid = true;
+        const residentialAddress2Valid = true;
+        const residentialAddress3Valid = true;
+        //const cityValid = this.handleValidateInput('city', city);
+        const cityValid = true;
         const postcodeValid = this.handleValidateInput('postcode', postcode);
         const dateOfBirthValid = this.handleValidateInput('dateOfBirth', dateOfBirth);
         const cpfValid = this.handleValidateInput('cpf', cpf);
@@ -810,6 +845,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             !firstNameValid ||
             !lastNameValid ||
             !residentialAddressValid ||
+            !residentialAddress2Valid ||
+            !residentialAddress3Valid ||
             !countryOfBirth ||
             !cityValid ||
             !postcodeValid ||
@@ -827,7 +864,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             first_name: this.state.firstName,
             last_name: this.state.lastName,
             dob,
-            address: this.state.residentialAddress,
+            address: this.state.residentialAddress + this.state.residentialAddress2 + this.state.residentialAddress3,
             postcode: this.state.postcode,
             
             city: this.state.city,
