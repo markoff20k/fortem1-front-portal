@@ -342,7 +342,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         return (
             <form className="pg-confirm__content-identity" autoComplete="on">
                 <div className="pg-confirm__content-identity__forms">
-                    <div className="pg-confirm__content-identity__forms__row input-group">
+                    <div className="pg-confirm__content-identity__forms__row">
                         <fieldset className={firstNameGroupClass}>
                             <CustomInput
                                 type="string"
@@ -357,6 +357,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 handleFocusInput={this.handleFieldFocus('firstName')}
                             />
                         </fieldset>
+                        </div>
+                        <div className="pg-confirm__content-identity__forms__row">
+
                         <fieldset className={lastNameGroupClass}>
                             <CustomInput
                                 type="string"
