@@ -199,7 +199,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__button pg-profile-page-verification-labels__step__button--blocked">
-							<Link to="/confirm">
+							<Link to="/confirm" className='disabled-link'>
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>

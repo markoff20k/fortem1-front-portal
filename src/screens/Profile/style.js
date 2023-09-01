@@ -16,12 +16,12 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: relative;
   
   // top: 130px;
   // left: 325px;
-  left: 2%;
-  right: 2%;
+  // left: 2%;
+  // right: 2%;
   border-radius: 20px;
   // height: fit-content;
   background-color: var(--header-background-color);
@@ -29,8 +29,11 @@ export const Content = styled.div`
   padding: 35px 10px;
   
   margin-top: 30px;
-  // margin-bottom: 130px;
-  height: 110vh;
+  margin-bottom: 30px;
+  
+  height: 100%;
+  width: 90%;
+  min-height: 900px;
 
   @media screen and (max-width: 1140px) {
     height: 110vh;

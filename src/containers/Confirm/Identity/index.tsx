@@ -289,7 +289,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         const cpfGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': cpfFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
-                cpf && !this.handleValidateInput('cpf', cpf),
+                cpf && !this.isValidCPF(cpf),
         });
 
         const telGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -350,7 +350,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 autoComplete="given-name"
                                 inputValue={firstName}
                                 placeholder={this.translate('page.body.kyc.identity.firstName')}
-                                handleChangeInput={(e) => this.handleChange(e, 'firstName')}
+                                handleChangeInput={(e) => this.handleChangeNames(e, 'firstName')}
                                 autoFocus={true}
                                 label={this.translate('page.body.kyc.identity.firstName')}
                                 defaultLabel={''}
@@ -363,7 +363,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 name="lname"
                                 autoComplete="family-name"
                                 inputValue={lastName}
-                                handleChangeInput={(e) => this.handleChange(e, 'lastName')}
+                                handleChangeInput={(e) => this.handleChangeNames(e, 'lastName')}
                                 placeholder={this.translate('page.body.kyc.identity.lastName')}
                                 label={this.translate('page.body.kyc.identity.lastName')}
                                 defaultLabel={''}
@@ -376,7 +376,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             <div className="custom-input">
                                 {dateOfBirth ? (
                                     <label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label>
-                                ) : null}
+                                ) : <label>Data de Nascimento</label>}
                                 <div className="input-group input-group-lg">
                                     <MaskInput
                                         className="pg-confirm__content-identity__forms__row__content-number"
@@ -391,21 +391,21 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 </div>
                             </div>
                         </fieldset>
-                    </div>
+                    {/* </div>
 
-                    <div className="pg-confirm__content-identity__forms__row">
+                    <div className="pg-confirm__content-identity__forms__row"> */}
                         <fieldset className={cpfGroupClass}>
                             <div className="custom-input">
                                 {cpf ? (
                                     <label>{this.translate('page.body.kyc.identity.cpf')}</label>
-                                ) : null}
+                                ) : <label>CPF</label>}
                                 <div className="input-group input-group-lg">
                                     <MaskInput
                                         className="pg-confirm__content-identity__forms__row__content-number"
                                         maskString="000.000.000-00"
                                         mask="000.000.000-00"
                                         onChange={this.handleChangeCPF}
-                                        onFocus={this.handleFieldFocus('cpf')}
+                                        onFocus={this.handleFieldFocus('cpf')} xxx
                                         onBlur={this.handleFieldFocus('cpf')}
                                         value={cpf}
                                         placeholder={this.translate('page.body.kyc.identity.cep.placeholder')}
@@ -421,7 +421,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             <div className="custom-input">
                                 {tel ? (
                                     <label>{this.translate('page.body.kyc.phone.phoneNumber')}</label>
-                                ) : null}
+                                ) : <label>Telefone</label>}
                                 <div className="input-group input-group-lg">
                                     <MaskInput
                                         className="pg-confirm__content-identity__forms__row__content-number"
@@ -431,7 +431,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                         onFocus={this.handleFieldFocus('tel')}
                                         onBlur={this.handleFieldFocus('tel')}
                                         value={tel}
-                                        placeholder={this.translate('page.body.kyc.phone.phoneNumber')}
+                                        placeholder="00-0000-0000"
                                     />
                                 </div>
                             </div>
@@ -467,124 +467,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         
                         </fieldset>
                     </div>
-     
-
-                    {/* <div className="pg-confirm__content-identity__forms__row" style={{marginTop: '20px'}}>
-                        <div className="pg-confirm__content-identity__forms__row__content">
-                        <GooglePlacesAutocomplete
-                                apiOptions={{ language: 'pt-BR' }}
-                                autocompletionRequest={{
-                                    componentRestrictions: {
-                                    country: ['br'],
-                                    },
-                                    types: ['address'],
-                                  }}
-                                  
-
-                                  selectProps={{
-                                    
-                                    onChange: this.handleFieldFocusGoogle(value2),
-                                    
-
-                                    styles: {
-                                      input: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'transparent',
-                                        border: 'none !important' ,
-                                        borderRadius: '12px',
-                                        height: '42px'
-                                      }),
-                                      control: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                        border: 'none !important' ,
-                                        borderRadius: '12px',
-                                      }),
-                                      container: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                        border: 'none !important' ,
-                                      }),
-                                      valueContainer: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'transparent',
-                                        border: 'none !important' ,
-                                        borderRadius: '12px',
-                                      }),
-                                      menuList: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                        
-                                      }),
-                                      menu: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: '#414855',
-                                        
-                                      }),
-
-                                      option: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                      }),
-                                      singleValue: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                        
-                                      }),
-                                      multiValue: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        backgroundColor: 'var(--input-background-color)',
-                                        
-                                      }),
-                                      indicatorsContainer: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        opacity: 0.5,
-                                        
-                                      }),
-                                      indicatorSeparator: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        opacity: 0.5,
-                                        
-                                      }),
-                                      dropdownIndicator: (provided) => ({
-                                        ...provided,
-                                        color: 'var(--input-text-color)',
-                                        opacity: 0.5,
-                                      }),
-
-                                      
-                              
-                                    },
-                                  }}
-
-
-
-                                // selectProps={{
-                                //     value, onChange: setValue
-                                // }}
-
-                                
-                            />
-                        </div>
-                    </div> */}
 
 
                     <div className="pg-confirm__content-identity__forms__row input-group">
                         <fieldset className={residentialAddress2GroupClass}>
                             <CustomInput
                                 type="string"
-                                name="ship-city"
+                                name="numero"
                                 autoComplete="shipping locality"
                                 inputValue={residentialAddress2}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress2')}
@@ -598,10 +487,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         </fieldset>
                         <fieldset className={residentialAddress3GroupClass}>
                             <CustomInput
-                                label={this.translate('page.body.kyc.identity.postcode')}
-                                defaultLabel={this.translate('page.body.kyc.identity.postcode')}
+                                //label={this.translate('page.body.kyc.identity.postcode')}
+                                label="Complemento"
+
+                                // defaultLabel={this.translate('page.body.kyc.identity.postcode')}
+                                defaultLabel="Complemento"
                                 type="string"
-                                name="ship-zip"
+                                name="complemento"
                                 autoComplete="shipping postal-code"
                                 inputValue={residentialAddress3}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress3')}
@@ -613,20 +505,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         </fieldset>
                     </div>
 
-                    <div className="pg-confirm__content-identity__forms__row input-group">
-                        {/* <fieldset className={cityGroupClass}>
-                            <CustomInput
-                                type="string"
-                                name="ship-city"
-                                autoComplete="shipping locality"
-                                inputValue={city}
-                                handleChangeInput={(e) => this.handleChange(e, 'city')}
-                                placeholder={this.translate('page.body.kyc.identity.city')}
-                                label={this.translate('page.body.kyc.identity.city')}
-                                defaultLabel={''}
-                                handleFocusInput={this.handleFieldFocus('city')}
-                            />
-                        </fieldset> */}
+                    {/* <div className="pg-confirm__content-identity__forms__row input-group">
                         <fieldset className={postcodeGroupClass}>
                             <CustomInput
                                 label={this.translate('page.body.kyc.identity.postcode')}
@@ -641,7 +520,34 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 handleFocusInput={this.handleFieldFocus('postcode')}
                             />
                         </fieldset>
+                    </div> */}
+
+                    <div className="pg-confirm__content-identity__forms__row">
+                        <fieldset className={postcodeGroupClass}>
+                            <div className="custom-input">
+                                {postcode ? (
+                                    <label>{this.translate('page.body.kyc.identity.postcode')}</label>
+                                ) : <label>CEP</label>}
+                                <div className="input-group input-group-lg">
+                                    <MaskInput
+                                        className="pg-confirm__content-identity__forms__row__content-number"
+                                        maskString="00000-000"
+                                        mask="00000-000"
+                                        // onChange={this.handleChangeDate}
+                                        handleChangeInput={(e) => this.handleChange(e, 'postcode')}
+                                        onFocus={this.handleFieldFocus('postcode')}
+                                        onBlur={this.handleFieldFocus('postcode')}
+                                        value={postcode}
+                                        placeholder="00000-000"
+                                    />
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
+
+
+
+
                 </div>
                 {sendSuccess && !editSuccess && <p className="pg-confirm__success">{this.translate(sendSuccess)}</p>}
                 {editSuccess && !sendSuccess && <p className="pg-confirm__success">{this.translate(editSuccess)}</p>}
@@ -753,6 +659,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         });
     };
 
+    private handleChangeNames = (value: string, key: string) => {
+        // @ts-ignore
+        this.setState({
+            [key]: value.replace(/w/, '').toUpperCase()
+        });
+    };
+
     private handleConfirmEnterPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter' && !this.handleCheckButtonDisabled()) {
             event.preventDefault();
@@ -807,23 +720,65 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             
                     return true;
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w\D]{1,255}$`);
+                const cityRegex = new RegExp(`^[\w]{1,255}$`);
 
                 return Boolean(value.match(cityRegex));
             case 'postcode':
-                const postcodeRegex = new RegExp(`^[a-zA-Z0-9]{1,12}$`);
+                //const postcodeRegex = new RegExp(`^[a-zA-Z0-9]{1,12}$`);
+                const postcodeRegex = new RegExp(`^[a-zA-Z0-9-,.-;/\\\\\\s\w]{1,255}$`);
 
-                return Boolean(value.match(postcodeRegex));
+                // return Boolean(value.match(postcodeRegex));
+                return true;
             case 'dateOfBirth':
                 if (value.length === 10) {
                     return moment(value, 'DD/MM/YYYY').unix() < Date.now() / 1000;
                 }
 
                 return false;
+            // case 'cpf':
+            //         // const cpfRegex = new RegExp(`^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$`);
+            //         const cpfRegex = true;
+    
+            //         return Boolean(value.match(cpfRegex));
             default:
                 return true;
         }
     };
+
+    private isValidCPF(cpf) {
+        if (typeof cpf !== "string") return false
+        cpf = cpf.replace(/[\s.-]*/igm, '')
+        if (
+            !cpf ||
+            cpf.length != 11 ||
+            cpf == "00000000000" ||
+            cpf == "11111111111" ||
+            cpf == "22222222222" ||
+            cpf == "33333333333" ||
+            cpf == "44444444444" ||
+            cpf == "55555555555" ||
+            cpf == "66666666666" ||
+            cpf == "77777777777" ||
+            cpf == "88888888888" ||
+            cpf == "99999999999" 
+        ) {
+            return false
+        }
+        var soma = 0
+        var resto
+        for (var i = 1; i <= 9; i++) 
+            soma = soma + parseInt(cpf.substring(i-1, i)) * (11 - i)
+        resto = (soma * 10) % 11
+        if ((resto == 10) || (resto == 11))  resto = 0
+        if (resto != parseInt(cpf.substring(9, 10)) ) return false
+        soma = 0
+        for (var i = 1; i <= 10; i++) 
+            soma = soma + parseInt(cpf.substring(i-1, i)) * (12 - i)
+        resto = (soma * 10) % 11
+        if ((resto == 10) || (resto == 11))  resto = 0
+        if (resto != parseInt(cpf.substring(10, 11) ) ) return false
+        return true
+    }
 
     private handleCheckButtonDisabled = () => {
         const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, residentialAddress2, residentialAddress3, countryOfBirth, cpf, tel } = this.state;
@@ -837,9 +792,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         //const cityValid = this.handleValidateInput('city', city);
         const cityValid = true;
         const postcodeValid = this.handleValidateInput('postcode', postcode);
+        //const postcodeValid = true;
         const dateOfBirthValid = this.handleValidateInput('dateOfBirth', dateOfBirth);
-        const cpfValid = this.handleValidateInput('cpf', cpf);
+        const cpfValid = this.isValidCPF(cpf);
+        // const telValid = this.handleValidateInput('tel', tel);
         const telValid = this.handleValidateInput('tel', tel);
+
 
         return (
             !firstNameValid ||

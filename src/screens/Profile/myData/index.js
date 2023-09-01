@@ -87,7 +87,7 @@ export function Mydata() {
           placeholder="Telefone"
 
           // value="Telefone"
-          value={metadata.telefone ? metadata.telefone : "Telefone [Complete seu cadastro]"}
+          value={metadata.tel ? metadata.tel : "Telefone [Complete seu cadastro]"}
           disabled='true'
           
         />

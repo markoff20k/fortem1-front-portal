@@ -1,6 +1,23 @@
+.pg-confirm__content-identity__forms__row__content--wrong {
+    custom-input {
+        label {
+            
+            color: var(--asks) !important;
+        }
+    }
+}
+
+.pg-confirm__content-identity__forms__row__content-number-dropdown {
+    background: var(--input-background-color);
+}
+
 .btn.primary.focus {
     background-color: var(--button-primary-cta-background-color) !important;
 }
+
+.disabled-link {
+    pointer-events: none;
+  }
 
 .redirect-login {
     display: flex;
@@ -2216,7 +2233,7 @@ input:-webkit-autofill:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -130px;
+    top: -100px;
     /* width: 60%; */
     margin-left: 10%;
     margin-right: 10%;
@@ -2250,7 +2267,7 @@ input:-webkit-autofill:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -130px;
+    top: -100px;
     /* width: 60%; */
     margin-left: 10%;
     margin-right: 10%;
@@ -2328,7 +2345,7 @@ input:-webkit-autofill:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -130px;
+    top: -100px;
     /* width: 60%; */
     margin-left: 10%;
     margin-right: 10%;
@@ -2367,7 +2384,7 @@ input:-webkit-autofill:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -130px;
+    top: -100px;
     /* width: 60%; */
     margin-left: 10%;
     margin-right: 10%;

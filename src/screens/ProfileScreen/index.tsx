@@ -107,7 +107,7 @@ export const ProfileScreen: FC = (): ReactElement => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-12">
                         <TabPanel
                             panels={renderTabs()}
@@ -116,7 +116,7 @@ export const ProfileScreen: FC = (): ReactElement => {
                             onCurrentTabChange={onCurrentTabChange}
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
             {tab === 'security' && (
                 <div className="row">

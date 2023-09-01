@@ -27,8 +27,8 @@ export function Security(props) {
       
          
           <ProfileSecurity />
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
           <ProfileAccountActivity />
           
       
