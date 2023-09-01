@@ -405,7 +405,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                         maskString="000.000.000-00"
                                         mask="000.000.000-00"
                                         onChange={this.handleChangeCPF}
-                                        onFocus={this.handleFieldFocus('cpf')} xxx
+                                        onFocus={this.handleFieldFocus('cpf')}
                                         onBlur={this.handleFieldFocus('cpf')}
                                         value={cpf}
                                         placeholder={this.translate('page.body.kyc.identity.cep.placeholder')}
@@ -533,12 +533,14 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                         className="pg-confirm__content-identity__forms__row__content-number"
                                         maskString="00000-000"
                                         mask="00000-000"
-                                        // onChange={this.handleChangeDate}
-                                        handleChangeInput={(e) => this.handleChange(e, 'postcode')}
+                                        onChange={this.handleChangeCEP}
+                                        //handleChangeInput={(e) => this.handleChange(e, 'postcode')}
                                         onFocus={this.handleFieldFocus('postcode')}
                                         onBlur={this.handleFieldFocus('postcode')}
                                         value={postcode}
                                         placeholder="00000-000"
+
+                                        
                                     />
                                 </div>
                             </div>
@@ -685,6 +687,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         });
     };
 
+    private handleChangeCEP = (e: OnChangeEvent) => {
+        this.setState({
+            postcode: e.target.value,
+        });
+    };
+
     private handleChangeTel = (e: OnChangeEvent) => {
         this.setState({
             tel: e.target.value,
@@ -725,10 +733,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                 return Boolean(value.match(cityRegex));
             case 'postcode':
                 //const postcodeRegex = new RegExp(`^[a-zA-Z0-9]{1,12}$`);
-                const postcodeRegex = new RegExp(`^[a-zA-Z0-9-,.-;/\\\\\\s\w]{1,255}$`);
+                const postcodeRegex = new RegExp(`^[a-zA-Z0-9-,.-;/\\\\\\s\w]{9,255}$`);
 
-                // return Boolean(value.match(postcodeRegex));
-                return true;
+                return Boolean(value.match(postcodeRegex));
+                //return true;
             case 'dateOfBirth':
                 if (value.length === 10) {
                     return moment(value, 'DD/MM/YYYY').unix() < Date.now() / 1000;
