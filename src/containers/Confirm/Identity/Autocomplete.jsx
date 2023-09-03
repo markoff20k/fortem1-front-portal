@@ -1,10 +1,16 @@
+import React from "react";
 import { useRef, useEffect } from "react";
-import "./styles.css";
+
+
 const AutoComplete = () => {
  const autoCompleteRef = useRef();
  const inputRef = useRef();
- const options = {....
+ const options = {
+  fields: ["address_components"],
+  types: ["establishment"]
  };
+
+
  useEffect(() => {
   autoCompleteRef.current = new window.google.maps.places.Autocomplete(
    inputRef.current,

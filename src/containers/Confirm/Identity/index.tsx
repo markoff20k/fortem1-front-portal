@@ -1,7 +1,7 @@
 import cr from 'classnames';
 import moment from 'moment';
-//import * as React from 'react';
-import  React, {useState } from 'react';
+import * as React from 'react';
+
 import { Button, Spinner } from 'react-bootstrap';
 import { injectIntl } from 'react-intl';
 import MaskInput from 'react-maskinput';
@@ -32,7 +32,13 @@ import { IdentityData } from '../../../modules/user/kyc/identity/types';
 import * as countries from 'i18n-iso-countries';
 
 // import AutoComplete from './Autocomplete';
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+//import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+
+// import SearchBar from 'material-ui-search-bar';
+import Script from 'react-load-script';
+
+// import AutoComplete from './Autocomplete';
+
 
 interface ReduxProps {
     editSuccess?: string;
@@ -64,9 +70,11 @@ interface IdentityState {
     postcode: string;
     cpf: string;
     tel: string;
+    query: string;
     residentialAddress: string;
     residentialAddress2: string;
     residentialAddress3: string;
+    
     cityFocused: boolean;
     dateOfBirthFocused: boolean;
     cpfFocused: boolean;
@@ -91,6 +99,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         postcode: '',
         cpf: '',
         tel: '',
+        query: '',
         residentialAddress: '',
         residentialAddress2: '',
         residentialAddress3: '',
@@ -122,123 +131,33 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     }
 
     
-    // const autocomplete = new google.maps.places.Autocomplete(input, options);
+    //const autocomplete = new google.maps.places.Autocomplete(input, options);
 
-    
+
+
+
+      
 
     public render() {
 
-               
+        // const input = document.getElementById('autocomplete') as HTMLInputElement | null;
+        // const value = input?.value;
+
+        // input?.addEventListener('input', function (event) {
+        //     const target = event.target as HTMLInputElement;
+
+        //   });
 
 
-
-        // const autocomplete = new google.maps.places.Autocomplete();
-
-        const input = document.getElementById('autocomplete') as HTMLInputElement | null;
-        const value = input?.value;
-
-        input?.addEventListener('input', function (event) {
-            const target = event.target as HTMLInputElement;
-            //console.log(target.value);
-            //residentialAddress = target.value;
-
-
- 
-
-
-
-          });
-
-
-        function fillInAddress() {
-            // Get the place details from the autocomplete object.
-            const place = autocomplete.getPlace();
-            let address1 = "";
-            let postcode = "";
-          
-            // Get each component of the address from the place details,
-            // and then fill-in the corresponding field on the form.
-            // place.address_components are google.maps.GeocoderAddressComponent objects
-            // which are documented at http://goo.gle/3l5i5Mr
-            for (const component of place.address_components as google.maps.GeocoderAddressComponent[]) {
-              // @ts-ignore remove once typings fixed
-              const componentType = component.types[0];
-          
-              switch (componentType) {
-                case "street_number": {
-                  address1 = `${component.long_name} ${address1}`;
-                  break;
-                }
-          
-                case "route": {
-                  address1 += component.short_name;
-                  break;
-                }
-          
-                case "postal_code": {
-                  postcode = `${component.long_name}${postcode}`;
-                  break;
-                }
-          
-                case "postal_code_suffix": {
-                  postcode = `${postcode}-${component.long_name}`;
-                  break;
-                }
-          
-                case "locality":
-                  (document.querySelector("#locality") as HTMLInputElement).value =
-                    component.long_name;
-                  break;
-          
-                case "administrative_area_level_1": {
-                  (document.querySelector("#state") as HTMLInputElement).value =
-                    component.short_name;
-                  break;
-                }
-          
-                case "country":
-                  (document.querySelector("#country") as HTMLInputElement).value =
-                    component.long_name;
-                  break;
-              }
-            }
-          
-            // address1Field.value = address1;
-            this.state.residentialAddress = address1;
             
-            // postalField.value = postcode;
-            this.state.cep = postcode;
-          
-            // After filling the form with address components from the Autocomplete
-            // prediction, set cursor focus on the second address line to encourage
-            // entry of subpremise information such as apartment, unit, or floor number.
-            
-            
-            //address2Field.focus();
-
-
-          }
-
-        // const [value, setValue ] = React.useState(null);
-
-        //       useEffect(() => {
-        //     autoCompleteRef.current = new window.google.maps.places.Autocomplete(
-        //      inputRef.current,
-        //      options
-        //     );
-        //    }, []);
-
-            //const autoCompleteRef = useRef();
-            //const inputRef = useRef();
-            
-            const options = {
-                // componentRestrictions: { country: "ng" },
-                fields: ["address_components", "geometry", "icon", "name"],
-                types: ["address"]
-               }
+            // const options = {
+            //     fields: ["address_components", "geometry", "icon", "name"],
+            //     types: ["address"]
+            //    }
        
                    
         const { editSuccess, sendSuccess, lang, loading } = this.props;
+
         const {
             city,
             dateOfBirth,
@@ -260,12 +179,11 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             residentialAddressFocused,
             residentialAddress2Focused,
             residentialAddress3Focused,
+            query,
             
             
             
         } = this.state;
-
-        // let [value, setValue] = "321";
 
 
         const firstNameGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -338,11 +256,113 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             return { label: item, value: item };
         });
 
+ 
+        const options = {
+            // componentRestrictions: { country: "ng" },
+            // fields: ["address_components", "geometry", "icon", "name"],
+            types: ["address"]
+           }
+    
+        const autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), options );
+
+        
+   
+
+        const handleScriptLoad = () => { 
+
+            // google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            //     var place = autocomplete.getPlace();
+            //     console.log(place);
+
+            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+
+
+            // Declare Options For Autocomplete 
+            //const options = { types: ['(address)'] }; 
+
+            // const options = {
+            //     // componentRestrictions: { country: "ng" },
+            //     fields: ["address_components", "geometry", "icon", "name"],
+            //     types: ["address"]
+            //    }
+            
+            // Initialize Google Autocomplete 
+            /*global google*/
+            
+            // const autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), options );
+
+
+
+            // Avoid paying for data that you don't need by restricting the 
+            // set of place fields that are returned to just the address
+            // components and formatted address
+            // autocomplete.setFields(['address_components',   
+            //                              'formatted_address']);
+            // Fire Event when a suggested name is selected
+            
+            
+            //autocomplete.addListener('place_changed', handlePlaceSelect());
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                var place = autocomplete.getPlace();
+                console.log(place);
+                console.log('PLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACE')
+            });
+
+            
+
+            autocomplete.addListener('autocomplete', function() {
+
+                var place = autocomplete.getPlace();
+
+                console.log('PLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACEPLACE')
+            
+                if (!place.geometry) {
+                  // User entered the name of a Place that was not suggested and
+                  // pressed the Enter key, or the Place Details request failed.
+                  // Do anything you like with what was entered in the ac field.
+                  console.log('You entered: ' + place.name);
+                  return;
+                }
+            
+                console.log('You selected: ' + place.formatted_address);
+              });
+            
+            
+          }
+
+          const handlePlaceSelect = () => {
+
+            console.log("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+
+            // Extract City From Address Object
+            const addressObject = autocomplete.getPlace();
+            const address = addressObject.address_components;
+        
+            // Check if address is valid
+            if (address) {
+              // Set State
+              this.setState(
+                {
+                  city: address[0].long_name,
+                  query: addressObject.formatted_address,
+                }
+              );
+              console.log(city);
+              console.log("UHUUUUUUUUUUUUUUUUUUUUUUUUUUUL");
+            }
+          }
+
+          //autocomplete.addListener('place_changed', handlePlaceSelect());
         
         return (
+            <>
+            {/* <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhuXDx_zh466hb2LYtMmwiyi0d0Bb7RgA&libraries=places" onLoad={handleScriptLoad} />   */}
             <form className="pg-confirm__content-identity" autoComplete="on">
                 <div className="pg-confirm__content-identity__forms">
                     <div className="pg-confirm__content-identity__forms__row">
+
+                    {/* <AutoComplete /> */}
                         <fieldset className={firstNameGroupClass}>
                             <CustomInput
                                 type="string"
@@ -459,6 +479,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 type="string"
                                 name="ship-address"
                                 autoComplete={new google.maps.places.Autocomplete(document.getElementById("autocomplete"), options)}
+                                // inputValue={this.state.query}
                                 inputValue={residentialAddress}
                                 placeholder={this.translate('page.body.kyc.identity.residentialAddress')}
                                 label={this.translate('page.body.kyc.identity.residentialAddress')}
@@ -467,7 +488,17 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 handleFocusInput={this.handleFieldFocus('residentialAddress')}
                                 id="autocomplete"
                             />
-                        
+                                {/* <input id="autocomplete2" placeholder="Endereço residencial"
+                                    style={{
+                                        margin: '0 auto',
+                                        height: '48px',
+                                        width: '100%',
+                                        color: 'var(--input-text-color)',
+                                        border: 'none !important',
+                                        outline: 'none !important',
+                                        
+                                    }}
+                                    /> */}
                         </fieldset>
                     </div>
 
@@ -576,6 +607,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     </Button>
                 </div>
             </form>
+            </>
         );
     }
 
@@ -627,11 +659,84 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     this.scrollToElement(8);
                     break;
                 case 'residentialAddress':
+                    // var ac = new google.maps.places.Autocomplete(
+                    //     (document.getElementById('autocomplete')), {
+                    //                   types: ["address"]
+
+                    //     });
+
+            
+                    const options = {
+                        fields: ["address_components"],
+                      
+                       };
+
+
+                    let auto_complete = new google.maps.places.Autocomplete(
+                        this.state.residentialAddress2,
+                        options,
+                      );
+
+                      //auto_complete.trigger(auto_complete, 'place_changed');
+                      google.maps.event.trigger(auto_complete, 'place_changed');
+
+                      google.maps.event.trigger(this.autocomplete, 'place_changed');
+
+
+                    auto_complete.setFields(['address_components', 'name']);
+
+                    //this.autocomplete = auto_complete.getPlace();
+
+
+                    //const ac = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), options );
+
+                        //var place = ac.getPlace();
+                        console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+
+                        auto_complete.setFields(["address_component"]); 
+                        const addressObject = auto_complete.getPlace();
+                        
+                         
+                        //const address = addressObject.address_components;
+                        console.log(addressObject);
+                        console.log(auto_complete);
+                        //console.log(autocomplete.getPlace());
+
+
+                    setTimeout(codingCourse, 3000);
+                    
+                    function codingCourse() {
+                        console.log(addressObject);
+                        console.log(addressObject);
+                        console.log(addressObject);
+                        console.log(auto_complete);
+                
+
+                      }
+
+
                     this.setState({
                         residentialAddressFocused: !this.state.residentialAddressFocused,
                         //residentialAddress: (document.getElementById('autocomplete')).value,
-                        residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value,
-                        //postcode: (document.getElementById('autocomplete') as HTMLInputElement).value.split("-")[length-1],
+                        
+
+                        
+                        //residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1],
+                        residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+
+                        //value={lastVerifiedProfile.fullname ? lastVerifiedProfile.fullname : "Nome completo - Complete seu cadastro"}
+
+
+                                  //value={lastVerifiedProfile.fullname ? lastVerifiedProfile.fullname : "Nome completo - Complete seu cadastro"}
+
+                        //residentialAddress: place.formatted_address+"OK OK",
+                        
+
+                        //residentialAddress: this.state.query,
+
+                        residentialAddress2: ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0],
+                        residentialAddress2: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[1]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[1] : "",
+
                     });
                     this.scrollToElement(5);
                     break;

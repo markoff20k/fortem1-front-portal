@@ -17,7 +17,6 @@ import { useSelector } from 'react-redux';
 import { UserOutlined } from '@ant-design/icons';
 
 import { Input } from 'antd';
-// import { User } from "@openware/react-opendax";
 
 import { selectUserInfo } from "src/modules";
 

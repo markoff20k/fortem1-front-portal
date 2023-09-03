@@ -7,9 +7,21 @@
     }
 }
 
+.pg-confirm__content-identity__forms__row__content {
+    .pac-target-input {
+        border: none !important;
+    }
+}
+
+
 .pg-confirm__content-identity__forms__row__content-number-dropdown {
     background: var(--input-background-color);
 }
+
+#autocomplete {
+    border: none !important;
+}
+
 
 .btn.primary.focus {
     background-color: var(--button-primary-cta-background-color) !important;
