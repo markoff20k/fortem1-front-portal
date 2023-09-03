@@ -480,13 +480,13 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 <div className="input-group input-group-lg">
                                     <MaskInput
                                         className="pg-confirm__content-identity__forms__row__content-number"
-                                        maskString="00-0000-0000"
-                                        mask="00-0000-0000"
+                                        maskString="00-00000-0000"
+                                        mask="00-00000-0000"
                                         onChange={this.handleChangeTel}
                                         onFocus={this.handleFieldFocus('tel')}
                                         onBlur={this.handleFieldFocus('tel')}
                                         value={tel}
-                                        placeholder="00-0000-0000"
+                                        placeholder="00-00000-0000"
                                     />
                                 </div>
                             </div>
@@ -982,6 +982,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             case 'country':
                     //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
                 return Boolean(value.length > 1) ;                
+            case 'tel':
+                    //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
+                return Boolean(value.length > 12) ;   
             case 'postcode':
                 //const postcodeRegex = new RegExp(`^[a-zA-Z0-9]{1,12}$`);
                 const postcodeRegex = new RegExp(`^[a-zA-Z0-9-,.-;/\\\\\\s\w]{9,255}$`);
