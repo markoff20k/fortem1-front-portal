@@ -135,7 +135,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
         if ((!prev.editSuccess && editSuccess) || (!prev.sendSuccess && sendSuccess)) {
             this.props.labelFetch();
-            history.push('/profile');
+            history.push('/profile?internalPage=3', {internalPage: 3});
+            
+
         }
 
   

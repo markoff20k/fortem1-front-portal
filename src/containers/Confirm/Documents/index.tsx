@@ -90,7 +90,9 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 
     public UNSAFE_componentWillReceiveProps(next: Props) {
         if (next.success && !this.props.success) {
-            this.props.history.push('/profile');
+            //this.props.history.push('/profile');
+            this.props.history.push('/profile?internalPage=3', {internalPage: 3});
+
         }
     }
 

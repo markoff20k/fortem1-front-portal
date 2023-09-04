@@ -1,3 +1,11 @@
+.pg-profile-page-verification-labels__step__tooltip tooltip-hover tooltip-hover--visible {
+    position: fixed !important;
+}
+
+.pg-profile-page-verification-labels__step__tooltip {
+    position: fixed !important;
+}
+
 .pg-confirm__content-identity__forms__row__content--wrong {
     custom-input {
         label {

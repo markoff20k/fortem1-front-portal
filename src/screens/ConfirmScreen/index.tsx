@@ -74,7 +74,10 @@ class ConfirmComponent extends React.Component<Props> {
                     <Logo />
                     <CrossIcon
                         className="pg-confirm__title__icon"
-                        onClick={e => history.push('/profile')}
+                        onClick={e => history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
+
+                        
+
                     />
                 </div>
                 <h3 className="pg-confirm__title">
@@ -104,7 +107,9 @@ class ConfirmComponent extends React.Component<Props> {
         const passedSteps = kycSteps().filter((step: string) => labels.find(label => step === label.key && label.value === 'verified' && label.scope === 'private'));
 
         if (pendingLabelExists || (kycSteps().length === passedSteps.length)) {
-            this.props.history.push('/profile');
+            // this.props.history.push('/profile');
+            this.props.history.push('/profile', {internalPage: 4});
+
         }
     };
 }

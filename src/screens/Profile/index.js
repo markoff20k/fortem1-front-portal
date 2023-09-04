@@ -6,8 +6,26 @@ import { Preferences } from "./preferences";
 import { Limits } from "./limits";
 import { Security } from "./security";
 
+// import {useSearchParams} from 'react-router-dom';
+
+import { useHistory, useLocation } from 'react-router-dom'
+
+
+
 export function Profile() {
   const [internalPage, setInternalPage] = useState(1);
+
+  const queryParameters = new URLSearchParams(window.location.search);
+  const urlState = queryParameters.get("internalPage");
+
+  //const [searchParams, setSearchParams] = useSearchParams();
+
+  queryParameters.delete("internalPage");
+  queryParameters.set("internalPage", "5");
+
+  //if (urlState) setInternalPage(urlState);
+  console.log(urlState);
+
 
   return (
     <Container>
@@ -31,6 +49,8 @@ export function Profile() {
               </button>
               <button
                 onClick={() => setInternalPage(3)}
+                //onClick={e => history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
+
                 className={internalPage === 3 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
               >
@@ -38,6 +58,7 @@ export function Profile() {
               </button>
               <button
                 onClick={() => setInternalPage(4)}
+                //onClick={history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
                 style={{color: 'var(--primary-text-color)'}}
               >
                 Segurança
@@ -53,18 +74,26 @@ export function Profile() {
             </div>
           </div>
         </div>
-        {internalPage === 1 ? (
-          <Mydata />
-         ) : internalPage === 2 ? (
+        {internalPage === 3 || urlState === '3' ? ( 
+          <Limits />
+        
+         ) : internalPage === 2 || urlState === 2 ? (
            <Preferences />
-         ) : internalPage === 3 ? (
-           <Limits />
-         ) : internalPage === 4 ? (
-           <Security />
+         ) : internalPage === 4 || urlState === 4 ? (
+          <Security />
+         ) : internalPage === 1  && urlState != '1'? (
+          <Mydata />
         ) : (
           {}
         )}
       </Content>
+      {queryParameters.delete("internalPage")}
+      {queryParameters.set("internalPage", "5")}
+      {/* {searchParams.delete('q')}
+      {setSearchParams(searchParams)} */}
+
     </Container>
+
+    
   );
 }
