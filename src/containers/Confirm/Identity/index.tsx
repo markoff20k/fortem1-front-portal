@@ -391,7 +391,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         
         return (
             <>
-            {/* <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhuXDx_zh466hb2LYtMmwiyi0d0Bb7RgA&libraries=places" onLoad={handleScriptLoad} />   */}
+            <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhuXDx_zh466hb2LYtMmwiyi0d0Bb7RgA&libraries=places" onLoad={handleScriptLoad} />  
             <form className="pg-confirm__content-identity" autoComplete="on">
                 <div className="pg-confirm__content-identity__forms">
                     <div className="pg-confirm__content-identity__forms__row">
