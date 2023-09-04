@@ -1,3 +1,27 @@
+.pg-confirm__content-identity fieldset {
+    height: 48px;
+}
+
+.label-error {
+    color: red;
+    font-size: 10px;
+    opacity: 0;
+    position: relative;
+    top: -4px;
+ 
+}
+
+.label-error--active {
+    
+    .label-error {
+        color: red;
+        font-size: 10px;
+        opacity: 0.81;
+    
+        
+    }
+}
+
 .pg-profile-page-verification-labels__step__tooltip, .tooltip-hover, .tooltip-hover--visible {
     position: fixed !important;
 }

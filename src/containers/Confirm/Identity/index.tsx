@@ -209,6 +209,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': firstNameFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 firstName && !this.handleValidateInput('firstName', firstName),
+
+                'label-error--active':
+                firstName && !this.handleValidateInput('firstName', firstName),
+                
         });
 
         const lastNameGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -221,11 +225,15 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': dateOfBirthFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 dateOfBirth && !this.handleValidateInput('dateOfBirth', dateOfBirth),
+            'label-error--active':
+                dateOfBirth && !this.handleValidateInput('dateOfBirth', dateOfBirth),
         });
 
         const cpfGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': cpfFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
+                cpf && !this.isValidCPF(cpf),
+            'label-error--active':
                 cpf && !this.isValidCPF(cpf),
         });
 
@@ -273,6 +281,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         const countryGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': countryFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': country && !this.handleValidateInput('country', country),
+            
         });
 
         const postcodeGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -410,8 +419,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('firstName')}
                             />
+                        <label className='label-error'>Seu nome deve possuir pelo menos 3 caracteres</label>
                         </fieldset>
+                        
                         </div>
+                        
+
                         <div className="pg-confirm__content-identity__forms__row">
 
                         <fieldset className={lastNameGroupClass}>
@@ -426,6 +439,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('lastName')}
                             />
+                            <label className='label-error'>Seu sobrenome deve possuir pelo menos 3 caracteres</label>
                         </fieldset>
                     </div>
                     <div className="pg-confirm__content-identity__forms__row">
@@ -447,6 +461,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                     />
                                 </div>
                             </div>
+                            <label className='label-error'>Data inválida</label>
                         </fieldset>
                     {/* </div>
 
@@ -469,6 +484,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                     />
                                 </div>
                             </div>
+                            <label className='label-error'>CPF inválido</label>
                         </fieldset>
                     </div>
 
@@ -953,12 +969,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                 const firstNameRegex = new RegExp(`^[\w\D]{3,255}$`);
 
                 // return Boolean(value.match(firstNameRegex));
-                return Boolean(value.length > 1) ;
+                return Boolean(value.length > 2) ;
             case 'lastName':
                 const lastNameRegex = new RegExp(`^[a-zA-Z—-\\s]{3,255}$`);
 
                 // return Boolean(value.match(lastNameRegex));
-                return Boolean(value.length > 1) ;
+                return Boolean(value.length > 2) ;
             case 'residentialAddress':
                 // const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\\\\\s\w]{1,255}$`);
 
