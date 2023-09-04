@@ -520,9 +520,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress')}
                                 handleFocusInput={this.handleFieldFocus('residentialAddress')}
-                                id="autocomplete"
+                                id="autocomplete2"
                             />
-                                {/* <input id="autocomplete2" placeholder="Endereço residencial"
+                                <input id="autocomplete" placeholder="Endereço residencial"
                                     style={{
                                         margin: '0 auto',
                                         height: '48px',
@@ -532,7 +532,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                         outline: 'none !important',
                                         
                                     }}
-                                    /> */}
+                                    />
                         </fieldset>
                     </div>
 
