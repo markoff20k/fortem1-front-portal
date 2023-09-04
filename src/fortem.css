@@ -2,6 +2,17 @@
     position: fixed !important;
 }
 
+.pg-profile-page-verification-labels__step__label pg-profile-page-verification-labels__step__label--rejected {
+    font-size: 14px;
+}
+
+.pg-profile-page-verification-labels__step__label, .pg-profile-page-verification-labels__step__label--blocked {
+    cursor: pointer !important;
+    font-size: 14px !important;
+
+}
+
+
 .pg-profile-page-verification-labels__step__tooltip {
     position: fixed !important;
 }
