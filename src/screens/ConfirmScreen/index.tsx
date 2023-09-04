@@ -74,7 +74,7 @@ class ConfirmComponent extends React.Component<Props> {
                     <Logo />
                     <CrossIcon
                         className="pg-confirm__title__icon"
-                        onClick={e => history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
+                        onClick={e => history.push('/profile?internalPage=3')}
 
                         
 

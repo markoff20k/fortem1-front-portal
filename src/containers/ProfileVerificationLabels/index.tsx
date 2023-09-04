@@ -47,6 +47,20 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 		const { isMouseTooltipVisible } = this.state;
 		const targetLabelStatus = this.handleCheckLabel(labels, labelToCheck);
 
+		const nLabel =
+		labels.length && labels.find((label: Label) => label.key === labelToCheck && label.scope === 'private');
+
+		const targetLabel =
+		labels.length && labels.find((label: Label) => label.value === 'verified');
+		let targetLabelStatus2 = targetLabel ? targetLabel.value : '';
+
+	
+		
+
+		 //labels.find((label: Label) => label.value === 'verified');
+
+
+
 		const tooltipClass = classnames('pg-profile-page-verification-labels__step__tooltip tooltip-hover', {
 			'tooltip-hover--visible': isMouseTooltipVisible,
 		});
@@ -56,7 +70,17 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 				return (
 					// <Card>
 					<div key={index} className="pg-profile-page-verification-labels__step pg-profile-page-verification-labels__step--verified">
-						<div className="pg-profile-page-verification-labels__step__info">
+						{/* <div className="pg-profile-page-verification-labels__step__info" id='pg-profile-page-verification-labels__step__info'> */}
+						<div className="pg-profile-page-verification-labels__step__info" >
+						{/* {((labels.length-1) - (index+1) ) < 1 ? "Ultimo" : "Dois"} */}
+						{((labels.length-1) - (index+1) ) < 0 ? 
+							(<div className="pg-profile-page-verification-labels__step__info__title-active">
+								{/* <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} /> */}
+								{/* Limite atual2 {index} / {nLabel.value} / {labels.length} / {targetLabelStatus2.length} / {!isMouseTooltipVisible ? 'Teste' : 'Teste2'} */}
+								{/* {((labels.length-1) - (index+1) ) < 1 ? "Ultimo" : "Dois"} */}
+								Limite atual
+								
+							</div>) : ""}
 							<div className="pg-profile-page-verification-labels__step__info__title">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 
@@ -88,6 +112,49 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 					</div>
 					// </Card>
 				);
+
+				case 'active':
+					return (
+						// <Card>
+						<div key={index} className="pg-profile-page-verification-labels__step pg-profile-page-verification-labels__step--verified">
+							<div className="pg-profile-page-verification-labels__step__info" id='pg-profile-page-verification-labels__step__info'>
+								
+								<div className="pg-profile-page-verification-labels__step__info__title-active">
+									{/* <FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} /> */}
+									Limite atual-OK {index} / {nLabel.value} / {labels.length} / {targetLabelStatus2.length} / {!isMouseTooltipVisible ? 'Teste' : 'Teste2'}
+									
+								</div>
+								<div className="pg-profile-page-verification-labels__step__info__title">
+									<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
+	
+								</div>
+								
+								<div className="pg-profile-page-verification-labels__step__info__subtitle">
+									<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px', marginTop: '20px'}}>
+										Funcionalidades:
+									</div>
+									<div></div>
+									 Compra e venda de criptomoedas
+									<div></div>
+									Negociação de criptomoedas (Exchange Pro)
+									<div></div>
+									<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} /><div></div>
+									<div></div>
+									<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
+										<br />Limites:
+									</div>
+									
+									<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} /><div></div>
+									<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} />
+								</div>
+							</div>
+							<div className="pg-profile-page-verification-labels__step__label pg-profile-page-verification-labels__step__label--verified">
+								<FormattedMessage id="page.body.profile.verification.verified" />
+								<CheckBigIcon />
+							</div>
+						</div>
+						// </Card>
+					);				
 			case 'drafted':
 			case 'pending':
 			case 'submitted':
@@ -211,8 +278,9 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 					// <Card>
 					<div key={index} className="pg-profile-page-verification-labels__step pg-profile-page-verification-labels__step--active">
 						<div className="pg-profile-page-verification-labels__step__info">
+			
+
 							<div className="pg-profile-page-verification-labels__step__info__title">
-				
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
@@ -226,7 +294,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<div></div>
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} /><div></div>
 								<div></div>
-								<div style={{textDecoration: 'underline'}}>
+								<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
 									<br />Limites:
 								</div>
 								

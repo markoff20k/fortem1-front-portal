@@ -8,7 +8,7 @@ import { Security } from "./security";
 
 // import {useSearchParams} from 'react-router-dom';
 
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 
 
 
@@ -18,6 +18,8 @@ export function Profile() {
   const queryParameters = new URLSearchParams(window.location.search);
   const urlState = queryParameters.get("internalPage");
 
+  const history = useHistory();
+
   //const [searchParams, setSearchParams] = useSearchParams();
 
   queryParameters.delete("internalPage");
@@ -25,6 +27,7 @@ export function Profile() {
 
   //if (urlState) setInternalPage(urlState);
   console.log(urlState);
+  // setInternalPage(3);
 
 
   return (
@@ -41,15 +44,18 @@ export function Profile() {
             </p>
             <div style={{display: 'flex'}}>
               <button
-                onClick={() => setInternalPage(1)}
+                //onClick={() => setInternalPage(1)}
+                onClick={() => history.push(`/profile?internalPage=1`)}
                 className={internalPage === 1 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
               >
                 Meus dados
               </button>
               <button
-                onClick={() => setInternalPage(3)}
-                //onClick={e => history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
+                //onClick={() => setInternalPage(3)}
+                //onClick={() => history.push('/profile?internalPage=4', 4)}
+                //onClick={() => history.push('/profile?internalPage=4', 4)}
+                onClick={() => history.push(`/profile?internalPage=3`)}
 
                 className={internalPage === 3 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
@@ -57,14 +63,16 @@ export function Profile() {
                 Cadastro
               </button>
               <button
-                onClick={() => setInternalPage(4)}
+                //onClick={() => setInternalPage(4)}
+                onClick={() => history.push(`/profile?internalPage=4`)}
                 //onClick={history.push('/profile?internalPage=3', {internalPage: 3, setInternalPage: 3})}
                 style={{color: 'var(--primary-text-color)'}}
               >
                 Segurança
               </button>
               <button
-                onClick={() => setInternalPage(2)}
+                //onClick={() => setInternalPage(2)}
+                onClick={() => history.push(`/profile?internalPage=2`)}
                 className={internalPage === 2 && "active-menu-header"}
                 style={{color: 'var(--primary-text-color)'}}
               >
@@ -74,17 +82,17 @@ export function Profile() {
             </div>
           </div>
         </div>
-        {internalPage === 3 || urlState === '3' ? ( 
+        {urlState === '3' ? ( 
           <Limits />
         
-         ) : internalPage === 2 || urlState === 2 ? (
+         ) : urlState === '2' ? (
            <Preferences />
-         ) : internalPage === 4 || urlState === 4 ? (
+         ) :  urlState === '4' ? (
           <Security />
-         ) : internalPage === 1  && urlState != '1'? (
+         ) : urlState === '1'? (
           <Mydata />
         ) : (
-          {}
+          <Mydata />
         )}
       </Content>
       {queryParameters.delete("internalPage")}
