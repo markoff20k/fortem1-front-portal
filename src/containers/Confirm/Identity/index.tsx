@@ -796,24 +796,24 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     //     });
 
             
-                    const options = {
-                        fields: ["address_components"],
+                    // const options = {
+                    //     fields: ["address_components"],
                       
-                       };
+                    //    };
 
 
-                    let auto_complete = new google.maps.places.Autocomplete(
-                        this.state.residentialAddress2,
-                        options,
-                      );
+                    // let auto_complete = new google.maps.places.Autocomplete(
+                    //     this.state.residentialAddress2,
+                    //     options,
+                    //   );
 
                       //auto_complete.trigger(auto_complete, 'place_changed');
-                      google.maps.event.trigger(auto_complete, 'place_changed');
+                      //google.maps.event.trigger(auto_complete, 'place_changed');
 
-                      google.maps.event.trigger(this.autocomplete, 'place_changed');
+                      //google.maps.event.trigger(this.autocomplete, 'place_changed');
 
 
-                    auto_complete.setFields(['address_components', 'name']);
+                    //auto_complete.setFields(['address_components', 'name']);
 
                     //this.autocomplete = auto_complete.getPlace();
 
@@ -821,28 +821,28 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     //const ac = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), options );
 
                         //var place = ac.getPlace();
-                        console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+                        //console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
 
-                        auto_complete.setFields(["address_component"]); 
-                        const addressObject = auto_complete.getPlace();
+                        //auto_complete.setFields(["address_component"]); 
+                        //const addressObject = auto_complete.getPlace();
                         
                          
                         //const address = addressObject.address_components;
-                        console.log(addressObject);
-                        console.log(auto_complete);
+                        //console.log(addressObject);
+                        //console.log(auto_complete);
                         //console.log(autocomplete.getPlace());
 
 
-                    setTimeout(codingCourse, 3000);
+                    //setTimeout(codingCourse, 3000);
                     
-                    function codingCourse() {
-                        console.log(addressObject);
-                        console.log(addressObject);
-                        console.log(addressObject);
-                        console.log(auto_complete);
+                    // function codingCourse() {
+                    //     console.log(addressObject);
+                    //     console.log(addressObject);
+                    //     console.log(addressObject);
+                    //     console.log(auto_complete);
                 
 
-                      }
+                    //   }
 
 
                     this.setState({
