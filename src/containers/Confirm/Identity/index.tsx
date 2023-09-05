@@ -876,7 +876,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                     //   }
 
-
+                    const auto_c = (document.getElementById('autocomplete') as HTMLInputElement).value;
+                    console.log('auto_c ->>' + auto_c);
                     this.setState({
                         residentialAddressFocused: !this.state.residentialAddressFocused,
                         //residentialAddress: (document.getElementById('autocomplete')).value,
@@ -886,7 +887,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         //residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1],
                         
                         //comentei aqui TO-DO
-                        residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+                        residentialAddress: (auto_c.split(",")[length-1]).split(" - ")[0] ? (auto_c.split(",")[length-1]).split(" - ")[0] : "",
                         
                         
 
