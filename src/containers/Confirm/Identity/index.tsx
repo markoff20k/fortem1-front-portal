@@ -219,6 +219,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': lastNameFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 lastName && !this.handleValidateInput('lastName', lastName),
+                'label-error--active':
+                lastName && !this.handleValidateInput('lastName', lastName),
         });
 
         const dateOfBirthGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -241,6 +243,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': telFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 tel && !this.handleValidateInput('tel', tel),
+                'label-error--active': tel && !this.handleValidateInput('tel', tel),
         });
 
         const residentialAddressGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -266,21 +269,25 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         const cityGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': cityFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': city && !this.handleValidateInput('city', city),
+            'label-error--active': city && !this.handleValidateInput('city', city),
         });
 
         const regionGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': regionFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': region && !this.handleValidateInput('region', region),
+            'label-error--active': region && !this.handleValidateInput('region', region),
         });
 
         const zoneGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': zoneFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': zone && !this.handleValidateInput('zone', zone),
+            'label-error--active': zone && !this.handleValidateInput('zone', zone),
         });
 
         const countryGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': countryFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': country && !this.handleValidateInput('country', country),
+            'label-error--active': country && !this.handleValidateInput('country', country),
             
         });
 
@@ -288,6 +295,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--focused': postcodeFocused,
             'pg-confirm__content-identity__forms__row__content--wrong':
                 postcode && !this.handleValidateInput('postcode', postcode),
+            'label-error--active': postcode && !this.handleValidateInput('postcode', postcode),
         });
 
         /* tslint:disable */
@@ -536,9 +544,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress')}
                                 handleFocusInput={this.handleFieldFocus('residentialAddress')}
-                                id="autocomplete2"
+                                id="autocomplete"
                             />
-                                <input id="autocomplete" placeholder="Endereço residencial"
+                                <input id="autocomplete2" placeholder="Endereço residencial"
                                     style={{
                                         margin: '0 auto',
                                         height: '48px',
@@ -567,6 +575,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('residentialAddress2')}
                             />
+                            <label className='label-error'>Número inválido. Digite DDD + Telefone</label>
                         </fieldset>
                         <fieldset className={residentialAddress3GroupClass}>
                             <CustomInput
@@ -604,6 +613,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('region')}
                             />
+                        <label className='label-error'>Campo com menos de 3 caracteres</label>
                         </fieldset>
 
                     </div>
@@ -627,6 +637,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 placeholder="Cidade"
                                 handleFocusInput={this.handleFieldFocus('city')}
                             />
+                            <label className='label-error'>Campo com menos de 3 caracteres</label>
                         </fieldset>
 
                         <fieldset className={zoneGroupClass}>
@@ -643,6 +654,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('zone')}
                             />
+                            <label className='label-error'>Campo com menos de 2 caracteres</label>
                         </fieldset>
                     </div>
 
@@ -681,6 +693,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 placeholder="País"
                                 handleFocusInput={this.handleFieldFocus('country')}
                             />
+                            <label className='label-error'>Campo com menos de 3 caracteres</label>
                         </fieldset>
                         
                         <fieldset className={postcodeGroupClass}>
@@ -704,6 +717,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                     />
                                 </div>
                             </div>
+                            <label className='label-error'>CEP inválido</label>
                         </fieldset>
                     </div>
 
@@ -868,7 +882,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                         
                         //residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1],
-                        residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+                        
+                        //comentei aqui TO-DO
+                        //residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+                        
 
                         //value={lastVerifiedProfile.fullname ? lastVerifiedProfile.fullname : "Nome completo - Complete seu cadastro"}
 
@@ -881,10 +898,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         //residentialAddress: this.state.query,
 
                         //residentialAddress2: ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0],
-                        region: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length] : "",
+                        //region: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length] : "",
                         city: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0] : "",
-                        zone: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length] : "",
-                        country: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0] : "",
+                        //zone: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length] : "",
+                        //country: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0] : "",
 
                     });
                     this.scrollToElement(5);
@@ -990,16 +1007,16 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             case 'city':
                 //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
 
-                return Boolean(value.length > 1) ;
+                return Boolean(value.length > 2) ;
             case 'region':
                 //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
-                return Boolean(value.length > 1) ;
+                return Boolean(value.length > 2) ;
             case 'zone':
                     //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
                 return Boolean(value.length > 1) ;                
             case 'country':
                     //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
-                return Boolean(value.length > 1) ;                
+                return Boolean(value.length > 2) ;                
             case 'tel':
                     //const cityRegex = new RegExp(`/^[\w\D]{2,30}$`);
                 return Boolean(value.length > 12) ;   
