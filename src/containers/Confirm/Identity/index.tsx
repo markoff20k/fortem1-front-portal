@@ -546,7 +546,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 handleFocusInput={this.handleFieldFocus('residentialAddress')}
                                 id="autocomplete"
                             />
-                                <input id="autocomplete2" placeholder="Endereço residencial"
+                                {/* <input id="autocomplete2" placeholder="Endereço residencial"
                                     style={{
                                         margin: '0 auto',
                                         height: '48px',
@@ -556,7 +556,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                         outline: 'none !important',
                                         
                                     }}
-                                    />
+                                    /> */}
                         </fieldset>
                     </div>
 
@@ -819,6 +819,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     
     
                 case 'residentialAddress':
+
+                console.log((document.getElementById('autocomplete') as HTMLInputElement).value);
                     // var ac = new google.maps.places.Autocomplete(
                     //     (document.getElementById('autocomplete')), {
                     //                   types: ["address"]
@@ -884,7 +886,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         //residentialAddress: (document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1],
                         
                         //comentei aqui TO-DO
-                        //residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+                        residentialAddress: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0] : "",
+                        
                         
 
                         //value={lastVerifiedProfile.fullname ? lastVerifiedProfile.fullname : "Nome completo - Complete seu cadastro"}

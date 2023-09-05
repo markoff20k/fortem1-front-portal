@@ -1,4 +1,4 @@
-const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'https://homolog.fortem1.com.br' : window.location.origin;
+const hostUrl = window.location.hostname === 'homolog.fortem1.com.br' ? 'http://homolog.fortem1.com.br' : window.location.origin;
 const protocolSSL = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 // const rangerHostUrl =  window.location.hostname === 'www.fortem1.com.br' ? 'ws://www.fortem1.com.br' : `${protocolSSL}${window.location.hostname}`;
 
