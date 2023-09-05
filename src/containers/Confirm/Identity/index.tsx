@@ -653,6 +653,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 label="Estado"
                                 defaultLabel={''}
                                 handleFocusInput={this.handleFieldFocus('zone')}
+                                id='autogeneratecity'
                             />
                             <label className='label-error'>Campo com menos de 2 caracteres</label>
                         </fieldset>
@@ -821,6 +822,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                 case 'residentialAddress':
 
                 console.log((document.getElementById('autocomplete') as HTMLInputElement).value);
+                document.getElementById("autogeneratecity").innerHTML="Sampa";
+
                     // var ac = new google.maps.places.Autocomplete(
                     //     (document.getElementById('autocomplete')), {
                     //                   types: ["address"]
@@ -877,7 +880,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     //   }
 
                     const auto_c = (document.getElementById('autocomplete') as HTMLInputElement).value;
-                    console.log('auto_c ->>' + auto_c);
+
+                    const auto_zone = auto_c.split(",")[length].split(" - ")[length] ? auto_c.split(",")[length].split(" - ")[length] : "";
+                    console.log('Estado:'  + auto_zone);
                     this.setState({
                         residentialAddressFocused: !this.state.residentialAddressFocused,
                         //residentialAddress: (document.getElementById('autocomplete')).value,
@@ -903,8 +908,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                         //residentialAddress2: ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[0],
                         //region: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length-1]).split(" - ")[length] : "",
-                        city: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0] : "",
+                        //city: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0] : "",
                         //zone: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length] : "",
+                        zone: auto_zone,
                         //country: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0] : "",
 
                     });
