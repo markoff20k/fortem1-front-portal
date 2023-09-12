@@ -6,6 +6,13 @@
 $ npm install --legacy-peer-deps
 ```
 
+## Run local
+```bash
+$ npm run start
+```
+
+
+
 ## Available Docker build args
 
 While building a Docker image you can pass build-dependant arguments using `--build-arg`: 
