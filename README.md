@@ -1,7 +1,9 @@
+## Node version: 16.15.1
+
 ## Install dependencies
 
 ```bash
-$ yarn install
+$ npm install --legacy-peer-deps
 ```
 
 ## Available Docker build args
@@ -18,11 +20,11 @@ While building a Docker image you can pass build-dependant arguments using `--bu
 ## Build mobile app
 Install dependencies using npm. Important for mobile app development.
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 Build frontend
 ```bash
-yarn build
+npm build
 ```
 Generate a native project (ios, android)
 ```bash
@@ -143,3 +145,4 @@ For release build you have to create keystore path and keystore alias and run ne
   zipalign 4 app-release-unsigned.apk app-release.apk
 ```
 
+# f3-frontend-reference
