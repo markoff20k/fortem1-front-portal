@@ -14241,6 +14241,14 @@
   "resolved" "https://registry.npmjs.org/react-ga/-/react-ga-2.7.0.tgz"
   "version" "2.7.0"
 
+"react-google-autocomplete@^2.7.3":
+  "integrity" "sha512-Nm+7/VDe7/NDWb8p/a39is7ktNqt5bNqAOoQv2Ev/XkuEvjsRk08VAPFmXUH03xKuM8IUuDrk2Lwfge44YEj6Q=="
+  "resolved" "https://registry.npmjs.org/react-google-autocomplete/-/react-google-autocomplete-2.7.3.tgz"
+  "version" "2.7.3"
+  dependencies:
+    "lodash.debounce" "^4.0.8"
+    "prop-types" "^15.5.0"
+
 "react-google-places-autocomplete@^4.0.1":
   "integrity" "sha512-BA/+8eky8pvnXjuBiqcPS6CdwPOEM38hjUkh+iOE6D/ctrQVTTFdm5ylQyWOGOD+1LeuB/INE8SwIp/Gre0A9A=="
   "resolved" "https://registry.npmjs.org/react-google-places-autocomplete/-/react-google-places-autocomplete-4.0.1.tgz"

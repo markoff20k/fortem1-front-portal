@@ -2,6 +2,8 @@ import cr from 'classnames';
 import moment from 'moment';
 import * as React from 'react';
 
+import { useState, useRef, useEffect } from 'react';
+
 import { Button, Spinner } from 'react-bootstrap';
 import { injectIntl } from 'react-intl';
 import MaskInput from 'react-maskinput';
@@ -38,6 +40,11 @@ import * as countries from 'i18n-iso-countries';
 import Script from 'react-load-script';
 
 // import AutoComplete from './Autocomplete';
+
+// import App from './Google';
+
+import Autocomplete from "react-google-autocomplete";
+
 
 
 interface ReduxProps {
@@ -93,6 +100,23 @@ interface IdentityState {
 }
 
 type Props = ReduxProps & DispatchProps & RouterProps & IntlProps;
+
+const Allowance = () => {
+    const [allowances, setAllowances] = useState([]);
+  
+    useEffect(() => {
+      fetch("http://127.0.0.1:8000/allowances")
+        .then(data => {
+          return data.json();
+        })
+        .then(data => {
+          setAllowances(data);
+        })
+        .catch(err => {
+          console.log(123123);
+        });
+    }, []);
+};
 
 class IdentityComponent extends React.Component<Props, IdentityState> {
     public state = {
@@ -152,6 +176,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
       
 
     public render() {
+
+        
+        
 
         // const input = document.getElementById('autocomplete') as HTMLInputElement | null;
         // const value = input?.value;
@@ -316,6 +343,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     
         const autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), options );
 
+        //const inputRef = useRef(null);
+        //const [pais, setPais] = useState("br");
+        
         
    
 
@@ -408,7 +438,16 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         
         return (
             <>
+            {/* {G} */}
             <Script url="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhuXDx_zh466hb2LYtMmwiyi0d0Bb7RgA&libraries=places" onLoad={handleScriptLoad} />  
+            <Autocomplete
+                apiKey={'AIzaSyBhuXDx_zh466hb2LYtMmwiyi0d0Bb7RgA'}
+                onPlaceSelected={(place) => {
+                console.log(place.address_components[0].long_name);
+                this.state.query = place.address_components[0].long_name;
+            }}
+/>;
+            
             <form className="pg-confirm__content-identity" autoComplete="on">
                 <div className="pg-confirm__content-identity__forms">
                     <div className="pg-confirm__content-identity__forms__row">
@@ -538,7 +577,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 name="ship-address"
                                 autoComplete={new google.maps.places.Autocomplete(document.getElementById("autocomplete"), options)}
                                 // inputValue={this.state.query}
-                                inputValue={residentialAddress}
+                                 inputValue={residentialAddress}
+                                
                                 placeholder={this.translate('page.body.kyc.identity.residentialAddress')}
                                 label={this.translate('page.body.kyc.identity.residentialAddress')}
                                 defaultLabel={''}
@@ -587,7 +627,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                                 type="string"
                                 name="complemento"
                                 autoComplete="shipping postal-code"
-                                inputValue={residentialAddress3}
+                                inputValue={query}
                                 handleChangeInput={(e) => this.handleChange(e, 'residentialAddress3')}
                                 onKeyPress={this.handleConfirmEnterPress}
                                 // placeholder={this.translate('page.body.kyc.identity.postcode')}
@@ -823,6 +863,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                 console.log((document.getElementById('autocomplete') as HTMLInputElement).value);
                 document.getElementById("autogeneratecity").innerHTML="Sampa";
+                
 
                     // var ac = new google.maps.places.Autocomplete(
                     //     (document.getElementById('autocomplete')), {
@@ -911,6 +952,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         //city: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[0] : "",
                         //zone: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length]).split(" - ")[length] : "",
                         zone: auto_zone,
+                        query: "Teste",
                         //country: (((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0]) ? ((document.getElementById('autocomplete') as HTMLInputElement).value.split(",")[length+1]).split(" - ")[0] : "",
 
                     });

@@ -181,7 +181,7 @@ export class Setup extends React.Component<Props, SetupScreenState> {
                                     logo={logo}
                                     backgroundImage={bgStep2}
                                     title="Configure the liquidity network"
-                                    description="XLN is a liquidity network by Openware. Everyone can join it by deploying the OpenDAX platform or integrating with our APIs. XLN provides aggregated liquidity and creates a beneficial environment for all market participants"
+                                    description="XLN is a liquidity network."
                                 />
                             </div>
                             <div className="setup-screen__right">
@@ -207,7 +207,7 @@ export class Setup extends React.Component<Props, SetupScreenState> {
                                 <SetupInfoBlock
                                     logo={logo}
                                     backgroundImage={bgStep3}
-                                    title="Welcome to OpenDax software"
+                                    title="Welcome to F1 software"
                                     description=""
                                 />
                             </div>
